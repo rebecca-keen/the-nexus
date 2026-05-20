@@ -113,6 +113,19 @@ export const SEED_STORIES = [
   { id:"s28", type:"research",source:"Koinonia House",            sourceUrl:"https://www.khouse.org",             time:"2d ago",  topic:"Biblical & Religious Records",  region:"🇺🇸 USA",  title:"Chuck Missler: The Integrity of the Genetic Bloodline — Why Genesis 6 Giants Were the Reason for the Flood", summary:"Biblical scholar Chuck Missler's research argues that the Nephilim corruption of the human genetic line — not merely moral corruption — was the reason God initiated the flood. He cross-references Genesis 6 with Enoch, Numbers 13, and the Dead Sea Scrolls.", upvotes:4800, comments:712,  credible:58, debunked:42, tags:["Missler","Genesis","Flood","Nephilim","Biblical"],   premium:true },
   { id:"s29", type:"research",source:"L.A. Marzulli Blog",        sourceUrl:"https://lamarzulli.net",             time:"2d ago",  topic:"Giants & Nephilim",             region:"🇺🇸 USA",  title:"Peruvian Elongated Skulls — DNA Testing Shows Non-Human Mitochondrial DNA in Paracas Specimens",           summary:"DNA analysis conducted on elongated skulls from Paracas, Peru reportedly showed mitochondrial DNA with mutations unknown in any human, primate, or animal. The researcher who conducted the analysis has been unable to get results peer-reviewed through conventional journals.", upvotes:7100, comments:1204, credible:44, debunked:56, tags:["Paracas","Skulls","DNA","Giants","Peru"],           premium:true },
   { id:"s30", type:"podcast", source:"Stuff They Don't Want You to Know",sourceUrl:"https://www.iheart.com/podcast/182-stuff-they-dont-want-you-17913675/",time:"2d ago",topic:"Government & Intelligence",region:"🇺🇸 USA",title:"COINTELPRO: The FBI's Documented Campaign to Destroy Civil Rights Leaders, Anti-War Groups, and Political Dissidents", summary:"COINTELPRO ran from 1956 to 1971. Declassified documents confirm the FBI used illegal surveillance, infiltration, fabricated evidence, and psychological warfare against the NAACP, SCLC, Black Panthers, SDS, and even the women's liberation movement.", upvotes:5400, comments:781,  credible:95, debunked:5,  tags:["COINTELPRO","FBI","Civil Rights","Declassified"],    premium:false },
+  {id:"s31",type:"archive", source:"Sacred Texts Archive",      sourceUrl:"https://sacred-texts.com/ane/adapa.htm",  time:"3h ago", topic:"Ancient Civilizations",       region:"🇮🇱 Israel / Middle East",title:"Myth of Adapa: The First Man Given Wisdom but Denied Immortality — Sumerian Primary Text", summary:"The Adapa myth predates Genesis by thousands of years. Enki creates Adapa as humanity's first sage and commissioner of the Anunnaki, granting him wisdom but withholding eternal life. When sky-god Anu offers Adapa the bread and water of immortality, Enki's secret instructions cause Adapa to refuse. Researchers argue this is the original template for the Garden of Eden narrative.", upvotes:4800,comments:712, credible:72,debunked:28,tags:["Adapa","Enki","Anu","Anunnaki","Genesis"],    premium:false},
+  {id:"s32",type:"research",source:"ETCSL Oxford University",   sourceUrl:"https://etcsl.orinst.ox.ac.uk",           time:"4h ago", topic:"Ancient Civilizations",       region:"🌍 Global",               title:"Anki, Enlil & the Anunnaki Council: The Original Divine Hierarchy Preserved in Sumerian Cuneiform", summary:"Sumerian tablets describe An (heaven) and Ki (earth) as cosmic parents. Their son Enlil separated heaven from earth. The Anunnaki — the heaven-earth council of gods — governed fate, created humanity, and survived the flood. These texts at Oxford's ETCSL structurally parallel the divine councils in Genesis, Enoch, and the Dead Sea Scrolls.", upvotes:3900,comments:521, credible:78,debunked:22,tags:["Anki","Enlil","Anunnaki","Sumerian"],premium:false},
+  {id:"s33",type:"research",source:"Ancient Origins",           sourceUrl:"https://www.ancient-origins.net",         time:"5h ago", topic:"Ancient Civilizations",       region:"🌍 Global",               title:"The Anunnaki: Sumerian Gods, Genetic Engineers, or Extraterrestrial Visitors? All Theories Examined", summary:"The Anunnaki appear in thousands of tablets as the divine assembly who created humanity from clay and divine blood. Sitchin interpreted them as aliens from Nibiru who engineered Homo sapiens. Orthodox scholars read them as the Mesopotamian pantheon. The debate spans DNA manipulation, ancient astronaut theory, and the origin of civilization.", upvotes:7200,comments:1104,credible:55,debunked:45,tags:["Anunnaki","Sitchin","DNA","Ancient Aliens"], premium:false},
+  {id:"s34",type:"research",source:"Project Unredacted",        sourceUrl:"https://www.projectunredacted.com/cases/chronovisor-vatican-time-machine",time:"6h ago",topic:"Secret Societies",region:"🇻🇦 Vatican",title:"Vatican Chronovisor: Father Ernetti's Time-Viewing Device — Built With Enrico Fermi, Hidden in the Archives", summary:"In 1972 Father Pellegrino Ernetti claimed he and 12 scientists including Enrico Fermi and Wernher von Braun built a device capturing electromagnetic echoes of past events. He claimed to witness Christ's crucifixion and a lost Roman play. The Vatican issued an excommunication decree against unauthorized use of such devices in 1988 — an act researchers argue implies acknowledgment.", upvotes:6100,comments:981, credible:42,debunked:58,tags:["Chronovisor","Vatican","Time","Ernetti"],       premium:false},
+  {id:"s35",type:"research",source:"Sedona Anomalies Research", sourceUrl:"https://sedonanomalies.com",              time:"7h ago", topic:"Forbidden Science",           region:"🇺🇸 USA",                title:"Sedona Vortex Sites: Electrical Engineer Measures Magnetic Anomalies — EEG and Magnetometer Data", summary:"Electrical engineer Benjamin Lonetree spent a decade measuring Sedona's vortex sites using magnetometers and portable EEG devices. His research documents measurable outflows of magnetic energy correlated with human brainwave changes. The geology — high iron oxide sandstone, volcanic basalt with 5-20% quartz — may genuinely affect human consciousness.", upvotes:3400,comments:441, credible:61,debunked:39,tags:["Sedona","Electromagnetic","Vortex","Consciousness"],premium:false},
+  {id:"s36",type:"research",source:"George Church Lab — Harvard",sourceUrl:"https://arep.med.harvard.edu",           time:"8h ago", topic:"Forbidden Science",           region:"🇺🇸 USA",                title:"George Church (Harvard): First Book Encoded in DNA — 70 Billion Copies. CRISPR & Synthetic Biology", summary:"Harvard geneticist George Church encoded his book Regenesis entirely in DNA — 70 billion copies fitting on a thumbnail. His lab pioneered CRISPR gene editing, Neanderthal DNA reconstruction research, and the Personal Genome Project. He has speculated publicly about de-extincting Neanderthals and reversing aging through targeted gene therapy.", upvotes:5100,comments:721, credible:91,debunked:9, tags:["DNA","CRISPR","George Church","Synthetic Biology"],premium:false},
+  {id:"s37",type:"research",source:"Bruce Lipton — brucelipton.com",sourceUrl:"https://www.brucelipton.com",         time:"9h ago", topic:"Forbidden Science",           region:"🇺🇸 USA",                title:"Bruce Lipton: Epigenetics — Your Beliefs Change Gene Expression. DNA Is Not Your Destiny", summary:"Former Stanford cell biologist Bruce Lipton's research shows that the environment outside the cell — including thoughts, beliefs, and electromagnetic signals — controls which genes switch on or off. This directly challenges genetic determinism and suggests consciousness shapes biology at the molecular level.", upvotes:4800,comments:641, credible:74,debunked:26,tags:["Epigenetics","DNA","Lipton","Consciousness"],   premium:false},
+  {id:"s38",type:"archive", source:"Vatican Apostolic Archive",  sourceUrl:"https://www.archivioapostolicovaticano.va",time:"10h ago",topic:"Biblical & Religious Records",region:"🇻🇦 Vatican",          title:"Vatican Archives: 85 Kilometers of Shelving — Hidden Gospels, Galileo's Trial, Nazi Concordats, Pre-Nicaean Texts", summary:"The Vatican Apostolic Archive holds 85 kilometers of shelving. It contains Galileo's trial records, Nazi concordat documents, Henry VIII's annulment request, and thousands of inaccessible texts. Researchers believe ancient documents about the Nephilim, Mary Magdalene, and pre-canonical gospels remain sealed to the public.", upvotes:6800,comments:1021,credible:77,debunked:23,tags:["Vatican","Archives","Hidden","Gospels"],        premium:true},
+  {id:"s39",type:"research",source:"Gregg Braden Official",      sourceUrl:"https://www.greggbraden.com",            time:"11h ago",topic:"Forbidden Science",           region:"🇺🇸 USA",                title:"Gregg Braden: The God Code — Ancient Name Encoded in Every Human DNA Base Pair Sequence", summary:"Gregg Braden analyzed the chemical elements of DNA base pairs against ancient Hebrew letter-number values and claims the phrase meaning 'God Eternal Within the Body' is encoded in every strand of human DNA. His research bridges quantum physics, ancient scripture, and molecular biology — presenting DNA as cosmic message.", upvotes:5200,comments:812, credible:45,debunked:55,tags:["DNA","God Code","Braden","Frequency"],           premium:true},
+  {id:"s40",type:"research",source:"Dolores Cannon Archive",     sourceUrl:"https://dolorescannon.com",              time:"12h ago",topic:"Forbidden Science",           region:"🇺🇸 USA",                title:"Dolores Cannon QHHT: Subjects Under Deep Hypnosis Independently Describe Identical Accounts of Atlantis, DNA Modification, and Soul Origins", summary:"Over 50 years of Quantum Healing Hypnosis Technique sessions, Dolores Cannon documented subjects independently describing identical information about Atlantis, alien intervention in human DNA, and life between lives. Her 5-volume Convoluted Universe series catalogs thousands of cross-corroborating accounts that she argued cannot be explained by suggestion alone.", upvotes:4900,comments:781, credible:48,debunked:52,tags:["QHHT","Cannon","Past Lives","DNA","Atlantis"],   premium:true},
+  {id:"s41",type:"research",source:"4biddenknowledge",           sourceUrl:"https://www.4biddenknowledge.com",       time:"13h ago",topic:"Ancient Civilizations",       region:"🌍 Global",               title:"Billy Carson: The Emerald Tablets of Thoth — 15 Tablets Written by an Atlantean Priest-King 36,000 BCE", summary:"Billy Carson's analysis identifies Thoth (Hermes Trismegistus) as an Atlantean who fled to Egypt and built the Great Pyramid. The tablets describe stargates, the Halls of Amenti beneath the pyramid, zero-point energy, and consciousness as the fundamental substrate of reality. Carson cross-references with Sumerian tablets, quantum mechanics, and neuroscience.", upvotes:5800,comments:891, credible:50,debunked:50,tags:["Emerald Tablets","Thoth","Atlantis","Anunnaki"],premium:true},
+  {id:"s42",type:"blog",    source:"Ancient Origins",            sourceUrl:"https://www.ancient-origins.net",       time:"14h ago",topic:"Biblical & Religious Records",region:"🌍 Global",               title:"The Gospel of Mary Magdalene: Suppressed First-Century Text Shows Her as Jesus's Closest Disciple and Primary Teacher", summary:"The Gospel of Mary Magdalene, discovered in Cairo in 1896, depicts her receiving secret teachings from Jesus about matter, sin, and the soul — and transmitting these to the apostles over Peter's objection. Early church scholars argue this gospel was suppressed because it positioned a woman as the primary bearer of Jesus's esoteric teachings.", upvotes:5400,comments:821, credible:71,debunked:29,tags:["Mary Magdalene","Gospel","Suppressed","Gnostic"],premium:true},
+  {id:"s43",type:"research",source:"HeartMath Institute",        sourceUrl:"https://www.heartmath.org/research/",   time:"15h ago",topic:"Forbidden Science",           region:"🇺🇸 USA",                title:"HeartMath Institute: The Heart's Electromagnetic Field Is 100x Stronger Than the Brain — Research Confirmed", summary:"The HeartMath Institute's research shows the heart generates an electromagnetic field 100 times stronger in amplitude than the brain's and detectable several feet from the body. Their research suggests the heart transmits emotional information to every cell and can be measured affecting others in proximity — a finding with implications for energy healing and consciousness studies.", upvotes:4100,comments:561, credible:78,debunked:22,tags:["HeartMath","Electromagnetic","Consciousness","Heart"],premium:true},
 ];
 
 // ─── SEED COMMUNITY POSTS ─────────────────────────────────────────────────────
@@ -276,238 +289,452 @@ export const MEDIA_LIBRARY = [
 
 // ─── SOURCE DIRECTORY ─────────────────────────────────────────────────────────
 export const SOURCES = [
-  // ── UAP & DISCLOSURE RESEARCHERS ─────────────────────────────────────────
+
+  // ══ RESEARCHERS & AUTHORS — OFFICIAL SITES ════════════════════════════════
   {
-    label:"UAP / UFO Researchers & Investigators",
+    label:"Researchers & Authors — Official Sites",
     type:"research",
     items:[
-      {n:"Luis Elizondo — Pentagon UAP Insider",          u:"https://www.amazon.com/s?k=Imminent+Elizondo+UFO"},
-      {n:"Dr. Steven Greer — The Disclosure Project",     u:"https://siriusdisclosure.com"},
-      {n:"Christopher Mellon — Dep. Asst. Sec. of Defense",u:"https://www.christophermellon.net"},
-      {n:"Richard Dolan — UFOs & National Security State",u:"https://richarddolanmembers.com"},
-      {n:"Linda Moulton Howe — Earthfiles",               u:"https://www.earthfiles.com"},
-      {n:"George Knapp — Investigative Journalist",       u:"https://www.georgeknapp.com"},
-      {n:"MUFON — Mutual UFO Network",                    u:"https://www.mufon.com"},
-      {n:"To The Stars Academy",                          u:"https://www.tothestarsacademy.com"},
-      {n:"Skinwalker Ranch — Official Site",              u:"https://skinwalker-ranch.com"},
-      {n:"Dr. Avi Loeb — Galileo Project (Harvard)",      u:"https://projects.iq.harvard.edu/galileo"},
-      {n:"Dr. Garry Nolan — Stanford UAP Research",       u:"https://nolan-lab.stanford.edu"},
-      {n:"The Black Vault (declassified UAP docs)",        u:"https://www.theblackvault.com"},
-      {n:"NUFORC — National UFO Reporting Center",        u:"https://nuforc.org"},
-      {n:"AARO — Pentagon UAP Office",                    u:"https://www.aaro.mil"},
-      {n:"Project Blue Book Archive",                     u:"https://www.fold3.com/title/44/project-blue-book"},
+      {n:"Billy Carson — 4biddenknowledge.com (official site & articles)", u:"https://www.4biddenknowledge.com"},
+      {n:"Billy Carson — 4biddenknowledge TV (streaming platform)",        u:"https://www.4biddenknowledgetv.com"},
+      {n:"Dolores Cannon — Official Site & QHHT Research",                u:"https://dolorescannon.com"},
+      {n:"Dolores Cannon — QHHT Official (Quantum Healing Hypnosis)",     u:"https://www.qhhtofficial.com"},
+      {n:"David Icke — Official Site",                                     u:"https://davidicke.com"},
+      {n:"Wes Penre Papers — All 5 Levels Free PDF",                      u:"https://wespenre.com/category/level-1-5-in-pdf/"},
+      {n:"Graham Hancock — Official Site",                                 u:"https://grahamhancock.com"},
+      {n:"Michael Tsarion — Official Site",                               u:"https://www.michaeltsarion.com"},
+      {n:"Zecharia Sitchin — Official Archive",                           u:"https://sitchin.com"},
+      {n:"Jordan Maxwell — Video Archive (d.2022)",                       u:"https://www.jordanmaxwellvideos.com"},
+      {n:"Dr. Michael Heiser Foundation",                                 u:"https://michaelsheiserfoundation.org"},
+      {n:"Dr. Michael Heiser — Naked Bible Blog",                         u:"https://www.nakedbiblepodcast.com"},
+      {n:"Bruce Lipton — Epigenetics & DNA Research (brucelipton.com)",   u:"https://www.brucelipton.com"},
+      {n:"Gregg Braden — Official Site (frequency & DNA)",                u:"https://www.greggbraden.com"},
+      {n:"Brien Foerster — Elongated Skull Research",                     u:"https://brienfoerster.com"},
+      {n:"Robert Schoch — Sphinx & Geology",                              u:"https://www.robertschoch.net"},
+      {n:"Michael Cremo — Forbidden Archaeology",                         u:"https://www.mcremo.com"},
+      {n:"L.A. Marzulli — Nephilim & UAP Blog",                          u:"https://lamarzulli.net"},
+      {n:"Linda Moulton Howe — Earthfiles",                               u:"https://www.earthfiles.com"},
+      {n:"Richard Dolan — UAP Research",                                  u:"https://richarddolanmembers.com"},
+      {n:"Giorgio Tsoukalos — Ancient Aliens",                            u:"https://www.iamgiorgio.com"},
+      {n:"Randall Carlson — Kosmographia",                                u:"https://randallcarlson.com"},
     ],
   },
-  // ── BIBLICAL & NEPHILIM SCHOLARS ─────────────────────────────────────────
+
+  // ══ WRITTEN BLOGS — CONSCIOUSNESS, DNA, FREQUENCY & THE MATRIX ═══════════
   {
-    label:"Biblical Scholars & Nephilim Researchers",
-    type:"research",
-    items:[
-      {n:"Dr. Michael S. Heiser Foundation",              u:"https://michaelsheiserfoundation.org"},
-      {n:"Dr. Michael Heiser — Naked Bible Podcast",      u:"https://www.nakedbiblepodcast.com"},
-      {n:"Dr. Michael Heiser — Archive (drmsh.com)",      u:"https://drmsh.com"},
-      {n:"L.A. Marzulli — Nephilim & UAP Research",       u:"https://lamarzulli.net"},
-      {n:"Tom Horn — SkyWatch TV",                        u:"https://skywatchtv.com"},
-      {n:"Chuck Missler — Koinonia House",                u:"https://www.khouse.org"},
-      {n:"GenSix — Tim Alberino",                         u:"https://www.gensix.com"},
-      {n:"Stephen Quayle — Gen6 Giants",                  u:"https://www.gen6giants.com"},
-      {n:"Douglas Van Dorn — Reformed Scholastic",        u:"https://www.amazon.com/Giants-Sons-Douglas-Van-Dorn/dp/0615815375"},
-      {n:"Biblical Archaeology Society",                  u:"https://www.biblicalarchaeology.org"},
-      {n:"Dead Sea Scrolls Digital Library",              u:"https://www.deadseascrolls.org.il"},
-      {n:"Blue Letter Bible (Greek & Hebrew tools)",      u:"https://www.blueletterbible.org"},
-      {n:"Sacred Texts — Book of Enoch (free)",           u:"https://www.sacred-texts.com/bib/boe/"},
-      {n:"Bible Gateway — All Translations",              u:"https://www.biblegateway.com"},
-      {n:"Prophecy News Watch",                           u:"https://www.prophecynewswatch.com"},
-      {n:"Early Church Fathers Online (CCEL)",            u:"https://www.ccel.org"},
-    ],
-  },
-  // ── KEY RESEARCHERS & AUTHORS ─────────────────────────────────────────────
-  {
-    label:"Key Alternative Researchers & Authors",
-    type:"research",
-    items:[
-      {n:"David Icke — Official Site",                    u:"https://davidicke.com"},
-      {n:"Wes Penre Papers — Levels 1–5 (Free PDFs)",     u:"https://wespenre.com/category/level-1-5-in-pdf/"},
-      {n:"Graham Hancock — Official Site",                u:"https://grahamhancock.com"},
-      {n:"Michael Tsarion — Official Site",               u:"https://www.michaeltsarion.com"},
-      {n:"Zecharia Sitchin — Official Archive",           u:"https://sitchin.com"},
-      {n:"Jordan Maxwell — Video Archive (d. 2022)",      u:"https://www.jordanmaxwellvideos.com"},
-      {n:"Brien Foerster — Elongated Skulls",             u:"https://brienfoerster.com"},
-      {n:"Robert Schoch — Sphinx & Geology Research",     u:"https://www.robertschoch.com"},
-      {n:"Michael Cremo — Forbidden Archaeology",         u:"https://www.mcremo.com"},
-      {n:"Randall Carlson — Kosmographia",                u:"https://randallcarlson.com"},
-      {n:"Giorgio Tsoukalos — Ancient Aliens",            u:"https://www.iamgiorgio.com"},
-      {n:"Erich von Daniken — Official Site",             u:"https://www.daniken.com"},
-      {n:"Ickonic — David Icke Video Platform",           u:"https://www.ickonic.com"},
-    ],
-  },
-  // ── PARANORMAL, SUPERNATURAL & MEDIUMS ───────────────────────────────────
-  {
-    label:"Paranormal, Supernatural & Mediums",
-    type:"research",
-    items:[
-      {n:"James Van Praagh — Official Site",              u:"https://vanpraagh.com"},
-      {n:"John Edward — Psychic Medium",                  u:"https://www.johnedward.net"},
-      {n:"Tyler Henry — Hollywood Medium",                u:"https://www.tylerhenry.com"},
-      {n:"Theresa Caputo — Long Island Medium",           u:"https://theresacaputo.com"},
-      {n:"The Monroe Institute — Consciousness Research", u:"https://www.monroeinstitute.org"},
-      {n:"Institute of Noetic Sciences (IONS)",           u:"https://noetic.org"},
-      {n:"Rhine Research Center — Parapsychology",        u:"https://www.rhine.org"},
-      {n:"Society for Psychical Research (UK)",           u:"https://www.spr.ac.uk"},
-      {n:"Paranormal Research Society",                   u:"https://www.paranormalresearchsociety.org"},
-      {n:"The Warren Legacy — Ed & Lorraine Warren",      u:"https://www.warrens.net"},
-      {n:"Ghost Research Society",                        u:"https://www.ghostresearch.org"},
-      {n:"International Association for Near-Death Studies",u:"https://iands.org"},
-    ],
-  },
-  // ── NEWS & INVESTIGATIVE JOURNALISM ──────────────────────────────────────
-  {
-    label:"News & Investigative Journalism",
-    type:"news",
-    items:[
-      {n:"The Intercept",                                 u:"https://theintercept.com"},
-      {n:"Consortium News",                               u:"https://consortiumnews.com"},
-      {n:"The Grayzone",                                  u:"https://thegrayzone.com"},
-      {n:"MintPress News",                                u:"https://www.mintpressnews.com"},
-      {n:"WhoWhatWhy",                                    u:"https://whowhatwhy.org"},
-      {n:"Zero Hedge",                                    u:"https://www.zerohedge.com"},
-      {n:"Covert Action Magazine",                        u:"https://covertactionmagazine.com"},
-      {n:"ProPublica",                                    u:"https://www.propublica.org"},
-      {n:"Bellingcat",                                    u:"https://www.bellingcat.com"},
-      {n:"The Unz Review",                                u:"https://www.unz.com"},
-      {n:"Before It's News",                              u:"https://beforeitsnews.com"},
-      {n:"Epoch Times",                                   u:"https://www.theepochtimes.com"},
-    ],
-  },
-  // ── BLOGS & INDEPENDENT RESEARCH ─────────────────────────────────────────
-  {
-    label:"Blogs & Independent Research",
+    label:"Written Blogs — Consciousness, DNA, Frequency & The Matrix",
     type:"blog",
     items:[
-      {n:"Corbett Report — James Corbett",                u:"https://www.corbettreport.com"},
-      {n:"Unlimited Hangout — Whitney Webb",              u:"https://unlimitedhangout.com"},
-      {n:"OffGuardian",                                   u:"https://off-guardian.org"},
-      {n:"Matt Taibbi / Substack",                        u:"https://taibbi.substack.com"},
-      {n:"The Last American Vagabond",                    u:"https://www.thelastamericanvagabond.com"},
-      {n:"Steve Quayle.com",                              u:"https://www.stevequayle.com"},
-      {n:"L.A. Marzulli Blog",                            u:"https://lamarzulli.net"},
-      {n:"Mind Unleashed",                                u:"https://themindunleashed.com"},
-      {n:"Activist Post",                                 u:"https://www.activistpost.com"},
-      {n:"Waking Times",                                  u:"https://www.wakingtimes.com"},
-      {n:"Humans Are Free",                               u:"https://humansarefree.com"},
-      {n:"Ancient Origins",                               u:"https://www.ancient-origins.net"},
-      {n:"Richard Dolan Members Site",                    u:"https://richarddolanmembers.com"},
+      {n:"Bruce Lipton Blog — Epigenetics & Biology of Belief",           u:"https://www.brucelipton.com/blog/"},
+      {n:"Gregg Braden Blog — Frequency, DNA & Ancient Wisdom",           u:"https://www.greggbraden.com/blog/"},
+      {n:"HeartMath Institute — Scientific research on heart-brain coherence & frequency", u:"https://www.heartmath.org/research/"},
+      {n:"Institute of Noetic Sciences — Consciousness research papers",  u:"https://noetic.org/research/"},
+      {n:"Cymatics.org — Sound, frequency & visible matter research",     u:"https://www.cymatics.org"},
+      {n:"Sacred Geometry International — written research",              u:"https://sacredgeometryinternational.com"},
+      {n:"Flower of Life Research — Drunvalo Melchizedek",               u:"https://www.drunvalo.net"},
+      {n:"Gaia Consciousness Blog — written articles",                    u:"https://www.gaia.com/article"},
+      {n:"Simulation Theory — Nick Bostrom original paper (free PDF)",    u:"https://www.simulation-argument.com/simulation.pdf"},
+      {n:"Simulation Theory Research — Rizwan Virk",                     u:"https://www.zenentrepreneur.com"},
+      {n:"The Monroe Institute — Consciousness & OBE research",           u:"https://www.monroeinstitute.org"},
+      {n:"Dean Radin — Consciousness & PSI research papers",              u:"https://www.deanradin.com"},
+      {n:"Water Memory Research — Dr. Masaru Emoto archive",             u:"https://www.masaru-emoto.net/en/"},
+      {n:"432Hz & Solfeggio Frequencies — Meditative Mind research",     u:"https://meditativemind.org"},
     ],
   },
-  // ── YOUTUBE RESEARCH CHANNELS ─────────────────────────────────────────────
+
+  // ══ WRITTEN BLOGS — EMERALD TABLETS, THOTH & HERMETICISM ═════════════════
   {
-    label:"YouTube Research Channels",
+    label:"Written Blogs — Emerald Tablets, Thoth & Hermeticism",
+    type:"blog",
+    items:[
+      {n:"4biddenknowledge — Billy Carson: Emerald Tablets articles",     u:"https://www.4biddenknowledge.com/blog"},
+      {n:"Emerald Tablets of Thoth — Full Free Text Online",             u:"https://www.sacred-texts.com/egy/tet/index.htm"},
+      {n:"The Kybalion — Hermetic Principles (free full text)",          u:"https://www.sacred-texts.com/eso/kyb/index.htm"},
+      {n:"Hermetic Library — Crowley, Hermeticism, Alchemy archive",     u:"https://hermetic.com"},
+      {n:"Sacred Texts — Ancient Egypt & Hermetica (free)",              u:"https://www.sacred-texts.com/egy/"},
+      {n:"Thoth: The History & Mythology — Ancient History Encyclopedia",u:"https://www.worldhistory.org/thoth/"},
+      {n:"Alchemy & Hermeticism Research — Levity.com",                  u:"https://www.levity.com/alchemy/"},
+      {n:"Gnosis Archive — Gnostic, Hermetic & esoteric texts (free)",   u:"https://gnosis.org"},
+    ],
+  },
+
+  // ══ WRITTEN BLOGS — ANCIENT ALIENS, ANUNNAKI & SUMERIAN TABLETS ══════════
+  {
+    label:"Written Blogs — Ancient Aliens, Anunnaki & Sumerian Tablets",
+    type:"blog",
+    items:[
+      {n:"Ancient Astronaut Archive — written research articles",         u:"https://www.ancientastronautarchive.com"},
+      {n:"Ancient Origins — daily written ancient history articles",      u:"https://www.ancient-origins.net"},
+      {n:"Sitchin.com — Official Anunnaki & Sumerian research",          u:"https://sitchin.com"},
+      {n:"ETCSL Oxford — Sumerian texts in original & translation (free)",u:"https://etcsl.orinst.ox.ac.uk"},
+      {n:"XaviantVision.com — Free metaphysical & alt-history library",  u:"https://xaviantvision.com"},
+      {n:"World History Encyclopedia — Ancient Sumer (free articles)",   u:"https://www.worldhistory.org/sumer/"},
+      {n:"Before Its News — Alternative ancient history articles",       u:"https://beforeitsnews.com/alternative"},
+      {n:"Humans Are Free — Ancient civilizations written research",     u:"https://humansarefree.com"},
+    ],
+  },
+
+  // ══ WRITTEN BLOGS — GOVERNMENT, DEEP STATE & INTELLIGENCE ════════════════
+  {
+    label:"Written Blogs — Government, Deep State & Intelligence",
+    type:"blog",
+    items:[
+      {n:"Corbett Report — James Corbett long-form written research",     u:"https://www.corbettreport.com"},
+      {n:"Unlimited Hangout — Whitney Webb written investigations",       u:"https://unlimitedhangout.com"},
+      {n:"OffGuardian — media criticism & declassified research",         u:"https://off-guardian.org"},
+      {n:"The Intercept — investigative articles & leaked documents",     u:"https://theintercept.com"},
+      {n:"The Grayzone — written investigative journalism",               u:"https://thegrayzone.com"},
+      {n:"WantToKnow.info — 13,000+ archived news article summaries",    u:"https://www.wanttoknow.info"},
+      {n:"Matt Taibbi Substack — written investigative articles",        u:"https://taibbi.substack.com"},
+      {n:"Last American Vagabond — deep state written coverage",         u:"https://www.thelastamericanvagabond.com"},
+      {n:"Covert Action Magazine — written intelligence history",         u:"https://covertactionmagazine.com"},
+      {n:"Government Secrets Substack — William Arkin, national security",u:"https://governmentsecrets.substack.com"},
+      {n:"Zero Hedge — financial & geopolitical written analysis",       u:"https://www.zerohedge.com"},
+    ],
+  },
+
+  // ══ WRITTEN BLOGS — UAP, UFO & DISCLOSURE ════════════════════════════════
+  {
+    label:"Written Blogs — UAP, UFO & Disclosure",
+    type:"blog",
+    items:[
+      {n:"The Black Vault — 2M+ declassified pages & written case files", u:"https://www.theblackvault.com"},
+      {n:"Earthfiles — Linda Moulton Howe written investigative reports", u:"https://www.earthfiles.com"},
+      {n:"UFO Digest — written articles, photos & expert analysis",      u:"https://www.ufodigest.com"},
+      {n:"UFO Chronicles — written news, articles & historic cases",     u:"https://www.theufochronicles.com"},
+      {n:"Open Minds UFO — written news & investigative reports",        u:"https://www.openminds.tv"},
+      {n:"Singular Fortean Society — written paranormal journalism",     u:"https://www.singularfortean.com"},
+      {n:"The Anomalist — daily written review of unexplained phenomena", u:"https://www.anomalist.com"},
+      {n:"Skinwalker Ranch — official research & experiment log",        u:"https://skinwalker-ranch.com"},
+      {n:"MUFON — written sighting reports & case summaries",            u:"https://www.mufon.com"},
+    ],
+  },
+
+  // ══ WRITTEN BLOGS — BIBLICAL, NEPHILIM & GIANTS ══════════════════════════
+  {
+    label:"Written Blogs — Biblical, Nephilim & Giants",
+    type:"blog",
+    items:[
+      {n:"Dr. Michael Heiser — Naked Bible blog (peer-reviewed)",        u:"https://www.nakedbiblepodcast.com"},
+      {n:"Dr. Michael Heiser — PaleoBabble (ancient world debunking)",   u:"https://paleobabble.com"},
+      {n:"L.A. Marzulli — written Nephilim & UAP blog",                 u:"https://lamarzulli.net"},
+      {n:"Steve Quayle — written giants & ancient history articles",     u:"https://www.stevequayle.com"},
+      {n:"Gen6 Giants — Stephen Quayle Nephilim research",              u:"https://www.gen6giants.com"},
+      {n:"SkyWatch TV — Tom Horn written biblical research",            u:"https://skywatchtv.com"},
+      {n:"Koinonia House — Chuck Missler written biblical studies",     u:"https://www.khouse.org"},
+      {n:"Biblical Archaeology Society — peer-reviewed written articles",u:"https://www.biblicalarchaeology.org"},
+      {n:"Ancient Origins — written ancient history & archaeology",     u:"https://www.ancient-origins.net"},
+    ],
+  },
+
+  // ══ WRITTEN BLOGS — PARANORMAL & SUPERNATURAL ════════════════════════════
+  {
+    label:"Written Blogs — Paranormal & Supernatural",
+    type:"blog",
+    items:[
+      {n:"Phantoms & Monsters — written encounter reports (Lon Strickler)",u:"https://www.phantomsandmonsters.com"},
+      {n:"Mysterious Universe — written paranormal & strange world articles",u:"https://mysteriousuniverse.org"},
+      {n:"Fortean Times — written journal of strange phenomena",         u:"https://www.forteantimes.com"},
+      {n:"Higgypop — written paranormal news & occult articles",         u:"https://www.higgypop.com"},
+      {n:"Curious Archive — written deep dives into paranormal history", u:"https://www.curiousarchive.com"},
+      {n:"Ghost Research Society — written research",                    u:"https://www.ghostresearch.org"},
+      {n:"Society for Psychical Research — written research papers (UK)",u:"https://www.spr.ac.uk"},
+      {n:"Rhine Research Center — parapsychology studies",              u:"https://www.rhine.org"},
+      {n:"IANDS — near-death experience research archive",              u:"https://iands.org"},
+    ],
+  },
+
+  // ══ VIDEO CHANNELS — CONSCIOUSNESS, DNA, FREQUENCY & MATRIX ══════════════
+  {
+    label:"Video Channels — Consciousness, DNA, Frequency & The Matrix",
     type:"podcast",
     items:[
-      {n:"The Why Files",                                 u:"https://www.youtube.com/@TheWhyFiles"},
-      {n:"UnchartedX — Ben van Kerkwyk",                  u:"https://www.youtube.com/@UnchartedX1"},
-      {n:"Into the Impossible",                           u:"https://www.youtube.com/@IntotheImpossiblePodcast"},
-      {n:"Truthstream Media",                             u:"https://www.youtube.com/@TruthstreamMedia"},
-      {n:"After Skool",                                   u:"https://www.youtube.com/@AfterSkool"},
-      {n:"Leak Project",                                  u:"https://www.youtube.com/@LeakProject"},
-      {n:"Robert Sepehr",                                 u:"https://www.youtube.com/@RobertSepehr"},
-      {n:"Randall Carlson — Kosmographia",                u:"https://www.youtube.com/@RandallCarlson"},
-      {n:"Gregg Braden Official",                         u:"https://www.youtube.com/@GreggBradenOfficial"},
-      {n:"Billy Carson 4biddenknowledge",                 u:"https://www.youtube.com/@4biddenknowledge"},
-      {n:"Dr. Michael Salla — Exopolitics",               u:"https://www.youtube.com/@ExopoliticsTV"},
-      {n:"Suspicious Observers",                          u:"https://www.youtube.com/@SuspiciousObservers"},
-      {n:"Edge of Wonder",                                u:"https://www.youtube.com/@EdgeofWonder"},
-      {n:"Dr. Michael Heiser — YouTube",                  u:"https://www.youtube.com/@DrMichaelSHeiser"},
-      {n:"Book of Enoch Documentary",                     u:"https://www.youtube.com/watch?v=q_CjAUoiVBk"},
-      {n:"Forbidden Archaeology — Michael Cremo",         u:"https://www.youtube.com/watch?v=OzDAnFMBvLc"},
-      {n:"Jeremy Corbell — UAP Documentary",              u:"https://www.youtube.com/@JeremyCorbell"},
-      {n:"James Fox — UAP Films",                         u:"https://www.youtube.com/@jamesfoxfilms"},
+      {n:"Bruce Lipton — YouTube (epigenetics & Biology of Belief)",     u:"https://www.youtube.com/@BruceLipton"},
+      {n:"Gregg Braden — YouTube (frequency, DNA & ancient wisdom)",     u:"https://www.youtube.com/@GreggBradenOfficial"},
+      {n:"Dolores Cannon — YouTube archive (QHHT & past life research)", u:"https://www.youtube.com/results?search_query=Dolores+Cannon+QHHT"},
+      {n:"HeartMath Institute — YouTube (heart coherence research)",     u:"https://www.youtube.com/@HeartMathInstitute"},
+      {n:"Drunvalo Melchizedek — Flower of Life & Merkaba",             u:"https://www.youtube.com/results?search_query=Drunvalo+Melchizedek"},
+      {n:"Dean Radin — Consciousness & PSI science",                    u:"https://www.youtube.com/results?search_query=Dean+Radin+consciousness"},
+      {n:"Cymatics — Sound & Frequency Visualized",                     u:"https://www.youtube.com/results?search_query=cymatics+frequency"},
+      {n:"Into the Impossible — Dr. Haisch, frontier science",          u:"https://www.youtube.com/@IntotheImpossiblePodcast"},
+      {n:"After Skool — illustrated consciousness & hidden knowledge",   u:"https://www.youtube.com/@AfterSkool"},
+      {n:"Gaia — consciousness, UAP & spirituality platform",           u:"https://www.gaia.com"},
     ],
   },
-  // ── ARCHIVES & PRIMARY DOCUMENTS ─────────────────────────────────────────
+
+  // ══ VIDEO CHANNELS — ANCIENT HISTORY, TABLETS & FORBIDDEN SCIENCE ════════
   {
-    label:"Archives & Primary Documents",
+    label:"Video Channels — Ancient History, Tablets & Forbidden Science",
+    type:"podcast",
+    items:[
+      {n:"Billy Carson — 4biddenknowledge YouTube",                      u:"https://www.youtube.com/@4biddenknowledge"},
+      {n:"The Why Files — researched video deep dives",                  u:"https://www.youtube.com/@TheWhyFiles"},
+      {n:"UnchartedX — ancient stonework field research",                u:"https://www.youtube.com/@UnchartedX1"},
+      {n:"Randall Carlson — Kosmographia, catastrophism & history",      u:"https://www.youtube.com/@RandallCarlson"},
+      {n:"Robert Sepehr — anthropology & hidden history",               u:"https://www.youtube.com/@RobertSepehr"},
+      {n:"Truthstream Media — deep research video essays",               u:"https://www.youtube.com/@TruthstreamMedia"},
+      {n:"Dr. Michael Heiser — biblical & Nephilim lectures",           u:"https://www.youtube.com/@DrMichaelSHeiser"},
+      {n:"Book of Enoch Documentary (Stephen Quayle)",                  u:"https://www.youtube.com/watch?v=q_CjAUoiVBk"},
+      {n:"Forbidden Archaeology — Michael Cremo documentary",           u:"https://www.youtube.com/watch?v=OzDAnFMBvLc"},
+      {n:"Jason Martell — Ancient technology & Anunnaki",               u:"https://www.youtube.com/@jasonmartell4"},
+    ],
+  },
+
+  // ══ VIDEO CHANNELS — UAP, UFO & DISCLOSURE ════════════════════════════════
+  {
+    label:"Video Channels — UAP, UFO & Disclosure",
+    type:"podcast",
+    items:[
+      {n:"Jeremy Corbell — UAP documentary filmmaker",                   u:"https://www.youtube.com/@JeremyCorbell"},
+      {n:"James Fox — The Phenomenon documentary",                       u:"https://www.youtube.com/@jamesfoxfilms"},
+      {n:"Dr. Steven Greer — CSETI & Disclosure Project",               u:"https://www.youtube.com/@StevenGreer"},
+      {n:"Dr. Michael Salla — Exopolitics",                              u:"https://www.youtube.com/@ExopoliticsTV"},
+      {n:"Richard Dolan — UAP history & analysis",                      u:"https://www.youtube.com/@RichardDolanTV"},
+      {n:"Leak Project — UAP & hidden knowledge",                        u:"https://www.youtube.com/@LeakProject"},
+      {n:"Edge of Wonder — UAP & paranormal",                           u:"https://www.youtube.com/@EdgeofWonder"},
+      {n:"Suspicious Observers — Earth & space anomalies",              u:"https://www.youtube.com/@SuspiciousObservers"},
+    ],
+  },
+
+  // ══ VIDEO CHANNELS — PARANORMAL, MEDIUMS & SUPERNATURAL ══════════════════
+  {
+    label:"Video Channels — Paranormal, Mediums & Supernatural",
+    type:"podcast",
+    items:[
+      {n:"James Van Praagh — medium & consciousness",                    u:"https://www.youtube.com/@vanpraaghdotcom"},
+      {n:"John Edward — psychic medium channel",                        u:"https://www.youtube.com/@JohnEdwardPsychicMedium"},
+      {n:"Tyler Henry — Hollywood Medium",                               u:"https://www.youtube.com/@TylerHenry"},
+      {n:"The Monroe Institute — consciousness & OBE",                   u:"https://www.youtube.com/@TheMonroeInstitute"},
+      {n:"Institute of Noetic Sciences — science of consciousness",     u:"https://www.youtube.com/@instituteofnoeticsciences"},
+      {n:"Adam Curtis BBC Documentaries — free online",                 u:"https://www.youtube.com/results?search_query=Adam+Curtis+documentary"},
+      {n:"The Century of the Self (free, Adam Curtis)",                 u:"https://www.youtube.com/watch?v=eJ3RzGoQC4s"},
+      {n:"HyperNormalisation (free, Adam Curtis)",                      u:"https://www.youtube.com/watch?v=oJLqyuxm96k"},
+    ],
+  },
+
+  // ══ FREE PDFS, PAPERS & ONLINE TEXTS ══════════════════════════════════════
+  {
+    label:"Free PDFs, Papers & Online Texts",
     type:"archive",
     items:[
-      {n:"National Security Archive",                     u:"https://nsarchive.gwu.edu"},
-      {n:"CIA Reading Room — Declassified",               u:"https://www.cia.gov/readingroom"},
-      {n:"FBI Vault — Declassified Files",                u:"https://vault.fbi.gov"},
-      {n:"FOIA.gov — U.S. Government",                    u:"https://www.foia.gov"},
-      {n:"WikiLeaks",                                     u:"https://wikileaks.org"},
-      {n:"MuckRock — FOIA Request Platform",              u:"https://www.muckrock.com"},
-      {n:"DocumentCloud",                                 u:"https://www.documentcloud.org"},
-      {n:"Dead Sea Scrolls Digital Library",              u:"https://www.deadseascrolls.org.il"},
-      {n:"Vatican Apostolic Archive",                     u:"https://www.archivioapostolicovaticano.va"},
-      {n:"Sacred Texts Archive (free)",                   u:"https://www.sacred-texts.com"},
-      {n:"Internet Archive / Wayback Machine",            u:"https://archive.org"},
-      {n:"Newspaper Archive — Historical",                u:"https://newspaperarchive.com"},
-      {n:"The Black Vault — UAP Documents",               u:"https://www.theblackvault.com"},
-      {n:"Sumerian Literature — Oxford (ETCSL)",          u:"https://etcsl.orinst.ox.ac.uk"},
+      {n:"Wes Penre Papers — All 5 Levels FREE PDF download",           u:"https://wespenre.com/category/level-1-5-in-pdf/"},
+      {n:"Emerald Tablets of Thoth — Full Text FREE",                   u:"https://www.sacred-texts.com/egy/tet/index.htm"},
+      {n:"The Kybalion — Hermetic Principles FREE",                     u:"https://www.sacred-texts.com/eso/kyb/index.htm"},
+      {n:"Book of Enoch — Full Text FREE",                              u:"https://www.sacred-texts.com/bib/boe/"},
+      {n:"Gospel of Thomas — Full Text FREE",                           u:"https://www.sacred-texts.com/chr/thomas.htm"},
+      {n:"Dead Sea Scrolls — Digital Library FREE",                     u:"https://www.deadseascrolls.org.il"},
+      {n:"Simulation Argument — Nick Bostrom original paper FREE PDF",  u:"https://www.simulation-argument.com/simulation.pdf"},
+      {n:"CIA Gateway Process — declassified consciousness PDF",        u:"https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-3.pdf"},
+      {n:"CIA Stargate Files — remote viewing declassified",            u:"https://www.cia.gov/readingroom/collection/stargate"},
+      {n:"Project Blue Book Archive — declassified UFO files",         u:"https://www.fold3.com/title/44/project-blue-book"},
+      {n:"ETCSL Oxford — Sumerian Literature FREE",                     u:"https://etcsl.orinst.ox.ac.uk"},
+      {n:"Sacred Texts Archive — all ancient texts FREE",               u:"https://www.sacred-texts.com"},
+      {n:"Internet Archive — millions of free books, papers & docs",   u:"https://archive.org"},
+      {n:"Project Gutenberg — 70,000 free ebooks including apocrypha", u:"https://www.gutenberg.org"},
+      {n:"National Security Archive — declassified document library",  u:"https://nsarchive.gwu.edu"},
+      {n:"FBI Vault — declassified FBI investigation files",           u:"https://vault.fbi.gov"},
+      {n:"CIA Reading Room — official declassified files",             u:"https://www.cia.gov/readingroom"},
     ],
   },
-  // ── SCIENCE & FORBIDDEN RESEARCH ─────────────────────────────────────────
+
+  // ══ FACEBOOK GROUPS — ACTIVE RESEARCH COMMUNITIES ════════════════════════
   {
-    label:"Science & Forbidden Research",
-    type:"research",
+    label:"Facebook Groups — Active Research Communities",
+    type:"user",
     items:[
-      {n:"Dr. Avi Loeb — Harvard Galileo Project",        u:"https://projects.iq.harvard.edu/galileo"},
-      {n:"AE911Truth — WTC Engineering Study",            u:"https://www.ae911truth.org"},
-      {n:"Global Research — Michel Chossudovsky",         u:"https://www.globalresearch.ca"},
-      {n:"Whale & Dolphin Conservation",                  u:"https://us.whales.org"},
-      {n:"Cetacean Society International",                u:"https://csiwhalesalive.org"},
-      {n:"IWC — International Cetacean Research",         u:"https://iwc.int"},
-      {n:"Michael Cremo — Forbidden Archaeology",         u:"https://www.mcremo.com"},
-      {n:"Electric Universe / Thunderbolts",              u:"https://www.thunderbolts.info"},
-      {n:"Kimmela Center — Dr. Lori Marino",              u:"https://www.kimmela.org"},
-      {n:"NOAA Ocean Explorer",                           u:"https://oceanexplorer.noaa.gov"},
-      {n:"Robert Schoch — Sphinx Geology",                u:"https://www.robertschoch.com"},
-      {n:"Brien Foerster — Elongated Skulls",             u:"https://brienfoerster.com"},
-      {n:"Institute of Noetic Sciences (IONS)",           u:"https://noetic.org"},
+      {n:"Ancient Aliens & UFOs (Facebook Group)",                      u:"https://www.facebook.com/groups/AncientAliensUFOs"},
+      {n:"4biddenknowledge — Billy Carson Community",                   u:"https://www.facebook.com/4biddenknowledge"},
+      {n:"Dolores Cannon — QHHT Community Group",                       u:"https://www.facebook.com/groups/dolorescannon"},
+      {n:"Nephilim & Giants Research Group (Facebook)",                 u:"https://www.facebook.com/groups/281886105961506"},
+      {n:"UAP Disclosure — UFO Research Community",                     u:"https://www.facebook.com/groups/uapdisclosure"},
+      {n:"David Icke Forum Community Page",                             u:"https://www.facebook.com/davidicke"},
+      {n:"Graham Hancock — Official Page",                              u:"https://www.facebook.com/Author.GrahamHancock"},
+      {n:"Wes Penre Papers Community",                                  u:"https://www.facebook.com/groups/wespenrepapers"},
+      {n:"Emerald Tablets & Thoth Research",                            u:"https://www.facebook.com/groups/emeraldtablets"},
+      {n:"Ancient Sumerian & Anunnaki Research",                        u:"https://www.facebook.com/groups/anunnaki.research"},
+      {n:"Forbidden Archaeology & Alternative History",                 u:"https://www.facebook.com/groups/forbiddenarchaeology"},
+      {n:"Conspiracy Research Network",                                 u:"https://www.facebook.com/groups/conspiracyresearch"},
+      {n:"Paranormal Research & Investigations",                        u:"https://www.facebook.com/groups/paranormalresearch"},
+      {n:"Book of Enoch Studies Group",                                 u:"https://www.facebook.com/groups/bookofenoch"},
+      {n:"Simulation Theory — Are We Living in a Matrix?",             u:"https://www.facebook.com/groups/simulationtheory"},
+      {n:"DNA, Epigenetics & Consciousness Research",                   u:"https://www.facebook.com/groups/epigenetics.consciousness"},
+      {n:"Bruce Lipton — Biology of Belief Community",                  u:"https://www.facebook.com/BruceLifton"},
+      {n:"Gregg Braden — Science & Spirituality Community",            u:"https://www.facebook.com/greggbradenofficial"},
     ],
   },
-  // ── PODCASTS & AUDIO ─────────────────────────────────────────────────────
+
+  // ══ PODCASTS & AUDIO — WITH WRITTEN ARCHIVES ══════════════════════════════
   {
-    label:"Podcasts & Audio",
+    label:"Podcasts & Audio (with written show notes)",
     type:"podcast",
     items:[
-      {n:"The Corbett Report Podcast",                    u:"https://www.corbettreport.com/podcasts/"},
-      {n:"Stuff They Don't Want You to Know",             u:"https://www.iheart.com/podcast/182-stuff-they-dont-want-you-17913675/"},
-      {n:"Ground Zero — Clyde Lewis",                     u:"https://groundzeromedia.org"},
-      {n:"Coast to Coast AM",                             u:"https://www.coasttocoastam.com"},
-      {n:"The Higherside Chats",                          u:"https://www.thehighersidechats.com"},
-      {n:"Fade to Black — Jimmy Church Radio",            u:"https://jimmychurchradio.com"},
-      {n:"Open Minds UFO Radio",                          u:"https://www.openminds.tv/radio"},
-      {n:"Naked Bible Podcast — Dr. Heiser",              u:"https://www.nakedbiblepodcast.com"},
-      {n:"Witness Testimony — Tim Alberino",              u:"https://www.gensix.com"},
-      {n:"Mysteries of the Bible (BAS)",                  u:"https://www.biblicalarchaeology.org/podcasts/"},
-      {n:"Waking Up — Sam Harris",                        u:"https://www.samharris.org/podcasts"},
-      {n:"Conspirituality",                               u:"https://conspirituality.net"},
-      {n:"Tin Foil Hat — Sam Tripoli",                    u:"https://www.samtripoli.com"},
-      {n:"Richard Dolan Show",                            u:"https://richarddolanmembers.com"},
+      {n:"The Corbett Report Podcast — full transcripts",               u:"https://www.corbettreport.com/podcasts/"},
+      {n:"Naked Bible Podcast — Dr. Heiser with written notes",        u:"https://www.nakedbiblepodcast.com"},
+      {n:"Witness Testimony — Tim Alberino, Enoch & Giants series",    u:"https://www.gensix.com"},
+      {n:"Coast to Coast AM — written archive & show notes",           u:"https://www.coasttocoastam.com"},
+      {n:"The Higherside Chats — written guest summaries",             u:"https://www.thehighersidechats.com"},
+      {n:"Ground Zero — Clyde Lewis articles & show archive",         u:"https://groundzeromedia.org"},
+      {n:"Mysteries of the Bible (Biblical Archaeology Society)",      u:"https://www.biblicalarchaeology.org/podcasts/"},
+      {n:"Waking Up — Sam Harris, consciousness & science",           u:"https://www.samharris.org/podcasts"},
+      {n:"Fade to Black — Jimmy Church Radio UAP archive",            u:"https://jimmychurchradio.com"},
+      {n:"Stuff They Don\'t Want You to Know — written episode notes",  u:"https://www.iheart.com/podcast/182-stuff-they-dont-want-you-17913675/"},
+      {n:"Earth Ancients — ancient history & Emerald Tablets podcast", u:"https://earthancients.net"},
+    ],
+  },
+
+  // ══ SUMERIAN TEXTS — ADAPA, ANKI, ENLIL & ANUNNAKI ═══════════════════════
+  {
+    label:"Sumerian Texts — Adapa, Anki, Enlil & Anunnaki",
+    type:"archive",
+    items:[
+      {n:"Myth of Adapa — Full Text FREE (Sacred Texts)",           u:"https://sacred-texts.com/ane/adapa.htm"},
+      {n:"Adapa & the South Wind — Full Translation PDF",           u:"https://jimgetz.org/wp-content/uploads/2008/06/adapa.pdf"},
+      {n:"ETCSL Oxford — Complete Sumerian Literature FREE",        u:"https://etcsl.orinst.ox.ac.uk"},
+      {n:"Myth of Adapa — World History Encyclopedia",             u:"https://www.worldhistory.org/article/216/the-myth-of-adapa/"},
+      {n:"Anunnaki — Ancient Origins written research",             u:"https://www.ancient-origins.net"},
+      {n:"Sitchin.com — Official Anunnaki & 12th Planet archive",  u:"https://sitchin.com"},
+      {n:"Sumer Fandom — Adapa, Enlil, An mythology database",     u:"https://sumer.fandom.com"},
+      {n:"Founder Hypothesis — Sumerian myth translations",        u:"https://founder-hypothesis.com/en/sumerian-mythology/"},
+    ],
+  },
+
+  // ══ CHRONOVISOR, TIME TRAVEL & VATICAN SECRETS ════════════════════════════
+  {
+    label:"Chronovisor, Time Travel & Vatican Secrets",
+    type:"research",
+    items:[
+      {n:"Project Unredacted — Chronovisor: Vatican Time Machine",  u:"https://www.projectunredacted.com/cases/chronovisor-vatican-time-machine"},
+      {n:"Ancient Origins — Chronovisor: Vatican Time Device",      u:"https://www.ancient-origins.net/news-science-space/chronovisor-vatican-time-machine-00102422"},
+      {n:"All That's Interesting — Legend of the Chronovisor",      u:"https://allthatsinteresting.com/chronovisor"},
+      {n:"Gaia — Vatican Chronovisor Time Travel Device",           u:"https://www.gaia.com/article/the-chronovisor-the-vaticans-mysterious-time-travel-device"},
+      {n:"Historic Mysteries — Vatican Chronovisor article",        u:"https://www.historicmysteries.com/unexplained-mysteries/vatican-chronovisor/29300/"},
+      {n:"Vatican Apostolic Archive — Official site",               u:"https://www.archivioapostolicovaticano.va"},
+      {n:"Discovery UK — The Chronovisor: Truth Behind the Time Machine", u:"https://www.discoveryuk.com/mysteries/the-chronovisor-the-truth-behind-this-secret-time-machine/"},
+    ],
+  },
+
+  // ══ SEDONA VORTEX & ELECTROMAGNETIC RESEARCH ══════════════════════════════
+  {
+    label:"Sedona Vortex, Electromagnetic & Earth Energy",
+    type:"research",
+    items:[
+      {n:"Sedona Anomalies — Benjamin Lonetree magnetic field research", u:"https://sedonanomalies.com"},
+      {n:"Visit Sedona — Official Vortex Guide",                    u:"https://visitsedona.com/spiritual-wellness/what-is-a-vortex/"},
+      {n:"Sedona Vortex Adventures — Seven Vortex Sites",          u:"https://sedonavortexsites.com"},
+      {n:"Free Soul Foundation — Pete Sanders MIT vortex research", u:"https://freesoul.net"},
+      {n:"Sedona Metaphysical Spiritual Association",               u:"https://www.sedonaspiritual.com"},
+      {n:"HeartMath Institute — Heart electromagnetic research",     u:"https://www.heartmath.org/research/"},
+      {n:"Schumann Resonance — Earth electromagnetic frequency",    u:"https://www.spaceweatherlive.com/en/solar-activity/schumann-resonance.html"},
+      {n:"NOAA Geomagnetic Research — Earth field data",           u:"https://www.ngdc.noaa.gov/geomag/"},
+    ],
+  },
+
+  // ══ DNA, FREQUENCY, EPIGENETICS & CONSCIOUSNESS ═══════════════════════════
+  {
+    label:"DNA, Frequency, Epigenetics & Consciousness",
+    type:"research",
+    items:[
+      {n:"George Church Lab Harvard — DNA, CRISPR, synthetic biology", u:"https://arep.med.harvard.edu"},
+      {n:"Personal Genome Project — George Church",                 u:"https://www.personalgenomes.org"},
+      {n:"Regenesis — George Church book (Hachette)",              u:"https://www.hachettebookgroup.com/titles/george-m-church/regenesis/9780465038657/"},
+      {n:"Bruce Lipton — Epigenetics & Biology of Belief",         u:"https://www.brucelipton.com"},
+      {n:"Gregg Braden — God Code, DNA & Frequency research",      u:"https://www.greggbraden.com"},
+      {n:"HeartMath Institute — Heart-brain electromagnetic research",u:"https://www.heartmath.org/research/"},
+      {n:"Dean Radin — Consciousness & PSI research",              u:"https://www.deanradin.com"},
+      {n:"Cymatics.org — Sound, frequency & matter",               u:"https://www.cymatics.org"},
+      {n:"Masaru Emoto — Water Memory official archive",           u:"https://www.masaru-emoto.net/en/"},
+      {n:"CIA Gateway Process — Declassified consciousness PDF",   u:"https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-3.pdf"},
+      {n:"NIH PubMed — Epigenetics peer-reviewed papers",          u:"https://pubmed.ncbi.nlm.nih.gov/?term=epigenetics"},
+    ],
+  },
+
+  // ══ MARY MAGDALENE, EMERALD TABLETS & HIDDEN TEXTS ════════════════════════
+  {
+    label:"Mary Magdalene, Emerald Tablets & Hidden Gnostic Texts",
+    type:"archive",
+    items:[
+      {n:"Gospel of Mary Magdalene — Full Text FREE",              u:"https://gnosis.org/library/marygosp.htm"},
+      {n:"Gnostic Society Library — All Nag Hammadi texts FREE",   u:"https://gnosis.org/naghamm/nhl.html"},
+      {n:"Emerald Tablets of Thoth — Full Text FREE",             u:"https://www.sacred-texts.com/egy/tet/index.htm"},
+      {n:"4biddenknowledge — Billy Carson Emerald Tablets articles",u:"https://www.4biddenknowledge.com/blog"},
+      {n:"The Kybalion — Full Hermetic Text FREE",                u:"https://www.sacred-texts.com/eso/kyb/index.htm"},
+      {n:"Gnosis Archive — All Gnostic & Apocryphal texts FREE",  u:"https://gnosis.org"},
+      {n:"Elaine Pagels — Gospel of Thomas (PBS Frontline)",      u:"https://www.pbs.org/wgbh/pages/frontline/shows/religion/maps/primary/thomas.html"},
+      {n:"Meggan Watterson — Mary Magdalene research",            u:"https://www.megganwatterson.com"},
+      {n:"World History Encyclopedia — Thoth & Hermes",          u:"https://www.worldhistory.org/thoth/"},
+    ],
+  },
+
+  // ══ GOLDILOCKS ZONE, SIMULATION & REALITY ════════════════════════════════
+  {
+    label:"Goldilocks Zone, Simulation Theory & Reality Research",
+    type:"research",
+    items:[
+      {n:"NASA — Goldilocks Zone habitable exoplanet research",    u:"https://exoplanets.nasa.gov/search-for-life/goldilocks/"},
+      {n:"SETI Institute — Search for extraterrestrial intelligence",u:"https://www.seti.org"},
+      {n:"Nick Bostrom — Simulation Argument paper FREE PDF",     u:"https://www.simulation-argument.com/simulation.pdf"},
+      {n:"Rizwan Virk — Simulation Theory research",             u:"https://www.zenentrepreneur.com"},
+      {n:"Tom Campbell — My Big TOE (Theory of Everything)",     u:"https://www.my-big-toe.com"},
+      {n:"Institute of Noetic Sciences — Consciousness & reality",u:"https://noetic.org/research/"},
+      {n:"Monroe Institute — OBE & consciousness beyond body",   u:"https://www.monroeinstitute.org"},
     ],
   },
 ];
 
 
-export const PRIVACY_POLICY = `PRIVACY POLICY — THE NEXUS
-thenexusapp.com | Effective: ${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
+export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE — THE NEXUS
+thenexusapp.com | Effective: \${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
 
-This platform requires no account and no login. By default, no personal information is collected from visitors.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. WHO WE ARE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The Nexus is an independent investigative research platform. We aggregate public records, declassified documents, investigative journalism, and community-submitted research for independent educational use. Not affiliated with any government, intelligence agency, political organization, or media company.
 
-WHAT WE COLLECT
-• No email, no passwords, no personal data required to browse
-• Community posts you voluntarily submit are stored publicly on the platform
-• Payments handled entirely by Stripe — we never see your card details
-• Reddit integration uses Reddit's public API — no Reddit user data collected by us
-• AI queries processed by Anthropic — see anthropic.com/privacy
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. WHAT WE COLLECT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• NO account required to browse. No email, no passwords, no personal data collected by default.
+• Community posts you submit are stored publicly on the platform and visible to all users.
+• Payments are handled entirely by Stripe. We never see, store, or process your card details.
+• Reddit integration uses Reddit's public API only. No Reddit user data is collected by us.
+• AI Analysis queries are processed by Anthropic's API. See anthropic.com/privacy.
+• We do not use cookies for tracking, advertising, or behavioral profiling.
 
-WHAT WE DO NOT DO
-• We do not sell your data. Ever.
-• We do not use advertising cookies or tracking pixels
-• We do not require account creation to browse
-• We do not store passwords
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. WHAT WE DO NOT DO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• We do NOT sell, rent, or share any user data. Ever.
+• We do NOT use advertising networks, tracking pixels, or behavioral analytics.
+• We do NOT require account creation to browse free content.
+• We do NOT store payment card details of any kind.
+• We do NOT collect data on minors. This platform is for adults 18+ only.
 
-YOUR RIGHTS
-You may request deletion of any community content you submitted at any time.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. TERMS OF USE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• This platform is for ADULTS aged 18 and older only.
+• All content is for independent research and educational purposes only.
+• The Nexus does not endorse, verify, or take editorial positions on any record or claim.
+• Community posts must be based on publicly available information. Users confirm no copyright violations.
+• Paid subscribers agree to Stripe's Terms of Service for payment processing.
+• We reserve the right to remove community posts that violate these terms without notice.
+• By using this platform you agree to these terms.
 
-This platform is for adults aged 18 and older only. Not affiliated with any government, intelligence agency, political organization, or media company.`;
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. INTELLECTUAL PROPERTY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• All source links point to original external sources. The Nexus does not reproduce copyrighted material.
+• Community posts remain the intellectual property of their authors.
+• The Nexus platform design, code, and original text are proprietary.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. YOUR RIGHTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• You may request deletion of any community content you submitted at any time.
+• You may cancel your paid subscription at any time through the Stripe customer portal.
+• No personal data is stored by us beyond your community posts.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. DISCLAIMER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The Nexus presents records, documents, and community research for independent examination. Inclusion of any record does not constitute endorsement. Users are encouraged to verify all claims independently. This platform is not a news organization, legal authority, or medical service.`;
