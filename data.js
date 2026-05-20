@@ -72,19 +72,32 @@ export const getType = t => TYPE_COLORS[t] || TYPE_COLORS.user;
 
 // ─── REDDIT SUBREDDITS ────────────────────────────────────────────────────────
 export const REDDIT_SUBS = [
-  { name:"r/conspiracy",          url:"https://www.reddit.com/r/conspiracy",          color:"#ff6314", desc:"2.4M members" },
-  { name:"r/UFOs",                url:"https://www.reddit.com/r/UFOs",                color:"#4488ff", desc:"UAP & disclosure" },
-  { name:"r/HighStrangeness",     url:"https://www.reddit.com/r/HighStrangeness",     color:"#9944cc", desc:"Paranormal & unexplained" },
-  { name:"r/conspiracytheories",  url:"https://www.reddit.com/r/conspiracytheories",  color:"#e04444", desc:"Theory & debate" },
-  { name:"r/UnresolvedMysteries", url:"https://www.reddit.com/r/UnresolvedMysteries", color:"#44aaff", desc:"Cold cases" },
-  { name:"r/AlternativeHistory",  url:"https://www.reddit.com/r/AlternativeHistory",  color:"#88aa44", desc:"Suppressed history" },
-  { name:"r/Giants",              url:"https://www.reddit.com/r/Giants",              color:"#aa6622", desc:"Giants & Nephilim" },
-  { name:"r/biblestudy",          url:"https://www.reddit.com/r/biblestudy",          color:"#ddaa44", desc:"Biblical research" },
-  { name:"r/Dolphins",            url:"https://www.reddit.com/r/Dolphins",            color:"#44aacc", desc:"Dolphin intelligence" },
-  { name:"r/ForbiddenScience",    url:"https://www.reddit.com/r/forbiddenscience",    color:"#cc44aa", desc:"Suppressed research" },
-  { name:"r/Paranormal",          url:"https://www.reddit.com/r/Paranormal",          color:"#6644aa", desc:"Supernatural events" },
-  { name:"r/C_S_T",               url:"https://www.reddit.com/r/C_S_T",              color:"#ff4488", desc:"Critical speculative theory" },
+  {name:"r/conspiracy",          url:"https://www.reddit.com/r/conspiracy",          color:"#ff6314", desc:"1.9M members — alternative viewpoints"},
+  {name:"r/UFOs",                url:"https://www.reddit.com/r/UFOs",                color:"#4488ff", desc:"UAP & disclosure"},
+  {name:"r/HighStrangeness",     url:"https://www.reddit.com/r/HighStrangeness",     color:"#9944cc", desc:"Paranormal & unexplained"},
+  {name:"r/conspiracytheories",  url:"https://www.reddit.com/r/conspiracytheories",  color:"#e04444", desc:"Theory & debate"},
+  {name:"r/UnresolvedMysteries", url:"https://www.reddit.com/r/UnresolvedMysteries", color:"#44aaff", desc:"Cold cases & strange events"},
+  {name:"r/AlternativeHistory",  url:"https://www.reddit.com/r/AlternativeHistory",  color:"#88aa44", desc:"Suppressed history"},
+  {name:"r/Giants",              url:"https://www.reddit.com/r/Giants",              color:"#aa6622", desc:"Giants & Nephilim"},
+  {name:"r/biblestudy",          url:"https://www.reddit.com/r/biblestudy",          color:"#ddaa44", desc:"Biblical research"},
+  {name:"r/Dolphins",            url:"https://www.reddit.com/r/Dolphins",            color:"#44aacc", desc:"Dolphin intelligence"},
+  {name:"r/ForbiddenScience",    url:"https://www.reddit.com/r/forbiddenscience",    color:"#cc44aa", desc:"Suppressed research"},
+  {name:"r/Paranormal",          url:"https://www.reddit.com/r/Paranormal",          color:"#6644aa", desc:"Supernatural events"},
+  {name:"r/C_S_T",               url:"https://www.reddit.com/r/C_S_T",              color:"#ff4488", desc:"Critical speculative theory"},
+  {name:"r/ancientcivilizations",url:"https://www.reddit.com/r/ancientcivilizations",color:"#c8a020", desc:"Lost & advanced ancient cultures"},
+  {name:"r/AncientAliens",       url:"https://www.reddit.com/r/AncientAliens",       color:"#20c8a0", desc:"Ancient astronaut theory"},
+  {name:"r/GrahamHancock",       url:"https://www.reddit.com/r/GrahamHancock",       color:"#a0c820", desc:"Lost civilization research"},
+  {name:"r/Anunnaki",            url:"https://www.reddit.com/r/Anunnaki",            color:"#c8a080", desc:"Sumerian & Anunnaki research"},
+  {name:"r/SimulationTheory",    url:"https://www.reddit.com/r/SimulationTheory",    color:"#20a0c8", desc:"Are we in a simulation?"},
+  {name:"r/Missing411",          url:"https://www.reddit.com/r/Missing411",          color:"#c82020", desc:"David Paulides missing persons"},
+  {name:"r/FOIA",                url:"https://www.reddit.com/r/FOIA",               color:"#a020c8", desc:"Declassified documents"},
+  {name:"r/SkinWalkerRanch",     url:"https://www.reddit.com/r/SkinWalkerRanch",    color:"#20c880", desc:"Paranormal ranch research"},
+  {name:"r/consciousness",       url:"https://www.reddit.com/r/consciousness",       color:"#8020c8", desc:"Science of consciousness"},
+  {name:"r/UAP",                 url:"https://www.reddit.com/r/UAP",                color:"#2080c8", desc:"UAP evidence"},
+  {name:"r/RealXFiles",          url:"https://www.reddit.com/r/RealXFiles",          color:"#c88020", desc:"Real unexplained events"},
+  {name:"r/conspiracyfact",      url:"https://www.reddit.com/r/conspiracyfact",      color:"#20c840", desc:"Confirmed conspiracies"},
 ];
+
 
 // ─── SEED STORIES ─────────────────────────────────────────────────────────────
 export const SEED_STORIES = [
@@ -847,6 +860,166 @@ export const SOURCES = [
       {n:"Dr. Joe Dispenza — Meditation & brain frequency research",u:"https://drjoedispenza.com"},
       {n:"GreenMedInfo — Evidence-based natural medicine research", u:"https://greenmedinfo.com"},
       {n:"Global Consciousness Project — Princeton anomaly research",u:"https://noosphere.princeton.edu"},
+    ],
+  },
+
+  // ══ PODCASTS — CONSPIRACY, ANOMALOUS & HIDDEN KNOWLEDGE ══════════════════
+  {
+    label:"Podcasts — Conspiracy, Anomalous & Hidden Knowledge",
+    type:"podcast",
+    items:[
+      {n:"Stuff They Don't Want You to Know (iHeart) — 1,500+ episodes",u:"https://www.iheart.com/podcast/182-stuff-they-dont-want-you-17913675/"},
+      {n:"Conspiracy Theories (Spotify Parcast) — weekly deep dives",  u:"https://open.spotify.com/show/5RdShpOtxKO3ZWohR2M6Sv"},
+      {n:"The Why Files — researched mysteries & anomalous events",    u:"https://www.youtube.com/@TheWhyFiles"},
+      {n:"Tin Foil Hat with Sam Tripoli",                              u:"https://www.samtripoli.com"},
+      {n:"Those Conspiracy Guys — history, comedy & true crime",      u:"https://www.thoseconspiracyguys.com"},
+      {n:"The Corbett Report Podcast — full transcripts",             u:"https://www.corbettreport.com/podcasts/"},
+      {n:"Macrodosing with PFT Commenter & Arian Foster",             u:"https://open.spotify.com/show/6XCsTV7fJjQlaDkH8P3Bme"},
+      {n:"The Higherside Chats — Greg Carlwood interviews",           u:"https://www.thehighersidechats.com"},
+      {n:"Fade to Black — Jimmy Church Radio",                        u:"https://jimmychurchradio.com"},
+      {n:"Ground Zero with Clyde Lewis",                              u:"https://groundzeromedia.org"},
+      {n:"Coast to Coast AM — Art Bell/George Noory archive",         u:"https://www.coasttocoastam.com"},
+      {n:"Generation Why — true crime & conspiracies since 2012",     u:"https://generationwhypodcast.com"},
+      {n:"Mysterious Universe Podcast",                               u:"https://mysteriousuniverse.org/category/podcasts/"},
+      {n:"Blurry Creatures Podcast — paranormal & biblical mysteries",u:"https://www.blurrycreatures.com"},
+      {n:"Redacted with Clayton Morris",                              u:"https://www.redacted.inc"},
+      {n:"Geopolitics & Empire — Hrvoje Morić interviews",           u:"https://geopoliticsandempire.com"},
+      {n:"Unlimited Hangout Podcast — Whitney Webb",                 u:"https://unlimitedhangout.com"},
+      {n:"Dark Journalist — X series & secret space",                u:"https://www.darkjournalist.com"},
+      {n:"The Solari Report — Catherine Austin Fitts",               u:"https://home.solari.com"},
+      {n:"No Agenda — Adam Curry & John C. Dvorak media deconstruction",u:"https://www.noagendashow.net"},
+    ],
+  },
+
+  // ══ PEER-REVIEWED & ACADEMIC JOURNALS (ANOMALOUS RESEARCH) ═══════════════
+  {
+    label:"Peer-Reviewed Journals — Anomalous & Suppressed Research",
+    type:"research",
+    items:[
+      {n:"Journal of Scientific Exploration (Society for Scientific Exploration)", u:"https://journalofscientificexploration.org"},
+      {n:"Journal of Anomalous Experience & Cognition (JAEX) — open access",u:"https://journals.lub.lu.se/jaex"},
+      {n:"Journal of Parapsychology — Rhine Research Center",         u:"https://www.rhine.org/what-we-do/journal-of-parapsychology.html"},
+      {n:"Journal of Near-Death Studies — IANDS",                    u:"https://iands.org/research/publications/journal-of-near-death-studies.html"},
+      {n:"Explore: Journal of Science & Healing",                    u:"https://www.explorejournal.com"},
+      {n:"Fortean Studies — academic Fortean research journal",      u:"https://www.forteantimes.com"},
+      {n:"Medical Hypotheses — Elsevier (unconventional medical ideas)",u:"https://www.sciencedirect.com/journal/medical-hypotheses"},
+      {n:"NeuroQuantology — consciousness & quantum research",       u:"https://www.neuroquantology.com"},
+      {n:"Nexus Magazine — UFO, fringe science & conspiracy",        u:"https://www.nexusmagazine.com"},
+      {n:"Fate Magazine — strange and unknown phenomena since 1948", u:"https://www.fatemagazine.com"},
+      {n:"Lobster Magazine — parapolitics research (UK)",            u:"https://www.lobster-magazine.co.uk"},
+      {n:"Skeptic Magazine — critical examination of claims",        u:"https://www.skeptic.com/reading_room/"},
+    ],
+  },
+
+  // ══ REDDIT COMMUNITIES — FULL EXPANDED LIST ═══════════════════════════════
+  {
+    label:"Reddit Communities — Full Expanded List",
+    type:"user",
+    items:[
+      // Core conspiracy & anomalous
+      {n:"r/conspiracy — 1.9M members, alternative viewpoints",      u:"https://www.reddit.com/r/conspiracy"},
+      {n:"r/conspiracytheories — theory & debate",                   u:"https://www.reddit.com/r/conspiracytheories"},
+      {n:"r/C_S_T — Critical Speculative Theory",                    u:"https://www.reddit.com/r/C_S_T"},
+      {n:"r/conspiracyfact — documented & confirmed conspiracies",   u:"https://www.reddit.com/r/conspiracyfact"},
+      {n:"r/conspiracyNOPOL — no politics conspiracy focus",         u:"https://www.reddit.com/r/conspiracyNOPOL"},
+      // UAP & paranormal
+      {n:"r/UFOs — UAP sightings, disclosure & evidence",            u:"https://www.reddit.com/r/UFOs"},
+      {n:"r/HighStrangeness — paranormal & unexplained",             u:"https://www.reddit.com/r/HighStrangeness"},
+      {n:"r/Paranormal — supernatural encounters",                   u:"https://www.reddit.com/r/Paranormal"},
+      {n:"r/UAP — unidentified aerial phenomena",                    u:"https://www.reddit.com/r/UAP"},
+      {n:"r/aliens — extraterrestrial life & contact",               u:"https://www.reddit.com/r/aliens"},
+      {n:"r/SkinWalkerRanch — paranormal ranch research",            u:"https://www.reddit.com/r/SkinWalkerRanch"},
+      // Ancient history & alternative
+      {n:"r/AlternativeHistory — suppressed & disputed history",     u:"https://www.reddit.com/r/AlternativeHistory"},
+      {n:"r/AncientAliens — ancient astronaut theory",               u:"https://www.reddit.com/r/AncientAliens"},
+      {n:"r/ancientcivilizations — lost & advanced ancient cultures",u:"https://www.reddit.com/r/ancientcivilizations"},
+      {n:"r/GrahamHancock — lost civilization research",             u:"https://www.reddit.com/r/GrahamHancock"},
+      {n:"r/Anunnaki — Sumerian & Anunnaki research",               u:"https://www.reddit.com/r/Anunnaki"},
+      // Biblical & giants
+      {n:"r/Giants — Nephilim & giant beings",                       u:"https://www.reddit.com/r/Giants"},
+      {n:"r/biblestudy — biblical research & interpretation",        u:"https://www.reddit.com/r/biblestudy"},
+      {n:"r/Christianity — biblical & theological discussion",       u:"https://www.reddit.com/r/Christianity"},
+      {n:"r/bibleprophecy — end times & prophecy research",         u:"https://www.reddit.com/r/bibleprophecy"},
+      // Science & health
+      {n:"r/Lyme — Lyme disease research & patient community",       u:"https://www.reddit.com/r/Lyme"},
+      {n:"r/VaccineDebate — vaccine safety discussion",              u:"https://www.reddit.com/r/VaccineDebate"},
+      {n:"r/epigenetics — DNA & gene expression research",          u:"https://www.reddit.com/r/epigenetics"},
+      {n:"r/forbiddenscience — suppressed scientific research",      u:"https://www.reddit.com/r/forbiddenscience"},
+      // Animal intelligence
+      {n:"r/Dolphins — dolphin intelligence & research",             u:"https://www.reddit.com/r/Dolphins"},
+      {n:"r/whales — cetacean research & conservation",              u:"https://www.reddit.com/r/whales"},
+      // Consciousness & simulation
+      {n:"r/SimulationTheory — are we in a simulation?",            u:"https://www.reddit.com/r/SimulationTheory"},
+      {n:"r/consciousness — science of consciousness",               u:"https://www.reddit.com/r/consciousness"},
+      {n:"r/spirituality — spiritual research & experience",         u:"https://www.reddit.com/r/spirituality"},
+      {n:"r/Metaphysics — philosophy & metaphysical research",       u:"https://www.reddit.com/r/Metaphysics"},
+      // Unresolved & cold cases
+      {n:"r/UnresolvedMysteries — unsolved cases & strange events",  u:"https://www.reddit.com/r/UnresolvedMysteries"},
+      {n:"r/RealXFiles — real unexplained events",                   u:"https://www.reddit.com/r/RealXFiles"},
+      {n:"r/Missing411 — David Paulides missing persons research",   u:"https://www.reddit.com/r/Missing411"},
+      // Government & finance
+      {n:"r/FOIA — FOIA requests & declassified documents",         u:"https://www.reddit.com/r/FOIA"},
+      {n:"r/intelligence — intelligence community discussion",       u:"https://www.reddit.com/r/intelligence"},
+      {n:"r/DeepStatePatriots — government & deep state discussion", u:"https://www.reddit.com/r/deepstatepatriots"},
+    ],
+  },
+
+  // ══ FORUMS & ALTERNATIVE PLATFORMS ════════════════════════════════════════
+  {
+    label:"Forums & Alternative Discussion Platforms",
+    type:"user",
+    items:[
+      {n:"Above Top Secret (ATS) — the original conspiracy forum",   u:"https://www.abovetopsecret.com"},
+      {n:"Godlike Productions (GLP) — UFO, politics & conspiracy",   u:"https://www.godlikeproductions.com"},
+      {n:"David Icke Forum — official community discussion",         u:"https://forum.davidicke.com"},
+      {n:"Project Avalon — Bill Ryan & alternative research forum",  u:"https://projectavalon.net"},
+      {n:"Cassiopaea Forum — Laura Knight-Jadczyk research",         u:"https://cassiopaea.org/forum"},
+      {n:"Rumble — uncensored video platform for banned content",    u:"https://rumble.com"},
+      {n:"Telegram — major alternative media & research channels",   u:"https://telegram.org"},
+      {n:"Gab — free speech alternative social platform",           u:"https://gab.com"},
+      {n:"Minds — decentralized free speech platform",              u:"https://www.minds.com"},
+      {n:"Odysee/LBRY — decentralized uncensored video platform",   u:"https://odysee.com"},
+      {n:"BitChute — alternative video hosting for banned content",  u:"https://www.bitchute.com"},
+      {n:"Substack — independent newsletter platform",               u:"https://substack.com"},
+      {n:"4chan /x/ board — paranormal, UAP & conspiracy discussion", u:"https://boards.4channel.org/x/"},
+      {n:"Unexplained Mysteries Forum — active paranormal community",u:"https://www.unexplained-mysteries.com/forum/"},
+      {n:"The Paracast Community Forums — UAP & paranormal",        u:"https://www.theparacast.com/forum/"},
+      {n:"Fortean Times Forum — FT community discussion",           u:"https://www.forteantimes.com/forum"},
+    ],
+  },
+
+  // ══ ALTERNATIVE NEWS AGGREGATORS & LINK HUBS ══════════════════════════════
+  {
+    label:"Alternative News Aggregators & Link Hubs",
+    type:"news",
+    items:[
+      {n:"Natural News — Mike Adams alternative health & news",      u:"https://www.naturalnews.com"},
+      {n:"Infowars — Alex Jones (archived; take critically)",        u:"https://www.infowars.com"},
+      {n:"SGT Report — precious metals, deep state & health",        u:"https://www.sgtreport.com"},
+      {n:"State of the Nation — deep state & alternative news",      u:"https://stateofthenation.co"},
+      {n:"What Really Happened — Michael Rivero news aggregator",   u:"https://www.whatreallyhappened.com"},
+      {n:"The Tap Blog — UK alternative news aggregator",           u:"https://tapnewswire.com"},
+      {n:"GlobalResearch.ca — Michel Chossudovsky geopolitics",     u:"https://www.globalresearch.ca"},
+      {n:"21st Century Wire — Patrick Henningsen independent news",  u:"https://21stcenturywire.com"},
+      {n:"Need To Know News — dark journalism aggregator",           u:"https://needtoknow.news"},
+      {n:"The Vigilant Citizen — symbolism & pop culture decoding",  u:"https://vigilantcitizen.com"},
+      {n:"End of the American Dream — Michael Snyder economic news", u:"https://endoftheamericandream.com"},
+    ],
+  },
+
+  // ══ TELEGRAM CHANNELS & COMMUNITIES (KEY ONES) ════════════════════════════
+  {
+    label:"Telegram Channels — Key Research Communities",
+    type:"user",
+    items:[
+      {n:"Search Telegram: 'David Icke' — official channel",        u:"https://t.me/davidickeofficial"},
+      {n:"Search Telegram: 'Corbett Report' — news & research",     u:"https://t.me/corbettreport"},
+      {n:"Search Telegram: 'Whitney Webb' — investigative research",u:"https://t.me/unlimitedhangout"},
+      {n:"Search Telegram: 'Dr. Robert Malone' — COVID research",   u:"https://t.me/robertmalonemd"},
+      {n:"Search Telegram: 'UAP Disclosure' — live UAP updates",    u:"https://t.me/uapdisclosure"},
+      {n:"Search Telegram: 'Forbidden History' — ancient civilizations",u:"https://telegram.org"},
+      {n:"Search Telegram: 'The Why Files' — mystery research",     u:"https://telegram.org"},
+      {n:"Search Telegram: 'Wes Penre' — papers & community",       u:"https://telegram.org"},
     ],
   },
 ];
