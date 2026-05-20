@@ -28,6 +28,18 @@ export const TOPICS = [
   "Lost Technology",
   "Secret Societies",
   "Geopolitics & Deep State",
+  "Vaccines & Big Pharma",
+  "Food & Biotech",
+  "Ticks & Bioweapons",
+  "DNA & Genetics",
+  "Frequency & Energy",
+  "Consciousness & Mind",
+  "Simulation & Reality",
+  "Ancient Gods & Beings",
+  "Sacred Geometry",
+  "Atlantis & Lemuria",
+  "Remote Viewing & PSI",
+  "Portals & Stargates",
 ];
 
 export const REGIONS = [
@@ -62,19 +74,32 @@ export const getType = t => TYPE_COLORS[t] || TYPE_COLORS.user;
 
 // ─── REDDIT SUBREDDITS ────────────────────────────────────────────────────────
 export const REDDIT_SUBS = [
-  { name:"r/conspiracy",          url:"https://www.reddit.com/r/conspiracy",          color:"#ff6314", desc:"2.4M members" },
-  { name:"r/UFOs",                url:"https://www.reddit.com/r/UFOs",                color:"#4488ff", desc:"UAP & disclosure" },
-  { name:"r/HighStrangeness",     url:"https://www.reddit.com/r/HighStrangeness",     color:"#9944cc", desc:"Paranormal & unexplained" },
-  { name:"r/conspiracytheories",  url:"https://www.reddit.com/r/conspiracytheories",  color:"#e04444", desc:"Theory & debate" },
-  { name:"r/UnresolvedMysteries", url:"https://www.reddit.com/r/UnresolvedMysteries", color:"#44aaff", desc:"Cold cases" },
-  { name:"r/AlternativeHistory",  url:"https://www.reddit.com/r/AlternativeHistory",  color:"#88aa44", desc:"Suppressed history" },
-  { name:"r/Giants",              url:"https://www.reddit.com/r/Giants",              color:"#aa6622", desc:"Giants & Nephilim" },
-  { name:"r/biblestudy",          url:"https://www.reddit.com/r/biblestudy",          color:"#ddaa44", desc:"Biblical research" },
-  { name:"r/Dolphins",            url:"https://www.reddit.com/r/Dolphins",            color:"#44aacc", desc:"Dolphin intelligence" },
-  { name:"r/ForbiddenScience",    url:"https://www.reddit.com/r/forbiddenscience",    color:"#cc44aa", desc:"Suppressed research" },
-  { name:"r/Paranormal",          url:"https://www.reddit.com/r/Paranormal",          color:"#6644aa", desc:"Supernatural events" },
-  { name:"r/C_S_T",               url:"https://www.reddit.com/r/C_S_T",              color:"#ff4488", desc:"Critical speculative theory" },
+  {name:"r/conspiracy",          url:"https://www.reddit.com/r/conspiracy",          color:"#ff6314", desc:"1.9M members — alternative viewpoints"},
+  {name:"r/UFOs",                url:"https://www.reddit.com/r/UFOs",                color:"#4488ff", desc:"UAP & disclosure"},
+  {name:"r/HighStrangeness",     url:"https://www.reddit.com/r/HighStrangeness",     color:"#9944cc", desc:"Paranormal & unexplained"},
+  {name:"r/conspiracytheories",  url:"https://www.reddit.com/r/conspiracytheories",  color:"#e04444", desc:"Theory & debate"},
+  {name:"r/UnresolvedMysteries", url:"https://www.reddit.com/r/UnresolvedMysteries", color:"#44aaff", desc:"Cold cases & strange events"},
+  {name:"r/AlternativeHistory",  url:"https://www.reddit.com/r/AlternativeHistory",  color:"#88aa44", desc:"Suppressed history"},
+  {name:"r/Giants",              url:"https://www.reddit.com/r/Giants",              color:"#aa6622", desc:"Giants & Nephilim"},
+  {name:"r/biblestudy",          url:"https://www.reddit.com/r/biblestudy",          color:"#ddaa44", desc:"Biblical research"},
+  {name:"r/Dolphins",            url:"https://www.reddit.com/r/Dolphins",            color:"#44aacc", desc:"Dolphin intelligence"},
+  {name:"r/ForbiddenScience",    url:"https://www.reddit.com/r/forbiddenscience",    color:"#cc44aa", desc:"Suppressed research"},
+  {name:"r/Paranormal",          url:"https://www.reddit.com/r/Paranormal",          color:"#6644aa", desc:"Supernatural events"},
+  {name:"r/C_S_T",               url:"https://www.reddit.com/r/C_S_T",              color:"#ff4488", desc:"Critical speculative theory"},
+  {name:"r/ancientcivilizations",url:"https://www.reddit.com/r/ancientcivilizations",color:"#c8a020", desc:"Lost & advanced ancient cultures"},
+  {name:"r/AncientAliens",       url:"https://www.reddit.com/r/AncientAliens",       color:"#20c8a0", desc:"Ancient astronaut theory"},
+  {name:"r/GrahamHancock",       url:"https://www.reddit.com/r/GrahamHancock",       color:"#a0c820", desc:"Lost civilization research"},
+  {name:"r/Anunnaki",            url:"https://www.reddit.com/r/Anunnaki",            color:"#c8a080", desc:"Sumerian & Anunnaki research"},
+  {name:"r/SimulationTheory",    url:"https://www.reddit.com/r/SimulationTheory",    color:"#20a0c8", desc:"Are we in a simulation?"},
+  {name:"r/Missing411",          url:"https://www.reddit.com/r/Missing411",          color:"#c82020", desc:"David Paulides missing persons"},
+  {name:"r/FOIA",                url:"https://www.reddit.com/r/FOIA",               color:"#a020c8", desc:"Declassified documents"},
+  {name:"r/SkinWalkerRanch",     url:"https://www.reddit.com/r/SkinWalkerRanch",    color:"#20c880", desc:"Paranormal ranch research"},
+  {name:"r/consciousness",       url:"https://www.reddit.com/r/consciousness",       color:"#8020c8", desc:"Science of consciousness"},
+  {name:"r/UAP",                 url:"https://www.reddit.com/r/UAP",                color:"#2080c8", desc:"UAP evidence"},
+  {name:"r/RealXFiles",          url:"https://www.reddit.com/r/RealXFiles",          color:"#c88020", desc:"Real unexplained events"},
+  {name:"r/conspiracyfact",      url:"https://www.reddit.com/r/conspiracyfact",      color:"#20c840", desc:"Confirmed conspiracies"},
 ];
+
 
 // ─── SEED STORIES ─────────────────────────────────────────────────────────────
 export const SEED_STORIES = [
@@ -126,7 +151,72 @@ export const SEED_STORIES = [
   {id:"s41",type:"research",source:"4biddenknowledge",           sourceUrl:"https://www.4biddenknowledge.com",       time:"13h ago",topic:"Ancient Civilizations",       region:"🌍 Global",               title:"Billy Carson: The Emerald Tablets of Thoth — 15 Tablets Written by an Atlantean Priest-King 36,000 BCE", summary:"Billy Carson's analysis identifies Thoth (Hermes Trismegistus) as an Atlantean who fled to Egypt and built the Great Pyramid. The tablets describe stargates, the Halls of Amenti beneath the pyramid, zero-point energy, and consciousness as the fundamental substrate of reality. Carson cross-references with Sumerian tablets, quantum mechanics, and neuroscience.", upvotes:5800,comments:891, credible:50,debunked:50,tags:["Emerald Tablets","Thoth","Atlantis","Anunnaki"],premium:true},
   {id:"s42",type:"blog",    source:"Ancient Origins",            sourceUrl:"https://www.ancient-origins.net",       time:"14h ago",topic:"Biblical & Religious Records",region:"🌍 Global",               title:"The Gospel of Mary Magdalene: Suppressed First-Century Text Shows Her as Jesus's Closest Disciple and Primary Teacher", summary:"The Gospel of Mary Magdalene, discovered in Cairo in 1896, depicts her receiving secret teachings from Jesus about matter, sin, and the soul — and transmitting these to the apostles over Peter's objection. Early church scholars argue this gospel was suppressed because it positioned a woman as the primary bearer of Jesus's esoteric teachings.", upvotes:5400,comments:821, credible:71,debunked:29,tags:["Mary Magdalene","Gospel","Suppressed","Gnostic"],premium:true},
   {id:"s43",type:"research",source:"HeartMath Institute",        sourceUrl:"https://www.heartmath.org/research/",   time:"15h ago",topic:"Forbidden Science",           region:"🇺🇸 USA",                title:"HeartMath Institute: The Heart's Electromagnetic Field Is 100x Stronger Than the Brain — Research Confirmed", summary:"The HeartMath Institute's research shows the heart generates an electromagnetic field 100 times stronger in amplitude than the brain's and detectable several feet from the body. Their research suggests the heart transmits emotional information to every cell and can be measured affecting others in proximity — a finding with implications for energy healing and consciousness studies.", upvotes:4100,comments:561, credible:78,debunked:22,tags:["HeartMath","Electromagnetic","Consciousness","Heart"],premium:true},
+
+  // ── TICKS, VACCINES & HEALTH ───────────────────────────────────────────────
+  {id:"s44",type:"research",source:"Kris Newby / BITTEN Files",  sourceUrl:"https://krisnewby.substack.com",        time:"1h ago", topic:"Health & Science",            region:"🇺🇸 USA",                title:"BITTEN: Congress Ordered Investigation Into Whether DoD Weaponized Ticks — Plum Island, Fort Detrick & Lyme Disease Origins", summary:"In 2019 Congress passed an amendment ordering the DoD Inspector General to investigate whether the military weaponized ticks and other insects as bioweapons between 1950–1975 and whether any were accidentally released. Science writer Kris Newby's book BITTEN documents interviews with Willy Burgdorfer — who discovered the Lyme bacterium — and evidence linking Plum Island, just 13 miles from Lyme CT, to Cold War bioweapons tick experiments.",upvotes:6200,comments:980, credible:65,debunked:35,tags:["Lyme Disease","Ticks","Bioweapons","Plum Island"],premium:false},
+  {id:"s45",type:"news",    source:"VAERS / HHS",                 sourceUrl:"https://vaers.hhs.gov",                time:"2h ago", topic:"Health & Science",            region:"🇺🇸 USA",                title:"VAERS Database: Over 2 Million Adverse Event Reports Filed Since 1990 — What the Data Does and Does Not Show", summary:"The Vaccine Adverse Event Reporting System, managed jointly by the FDA and CDC, has received over 2 million reports of adverse events following vaccination since 1990. Experts debate what the data reveals vs. what requires further investigation. Congress mandated VAERS through the 1986 National Childhood Vaccine Injury Act after acknowledging vaccines can cause injury.",upvotes:5800,comments:1102,credible:71,debunked:29,tags:["VAERS","Vaccines","FDA","CDC","Adverse Events"],premium:false},
+  {id:"s46",type:"research",source:"Food & Environment Reporting Network",sourceUrl:"https://thefern.org",          time:"3h ago", topic:"Health & Science",            region:"🇺🇸 USA",                title:"Lab-Grown Meat Uses Immortalized Cells — MIT Cancer Biologist: They Are 'Unmistakably More Like Cancer Cells'", summary:"The Food and Environment Reporting Network's investigation revealed that cultured meat companies use 'immortalized' cells — cells that divide indefinitely by bypassing normal biological limits. MIT cancer biologist Robert Weinberg stated these cells 'have already completed one of the prerequisites to becoming a cancer cell.' The FAO and WHO identified 53 potential hazards in cultured meat production.",upvotes:5400,comments:821, credible:72,debunked:28,tags:["Lab Meat","Fake Meat","Cancer","GMO","Food Safety"],premium:false},
+  {id:"s47",type:"research",source:"Children's Health Defense",   sourceUrl:"https://childrenshealthdefense.org",    time:"4h ago", topic:"Health & Science",            region:"🇺🇸 USA",                title:"Beyond Impossible: The Truth Behind the Fake Meat Industry — WEF, Harvard, and the Push to End Natural Meat", summary:"A 2024 systematic review of 45 studies and 9.8 million participants confirmed that ultra-processed food consumption is directly associated with 32 adverse health parameters. Lab-grown and fake meat are categorized as ultra-processed food. Critics argue the push toward fake meat serves financial and control agendas more than environmental or health goals.",upvotes:4900,comments:741, credible:61,debunked:39,tags:["Fake Meat","WEF","Ultra-processed","Health"],premium:false},
+
+  // ── ANCIENT ADVANCED TECHNOLOGY ───────────────────────────────────────────
+  {id:"s48",type:"research",source:"UnchartedX Field Research",   sourceUrl:"https://www.youtube.com/@UnchartedX1", time:"5h ago", topic:"Lost Technology",             region:"🌎 South America",        title:"Puma Punku: 100-Ton Stone Blocks Cut With CNC-Level Precision — No Metal Tools Available at the Time", summary:"Puma Punku in Bolivia features massive andesite stone blocks with cuts that modern engineers compare to CNC machining tolerances. Andesite is rated 6-7 on the Mohs hardness scale — harder than any copper tool available to the Tiwanaku civilization. Field researchers document drill holes of identical depth and spacing that stonemasons say they could not replicate today without diamond-tipped power tools.",upvotes:7100,comments:1102,credible:68,debunked:32,tags:["Puma Punku","Lost Tech","Ancient","CNC","Bolivia"],premium:false},
+  {id:"s49",type:"research",source:"Ancient Code",                 sourceUrl:"https://www.ancient-code.com",         time:"6h ago", topic:"Lost Technology",             region:"🇱🇧 Israel / Middle East",title:"Baalbek: The 1,200-Ton Stone of the Pregnant Woman — No Modern Crane Can Lift It", summary:"The quarry at Baalbek, Lebanon contains the largest known worked stones in history — including the Stone of the Pregnant Woman at 1,200 tons. No crane in the world today can lift a single Baalbek foundation stone. The Roman-era temple was built on top of a far older megalithic foundation whose origin and construction method remain entirely unexplained.",upvotes:6400,comments:921, credible:74,debunked:26,tags:["Baalbek","Megalithic","Lost Tech","Lebanon"],premium:false},
+  {id:"s50",type:"research",source:"Graham Hancock / Ancient Apocalypse",sourceUrl:"https://grahamhancock.com",     time:"7h ago", topic:"Hidden History",              region:"🌍 Global",               title:"The Younger Dryas Impact: A Comet Strike 12,800 Years Ago Destroyed an Advanced Global Civilization", summary:"A growing body of scientific evidence — including nano-diamonds, platinum anomalies, and burned layers found on four continents — supports the Younger Dryas Impact hypothesis: that a comet strike around 12,800 BCE caused a catastrophic global event that destroyed an advanced pre-ice age civilization. This explains why megalithic sites appear globally with no developmental sequence.",upvotes:5900,comments:881, credible:62,debunked:38,tags:["Younger Dryas","Comet","Lost Civilization","Graham Hancock"],premium:false},
+  {id:"s51",type:"research",source:"Ancient Origins",              sourceUrl:"https://www.ancient-origins.net",      time:"8h ago", topic:"Ancient Civilizations",       region:"🇪🇬 Egypt",               title:"The Osireion at Abydos: Built Before the Pyramids? Massive Granite Structure Defies Official Chronology", summary:"The Osireion — discovered beneath the Temple of Seti I at Abydos — is built from massive red granite blocks in a style completely different from New Kingdom Egyptian construction. Geologist Robert Schoch and others argue the building style matches structures contemporaneous with the Great Sphinx, suggesting an origin thousands of years before Seti I. No inscriptions, no dedications — just massive precision stonework.",upvotes:4800,comments:712, credible:66,debunked:34,tags:["Osireion","Egypt","Abydos","Lost Tech","Schoch"],premium:true},
+  {id:"s52",type:"research",source:"Randall Carlson / Kosmographia",sourceUrl:"https://randallcarlson.com",         time:"9h ago", topic:"Hidden History",              region:"🌍 Global",               title:"Sacred Geometry in Ancient Architecture: The Same Mathematical Constants Encoded Worldwide — Independently", summary:"Researcher Randall Carlson documents that ancient sites worldwide — from the Great Pyramid to Angkor Wat to Stonehenge — encode identical mathematical relationships: Pi, Phi (golden ratio), the precession of the equinoxes, and the dimensions of the Earth itself. The probability of this occurring by independent coincidence is astronomically small, suggesting either a common advanced source civilization or a lost mathematical tradition transmitted globally.",upvotes:5300,comments:781, credible:61,debunked:39,tags:["Sacred Geometry","Phi","Pyramid","Precession","Randall Carlson"],premium:true},
+
+  // ── GODS, ANCIENT BEINGS & ADVANCED CIVILIZATIONS ─────────────────────────
+  {id:"s53",type:"research",source:"World History Encyclopedia",  sourceUrl:"https://www.worldhistory.org",          time:"10h ago",topic:"Ancient Civilizations",       region:"🌍 Global",               title:"The Sumerian King List: Rulers Who Reigned for Thousands of Years Before the Flood — Cuneiform Primary Source", summary:"The Sumerian King List, a cuneiform document discovered at Nippur, records kings who ruled for tens of thousands of years before a great flood. After the flood, lifespans drop dramatically to human-normal lengths. Researchers debate whether this records actual dynasties, mythological time, or evidence of a pre-flood civilization. It is the oldest known historical document to reference the flood narrative.",upvotes:4600,comments:621, credible:70,debunked:30,tags:["Sumerian","King List","Flood","Cuneiform","Pre-Flood"],premium:false},
+  {id:"s54",type:"research",source:"Gaia / Billy Carson",          sourceUrl:"https://www.gaia.com",                 time:"11h ago",topic:"Ancient Civilizations",       region:"🌍 Global",               title:"Ancient Beings as Engineers: The Göbekli Tepe Builders Knew Astronomy, Geometry, and Built Before Agriculture Existed", summary:"New research at Göbekli Tepe confirms the 12,000-year-old site encodes star maps — specifically Deneb, Arcturus, and the Pleiades — in its pillar arrangements. The builders had sophisticated astronomical knowledge, geometric precision, and organized labor capability — all predating the supposed invention of agriculture by 1,000 years. This overturns the model of a linear progression from primitive to advanced.",upvotes:5700,comments:841, credible:82,debunked:18,tags:["Gobekli Tepe","Astronomy","Ancient Beings","Pre-History"],premium:false},
+  {id:"s55",type:"research",source:"Sitchin Archive",              sourceUrl:"https://sitchin.com",                  time:"12h ago",topic:"Ancient Civilizations",       region:"🌍 Global",               title:"Zecharia Sitchin: The Anunnaki Genetically Engineered Homo Sapiens 250,000 Years Ago — Sumerian Texts Decoded", summary:"Zecharia Sitchin's translations of Sumerian texts describe the Anunnaki creating humanity through genetic engineering — mixing their DNA with Homo erectus — to produce a slave race for mining gold. The Atrahasis Epic parallels the Genesis creation and flood accounts almost word for word. Mainstream archaeologists reject Sitchin's translations; alternative researchers point to the structural parallels as too precise to dismiss.",upvotes:6800,comments:1041,credible:45,debunked:55,tags:["Anunnaki","Sitchin","Genetic Engineering","Creation","Sumerian"],premium:true},
+  {id:"s56",type:"research",source:"Robert Sepehr — YouTube",      sourceUrl:"https://www.youtube.com/@RobertSepehr", time:"13h ago",topic:"Hidden History",              region:"🌍 Global",               title:"The Aryan Mystery: Secret Societies, Blood Types, and the Hidden History of Humanity's True Origins", summary:"Anthropologist Robert Sepehr's research examines the role of blood type distribution, genetic haplogroups, and ancient migration patterns in understanding humanity's hidden origins. He explores connections between ancient Aryan peoples, Atlantis, the Vedic traditions, and the origins of secret societies — arguing that mainstream history has deliberately suppressed knowledge of pre-Flood civilizations.",upvotes:4200,comments:601, credible:48,debunked:52,tags:["Aryan","Blood Type","Haplogroup","Hidden History","Sepehr"],premium:true},
+
+  // ── COMPREHENSIVE DOLPHIN FILES ────────────────────────────────────────────
+  {id:"s57",type:"archive", source:"Wikipedia / USNI Proceedings",sourceUrl:"https://en.wikipedia.org/wiki/United_States_Navy_Marine_Mammal_Program",time:"1h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"US Navy Marine Mammal Program: Classified 1967–1992 — What the Black Budget Dolphin Program Actually Did", summary:"The US Navy Marine Mammal Program (NMMP) began in 1960 studying dolphin hydrodynamics for torpedo and submarine design. By 1963 it became an active training program. In 1967 it was classified as a black budget program. Declassified only in 1992 — but operational details remain sealed. At peak during the Reagan years: 150+ dolphins, $8M annual budget, deployed in 25 countries. Some researchers call it the Cetacean Intelligence Mission rather than its official name — suggesting the scope went far beyond mine detection.",upvotes:8200,comments:1401,credible:88,debunked:12,tags:["Navy","Dolphins","Classified","NMMP","Black Budget"],premium:false},
+
+  {id:"s58",type:"research",source:"History.com / Military History",sourceUrl:"https://www.history.com/articles/navy-marine-mammal-program-history-dolphins-sea-lions",time:"2h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"The 5 Operational Dolphin Teams: Mine Detection, Swimmer Killing Devices, Harbor Patrol, and What They Won't Confirm", summary:"The Navy officially acknowledges five operational dolphin teams. MK-4 and MK-7 detect tethered and bottom mines. MK-8 clears landing corridors for troop insertions. MK-6 uses dolphins for anti-swimmer harbor defense — the dolphin approaches from behind and bumps a device onto the diver's air tank triggering an explosive buoy alert. Unconfirmed analyst claims describe carbonic acid injection devices mounted on dolphin heads — fired on contact with enemy divers. The Navy has never confirmed or denied the full scope of MK-6 offensive capabilities.",upvotes:7100,comments:1102,credible:74,debunked:26,tags:["NMMP","MK6","Swimmer","Mine","Dolphins","Combat"],premium:false},
+
+  {id:"s59",type:"archive", source:"Military Marine Mammal Wikipedia / lflank.wordpress.com",sourceUrl:"https://en.wikipedia.org/wiki/Military_marine_mammal",time:"3h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"CIA Sent Scientist James Fitzgerald to Key West 1964 — Classified Dolphin Lab and the Intelligence Program Nobody Talks About", summary:"According to declassified sources, the CIA sent scientist James Fitzgerald to Key West, Florida in 1964 to establish a classified laboratory studying dolphins. The program ran parallel to the Navy NMMP — with the CIA angle focused on intelligence applications rather than mine detection. The lab's full scope, findings, and what happened to its research remain classified. This is the CIA's dolphin program that almost nobody knows existed alongside the Navy's.",upvotes:6800,comments:981,credible:62,debunked:38,tags:["CIA","Dolphins","James Fitzgerald","Key West","Classified"],premium:false},
+
+  {id:"s60",type:"research",source:"Supercluster / Vice",          sourceUrl:"https://www.supercluster.com/editorial/how-dolphins-on-lsd-shaped-the-search-for-extraterrestrial-intelligence",time:"4h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"Dr. John C. Lilly: CIA-Funded, NASA-Contracted, LSD-Injecting Dolphin Researcher Who Founded the Science of Interspecies Communication", summary:"Dr. John C. Lilly — physician, neuroscientist, inventor of the isolation tank — opened the Communication Research Institute in St. Thomas in the 1960s funded by NASA and the CIA. NASA wanted a model for communicating with extraterrestrial intelligence. The CIA wanted dolphins as underwater spies. In 1964 Lilly began injecting dolphins with LSD to enhance communication — documented in a 1965 conference paper. Dolphin vocalizations increased dramatically. He co-founded the Order of the Dolphins with Carl Sagan. The CIA's interest in Lilly — through MK-Ultra era consciousness programs — has been confirmed in documents released decades later.",upvotes:9100,comments:1502,credible:82,debunked:18,tags:["Lilly","CIA","NASA","LSD","MK-Ultra","Dolphins","SETI"],premium:false},
+
+  {id:"s61",type:"research",source:"VeteranLife / USNavy",          sourceUrl:"https://veteranlife.com/military-history/marine-mammal-program",time:"5h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"Vietnam War 1965–1975, Persian Gulf 1986–1988, Iraq War 2003: The Combat Deployments of US Military Dolphins That History Barely Covers", summary:"Navy dolphins were operationally deployed in Vietnam from 1965–1975 guarding ammunition piers from enemy divers. In the Persian Gulf they escorted Kuwaiti oil tankers and patrolled for mines during the Iran-Iraq War 1986–1988. In 2003 during the Iraq War K-Dog and other dolphins detected and marked over 100 anti-ship mines at the port of Umm Qasr — clearing the way for the initial troop landings. In 1996 six dolphins patrolled San Francisco Bay to protect the Republican National Convention. The Navy acknowledges deployments in 25 countries — the full list remains classified.",upvotes:7400,comments:1041,credible:91,debunked:9,tags:["Navy","Dolphins","Vietnam","Iraq","Persian Gulf","Combat"],premium:false},
+
+  {id:"s62",type:"research",source:"Historic Mysteries / Military Wiki",sourceUrl:"https://www.historicmysteries.com/history/military-marine-mammal/30639/",time:"6h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"Soviet and Russian Military Dolphins: Sevastopol, Iran Sale, Arctic Bases, and Two Pens Placed at Ukraine Invasion Harbor", summary:"The Soviet Union ran a parallel dolphin program at Sevastopol, Crimea. Unlike the US program which denies offensive training, the Soviets are believed to have equipped dolphins with weapons. After the USSR collapsed the program transferred to Ukraine — which sold the dolphins and the chief trainer to Iran in 2000. Russia reactivated the program in 2012. After the 2014 Crimea annexation Russia took over Ukraine's remaining dolphins. When Russia invaded Ukraine in 2022, satellite imagery confirmed two dolphin pens placed at the entrance to Sevastopol harbor — the Black Sea's largest naval base — and additional pens at the secretive Arctic Olenya Guba facility.",upvotes:8600,comments:1301,credible:85,debunked:15,tags:["Russia","Soviet","Dolphins","Sevastopol","Ukraine","Military","Iran"],premium:false},
+
+  {id:"s63",type:"research",source:"NOAA Fisheries / LegalClarity",  sourceUrl:"https://www.fisheries.noaa.gov/marine-life-distress/frequent-questions-feeding-or-harassing-marine-mammals-wild",time:"7h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"Marine Mammal Protection Act: Why It Is Illegal to Touch, Feed, Chase or Attempt to Interact With Wild Dolphins — and Why Researchers Think the Government Knows More Than It Says", summary:"The MMPA of 1972 makes it a federal crime to 'take' any marine mammal — defined as harass, hunt, capture, collect, or kill, including attempts. Penalties reach $100,000 per violation and one year imprisonment. Each dolphin in a pod = a separate violation. Verbal communication is not explicitly illegal — but any act that disrupts behavioral patterns qualifies as Level B harassment. The law applies to US citizens anywhere on Earth including international waters. Researchers note: you cannot legally interact with wild dolphins yet the Navy does so daily under congressional exemption. The 1986 MMPA amendment granted the Pentagon the right to take dolphins from the wild for 'national defense purposes' — a carve-out that exists in no other wildlife law.",upvotes:7800,comments:1201,credible:96,debunked:4,tags:["MMPA","Law","Dolphins","Pentagon","National Defense","Exemption"],premium:false},
+
+  {id:"s64",type:"research",source:"Give.do / The Print / Sonar",   sourceUrl:"https://wearesonar.org/dolphin-and-whale-nonhuman-personhood/",time:"8h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"Global Dolphin Personhood: India 2013, Malibu 2014, Pacific Islands 2025 — Governments Officially Declaring Dolphins Non-Human Persons", summary:"In 2013 India became the first nation to officially declare dolphins 'non-human persons' — banning all captive dolphin shows and stating it is 'morally unacceptable to keep them captive.' In 2014 Malibu's mayor passed a resolution granting dolphins and whales the right to freedom. In 2025 Pacific Island leaders granted cetaceans personhood status. The 2010 international Declaration of Rights for Cetaceans declared them persons with rights to life, freedom of movement, and not to be killed, captured, bred, or enslaved. The EU applied great ape research bans to cetaceans — calling them 'great apes of the water.'",upvotes:6900,comments:981,credible:90,debunked:10,tags:["Personhood","India","Dolphins","Rights","Non-Human","Global Law"],premium:false},
+
+  {id:"s65",type:"research",source:"Wild Dolphin Project / Cambridge Declaration",sourceUrl:"https://www.wilddolphinproject.org",time:"9h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"What We Actually Know About Dolphin Intelligence: Cambridge Declaration, Mirror Tests, Name Whistles, Culture, Grief — The Evidence Governments Don't Publicize", summary:"The 2012 Cambridge Declaration on Consciousness — signed in presence of Stephen Hawking — confirmed dolphins are conscious and self-aware. Dolphins pass the mirror self-recognition test (only humans, great apes, elephants, and magpies also pass). They choose unique name whistles before age one that are remembered 20+ years. Shark Bay Australia documents sponge tool use transmitted mother-to-daughter across three generations — qualifying as culture. Dr. Denise Herzing's 35-year Wild Dolphin Project documents syntax in communication, multigenerational dialect transmission, and grief — mothers carrying dead calves for weeks. A 2024 study confirmed dolphins imitate computer-generated sounds they have never heard.",upvotes:8400,comments:1302,credible:97,debunked:3,tags:["Consciousness","Cambridge","Mirror Test","Intelligence","Dolphins","Culture"],premium:false},
+
+  {id:"s66",type:"research",source:"Dr. Denise Herzing / WDP",       sourceUrl:"https://www.wilddolphinproject.org/media/scientific-publications/",time:"10h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"What Global Governments May Be Hiding About Dolphins: Classified Programs, Suppressed Intelligence Research, and the Question Nobody Asks", summary:"Several layers of classification surround dolphin research: (1) The CIA's 1964 Key West lab — full scope classified. (2) NMMP operational details — still classified 30+ years after the program was 'declassified.' (3) Soviet weaponization details — never fully disclosed. (4) Whether communication research with dolphins produced results beyond what was published — John Lilly's CIA-funded work never fully disclosed. (5) North Korea reportedly developing its own military dolphin program in 2024. (6) Whether the 1986 MMPA national defense exemption was used to take dolphins for intelligence — not just military — purposes. The most classified intelligence programs globally involve three things that overlap: consciousness, communication, and non-human intelligence. Dolphins are the intersection of all three.",upvotes:9800,comments:1601,credible:55,debunked:45,tags:["Classified","CIA","Dolphins","Consciousness","Hidden","Intelligence"],premium:true},
+
+  // ── REMOTE VIEWING GOVERNMENT FILES ───────────────────────────────────────
+  {id:"s67",type:"archive", source:"CIA Reading Room",              sourceUrl:"https://www.cia.gov/readingroom/collection/stargate",time:"1h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"Project STARGATE: The CIA's $20 Million 25-Year Psychic Espionage Program — Now Fully Declassified", summary:"Project STARGATE was the code name for a classified US Army / DIA program established 1978 at Fort Meade, Maryland to weaponize psychic phenomena for intelligence collection against the Soviet Union. Ran for over 20 years. $20 million budget confirmed. Physicists Hal Puthoff and Russell Targ at Stanford Research Institute were the lead scientists. CIA fully declassified 12 million pages of Stargate documents in 2017. The entire archive is searchable at the CIA Reading Room. Congressman Charles Rose stated in the House Intelligence Committee: 'It seemed like a hell of a cheap radar system — and if the Russians have it and we don't, we're in serious trouble.'",upvotes:11200,comments:1802,credible:95,debunked:5,tags:["Stargate","CIA","Remote Viewing","Declassified","DIA","Puthoff"],premium:false},
+
+  {id:"s68",type:"research",source:"War History Online / Decrypted Matrix",sourceUrl:"https://www.warhistoryonline.com/war-articles/project-stargate.html",time:"2h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"Ingo Swann: The Psychic Who Remote-Viewed Jupiter Before Pioneer-10 Got There — and Found a Ring Nobody Knew Existed", summary:"Ingo Swann — artist and psychic, co-creator of remote viewing — was tested at Stanford Research Institute in 1972. CIA funded his research. In 1973 Swann remote-viewed Jupiter before the Pioneer-10 flyby and described a ring around the planet. Scientists assumed he had confused it with Saturn. When Pioneer-10 reached Jupiter the ring was confirmed. Swann also remote-viewed classified Soviet facilities from coordinates alone — with results that convinced CIA analysts to continue funding. He later claimed to have remote-viewed extraterrestrial bases on the Moon.",upvotes:9400,comments:1401,credible:71,debunked:29,tags:["Ingo Swann","Remote Viewing","Jupiter","CIA","Pioneer","Moon"],premium:false},
+
+  {id:"s69",type:"research",source:"Decrypted Matrix / Black Vault",  sourceUrl:"https://decryptedmatrix.com/project-stargate-cia-classified-psychic-espionage-program/",time:"3h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"The Remote Viewers Who Described Soviet Nuclear Submarines, Hidden Weapons, and a Secret Mars Colony from a Locked Room", summary:"Project Stargate remote viewers — including Pat Price (retired police commissioner), Joe McMoneagle (Army intelligence), and others — were given nothing but geographic coordinates and asked to describe what was there. Pat Price described a classified Soviet facility in Siberia with extraordinary accuracy in 1974. McMoneagle's readings of Soviet submarine construction were reportedly used in operational intelligence. A 1984 session described structures on Mars from 1 million years ago — the transcript remains in the CIA archive. The program was officially terminated in 1995, but researchers argue it went black rather than dark.",upvotes:10100,comments:1601,credible:64,debunked:36,tags:["Stargate","Remote Viewing","Soviet","Mars","Pat Price","McMoneagle"],premium:false},
+
+  {id:"s70",type:"archive", source:"CIA Reading Room (direct PDF)",   sourceUrl:"https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-3.pdf",time:"4h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"CIA Gateway Process: Declassified 1983 Army Report Concludes Human Consciousness Can Leave the Body and Access Other Dimensions", summary:"A 1983 US Army Intelligence & Security Command analysis of the Monroe Institute's Gateway Experience — declassified and now freely downloadable from the CIA Reading Room — concludes that human consciousness can be separated from space-time and used to access information non-locally. The report uses physics, quantum mechanics, and holographic universe theory to explain how it works. The document was classified for 37 years. When released it went viral — millions read it. The Army concluded: it works, and the mechanism is rooted in physics not mysticism.",upvotes:14200,comments:2102,credible:88,debunked:12,tags:["CIA","Gateway Process","Consciousness","Monroe Institute","Declassified","OBE"],premium:false},
+
+  {id:"s71",type:"research",source:"Black Vault / IRP.fas.org",       sourceUrl:"https://irp.fas.org/program/collect/stargate.htm",time:"5h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"Soviet Psychotronics: The USSR Spent 60 Million Rubles Annually on Psychic Warfare — Which Is Why the US Launched Stargate", summary:"The CIA launched the remote viewing program specifically because Soviet intelligence reports confirmed the USSR was spending the equivalent of $60 million annually on psychotronics — the weaponization of psychic phenomena. The CIA obtained a book by Canadian journalists Sheila Ostrander and Lynn Schroeder documenting Soviet PSI research and used it as justification to fund Puthoff and Targ. Both superpowers were simultaneously running classified psychic warfare programs throughout the Cold War. Neither has fully disclosed what they found.",upvotes:8800,comments:1301,credible:82,debunked:18,tags:["Soviet","Psychotronics","Cold War","CIA","Remote Viewing","USSR"],premium:false},
+
+  // ── PORTALS, STARGATES & INTERDIMENSIONAL RESEARCH ─────────────────────────
+  {id:"s72",type:"research",source:"Academic Block / Sacred Illusion",  sourceUrl:"https://www.academicblock.com/science/fringe-science/stargates-and-portals",time:"1h ago",topic:"Portals & Stargates",region:"🌍 Global",title:"Ancient Stargates: Sumerian Gate of Anu, Egyptian Osiris Portal, Tiahuanaco Gateway of the Sun — Ancient Civilizations Built Physical Portal Technology", summary:"Sumerian texts describe the Gate of Anu — a physical structure through which gods traversed dimensions. The Egyptian Book of the Dead describes 21 gates with guardians that souls must navigate. Tiahuanaco's Gateway of the Sun in Bolivia is aligned to precise astronomical coordinates and features carvings researchers argue depict portal activation sequences. Researcher and archaeologist Dr. Heather Lynn connects these to Anunnaki technology described in Sitchin's translations. Mike Ricksecker's Portals to the Stars documents physical portal research across ancient global sites.",upvotes:7800,comments:1102,credible:48,debunked:52,tags:["Stargate","Sumerian","Egypt","Tiahuanaco","Portal","Ancient"],premium:false},
+
+  {id:"s73",type:"research",source:"Sacred Illusion / MagellanTV",     sourceUrl:"https://www.sacredillusion.com/stargates-and-doors-to-nowhere-portals-illusions-or-entrances-to-elsewhere/",time:"2h ago",topic:"Portals & Stargates",region:"🇺🇸 USA",title:"The Montauk Project: Classified Time Travel, Mind Control, and Interdimensional Portals at Camp Hero Air Force Station 1943–1983", summary:"The Montauk Project — documented in books by Preston Nichols and Peter Moon — alleges that Camp Hero, Montauk NY, was the site of classified government experiments in time travel, mind control, and opening interdimensional portals from the 1940s through the 1980s. The theory connects to the 1943 Philadelphia Experiment in which the USS Eldridge reportedly vanished from a Philadelphia shipyard. A psychic named Duncan Cameron reportedly opened a time portal that created a tear in space-time that researchers claim was deliberately collapsed. The site is now Camp Hero State Park. The underground facilities remain sealed.",upvotes:8200,comments:1201,credible:38,debunked:62,tags:["Montauk","Time Travel","Portal","Camp Hero","Philadelphia Experiment","Classified"],premium:false},
+
+  {id:"s74",type:"research",source:"CERN / Israel First Substack",    sourceUrl:"https://home.cern/science/experiments/lhc",time:"3h ago",topic:"Portals & Stargates",region:"🌍 Global",title:"CERN Large Hadron Collider: Scientists Searching for 'Extra Dimensions' and Dark Matter — Critics Say It Already Opened Something", summary:"CERN has publicly stated that one of the goals of the Large Hadron Collider is to find evidence of extra dimensions and dark matter. In 2024 CERN activated the LHC during the solar eclipse and stated: 'What exactly we would detect would depend on the number of extra dimensions.' Critics argue this is portal research under a physics label. The LHC sits on the ancient site of St. Genis-Pouilly — a Roman town whose name derives from the Latin Appolliacum, built over a temple to Apollo described as a gateway to the underworld. CERN's campus features a statue of Shiva performing the Nataraja — the cosmic dance of creation and destruction.",upvotes:9100,comments:1502,credible:45,debunked:55,tags:["CERN","LHC","Extra Dimensions","Portal","Dark Matter","Shiva"],premium:false},
+
+  {id:"s75",type:"research",source:"Skinwalker Ranch / George Knapp",  sourceUrl:"https://skinwalker-ranch.com",time:"4h ago",topic:"Portals & Stargates",region:"🇺🇸 USA",title:"Skinwalker Ranch: Instrumented Scientific Research Confirms Anomalous Portal-Like Phenomena — DoD Funded Investigation", summary:"Skinwalker Ranch in Utah has been the subject of instrumented scientific investigation funded by the Department of Defense through the Advanced Aerospace Weapon System Applications Program (AAWSAP) — the same program that spawned the AATIP UAP investigation. Researchers document: UAP appearing and disappearing in specific sky locations consistently, cattle mutilation with surgical precision, poltergeist phenomena, and what instruments record as localized tears in space measuring magnetic, electromagnetic, and radiation anomalies simultaneously. Former DIA official Dr. James Lacatski led the DoD investigation. His findings remain classified.",upvotes:10400,comments:1601,credible:61,debunked:39,tags:["Skinwalker","Portal","DoD","AAWSAP","DIA","Classified","UAP"],premium:false},
+
+  {id:"s76",type:"research",source:"Iraq Stargate / Medium",          sourceUrl:"https://medium.com/@iram.ahmed1997/the-iraqi-stargate-conspiracy-a-modern-perspective-on-an-ancient-mystery-18d3cd39ff8f",time:"5h ago",topic:"Portals & Stargates",region:"🇮🇶 Iraq",title:"The Iraqi Stargate: Why the US Established Military Zones Around Ancient Sumerian Sites Immediately After Invasion in 2003", summary:"Researchers document that following the 2003 Iraq invasion, US forces established restricted military zones around ancient Sumerian sites including Ur, Nineveh, and Babylon — while the Baghdad Museum was looted of thousands of irreplaceable artifacts with no military intervention. Some claim soldiers reported time anomalies and electromagnetic disturbances near ancient sites. The theory: Sumerian tablets describe the Gate of Anu as a physical device, and the real objective of occupying Iraq was to control access to ancient portal technology buried beneath the oldest human civilization on Earth.",upvotes:8600,comments:1302,credible:35,debunked:65,tags:["Iraq","Stargate","Sumerian","2003","Artifacts","Gate of Anu"],premium:true},
+
+  {id:"s77",type:"research",source:"Thirdi.us / Tourism and Travel",   sourceUrl:"https://thirdi.us/blog/2024/07/unlocking-the-mysteries-of-stargates-portals-to-other-dimensions-and-realms/",time:"6h ago",topic:"Portals & Stargates",region:"🌍 Global",title:"Global Portal Sites: Mount Shasta, Sedona, Stonehenge, Machu Picchu, Easter Island — What Instruments Detect at Each Location", summary:"Researchers have documented measurable electromagnetic anomalies at every major ancient site associated with portal or vortex activity. Mount Shasta: Native American traditions of underground cities and interdimensional beings, plus measured magnetic anomalies. Sedona: Benjamin Lonetree's decade of magnetometer data. Stonehenge: confirmed solar and lunar alignment precision beyond architectural necessity. Machu Picchu: built on geological intersection of multiple fault lines creating piezoelectric energy. Easter Island: moai aligned to specific star systems. The common thread: all are built on granite and quartz formations that generate electromagnetic fields under tectonic pressure.",upvotes:7400,comments:1101,credible:55,debunked:45,tags:["Portals","Mount Shasta","Stonehenge","Sedona","Electromagnetic","Ancient Sites"],premium:false},
 ];
+
 
 // ─── SEED COMMUNITY POSTS ─────────────────────────────────────────────────────
 export const SEED_POSTS = [
@@ -677,6 +767,407 @@ export const SOURCES = [
       {n:"Tom Campbell — My Big TOE (Theory of Everything)",     u:"https://www.my-big-toe.com"},
       {n:"Institute of Noetic Sciences — Consciousness & reality",u:"https://noetic.org/research/"},
       {n:"Monroe Institute — OBE & consciousness beyond body",   u:"https://www.monroeinstitute.org"},
+    ],
+  },
+
+  // ══ VACCINES, BIG PHARMA & HEALTH FREEDOM ════════════════════════════════
+  {
+    label:"Vaccines, Big Pharma & Health Freedom",
+    type:"research",
+    items:[
+      {n:"VAERS — Vaccine Adverse Event Reporting System (official)", u:"https://vaers.hhs.gov"},
+      {n:"VAERS Data — CDC/FDA public database search",              u:"https://wonder.cdc.gov/vaers.html"},
+      {n:"OpenVAERS — Searchable VAERS reports visualization",       u:"https://openvaers.com"},
+      {n:"Children's Health Defense — Robert F. Kennedy Jr.",        u:"https://childrenshealthdefense.org"},
+      {n:"Dr. Peter McCullough — Substack (COVID/vaccine research)",  u:"https://petermcculloughmd.substack.com"},
+      {n:"Dr. Robert Malone — Substack (mRNA inventor, research)",   u:"https://www.malone.news"},
+      {n:"The Highwire — Del Bigtree investigative health reporting", u:"https://thehighwire.com"},
+      {n:"FLCCC Alliance — Front Line COVID-19 Critical Care",       u:"https://covid19criticalcare.com"},
+      {n:"Dr. Mercola — Alternative health research",                u:"https://www.mercola.com"},
+      {n:"National Vaccine Injury Compensation Program (official)",  u:"https://www.hrsa.gov/vaccine-compensation"},
+      {n:"Informed Consent Action Network (ICAN)",                   u:"https://www.icandecide.org"},
+      {n:"1986 National Childhood Vaccine Injury Act — full text",   u:"https://www.congress.gov/bill/99th-congress/house-bill/5546"},
+    ],
+  },
+
+  // ══ TICKS, BIOWEAPONS & PLUM ISLAND ══════════════════════════════════════
+  {
+    label:"Ticks, Bioweapons, Lyme Disease & Plum Island",
+    type:"research",
+    items:[
+      {n:"BITTEN — Kris Newby Substack (Lyme/bioweapons research)",  u:"https://krisnewby.substack.com"},
+      {n:"Bitten Book — HarperCollins (official)",                  u:"https://www.harpercollins.com/products/bitten-kris-newby"},
+      {n:"Lab 257 — Michael Carroll (Plum Island research)",        u:"https://www.amazon.com/s?k=Lab+257+Michael+Carroll"},
+      {n:"Declassified: DoD Weaponized Ticks — Malone Substack",   u:"https://www.malone.news/p/declassified-documents-link-us-bioweapons"},
+      {n:"Congress Amendment 116-19 — DoD Tick Bioweapons Investigation (PDF)", u:"https://chrissmith.house.gov/uploadedfiles/2021-09-22_americans_deserve_the_truth__did_dod_weaponize_ticks_with_lyme_disease.pdf"},
+      {n:"Corporate Crime Reporter — Kris Newby Interview 2024",    u:"https://www.corporatecrimereporter.com/news/200/kris-newby-on-the-secret-history-of-lyme-disease-and-biological-weapons/"},
+      {n:"Dr. Steven Phillips — Chronic Lyme Disease Research",     u:"https://www.lymediseaseresearch.org"},
+      {n:"LymeDisease.org — Patient advocacy & research",          u:"https://www.lymedisease.org"},
+    ],
+  },
+
+  // ══ FOOD, FAKE MEAT & BIOTECH ═════════════════════════════════════════════
+  {
+    label:"Food Safety, Fake Meat & Biotech Agenda",
+    type:"research",
+    items:[
+      {n:"Food & Environment Reporting Network — Lab Meat Investigation",u:"https://thefern.org"},
+      {n:"FAO/WHO — 53 Hazards in Cultured Meat (official report)", u:"https://www.fao.org/food-safety/scientific-advice/culturing-meat/en/"},
+      {n:"Children's Health Defense — Fake Meat health risks",      u:"https://childrenshealthdefense.org"},
+      {n:"Popular Science — Is Lab-Grown Meat Safe?",              u:"https://www.popsci.com/health/is-lab-grown-meat-safe/"},
+      {n:"Weston A. Price Foundation — Real food research",        u:"https://www.westonaprice.org"},
+      {n:"Dr. Zach Bush — gut health, soil & food systems",        u:"https://zachbushmd.com"},
+      {n:"Food Babe — Vani Hari food additive research",           u:"https://foodbabe.com"},
+      {n:"Navdanya — Vandana Shiva GMO & seed research",           u:"https://www.navdanya.org"},
+      {n:"GMO Science — peer-reviewed GMO safety research",        u:"https://gmoscience.org"},
+      {n:"Environmental Working Group — food & chemical safety",   u:"https://www.ewg.org"},
+    ],
+  },
+
+  // ══ ANCIENT ADVANCED TECHNOLOGY & LOST CIVILIZATIONS ═════════════════════
+  {
+    label:"Ancient Advanced Technology & Lost Civilizations",
+    type:"research",
+    items:[
+      {n:"UnchartedX — Puma Punku & megalithic stonework field research",u:"https://www.youtube.com/@UnchartedX1"},
+      {n:"Ancient Code — Baalbek 1,200-ton megalithic stones",     u:"https://www.ancient-code.com"},
+      {n:"Ancient Origins — daily written ancient tech articles",  u:"https://www.ancient-origins.net"},
+      {n:"World History Encyclopedia — Sumerian King List & pre-Flood", u:"https://www.worldhistory.org"},
+      {n:"Graham Hancock — Younger Dryas Impact hypothesis",       u:"https://grahamhancock.com"},
+      {n:"Randall Carlson — Sacred geometry & catastrophism",      u:"https://randallcarlson.com"},
+      {n:"Robert Schoch — Geological dating of ancient structures",u:"https://www.robertschoch.net"},
+      {n:"Brien Foerster — Elongated skulls & advanced stonework", u:"https://brienfoerster.com"},
+      {n:"Jason Martell — Ancient technology & Anunnaki research", u:"https://www.youtube.com/@jasonmartell4"},
+      {n:"Legions of Atlantis — ancient global civilization research", u:"https://www.youtube.com/results?search_query=atlantis+lost+civilization"},
+      {n:"Younger Dryas Impact Hypothesis — peer-reviewed papers", u:"https://pubmed.ncbi.nlm.nih.gov/?term=younger+dryas+impact"},
+    ],
+  },
+
+  // ══ THE GODS, ANCIENT BEINGS & DIVINE COUNCIL ════════════════════════════
+  {
+    label:"The Gods, Ancient Beings & the Divine Council",
+    type:"research",
+    items:[
+      {n:"ETCSL Oxford — Sumerian deity texts FREE (An, Enlil, Enki)", u:"https://etcsl.orinst.ox.ac.uk"},
+      {n:"World History Encyclopedia — Anunnaki & Sumerian gods",  u:"https://www.worldhistory.org/Anunnaki/"},
+      {n:"Sitchin.com — Official Anunnaki research archive",       u:"https://sitchin.com"},
+      {n:"Dr. Michael Heiser — Divine Council theology (peer-reviewed)",u:"https://drmsh.com"},
+      {n:"4biddenknowledge — Ancient gods & Emerald Tablets",      u:"https://www.4biddenknowledge.com"},
+      {n:"Mauro Biglino — Biblical scholar, literal Elohim translation",u:"https://maurobiglino.com"},
+      {n:"Paul Wallis — Eden Series (Edenic Narratives YouTube)",  u:"https://www.youtube.com/@PaulWallis5thKind"},
+      {n:"The 5th Kind TV — Ancient gods & intervention",          u:"https://www.youtube.com/@The5thKind"},
+      {n:"Mystery Babylon — Bill Cooper deep state & ancient gods",u:"https://www.hourofthetime.com"},
+      {n:"Theosophy — Helena Blavatsky Secret Doctrine (free text)",u:"https://www.sacred-texts.com/the/sd/index.htm"},
+    ],
+  },
+
+  // ══ SACRED GEOMETRY, FIBONACCI & THE ARCHITECTURE OF CREATION ════════════
+  {
+    label:"Sacred Geometry, Fibonacci & Architecture of Creation",
+    type:"research",
+    items:[
+      {n:"Randall Carlson — Sacred geometry & ancient knowledge",   u:"https://randallcarlson.com"},
+      {n:"Drunvalo Melchizedek — Flower of Life & Merkaba",       u:"https://www.drunvalo.net"},
+      {n:"Sacred Geometry International",                         u:"https://sacredgeometryinternational.com"},
+      {n:"Fibonacci in Nature — official mathematical research",  u:"https://www.mathsisfun.com/numbers/fibonacci-sequence.html"},
+      {n:"Phi (Golden Ratio) research — Wolfram MathWorld",       u:"https://mathworld.wolfram.com/GoldenRatio.html"},
+      {n:"Sacred Geometry — Michael Schneider (A Beginner's Guide)",u:"https://www.amazon.com/s?k=Beginners+Guide+Constructing+Universe+Schneider"},
+      {n:"Jonathan Quintin — Sacred geometry art & research",     u:"https://www.jonathanquintin.com"},
+    ],
+  },
+
+  // ══ ATLANTIS, LEMURIA & PRE-FLOOD CIVILIZATIONS ════════════════════════════
+  {
+    label:"Atlantis, Lemuria & Pre-Flood Civilizations",
+    type:"research",
+    items:[
+      {n:"Graham Hancock — Atlantis & pre-flood civilization research",u:"https://grahamhancock.com"},
+      {n:"Dolores Cannon — Atlantis accounts from QHHT sessions",  u:"https://dolorescannon.com"},
+      {n:"Billy Carson — Atlantis, Thoth & Emerald Tablets",      u:"https://www.4biddenknowledge.com"},
+      {n:"Plato's Timaeus — Original Atlantis account (free text)",u:"https://classics.mit.edu/Plato/timaeus.html"},
+      {n:"Plato's Critias — Second Atlantis account (free text)",  u:"https://classics.mit.edu/Plato/critias.html"},
+      {n:"Atlantipedia — Comprehensive Atlantis research archive", u:"https://atlantipedia.ie"},
+      {n:"Robert Schoch — Sphinx water erosion & Atlantis connection",u:"https://www.robertschoch.net"},
+      {n:"Cayce Institute (ARE) — Edgar Cayce Atlantis readings",  u:"https://www.edgarcayce.org"},
+      {n:"Mu & Lemuria — James Churchward research archive",       u:"https://www.amazon.com/s?k=James+Churchward+Mu+Lost+Continent"},
+    ],
+  },
+
+  // ══ FREQUENCY, ENERGY MEDICINE & VIBRATIONAL HEALING ═════════════════════
+  {
+    label:"Frequency, Energy Medicine & Vibrational Healing",
+    type:"research",
+    items:[
+      {n:"Royal Rife Research — Rife machine & frequency healing",  u:"https://www.rife.org"},
+      {n:"Cymatics.org — Sound frequency creates matter patterns",  u:"https://www.cymatics.org"},
+      {n:"Solfeggio Frequencies — 432Hz & 528Hz healing research",  u:"https://meditativemind.org"},
+      {n:"Schumann Resonance — Earth's base frequency monitoring",  u:"https://www.spaceweatherlive.com/en/solar-activity/schumann-resonance.html"},
+      {n:"Masaru Emoto — Water memory & emotion research",          u:"https://www.masaru-emoto.net/en/"},
+      {n:"HeartMath Institute — Heart electromagnetic research",    u:"https://www.heartmath.org/research/"},
+      {n:"Dr. Joe Dispenza — Meditation & brain frequency research",u:"https://drjoedispenza.com"},
+      {n:"GreenMedInfo — Evidence-based natural medicine research", u:"https://greenmedinfo.com"},
+      {n:"Global Consciousness Project — Princeton anomaly research",u:"https://noosphere.princeton.edu"},
+    ],
+  },
+
+  // ══ REMOTE VIEWING, PSI & GOVERNMENT PSYCHIC PROGRAMS ════════════════════
+  {
+    label:"Remote Viewing, PSI & Government Psychic Programs",
+    type:"archive",
+    items:[
+      // Official declassified records
+      {n:"CIA Stargate Collection — 12 million pages declassified (official)",u:"https://www.cia.gov/readingroom/collection/stargate"},
+      {n:"CIA Gateway Process — 1983 Army consciousness report FREE PDF",u:"https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-3.pdf"},
+      {n:"IRP.fas.org — STAR GATE full program history & documents",   u:"https://irp.fas.org/program/collect/stargate.htm"},
+      {n:"Black Vault — Stargate declassified documents archive",      u:"https://www.theblackvault.com/documentarchive/project-star-gate/"},
+      // Key researchers & practitioners
+      {n:"Hal Puthoff — physicist & Stargate lead scientist research",  u:"https://www.esi-ea.org"},
+      {n:"Russell Targ — laser physicist & remote viewing researcher",  u:"https://www.espresearch.com"},
+      {n:"Ingo Swann — remote viewing co-creator official archive",    u:"https://www.biomindsuperpowers.com"},
+      {n:"Joe McMoneagle — Army Stargate viewer, official site",       u:"https://www.mceagle.com"},
+      {n:"Courtney Brown — Farsight Institute remote viewing",         u:"https://farsight.org"},
+      {n:"Monroe Institute — Gateway Process & OBE research",         u:"https://www.monroeinstitute.org"},
+      // Written research & analysis
+      {n:"Decrypted Matrix — Project Stargate full history",           u:"https://decryptedmatrix.com/project-stargate-cia-classified-psychic-espionage-program/"},
+      {n:"War History Online — CIA Remote Viewing & the Soviets",     u:"https://www.warhistoryonline.com/war-articles/project-stargate.html"},
+      {n:"Journal of Scientific Exploration — PSI research papers",   u:"https://journalofscientificexploration.org"},
+      {n:"Dean Radin — Institute of Noetic Sciences PSI research",    u:"https://www.deanradin.com"},
+      {n:"Society for Psychical Research — 140 years of PSI research (UK)",u:"https://www.spr.ac.uk"},
+      {n:"Rhine Research Center — remote viewing & PSI studies",      u:"https://www.rhine.org"},
+    ],
+  },
+
+  // ══ PORTALS, STARGATES & INTERDIMENSIONAL RESEARCH ════════════════════════
+  {
+    label:"Portals, Stargates & Interdimensional Research",
+    type:"research",
+    items:[
+      // Ancient sites & portal research
+      {n:"Mike Ricksecker — Portals to the Stars (Amazon)",            u:"https://www.amazon.com/dp/B0DK3YY7K6"},
+      {n:"Academic Block — Stargates & Portals full research article", u:"https://www.academicblock.com/science/fringe-science/stargates-and-portals"},
+      {n:"Sacred Illusion — Stargates & Doors to Nowhere",            u:"https://www.sacredillusion.com/stargates-and-doors-to-nowhere-portals-illusions-or-entrances-to-elsewhere/"},
+      {n:"Tourism & Travel — Global Stargate Sites mystery",          u:"https://www.tourismandtravel.org/2024/11/the-mystery-of-stargates-across-world.html"},
+      {n:"MagellanTV — Portals: Stonehenge, Pyramids, Dark Matter",   u:"https://www.magellantv.com/articles/portals-to-other-worlds-where-stonehenge-harry-potter-and-dark-matter-meet"},
+      {n:"Thirdi.us — Skinwalker Ranch, Mount Shasta, Stargates",     u:"https://thirdi.us/blog/2024/07/unlocking-the-mysteries-of-stargates-portals-to-other-dimensions-and-realms/"},
+      // Government research
+      {n:"Skinwalker Ranch — Official site & DoD investigation",      u:"https://skinwalker-ranch.com"},
+      {n:"AAWSAP / AATIP — Pentagon DoD anomalous program docs",      u:"https://www.aaro.mil"},
+      {n:"CERN — Official LHC extra dimensions research",             u:"https://home.cern/science/experiments/lhc"},
+      {n:"Montauk Project — Camp Hero State Park (former AF Station)", u:"https://www.nysparks.com/parks/41/details.aspx"},
+      // Theories & hidden knowledge
+      {n:"Medium — Iraqi Stargate: US Military Zones at Sumerian Sites",u:"https://medium.com/@iram.ahmed1997/the-iraqi-stargate-conspiracy-a-modern-perspective-on-an-ancient-mystery-18d3cd39ff8f"},
+      {n:"Awakening of a Thirdi — Metaphysical stargates research",   u:"https://thirdi.us/blog/2024/07/unlocking-the-mysteries-of-stargates-portals-to-other-dimensions-and-realms/"},
+      {n:"World History Encyclopedia — Sumerian Gate of Anu",         u:"https://www.worldhistory.org/article/216/the-myth-of-adapa/"},
+      {n:"Sedona Anomalies — Portal & vortex electromagnetic research",u:"https://sedonanomalies.com"},
+      {n:"Wes Penre — Interdimensional portals & grid research",      u:"https://wespenre.com/category/level-1-5-in-pdf/"},
+    ],
+  },
+
+  // ══ DOLPHINS — GOVERNMENT FILES, MILITARY PROGRAMS & INTELLIGENCE ═════════
+  {
+    label:"Dolphins — Military Programs, Government Files & Intelligence",
+    type:"research",
+    items:[
+      // Official government & military sources
+      {n:"US Navy NMMP — Official Navy Marine Mammal Program page",   u:"https://www.niwcpacific.navy.mil/marine-mammal/"},
+      {n:"NMMP Wikipedia — Full documented history (declassified)",   u:"https://en.wikipedia.org/wiki/United_States_Navy_Marine_Mammal_Program"},
+      {n:"Military Marine Mammal Wikipedia — Global programs incl. Soviet", u:"https://en.wikipedia.org/wiki/Military_marine_mammal"},
+      {n:"USNI Proceedings 2007 — Sleek Sailors: Navy Marine Mammal Program", u:"https://www.usni.org/magazines/proceedings/2007/may/oceans-sleek-sailors-navys-marine-mammal-program"},
+      {n:"History.com — How Dolphins Became Secret Cold War Weapons",  u:"https://www.history.com/articles/navy-marine-mammal-program-history-dolphins-sea-lions"},
+      {n:"VeteranLife — Exclusive NMMP Interview with Navy Commander", u:"https://veteranlife.com/military-history/marine-mammal-program"},
+      // The law — MMPA
+      {n:"NOAA Fisheries — Official MMPA dolphin harassment FAQ",     u:"https://www.fisheries.noaa.gov/marine-life-distress/frequent-questions-feeding-or-harassing-marine-mammals-wild"},
+      {n:"NOAA — Wild Dolphin Interaction Regulations (official PDF)", u:"https://nmssanctuaries.blob.core.windows.net/sanctuaries-prod/media/archive/dolphinsmart/pdfs/wd_interact_factsheet.pdf"},
+      {n:"LegalClarity — MMPA full law breakdown: what is and isn't illegal",u:"https://legalclarity.org/why-is-it-illegal-to-communicate-with-dolphins/"},
+      {n:"LegalClarity — Are Dolphins Protected Under US Law?",       u:"https://legalclarity.org/are-dolphins-protected-under-u-s-and-international-law/"},
+      {n:"LegalOverview — Is It Illegal to Talk to Dolphins? 2026",   u:"https://legaloverview.com/is-it-illegal-to-communicate-with-dolphins/"},
+      {n:"Dolphin Research Center — Marine Mammal Law full guide",    u:"https://dolphins.org/marine_mammal_law"},
+      {n:"NOAA Enforcement Hotline: (800) 853-1964 — Report violations 24/7",u:"https://www.fisheries.noaa.gov/contact/office-law-enforcement"},
+      // CIA & consciousness research
+      {n:"Vice — What We've Learned From Giving Dolphins LSD",        u:"https://www.vice.com/en/article/what-weve-learned-from-giving-dolphins-lsd/"},
+      {n:"Supercluster — How Dolphins on LSD Shaped the Search for ET Intelligence", u:"https://www.supercluster.com/editorial/how-dolphins-on-lsd-shaped-the-search-for-extraterrestrial-intelligence"},
+      {n:"Dr. John C. Lilly — Consciousness Research & Dolphin Programs",u:"https://troubledminds.substack.com/p/isolated-consciousness-the-collision"},
+      {n:"CIA MK-Ultra Connection to Dolphin Consciousness Research", u:"https://historiailliusitineris.com/john-c-lilly/"},
+      // Global personhood & rights
+      {n:"India 2013 — Non-Human Persons Declaration (The Print)",    u:"https://theprint.in/science/pacific-islands-leaders-grant-whales-dolphins-personhood-status-india-did-it-over-a-decade-ago/2036312/"},
+      {n:"Sonar — Dolphin & Whale Nonhuman Personhood global movement",u:"https://wearesonar.org/dolphin-and-whale-nonhuman-personhood/"},
+      {n:"Earth Island — What India's Dolphin Captivity Ban Means",   u:"https://www.earthisland.org/journal/index.php/articles/entry/what_indias_decision_to_ban_dolphin_captivity_means/"},
+      {n:"2010 Declaration of Rights for Cetaceans — Full text",      u:"https://www.cetaceanrights.org"},
+      {n:"SONAR Organization — Active cetacean personhood legislation campaign",u:"https://wearesonar.org"},
+      // Intelligence research
+      {n:"Wild Dolphin Project — Dr. Herzing 35-year peer-reviewed research",u:"https://www.wilddolphinproject.org/media/scientific-publications/"},
+      {n:"Cambridge Declaration on Consciousness 2012 — full text (PDF)",u:"https://fcmconference.org/img/CambridgeDeclarationOnConsciousness.pdf"},
+      {n:"Kimmela Center — Dr. Lori Marino dolphin brain & consciousness",u:"https://www.kimmela.org"},
+      {n:"Whale Sanctuary Project — Intelligence, cognition & emotion in cetaceans",u:"https://whalesanctuaryproject.org/intelligence-cognition-emotion-cetaceans/"},
+      {n:"Dolphin Research Center — Cognitive research archive",      u:"https://dolphins.org/research_spotlight"},
+      {n:"NOAA Ocean Explorer — US dolphin research programs",        u:"https://oceanexplorer.noaa.gov"},
+      {n:"Cetacean Society International — dolphin conservation research",u:"https://csiwhalesalive.org"},
+      {n:"Orion Magazine — Deep Intellect (Sy Montgomery, Dr. Herzing)",u:"https://orionmagazine.org/article/deep-intellect/"},
+      // Hidden history & declassified
+      {n:"Hidden History — Drafting Dolphins: Full military dolphin history",u:"https://lflank.wordpress.com/2016/04/05/drafting-dolphins-a-history-of-the-militarys-marine-mammal-program/"},
+      {n:"Historic Mysteries — Military Marine Mammals: History of Exploding Dolphins",u:"https://www.historicmysteries.com/history/military-marine-mammal/30639/"},
+      {n:"MEL Magazine — What's Going On With America's Navy Dolphins?",u:"https://melmagazine.com/en-us/story/navy-dolphins-program-history"},
+      {n:"Dolphins World — Full history of dolphins in military",     u:"https://www.dolphins-world.com/dolphins-in-the-military/"},
+    ],
+  },
+
+  // ══ PODCASTS — CONSPIRACY, ANOMALOUS & HIDDEN KNOWLEDGE ══════════════════
+  {
+    label:"Podcasts — Conspiracy, Anomalous & Hidden Knowledge",
+    type:"podcast",
+    items:[
+      {n:"Stuff They Don't Want You to Know (iHeart) — 1,500+ episodes",u:"https://www.iheart.com/podcast/182-stuff-they-dont-want-you-17913675/"},
+      {n:"Conspiracy Theories (Spotify Parcast) — weekly deep dives",  u:"https://open.spotify.com/show/5RdShpOtxKO3ZWohR2M6Sv"},
+      {n:"The Why Files — researched mysteries & anomalous events",    u:"https://www.youtube.com/@TheWhyFiles"},
+      {n:"Tin Foil Hat with Sam Tripoli",                              u:"https://www.samtripoli.com"},
+      {n:"Those Conspiracy Guys — history, comedy & true crime",      u:"https://www.thoseconspiracyguys.com"},
+      {n:"The Corbett Report Podcast — full transcripts",             u:"https://www.corbettreport.com/podcasts/"},
+      {n:"Macrodosing with PFT Commenter & Arian Foster",             u:"https://open.spotify.com/show/6XCsTV7fJjQlaDkH8P3Bme"},
+      {n:"The Higherside Chats — Greg Carlwood interviews",           u:"https://www.thehighersidechats.com"},
+      {n:"Fade to Black — Jimmy Church Radio",                        u:"https://jimmychurchradio.com"},
+      {n:"Ground Zero with Clyde Lewis",                              u:"https://groundzeromedia.org"},
+      {n:"Coast to Coast AM — Art Bell/George Noory archive",         u:"https://www.coasttocoastam.com"},
+      {n:"Generation Why — true crime & conspiracies since 2012",     u:"https://generationwhypodcast.com"},
+      {n:"Mysterious Universe Podcast",                               u:"https://mysteriousuniverse.org/category/podcasts/"},
+      {n:"Blurry Creatures Podcast — paranormal & biblical mysteries",u:"https://www.blurrycreatures.com"},
+      {n:"Redacted with Clayton Morris",                              u:"https://www.redacted.inc"},
+      {n:"Geopolitics & Empire — Hrvoje Morić interviews",           u:"https://geopoliticsandempire.com"},
+      {n:"Unlimited Hangout Podcast — Whitney Webb",                 u:"https://unlimitedhangout.com"},
+      {n:"Dark Journalist — X series & secret space",                u:"https://www.darkjournalist.com"},
+      {n:"The Solari Report — Catherine Austin Fitts",               u:"https://home.solari.com"},
+      {n:"No Agenda — Adam Curry & John C. Dvorak media deconstruction",u:"https://www.noagendashow.net"},
+    ],
+  },
+
+  // ══ PEER-REVIEWED & ACADEMIC JOURNALS (ANOMALOUS RESEARCH) ═══════════════
+  {
+    label:"Peer-Reviewed Journals — Anomalous & Suppressed Research",
+    type:"research",
+    items:[
+      {n:"Journal of Scientific Exploration (Society for Scientific Exploration)", u:"https://journalofscientificexploration.org"},
+      {n:"Journal of Anomalous Experience & Cognition (JAEX) — open access",u:"https://journals.lub.lu.se/jaex"},
+      {n:"Journal of Parapsychology — Rhine Research Center",         u:"https://www.rhine.org/what-we-do/journal-of-parapsychology.html"},
+      {n:"Journal of Near-Death Studies — IANDS",                    u:"https://iands.org/research/publications/journal-of-near-death-studies.html"},
+      {n:"Explore: Journal of Science & Healing",                    u:"https://www.explorejournal.com"},
+      {n:"Fortean Studies — academic Fortean research journal",      u:"https://www.forteantimes.com"},
+      {n:"Medical Hypotheses — Elsevier (unconventional medical ideas)",u:"https://www.sciencedirect.com/journal/medical-hypotheses"},
+      {n:"NeuroQuantology — consciousness & quantum research",       u:"https://www.neuroquantology.com"},
+      {n:"Nexus Magazine — UFO, fringe science & conspiracy",        u:"https://www.nexusmagazine.com"},
+      {n:"Fate Magazine — strange and unknown phenomena since 1948", u:"https://www.fatemagazine.com"},
+      {n:"Lobster Magazine — parapolitics research (UK)",            u:"https://www.lobster-magazine.co.uk"},
+      {n:"Skeptic Magazine — critical examination of claims",        u:"https://www.skeptic.com/reading_room/"},
+    ],
+  },
+
+  // ══ REDDIT COMMUNITIES — FULL EXPANDED LIST ═══════════════════════════════
+  {
+    label:"Reddit Communities — Full Expanded List",
+    type:"user",
+    items:[
+      // Core conspiracy & anomalous
+      {n:"r/conspiracy — 1.9M members, alternative viewpoints",      u:"https://www.reddit.com/r/conspiracy"},
+      {n:"r/conspiracytheories — theory & debate",                   u:"https://www.reddit.com/r/conspiracytheories"},
+      {n:"r/C_S_T — Critical Speculative Theory",                    u:"https://www.reddit.com/r/C_S_T"},
+      {n:"r/conspiracyfact — documented & confirmed conspiracies",   u:"https://www.reddit.com/r/conspiracyfact"},
+      {n:"r/conspiracyNOPOL — no politics conspiracy focus",         u:"https://www.reddit.com/r/conspiracyNOPOL"},
+      // UAP & paranormal
+      {n:"r/UFOs — UAP sightings, disclosure & evidence",            u:"https://www.reddit.com/r/UFOs"},
+      {n:"r/HighStrangeness — paranormal & unexplained",             u:"https://www.reddit.com/r/HighStrangeness"},
+      {n:"r/Paranormal — supernatural encounters",                   u:"https://www.reddit.com/r/Paranormal"},
+      {n:"r/UAP — unidentified aerial phenomena",                    u:"https://www.reddit.com/r/UAP"},
+      {n:"r/aliens — extraterrestrial life & contact",               u:"https://www.reddit.com/r/aliens"},
+      {n:"r/SkinWalkerRanch — paranormal ranch research",            u:"https://www.reddit.com/r/SkinWalkerRanch"},
+      // Ancient history & alternative
+      {n:"r/AlternativeHistory — suppressed & disputed history",     u:"https://www.reddit.com/r/AlternativeHistory"},
+      {n:"r/AncientAliens — ancient astronaut theory",               u:"https://www.reddit.com/r/AncientAliens"},
+      {n:"r/ancientcivilizations — lost & advanced ancient cultures",u:"https://www.reddit.com/r/ancientcivilizations"},
+      {n:"r/GrahamHancock — lost civilization research",             u:"https://www.reddit.com/r/GrahamHancock"},
+      {n:"r/Anunnaki — Sumerian & Anunnaki research",               u:"https://www.reddit.com/r/Anunnaki"},
+      // Biblical & giants
+      {n:"r/Giants — Nephilim & giant beings",                       u:"https://www.reddit.com/r/Giants"},
+      {n:"r/biblestudy — biblical research & interpretation",        u:"https://www.reddit.com/r/biblestudy"},
+      {n:"r/Christianity — biblical & theological discussion",       u:"https://www.reddit.com/r/Christianity"},
+      {n:"r/bibleprophecy — end times & prophecy research",         u:"https://www.reddit.com/r/bibleprophecy"},
+      // Science & health
+      {n:"r/Lyme — Lyme disease research & patient community",       u:"https://www.reddit.com/r/Lyme"},
+      {n:"r/VaccineDebate — vaccine safety discussion",              u:"https://www.reddit.com/r/VaccineDebate"},
+      {n:"r/epigenetics — DNA & gene expression research",          u:"https://www.reddit.com/r/epigenetics"},
+      {n:"r/forbiddenscience — suppressed scientific research",      u:"https://www.reddit.com/r/forbiddenscience"},
+      // Animal intelligence
+      {n:"r/Dolphins — dolphin intelligence & research",             u:"https://www.reddit.com/r/Dolphins"},
+      {n:"r/whales — cetacean research & conservation",              u:"https://www.reddit.com/r/whales"},
+      // Consciousness & simulation
+      {n:"r/SimulationTheory — are we in a simulation?",            u:"https://www.reddit.com/r/SimulationTheory"},
+      {n:"r/consciousness — science of consciousness",               u:"https://www.reddit.com/r/consciousness"},
+      {n:"r/spirituality — spiritual research & experience",         u:"https://www.reddit.com/r/spirituality"},
+      {n:"r/Metaphysics — philosophy & metaphysical research",       u:"https://www.reddit.com/r/Metaphysics"},
+      // Unresolved & cold cases
+      {n:"r/UnresolvedMysteries — unsolved cases & strange events",  u:"https://www.reddit.com/r/UnresolvedMysteries"},
+      {n:"r/RealXFiles — real unexplained events",                   u:"https://www.reddit.com/r/RealXFiles"},
+      {n:"r/Missing411 — David Paulides missing persons research",   u:"https://www.reddit.com/r/Missing411"},
+      // Government & finance
+      {n:"r/FOIA — FOIA requests & declassified documents",         u:"https://www.reddit.com/r/FOIA"},
+      {n:"r/intelligence — intelligence community discussion",       u:"https://www.reddit.com/r/intelligence"},
+      {n:"r/DeepStatePatriots — government & deep state discussion", u:"https://www.reddit.com/r/deepstatepatriots"},
+    ],
+  },
+
+  // ══ FORUMS & ALTERNATIVE PLATFORMS ════════════════════════════════════════
+  {
+    label:"Forums & Alternative Discussion Platforms",
+    type:"user",
+    items:[
+      {n:"Above Top Secret (ATS) — the original conspiracy forum",   u:"https://www.abovetopsecret.com"},
+      {n:"Godlike Productions (GLP) — UFO, politics & conspiracy",   u:"https://www.godlikeproductions.com"},
+      {n:"David Icke Forum — official community discussion",         u:"https://forum.davidicke.com"},
+      {n:"Project Avalon — Bill Ryan & alternative research forum",  u:"https://projectavalon.net"},
+      {n:"Cassiopaea Forum — Laura Knight-Jadczyk research",         u:"https://cassiopaea.org/forum"},
+      {n:"Rumble — uncensored video platform for banned content",    u:"https://rumble.com"},
+      {n:"Telegram — major alternative media & research channels",   u:"https://telegram.org"},
+      {n:"Gab — free speech alternative social platform",           u:"https://gab.com"},
+      {n:"Minds — decentralized free speech platform",              u:"https://www.minds.com"},
+      {n:"Odysee/LBRY — decentralized uncensored video platform",   u:"https://odysee.com"},
+      {n:"BitChute — alternative video hosting for banned content",  u:"https://www.bitchute.com"},
+      {n:"Substack — independent newsletter platform",               u:"https://substack.com"},
+      {n:"4chan /x/ board — paranormal, UAP & conspiracy discussion", u:"https://boards.4channel.org/x/"},
+      {n:"Unexplained Mysteries Forum — active paranormal community",u:"https://www.unexplained-mysteries.com/forum/"},
+      {n:"The Paracast Community Forums — UAP & paranormal",        u:"https://www.theparacast.com/forum/"},
+      {n:"Fortean Times Forum — FT community discussion",           u:"https://www.forteantimes.com/forum"},
+    ],
+  },
+
+  // ══ ALTERNATIVE NEWS AGGREGATORS & LINK HUBS ══════════════════════════════
+  {
+    label:"Alternative News Aggregators & Link Hubs",
+    type:"news",
+    items:[
+      {n:"Natural News — Mike Adams alternative health & news",      u:"https://www.naturalnews.com"},
+      {n:"Infowars — Alex Jones (archived; take critically)",        u:"https://www.infowars.com"},
+      {n:"SGT Report — precious metals, deep state & health",        u:"https://www.sgtreport.com"},
+      {n:"State of the Nation — deep state & alternative news",      u:"https://stateofthenation.co"},
+      {n:"What Really Happened — Michael Rivero news aggregator",   u:"https://www.whatreallyhappened.com"},
+      {n:"The Tap Blog — UK alternative news aggregator",           u:"https://tapnewswire.com"},
+      {n:"GlobalResearch.ca — Michel Chossudovsky geopolitics",     u:"https://www.globalresearch.ca"},
+      {n:"21st Century Wire — Patrick Henningsen independent news",  u:"https://21stcenturywire.com"},
+      {n:"Need To Know News — dark journalism aggregator",           u:"https://needtoknow.news"},
+      {n:"The Vigilant Citizen — symbolism & pop culture decoding",  u:"https://vigilantcitizen.com"},
+      {n:"End of the American Dream — Michael Snyder economic news", u:"https://endoftheamericandream.com"},
+    ],
+  },
+
+  // ══ TELEGRAM CHANNELS & COMMUNITIES (KEY ONES) ════════════════════════════
+  {
+    label:"Telegram Channels — Key Research Communities",
+    type:"user",
+    items:[
+      {n:"Search Telegram: 'David Icke' — official channel",        u:"https://t.me/davidickeofficial"},
+      {n:"Search Telegram: 'Corbett Report' — news & research",     u:"https://t.me/corbettreport"},
+      {n:"Search Telegram: 'Whitney Webb' — investigative research",u:"https://t.me/unlimitedhangout"},
+      {n:"Search Telegram: 'Dr. Robert Malone' — COVID research",   u:"https://t.me/robertmalonemd"},
+      {n:"Search Telegram: 'UAP Disclosure' — live UAP updates",    u:"https://t.me/uapdisclosure"},
+      {n:"Search Telegram: 'Forbidden History' — ancient civilizations",u:"https://telegram.org"},
+      {n:"Search Telegram: 'The Why Files' — mystery research",     u:"https://telegram.org"},
+      {n:"Search Telegram: 'Wes Penre' — papers & community",       u:"https://telegram.org"},
     ],
   },
 ];
