@@ -3,8 +3,8 @@ export const ADMIN_USER = "nexusadmin";
 export const ADMIN_PASS = "N3xus@2025";
 
 // ─── STRIPE ──────────────────────────────────────────────────────────────────
-export const STRIPE_MONTHLY = "https://buy.stripe.com/test_dRm6oH84JdG5dbRgfO8bS01";
-export const STRIPE_ANNUAL  = "https://buy.stripe.com/test_4gMcN54SxbxXefV6Fe8bS00";
+export const STRIPE_MONTHLY = "https://buy.stripe.com/REPLACE_MONTHLY_LINK";
+export const STRIPE_ANNUAL  = "https://buy.stripe.com/REPLACE_ANNUAL_LINK";
 
 export const FREE_LIMIT = 9;
 
@@ -191,6 +191,13 @@ export const SEED_STORIES = [
   {id:"s65",type:"research",source:"Wild Dolphin Project / Cambridge Declaration",sourceUrl:"https://www.wilddolphinproject.org",time:"9h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"What We Actually Know About Dolphin Intelligence: Cambridge Declaration, Mirror Tests, Name Whistles, Culture, Grief — The Evidence Governments Don't Publicize", summary:"The 2012 Cambridge Declaration on Consciousness — signed in presence of Stephen Hawking — confirmed dolphins are conscious and self-aware. Dolphins pass the mirror self-recognition test (only humans, great apes, elephants, and magpies also pass). They choose unique name whistles before age one that are remembered 20+ years. Shark Bay Australia documents sponge tool use transmitted mother-to-daughter across three generations — qualifying as culture. Dr. Denise Herzing's 35-year Wild Dolphin Project documents syntax in communication, multigenerational dialect transmission, and grief — mothers carrying dead calves for weeks. A 2024 study confirmed dolphins imitate computer-generated sounds they have never heard.",upvotes:8400,comments:1302,credible:97,debunked:3,tags:["Consciousness","Cambridge","Mirror Test","Intelligence","Dolphins","Culture"],premium:false},
 
   {id:"s66",type:"research",source:"Dr. Denise Herzing / WDP",       sourceUrl:"https://www.wilddolphinproject.org/media/scientific-publications/",time:"10h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"What Global Governments May Be Hiding About Dolphins: Classified Programs, Suppressed Intelligence Research, and the Question Nobody Asks", summary:"Several layers of classification surround dolphin research: (1) The CIA's 1964 Key West lab — full scope classified. (2) NMMP operational details — still classified 30+ years after the program was 'declassified.' (3) Soviet weaponization details — never fully disclosed. (4) Whether communication research with dolphins produced results beyond what was published — John Lilly's CIA-funded work never fully disclosed. (5) North Korea reportedly developing its own military dolphin program in 2024. (6) Whether the 1986 MMPA national defense exemption was used to take dolphins for intelligence — not just military — purposes. The most classified intelligence programs globally involve three things that overlap: consciousness, communication, and non-human intelligence. Dolphins are the intersection of all three.",upvotes:9800,comments:1601,credible:55,debunked:45,tags:["Classified","CIA","Dolphins","Consciousness","Hidden","Intelligence"],premium:true},
+
+  // ── DAVID PAULIDES — MISSING 411 ──────────────────────────────────────────
+  {id:"s78",type:"research",source:"CanAm Missing / Missing411.com",  sourceUrl:"https://www.canammissing.com",time:"1h ago",topic:"Unresolved Events",region:"🇺🇸 USA",title:"Missing 411: David Paulides Documents 9,000+ Hours of Research Into Unexplained National Park Disappearances — Patterns That Defy Explanation", summary:"Former law enforcement officer David Paulides spent 9,000+ hours investigating disappearances in US National Parks after a ranger tipped him off to a disturbing pattern. His findings: victims disappear in good weather with no distress call. Bodies are found miles away in terrain search teams already covered. Clothing is missing or neatly arranged. No trail of passage. Berry bushes stripped near discovery sites. Victims are often found in or near water. The National Park Service refused his FOIA request for a list of missing persons — citing cost. No other government database tracks this.",upvotes:14200,comments:2102,credible:72,debunked:28,tags:["Missing 411","Paulides","National Parks","Disappearances","FOIA","Unexplained"],premium:false},
+
+  {id:"s79",type:"research",source:"Missing411.com / CanAm",          sourceUrl:"https://missing411.com",time:"2h ago",topic:"Unresolved Events",region:"🇺🇸 USA",title:"The Missing 411 Profile Points: 30+ Consistent Patterns Across Hundreds of Disappearances That Cannot Be Explained by Conventional Search Theory", summary:"Paulides identified 30+ profile points appearing consistently across cases: disappearances near boulder fields or granite outcroppings; victims last seen near berry patches; dogs cannot track scent; victims found in water despite not being near water when last seen; clothing found neatly folded or missing entirely; victims recovered with no memory of what happened; weather changes immediately after disappearance; discovery sites already searched multiple times. The clusters map to specific geographic zones. The NPS has never commented. Some researchers point to interdimensional portals. Others point to predatory human networks. The cases remain officially unexplained.",upvotes:12800,comments:1901,credible:65,debunked:35,tags:["Missing 411","Profile Points","National Parks","Paulides","Patterns"],premium:false},
+
+  {id:"s80",type:"research",source:"CanAm Missing Project",            sourceUrl:"https://www.canammissing.com",time:"3h ago",topic:"Unresolved Events",region:"🇺🇸 USA",title:"Missing 411: The Hunted — Experienced Hunters With Military Training Vanish in the Woods. Something Is Hunting Them Back", summary:"Paulides' 2019 documentary The Hunted focuses exclusively on experienced hunters — many with military backgrounds — who vanished in wilderness areas. These are not lost hikers. These are men with compass skills, survival training, and firearms who were in familiar territory. Several cases: hunters who called family to say they were coming home and never arrived. Shots fired with no casualty found. Weapons found but hunter gone. Paulides argues the pattern in hunter disappearances is distinct from civilian cases and suggests an active predatory intelligence.",upvotes:11400,comments:1701,credible:61,debunked:39,tags:["Missing 411","Hunters","Military","Paulides","Predator","Wilderness"],premium:false},
 
   // ── REMOTE VIEWING GOVERNMENT FILES ───────────────────────────────────────
   {id:"s67",type:"archive", source:"CIA Reading Room",              sourceUrl:"https://www.cia.gov/readingroom/collection/stargate",time:"1h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"Project STARGATE: The CIA's $20 Million 25-Year Psychic Espionage Program — Now Fully Declassified", summary:"Project STARGATE was the code name for a classified US Army / DIA program established 1978 at Fort Meade, Maryland to weaponize psychic phenomena for intelligence collection against the Soviet Union. Ran for over 20 years. $20 million budget confirmed. Physicists Hal Puthoff and Russell Targ at Stanford Research Institute were the lead scientists. CIA fully declassified 12 million pages of Stargate documents in 2017. The entire archive is searchable at the CIA Reading Room. Congressman Charles Rose stated in the House Intelligence Committee: 'It seemed like a hell of a cheap radar system — and if the Russians have it and we don't, we're in serious trouble.'",upvotes:11200,comments:1802,credible:95,debunked:5,tags:["Stargate","CIA","Remote Viewing","Declassified","DIA","Puthoff"],premium:false},
@@ -1136,22 +1143,75 @@ export const SOURCES = [
     ],
   },
 
+  // ══ FORBIDDEN KNOWLEDGE & SUPPRESSED VIDEO PLATFORMS ═════════════════════
+  {
+    label:"Forbidden Knowledge — Video Platforms & Suppressed Research Sites",
+    type:"blog",
+    items:[
+      // The sites like Forbidden Knowledge TV
+      {n:"Forbidden Knowledge TV — Alexandra Bruce (forbiddenknowledgetv.net)",u:"https://forbiddenknowledgetv.net/home"},
+      {n:"Forbidden Knowledge TV — Substack newsletter archive",        u:"https://forbiddennews.substack.com"},
+      {n:"Forbidden Knowledge News — daily paranormal & suppressed research",u:"https://forbiddenknowledge.news"},
+      {n:"Forbidden Knowledge Network Podcast — Apple Podcasts",       u:"https://podcasts.apple.com/us/podcast/forbidden-knowledge-news/id1470192028"},
+      {n:"Dark Journalist — X-Series UAP & deep state investigations", u:"https://www.darkjournalist.com"},
+      {n:"The Solari Report — Catherine Austin Fitts, missing trillions",u:"https://home.solari.com"},
+      {n:"Redacted with Clayton Morris — daily suppressed news",        u:"https://www.redacted.inc"},
+      {n:"SGT Report — Sean Turnbull, deep state & financial research", u:"https://www.sgtreport.com"},
+      {n:"Need To Know News — dark journalism daily aggregator",        u:"https://needtoknow.news"},
+      {n:"The Vigilant Citizen — occult symbolism & pop culture decoding",u:"https://vigilantcitizen.com"},
+      {n:"Universe Inside You — ancient knowledge & consciousness YouTube",u:"https://www.youtube.com/@UniverseInsideYou"},
+      {n:"Zohar StarGate Ancient Discoveries — YouTube",               u:"https://www.youtube.com/@ZoharStarGateAncientDiscoveries"},
+      {n:"Universe Inside You — website",                              u:"https://universeinsideyou.net"},
+      {n:"Collective Evolution — consciousness & suppressed science",   u:"https://www.ce1.com"},
+      {n:"Prepare For Change — planetary liberation research",         u:"https://prepareforchange.net"},
+      {n:"Operation Disclosure Official — suppressed & classified research",u:"https://operationdisclosureofficial.com"},
+      {n:"Ascension Glossary — Laura Knight-Jadczyk hidden knowledge", u:"https://ascensionglossary.com"},
+      {n:"Era of Light — spiritual & suppressed news aggregator",       u:"https://eraoflight.com"},
+      {n:"Truth11 — suppressed science & government secrets",          u:"https://truth11.com"},
+      {n:"The Freedom Articles — Makia Freeman investigations",        u:"https://thefreedomarticles.com"},
+    ],
+  },
+
+  // ══ DAVID PAULIDES — MISSING 411 & CANAMMISSING ═══════════════════════════
+  {
+    label:"David Paulides — Missing 411 & CanAm Missing Research",
+    type:"research",
+    items:[
+      {n:"Missing411.com — Official David Paulides site & book store",  u:"https://missing411.com"},
+      {n:"CanAm Missing Project — canammissing.com (active case files)",u:"https://www.canammissing.com"},
+      {n:"David Paulides YouTube — investigative videos & new cases",   u:"https://www.youtube.com/@DavidPaulides"},
+      {n:"Missing 411 Western US — first book (Amazon)",               u:"https://www.amazon.com/s?k=Missing+411+Western+United+States+Paulides"},
+      {n:"Missing 411 Eastern US — second book (Amazon)",              u:"https://www.amazon.com/s?k=Missing+411+Eastern+United+States+Paulides"},
+      {n:"Missing 411 North America & Beyond (Amazon)",                u:"https://www.amazon.com/s?k=Missing+411+North+America+Beyond+Paulides"},
+      {n:"Missing 411 — The Hunted: Hunters Missing in North America",  u:"https://www.amazon.com/s?k=Missing+411+Hunters+Paulides"},
+      {n:"Missing 411 — Off The Grid: 7th book in the series",         u:"https://www.amazon.com/s?k=Missing+411+Off+Grid+Paulides"},
+      {n:"Missing 411 The Movie — documentary on Amazon Prime",        u:"https://www.amazon.com/s?k=Missing+411+movie+documentary"},
+      {n:"Missing 411 The Hunted — 2019 hunters documentary",          u:"https://www.amazon.com/s?k=Missing+411+Hunted+documentary"},
+      {n:"Hancock House Publishers — Official Missing 411 series",      u:"https://www.hancockhouse.com/collections/missing-411-series"},
+      {n:"Hangar 1 Publishing — David Paulides interview archive",      u:"https://hangar1publishing.com/blogs/news-1/episode-1-david-paulides-missing-411-series-and-the-hunted-documentary"},
+      {n:"r/Missing411 — Reddit community tracking cases",             u:"https://www.reddit.com/r/Missing411"},
+      {n:"North America Bigfoot Search — Paulides earlier Bigfoot research",u:"https://www.nabigfootsearch.com"},
+    ],
+  },
+
   // ══ ALTERNATIVE NEWS AGGREGATORS & LINK HUBS ══════════════════════════════
   {
     label:"Alternative News Aggregators & Link Hubs",
     type:"news",
     items:[
-      {n:"Natural News — Mike Adams alternative health & news",      u:"https://www.naturalnews.com"},
-      {n:"Infowars — Alex Jones (archived; take critically)",        u:"https://www.infowars.com"},
-      {n:"SGT Report — precious metals, deep state & health",        u:"https://www.sgtreport.com"},
-      {n:"State of the Nation — deep state & alternative news",      u:"https://stateofthenation.co"},
-      {n:"What Really Happened — Michael Rivero news aggregator",   u:"https://www.whatreallyhappened.com"},
-      {n:"The Tap Blog — UK alternative news aggregator",           u:"https://tapnewswire.com"},
-      {n:"GlobalResearch.ca — Michel Chossudovsky geopolitics",     u:"https://www.globalresearch.ca"},
-      {n:"21st Century Wire — Patrick Henningsen independent news",  u:"https://21stcenturywire.com"},
-      {n:"Need To Know News — dark journalism aggregator",           u:"https://needtoknow.news"},
-      {n:"The Vigilant Citizen — symbolism & pop culture decoding",  u:"https://vigilantcitizen.com"},
-      {n:"End of the American Dream — Michael Snyder economic news", u:"https://endoftheamericandream.com"},
+      {n:"Natural News — Mike Adams alternative health & news",         u:"https://www.naturalnews.com"},
+      {n:"Infowars — Alex Jones archive (take critically)",             u:"https://www.infowars.com"},
+      {n:"SGT Report — precious metals, deep state & health",           u:"https://www.sgtreport.com"},
+      {n:"State of the Nation — deep state & alternative news",         u:"https://stateofthenation.co"},
+      {n:"What Really Happened — Michael Rivero news aggregator",      u:"https://www.whatreallyhappened.com"},
+      {n:"The Tap Blog — UK alternative news aggregator",              u:"https://tapnewswire.com"},
+      {n:"GlobalResearch.ca — Michel Chossudovsky geopolitics",        u:"https://www.globalresearch.ca"},
+      {n:"21st Century Wire — Patrick Henningsen independent news",     u:"https://21stcenturywire.com"},
+      {n:"Need To Know News — dark journalism aggregator",              u:"https://needtoknow.news"},
+      {n:"The Vigilant Citizen — symbolism & pop culture decoding",     u:"https://vigilantcitizen.com"},
+      {n:"End of the American Dream — Michael Snyder economic news",    u:"https://endoftheamericandream.com"},
+      {n:"Drop Site News — Jeremy Scahill & Ryan Grim investigative",  u:"https://www.dropsitenews.com"},
+      {n:"Reckonin' — Substack investigative journalism hub",           u:"https://www.reckonin.com"},
     ],
   },
 
