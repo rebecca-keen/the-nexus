@@ -3,8 +3,8 @@ export const ADMIN_USER = "nexusadmin";
 export const ADMIN_PASS = "N3xus@2025";
 
 // ─── STRIPE ──────────────────────────────────────────────────────────────────
-export const STRIPE_MONTHLY = "https://buy.stripe.com/REPLACE_MONTHLY_LINK";
-export const STRIPE_ANNUAL  = "https://buy.stripe.com/REPLACE_ANNUAL_LINK";
+export const STRIPE_MONTHLY = "https://buy.stripe.com/test_dRm6oH84JdG5dbRgfO8bS01";
+export const STRIPE_ANNUAL  = "https://buy.stripe.com/test_4gMcN54SxbxXefV6Fe8bS00";
 
 export const FREE_LIMIT = 9;
 
