@@ -33,19 +33,21 @@ export function VBadge({ verdict }) {
   );
 }
 
-export function Sidebar({ filters, setFilters, isPaid, isAdmin, onFetch, onUpgrade }) {
+export function Sidebar({ filters, setFilters, isPaid, isAdmin, onFetch, onUpgrade, visibleTopics, visibleRegions }) {
   const { topic, region, srcType, verdict, sortBy, search } = filters;
   const set = (k, v) => setFilters(p => ({ ...p, [k]: v }));
   const sel = { background:"#0b0d14", border:"1px solid #1c2330", color:"#5a6a7a", padding:"5px 8px", fontFamily:"monospace", fontSize:9, outline:"none", width:"100%", marginBottom:6 };
+  const topics  = visibleTopics  || TOPICS;
+  const regions = visibleRegions || REGIONS;
   return (
     <div style={{ width:160, flexShrink:0, paddingRight:12, borderRight:"1px solid #0e1018" }}>
       <div style={{ fontSize:7, color:"#1c2a38", letterSpacing:1.5, textTransform:"uppercase", marginBottom:8, fontFamily:"monospace" }}>Filter & Sort</div>
       <input value={search} onChange={e => set("search", e.target.value)} placeholder="Search records..." className="inp" style={{ marginBottom:6, fontSize:9 }} />
       <select value={topic} onChange={e => set("topic", e.target.value)} style={sel}>
-        {TOPICS.map(t => <option key={t}>{t}</option>)}
+        {topics.map(t => <option key={t}>{t}</option>)}
       </select>
       <select value={region} onChange={e => set("region", e.target.value)} style={sel}>
-        {REGIONS.map(r => <option key={r}>{r}</option>)}
+        {regions.map(r => <option key={r}>{r}</option>)}
       </select>
       <select value={srcType} onChange={e => set("srcType", e.target.value)} style={sel}>
         {["All Sources","News","Blogs","Archives","Research","Podcasts","Community"].map(s => <option key={s}>{s}</option>)}
@@ -56,16 +58,19 @@ export function Sidebar({ filters, setFilters, isPaid, isAdmin, onFetch, onUpgra
       <select value={sortBy} onChange={e => set("sortBy", e.target.value)} style={sel}>
         {["Latest","Most Upvoted","Most Discussed","Most Credible"].map(s => <option key={s}>{s}</option>)}
       </select>
+      {!isPaid && !isAdmin && (
+        <div style={{ marginTop:6, background:"#0b0d14", border:"1px solid #1c2330", padding:"8px 10px" }}>
+          <div style={{ fontSize:7, color:"#3a4a5a", fontFamily:"monospace", marginBottom:6, lineHeight:1.6 }}>Upgrade to unlock all topics, regions & filters</div>
+          <button onClick={onUpgrade}
+            style={{ width:"100%", background:"#b02020", border:"none", color:"#fff", padding:"7px 0", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
+            Upgrade
+          </button>
+        </div>
+      )}
       {(isAdmin || isPaid) && (
         <button onClick={() => onFetch(topic !== "All Topics" ? topic : "")}
           style={{ width:"100%", background:"#0b0d14", border:"1px solid #1c2330", color:"#3a4a5a", padding:"7px 0", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", marginTop:4 }}>
           + Load Records
-        </button>
-      )}
-      {!isPaid && !isAdmin && (
-        <button onClick={onUpgrade}
-          style={{ width:"100%", background:"#b02020", border:"none", color:"#fff", padding:"7px 0", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", marginTop:4 }}>
-          Upgrade
         </button>
       )}
     </div>

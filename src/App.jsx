@@ -208,8 +208,11 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
 
   // ── Filtered stories ──────────────────────────────────────────────────────────
   const { topic, region, srcType, sortBy, search, verdict } = filters;
+  // Free users: show first 6 of ALL stories (don't filter out premium before the cap)
+  const FREE_VISIBLE = 6;
+
   const filteredStories = stories.filter(s => {
-    if (!isPaid && s.premium) return false;
+    // Topic / region / source / verdict / search filters apply to everyone
     if (topic !== "All Topics" && s.topic?.trim() !== topic.trim()) return false;
     if (region !== "All Regions" && s.region?.trim() !== region.trim()) return false;
     if (srcType !== "All Sources") {
@@ -232,15 +235,23 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
     return 0;
   });
 
-  // Free users see exactly 6 records then hit the paywall
-  const FREE_VISIBLE = 6;
-  const visibleStories = isPaid ? filteredStories : filteredStories.slice(0, FREE_VISIBLE);
-  const hiddenCount   = isPaid ? 0 : Math.max(0, stories.length - FREE_VISIBLE);
+  // Free: show first 6 regardless of premium flag — paywall wall appears after record 6
+  // Paid: show all, but hide premium-flagged records only if not subscribed
+  const visibleStories = isPaid
+    ? filteredStories
+    : filteredStories.slice(0, FREE_VISIBLE);
 
+  const hiddenCount = isPaid ? 0 : Math.max(0, stories.length - FREE_VISIBLE);
   const premiumLocked = isPaid ? 0 : stories.filter(s => s.premium).length;
 
+  // Topics and regions shown in sidebar — free users see limited list
+  const FREE_TOPICS = ["All Topics","Government & Intelligence","Ancient Civilizations","Hidden History","UAP & Anomalous","Giants & Nephilim","Biblical & Religious Records","Animal Intelligence"];
+  const FREE_REGIONS = ["All Regions","🇺🇸 USA","🌍 Global","🇪🇬 Egypt","🌎 South America"];
+  const visibleTopics  = isPaid ? TOPICS  : FREE_TOPICS;
+  const visibleRegions = isPaid ? REGIONS : FREE_REGIONS;
+
   // ── Shared sidebar props ──────────────────────────────────────────────────────
-  const sidebarProps = { filters, setFilters, isPaid, isAdmin, onFetch:fetchMore, onUpgrade:() => setShowUpgrade(true) };
+  const sidebarProps = { filters, setFilters, isPaid, isAdmin, onFetch:fetchMore, onUpgrade:() => setShowUpgrade(true), visibleTopics, visibleRegions };
 
   // ──────────────────────────────────────────────────────────────────────────────
   return (
@@ -388,7 +399,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                   <div>
                     <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>OPEN RECORDS</div>
-                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{isPaid ? filteredStories.length : FREE_VISIBLE} records · {isPaid ? "full access" : `${hiddenCount}+ locked — upgrade to unlock`}</div>
+                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{visibleStories.length} records · {isPaid ? "full access" : `${hiddenCount}+ locked — upgrade to unlock`}</div>
                   </div>
                   <button onClick={() => fetchMore()} disabled={loading}
                     style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"5px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
@@ -518,23 +529,24 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                       );
                     })}
 
-                    {/* Hard paywall after 6 free records */}
-                    {!isPaid && (
+
+                    {/* Hard paywall — only show when free user hits the 6-record cap */}
+                    {!isPaid && filteredStories.length > FREE_VISIBLE && (
                       <div style={{ margin:"18px 0 0", background:"#07080c", border:"1px solid #b02020", padding:"28px 24px", textAlign:"center" }}>
                         {/* Blurred preview cards */}
                         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:6, marginBottom:18, opacity:0.18, filter:"blur(2px)", pointerEvents:"none", userSelect:"none" }}>
-                          {stories.filter(s => s.premium).slice(0, 4).map(s => (
+                          {filteredStories.slice(FREE_VISIBLE, FREE_VISIBLE + 4).map(s => (
                             <div key={s.id} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"10px 12px", textAlign:"left" }}>
                               <div style={{ fontSize:7, color:"#b02020", fontFamily:"monospace", marginBottom:4 }}>{s.topic?.toUpperCase()}</div>
                               <div style={{ fontSize:9, color:"#ccc8be", fontFamily:"monospace", lineHeight:1.4 }}>{s.title?.slice(0, 60)}…</div>
                             </div>
                           ))}
                         </div>
-                        <div style={{ fontSize:11, color:"#b02020", fontFamily:"monospace", letterSpacing:2, marginBottom:8 }}>🔒 {hiddenCount}+ RECORDS LOCKED</div>
+                        <div style={{ fontSize:11, color:"#b02020", fontFamily:"monospace", letterSpacing:2, marginBottom:8 }}>🔒 {filteredStories.length - FREE_VISIBLE}+ RECORDS LOCKED</div>
                         <div className="bb" style={{ fontSize:22, letterSpacing:2, color:"#eeeae0", marginBottom:10 }}>You've reached the free limit</div>
                         <div style={{ fontSize:10, color:"#3a4a5a", marginBottom:20, lineHeight:1.8, fontFamily:"monospace", maxWidth:480, margin:"0 auto 20px" }}>
                           Free access includes {FREE_VISIBLE} records.<br/>
-                          Upgrade to unlock <strong style={{ color:"#eeeae0" }}>all {stories.length}+ records</strong>, unlimited AI analysis, live Reddit feeds, and community access.
+                          Upgrade to unlock <strong style={{ color:"#eeeae0" }}>all {stories.length}+ records</strong>, live Reddit feeds, and community access.
                         </div>
                         <div style={{ display:"flex", gap:10, justifyContent:"center", flexWrap:"wrap" }}>
                           <button onClick={() => setShowUpgrade(true)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"12px 28px", fontFamily:"monospace", fontSize:11, letterSpacing:2, cursor:"pointer", textTransform:"uppercase" }}>Unlock All Records →</button>
