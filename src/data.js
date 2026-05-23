@@ -12,7 +12,7 @@ export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model — no billi
 export const STRIPE_MONTHLY = "https://buy.stripe.com/REPLACE_MONTHLY_LINK";
 export const STRIPE_ANNUAL  = "https://buy.stripe.com/REPLACE_ANNUAL_LINK";
 
-export const FREE_LIMIT = 9;
+export const FREE_LIMIT = 6;
 
 // ─── TOPICS ──────────────────────────────────────────────────────────────────
 export const TOPICS = [

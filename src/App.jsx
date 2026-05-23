@@ -232,6 +232,11 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
     return 0;
   });
 
+  // Free users see exactly 6 records then hit the paywall
+  const FREE_VISIBLE = 6;
+  const visibleStories = isPaid ? filteredStories : filteredStories.slice(0, FREE_VISIBLE);
+  const hiddenCount   = isPaid ? 0 : Math.max(0, stories.length - FREE_VISIBLE);
+
   const premiumLocked = isPaid ? 0 : stories.filter(s => s.premium).length;
 
   // ── Shared sidebar props ──────────────────────────────────────────────────────
@@ -383,7 +388,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                   <div>
                     <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>OPEN RECORDS</div>
-                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{filteredStories.length} records · {isPaid ? "full access" : `${premiumLocked} more locked`}</div>
+                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{isPaid ? filteredStories.length : FREE_VISIBLE} records · {isPaid ? "full access" : `${hiddenCount}+ locked — upgrade to unlock`}</div>
                   </div>
                   <button onClick={() => fetchMore()} disabled={loading}
                     style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"5px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
@@ -484,7 +489,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 {/* Story list */}
                 {!openStory && (
                   <div>
-                    {filteredStories.map(s => {
+                    {visibleStories.map(s => {
                       const t = getType(s.type); const v = votes[s.id];
                       return (
                         <div key={s.id} className="card fade" style={{ display:"flex", padding:"11px 13px 11px 9px", marginBottom:3, cursor:"pointer" }} onClick={() => setOpenStory(s)}>
@@ -514,37 +519,40 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                       );
                     })}
 
-                    {/* Premium locked teasers */}
-                    {!isPaid && premiumLocked > 0 && (
-                      <div style={{ marginTop:4 }}>
-                        {stories.filter(s => s.premium).slice(0, 3).map(s => (
-                          <div key={s.id} onClick={() => setShowUpgrade(true)}
-                            style={{ display:"flex", padding:"11px 13px", marginBottom:3, cursor:"pointer", background:"#0b0d14", border:"1px solid #1c2330", opacity:.55, position:"relative", overflow:"hidden" }}>
-                            <div style={{ position:"absolute", inset:0, background:"linear-gradient(90deg,transparent 50%,#07080c)", pointerEvents:"none" }} />
-                            <div style={{ width:38, flexShrink:0, display:"flex", alignItems:"center", justifyContent:"center" }}><span style={{ fontSize:18 }}>🔒</span></div>
-                            <div style={{ flex:1, minWidth:0, filter:"blur(0.4px)" }}>
-                              <div style={{ display:"flex", gap:6, marginBottom:4 }}>
-                                <span style={{ background:getType(s.type).bg, color:getType(s.type).text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{getType(s.type).label}</span>
-                                <span style={{ fontSize:9, color:"#3a5a7a", fontFamily:"monospace" }}>{s.source}</span>
-                              </div>
-                              <div className="bk" style={{ fontSize:14, color:"#6a6060", lineHeight:1.3 }}>{s.title}</div>
+                    {/* Hard paywall after 6 free records */}
+                    {!isPaid && (
+                      <div style={{ margin:"18px 0 0", background:"#07080c", border:"1px solid #b02020", padding:"28px 24px", textAlign:"center" }}>
+                        {/* Blurred preview cards */}
+                        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:6, marginBottom:18, opacity:0.18, filter:"blur(2px)", pointerEvents:"none", userSelect:"none" }}>
+                          {stories.filter(s => s.premium).slice(0, 4).map(s => (
+                            <div key={s.id} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"10px 12px", textAlign:"left" }}>
+                              <div style={{ fontSize:7, color:"#b02020", fontFamily:"monospace", marginBottom:4 }}>{s.topic?.toUpperCase()}</div>
+                              <div style={{ fontSize:9, color:"#ccc8be", fontFamily:"monospace", lineHeight:1.4 }}>{s.title?.slice(0, 60)}…</div>
                             </div>
-                          </div>
-                        ))}
-                        <div style={{ background:"#0b0d14", border:"1px dashed #2a3a4a", padding:22, textAlign:"center", marginTop:4 }}>
-                          <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0", marginBottom:6 }}>🔒 {premiumLocked} MORE RECORDS</div>
-                          <div style={{ fontSize:10, color:"#3a4a5a", marginBottom:14, lineHeight:1.7, fontFamily:"monospace" }}>Free access includes {FREE_LIMIT} open records. Unlock everything — unlimited records, Reddit access, AI analysis, and community posting.</div>
-                          <button onClick={() => setShowUpgrade(true)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"10px 28px", fontFamily:"monospace", fontSize:10, letterSpacing:1.5, textTransform:"uppercase", cursor:"pointer" }}>Unlock Full Access →</button>
+                          ))}
+                        </div>
+                        <div style={{ fontSize:11, color:"#b02020", fontFamily:"monospace", letterSpacing:2, marginBottom:8 }}>🔒 {hiddenCount}+ RECORDS LOCKED</div>
+                        <div className="bb" style={{ fontSize:22, letterSpacing:2, color:"#eeeae0", marginBottom:10 }}>You've reached the free limit</div>
+                        <div style={{ fontSize:10, color:"#3a4a5a", marginBottom:20, lineHeight:1.8, fontFamily:"monospace", maxWidth:480, margin:"0 auto 20px" }}>
+                          Free access includes {FREE_VISIBLE} records.<br/>
+                          Upgrade to unlock <strong style={{ color:"#eeeae0" }}>all {stories.length}+ records</strong>, unlimited AI analysis, live Reddit feeds, and community access.
+                        </div>
+                        <div style={{ display:"flex", gap:10, justifyContent:"center", flexWrap:"wrap" }}>
+                          <button onClick={() => setShowUpgrade(true)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"12px 28px", fontFamily:"monospace", fontSize:11, letterSpacing:2, cursor:"pointer", textTransform:"uppercase" }}>Unlock All Records →</button>
+                          <button onClick={() => setShowUpgrade(true)} style={{ background:"transparent", border:"1px solid #3a4a5a", color:"#5a9ac8", padding:"12px 20px", fontFamily:"monospace", fontSize:10, cursor:"pointer" }}>See plans</button>
                         </div>
                       </div>
                     )}
 
-                    <div style={{ padding:"14px 0", textAlign:"center" }}>
-                      <button onClick={() => fetchMore()} disabled={loading}
-                        style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"8px 24px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
-                        {loading ? "Loading…" : "↓ Load More Records"}
-                      </button>
-                    </div>
+                    {/* Load more — paid users only */}
+                    {isPaid && (
+                      <div style={{ padding:"14px 0", textAlign:"center" }}>
+                        <button onClick={() => fetchMore()} disabled={loading}
+                          style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"8px 24px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
+                          {loading ? "Loading…" : "↓ Load More Records"}
+                        </button>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
