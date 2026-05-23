@@ -1,4 +1,4 @@
-// ─── SHARED COMPONENTS ───────────────────────────────────────────────────────
+import { useState } from 'react';
 import { VERDICTS, TOPICS, REGIONS, STRIPE_MONTHLY, STRIPE_ANNUAL, PRIVACY_POLICY, FREE_LIMIT, getType } from './data.js';
 
 export const CSS = `
@@ -8,177 +8,200 @@ body { background: #07080c; color: #ccc8be; font-family: 'IBM Plex Mono', monosp
 a { text-decoration: none; color: inherit; }
 .bb { font-family: 'Bebas Neue', impact, sans-serif !important; }
 .bk { font-family: 'Cormorant Garamond', Georgia, serif !important; }
-.card { background: #0b0d14; border: 1px solid #1c2330; transition: border-color .12s; }
-.card:hover { border-color: #2a3a4a; }
-.nb { background: none; border: none; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #2a3a4a; padding: 0 12px; height: 100%; letter-spacing: .5px; border-bottom: 2px solid transparent; transition: all .15s; }
-.nb:hover { color: #8a9aaa; }
-.nb.on { color: #ccc8be; border-bottom-color: #b02020; }
-.fsel { width: 100%; background: #0b0d14; border: 1px solid #1c2330; color: #7a8a9a; padding: 6px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; outline: none; margin-bottom: 5px; cursor: pointer; }
-.inp { width: 100%; background: #07080c; border: 1px solid #1c2330; color: #ccc8be; padding: 9px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; outline: none; }
-.inp:focus { border-color: #5a7a9a; }
-.cbar { height: 2px; background: #1c2330; }
-.cfill { height: 100%; background: linear-gradient(90deg, #2a6a2a, #40c070); }
-.sc::-webkit-scrollbar { width: 3px; }
-.sc::-webkit-scrollbar-thumb { background: #1c2330; }
-@keyframes fi { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-.fade { animation: fi .2s ease; }
-input::placeholder, textarea::placeholder { color: #1c2a38; }
-select option { background: #0b0d14; }
+.nb { background: none; border: none; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 14px; color: #2a3a4a; transition: color .15s; }
+.nb:hover, .nb.on { color: #ccc8be; }
+.nb.on { border-bottom: 1px solid #b02020 !important; }
+.inp { width: 100%; background: #07080c; border: 1px solid #1c2330; color: #ccc8be; padding: 8px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; outline: none; }
+.inp:focus { border-color: #2a3a4a; }
+.sc::-webkit-scrollbar { width: 3px; } .sc::-webkit-scrollbar-track { background: #07080c; } .sc::-webkit-scrollbar-thumb { background: #1c2330; }
+.fade { animation: fadeIn .25s ease; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
 `;
 
-// ─── VERDICT BADGE ────────────────────────────────────────────────────────────
 export function VBadge({ verdict }) {
-  const v = VERDICTS[verdict];
-  if (!v) return null;
+  const cfg = {
+    confirmed: { bg:"#0a1a0a", c:"#40c070", b:"#1a4a1a", label:"CONFIRMED" },
+    likely:    { bg:"#0a1408", c:"#80c040", b:"#1a3a10", label:"LIKELY" },
+    contested: { bg:"#1a1404", c:"#c0a020", b:"#3a3010", label:"DISPUTED" },
+    unverified:{ bg:"#100c04", c:"#c07020", b:"#3a2010", label:"UNVERIFIED" },
+    refuted:   { bg:"#1a0808", c:"#c03030", b:"#4a1010", label:"REFUTED" },
+  }[verdict] || { bg:"#100c04", c:"#c07020", b:"#3a2010", label:"UNVERIFIED" };
   return (
-    <span style={{ display:"inline-flex", alignItems:"center", gap:3, background:v.color, color:v.text, border:`1px solid ${v.border}`, padding:"1px 6px", fontFamily:"monospace", fontSize:9, fontWeight:700, letterSpacing:.6, textTransform:"uppercase" }}>
-      {v.icon} {v.short}
+    <span style={{ background:cfg.bg, color:cfg.c, border:`1px solid ${cfg.b}`, padding:"2px 7px", fontSize:7, fontFamily:"monospace", letterSpacing:1.5, textTransform:"uppercase" }}>
+      {cfg.label}
     </span>
   );
 }
 
-// ─── FILTER SIDEBAR ───────────────────────────────────────────────────────────
 export function Sidebar({ filters, setFilters, isPaid, isAdmin, onFetch, onUpgrade }) {
-  const { topic, region, srcType, sortBy, search, verdict } = filters;
-  const set = (key, val) => setFilters(f => ({ ...f, [key]: val }));
-  const clear = () => setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", sortBy:"Latest", search:"", verdict:"All" });
-
+  const { topic, region, srcType, verdict, sortBy, search } = filters;
+  const set = (k, v) => setFilters(p => ({ ...p, [k]: v }));
+  const sel = { background:"#0b0d14", border:"1px solid #1c2330", color:"#5a6a7a", padding:"5px 8px", fontFamily:"monospace", fontSize:9, outline:"none", width:"100%", marginBottom:6 };
   return (
-    <div style={{ width:200, flexShrink:0, paddingRight:14 }}>
-      <div style={{ fontSize:8, color:"#1c2a38", letterSpacing:1, textTransform:"uppercase", marginBottom:8, fontFamily:"monospace" }}>Filter Records</div>
-
-      <input value={search} onChange={e => set("search", e.target.value)} placeholder="Search..."
-        style={{ width:"100%", background:"#0b0d14", border:"1px solid #1c2330", color:"#8a9aaa", padding:"6px 8px", fontFamily:"monospace", fontSize:10, outline:"none", marginBottom:5 }} />
-
-      {[
-        { label:"Topic",   key:"topic",   opts:TOPICS },
-        { label:"Region",  key:"region",  opts:REGIONS },
-        { label:"Source",  key:"srcType", opts:["All Sources","News","Blogs","Archives","Research","Podcasts","Community"] },
-        { label:"Sort",    key:"sortBy",  opts:["Latest","Most Upvoted","Most Discussed","Most Credible"] },
-        { label:"Verdict", key:"verdict", opts:["All","Confirmed","Likely","Contested","Unverified","Refuted"] },
-      ].map(({ label, key, opts }) => (
-        <div key={key}>
-          <div style={{ fontSize:7, color:"#1c2a38", letterSpacing:1.5, textTransform:"uppercase", marginBottom:3, marginTop:8, fontFamily:"monospace" }}>{label}</div>
-          <select className="fsel" value={filters[key]} onChange={e => set(key, e.target.value)}>
-            {opts.map(o => <option key={o}>{o}</option>)}
-          </select>
-        </div>
-      ))}
-
-      <button onClick={clear} style={{ width:"100%", marginTop:7, padding:"5px", background:"transparent", border:"1px dashed #1c2330", color:"#1c2a38", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
-        Clear All
-      </button>
-
-      <div style={{ marginTop:14 }}>
-        <div style={{ fontSize:7, color:"#1c2a38", letterSpacing:1.5, textTransform:"uppercase", marginBottom:6, fontFamily:"monospace" }}>Quick Fetch</div>
-        {["JFK files","Epstein network","UAP disclosure","CIA programs","Ancient civilizations","Ocean anomalies","Financial control"].map(t => (
-          <button key={t} onClick={() => onFetch(t)}
-            style={{ width:"100%", textAlign:"left", background:"none", border:"1px solid #1c2330", color:"#2a3a4a", padding:"5px 7px", marginBottom:3, fontFamily:"monospace", fontSize:9, cursor:"pointer", transition:"all .12s" }}
-            onMouseEnter={e => { e.target.style.borderColor="#b02020"; e.target.style.color="#7a8a9a"; }}
-            onMouseLeave={e => { e.target.style.borderColor="#1c2330"; e.target.style.color="#2a3a4a"; }}>
-            → {t}
-          </button>
-        ))}
-      </div>
-
-      <div style={{ marginTop:14, background:"#0b0d14", border:"1px solid #1c2330", padding:10 }}>
-        <div style={{ fontSize:8, color:isAdmin?"#e0c060":isPaid?"#40c070":"#3a4a5a", letterSpacing:1, marginBottom:3, fontFamily:"monospace" }}>
-          {isAdmin ? "⚙ ADMIN" : isPaid ? "✓ FULL ACCESS" : "FREE ACCESS"}
-        </div>
-        <div style={{ fontSize:8, color:"#1c2a38", lineHeight:1.7, fontFamily:"monospace" }}>
-          {isPaid ? "Unlimited records & AI" : `${FREE_LIMIT} records · 5 AI queries`}
-        </div>
-        {!isPaid && (
-          <button onClick={onUpgrade} style={{ width:"100%", marginTop:6, background:"#b02020", border:"none", color:"#fff", padding:"5px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
-            Unlock Full Access →
-          </button>
-        )}
-      </div>
+    <div style={{ width:160, flexShrink:0, paddingRight:12, borderRight:"1px solid #0e1018" }}>
+      <div style={{ fontSize:7, color:"#1c2a38", letterSpacing:1.5, textTransform:"uppercase", marginBottom:8, fontFamily:"monospace" }}>Filter & Sort</div>
+      <input value={search} onChange={e => set("search", e.target.value)} placeholder="Search records..." className="inp" style={{ marginBottom:6, fontSize:9 }} />
+      <select value={topic} onChange={e => set("topic", e.target.value)} style={sel}>
+        {TOPICS.map(t => <option key={t}>{t}</option>)}
+      </select>
+      <select value={region} onChange={e => set("region", e.target.value)} style={sel}>
+        {REGIONS.map(r => <option key={r}>{r}</option>)}
+      </select>
+      <select value={srcType} onChange={e => set("srcType", e.target.value)} style={sel}>
+        {["All Sources","News","Blogs","Archives","Research","Podcasts","Community"].map(s => <option key={s}>{s}</option>)}
+      </select>
+      <select value={verdict} onChange={e => set("verdict", e.target.value)} style={sel}>
+        {["All","Confirmed","Likely","Contested","Unverified","Refuted"].map(v => <option key={v}>{v}</option>)}
+      </select>
+      <select value={sortBy} onChange={e => set("sortBy", e.target.value)} style={sel}>
+        {["Latest","Most Upvoted","Most Discussed","Most Credible"].map(s => <option key={s}>{s}</option>)}
+      </select>
+      {(isAdmin || isPaid) && (
+        <button onClick={() => onFetch(topic !== "All Topics" ? topic : "")}
+          style={{ width:"100%", background:"#0b0d14", border:"1px solid #1c2330", color:"#3a4a5a", padding:"7px 0", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", marginTop:4 }}>
+          + Load Records
+        </button>
+      )}
+      {!isPaid && !isAdmin && (
+        <button onClick={onUpgrade}
+          style={{ width:"100%", background:"#b02020", border:"none", color:"#fff", padding:"7px 0", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", marginTop:4 }}>
+          Upgrade
+        </button>
+      )}
     </div>
   );
 }
 
-// ─── UPGRADE MODAL ────────────────────────────────────────────────────────────
 export function UpgradeModal({ onClose }) {
-  const plans = [
-    {
-      name:"Investigator", price:"$7.99", cadence:"/month", accent:"#40c070", badge:"Most Popular",
-      note:"", link:STRIPE_MONTHLY,
-      features:["Unlimited investigative records","Full live Reddit communities","Unlimited AI analysis","Post findings & upload evidence","Save & organize records","Verified Investigator badge"],
-    },
-    {
-      name:"Analyst", price:"$59.99", cadence:"/year", accent:"#a070d0", badge:"Best Value",
-      note:"= $5/mo · Save 37%", link:STRIPE_ANNUAL,
-      features:["Everything in Investigator","Priority AI analysis","Senior Analyst badge","Ad-free experience","Founding member status","Priority support"],
-    },
-  ];
-
   return (
-    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.92)", zIndex:9900, display:"flex", alignItems:"center", justifyContent:"center", padding:20 }}
-      onClick={e => e.target === e.currentTarget && onClose()}>
-      <div style={{ background:"#0b0d14", border:"1px solid #252d3d", width:"100%", maxWidth:700, maxHeight:"90vh", overflowY:"auto" }} className="sc">
-        <div style={{ padding:"22px 26px 18px", borderBottom:"1px solid #1c2330", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,.88)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999, padding:16 }}>
+      <div style={{ background:"#07080c", border:"1px solid #b02020", maxWidth:560, width:"100%", padding:32 }}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:20 }}>
           <div>
-            <div className="bb" style={{ fontSize:22, letterSpacing:2, color:"#eeeae0" }}>UNLOCK FULL ACCESS</div>
-            <div style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace", marginTop:3 }}>Unlimited records · Reddit feeds · AI analysis · Community posting</div>
+            <div className="bb" style={{ fontSize:28, letterSpacing:3, color:"#eeeae0" }}>UNLOCK FULL ACCESS</div>
+            <div style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", marginTop:2 }}>The Nexus Investigative Research Platform</div>
           </div>
-          <button onClick={onClose} style={{ background:"none", border:"none", color:"#4a5a6a", cursor:"pointer", fontSize:20, lineHeight:1 }}>✕</button>
+          <button onClick={onClose} style={{ background:"none", border:"none", color:"#3a4a5a", cursor:"pointer", fontSize:18, padding:0 }}>x</button>
         </div>
-        <div style={{ padding:"22px 26px" }}>
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14, marginBottom:18 }}>
-            {plans.map(pl => (
-              <div key={pl.name} style={{ background:"#07080c", border:`1px solid ${pl.accent}33`, padding:"22px 20px", position:"relative" }}>
-                <div style={{ position:"absolute", top:-1, right:20, background:pl.accent, color:"#07080c", padding:"2px 10px", fontFamily:"monospace", fontSize:8, fontWeight:700, letterSpacing:1, textTransform:"uppercase" }}>{pl.badge}</div>
-                <div style={{ fontSize:9, color:pl.accent, letterSpacing:.5, fontFamily:"monospace", marginBottom:4 }}>{pl.name}</div>
-                <div className="bb" style={{ fontSize:34, color:"#eeeae0", letterSpacing:1, lineHeight:1 }}>
-                  {pl.price}<span style={{ fontSize:15, color:"#3a4a5a" }}>{pl.cadence}</span>
-                </div>
-                {pl.note && <div style={{ fontSize:9, color:pl.accent, fontFamily:"monospace", marginTop:2, marginBottom:12 }}>{pl.note}</div>}
-                <div style={{ height:1, background:"#1c2330", margin:"14px 0" }} />
-                {pl.features.map(f => (
-                  <div key={f} style={{ display:"flex", gap:8, alignItems:"flex-start", marginBottom:7 }}>
-                    <span style={{ color:pl.accent, flexShrink:0, fontSize:11, marginTop:1 }}>✓</span>
-                    <span style={{ fontSize:11, color:"#8a9aaa", fontFamily:"monospace", lineHeight:1.4 }}>{f}</span>
-                  </div>
-                ))}
-                <a href={pl.link} target="_blank" rel="noopener noreferrer"
-                  style={{ display:"block", width:"100%", marginTop:18, padding:"12px", background:pl.accent, color:"#07080c", fontFamily:"monospace", fontSize:11, letterSpacing:1, textAlign:"center", fontWeight:700, textTransform:"uppercase", boxSizing:"border-box" }}>
-                  Subscribe with Stripe →
-                </a>
-              </div>
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:20 }}>
+          <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:18 }}>
+            <div className="bb" style={{ fontSize:16, letterSpacing:2, color:"#eeeae0", marginBottom:4 }}>INVESTIGATOR</div>
+            <div style={{ fontSize:22, color:"#b02020", fontFamily:"monospace", marginBottom:10 }}>$7.99<span style={{ fontSize:10, color:"#3a4a5a" }}>/mo</span></div>
+            {["Unlimited records","Full AI analysis","Live Reddit feeds","Community posting","Save & organize"].map(f => (
+              <div key={f} style={{ fontSize:8, color:"#5a6a7a", fontFamily:"monospace", marginBottom:4 }}>+ {f}</div>
             ))}
+            <a href={STRIPE_MONTHLY} target="_blank" rel="noopener noreferrer"
+              style={{ display:"block", background:"#b02020", color:"#fff", padding:"9px 0", textAlign:"center", fontFamily:"monospace", fontSize:9, letterSpacing:1.5, textTransform:"uppercase", marginTop:12, cursor:"pointer" }}>
+              Subscribe Monthly
+            </a>
           </div>
-          <div style={{ background:"#07080c", border:"1px solid #1c2330", padding:"11px 14px", marginBottom:12 }}>
-            <div style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", lineHeight:1.8 }}>
-              🔒 <strong style={{ color:"#4a5a6a" }}>Payments handled entirely by Stripe.</strong> We never see your card details. Cancel anytime from your Stripe customer portal.
-            </div>
-          </div>
-          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-            <div style={{ fontSize:9, color:"#1c2a38", fontFamily:"monospace" }}>7-day free trial · No sign-up required · No data sold</div>
-            <button onClick={onClose} style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"7px 16px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Maybe Later</button>
+          <div style={{ background:"#0b0d14", border:"1px solid #5a9ac8", padding:18, position:"relative" }}>
+            <div style={{ position:"absolute", top:-1, right:10, background:"#5a9ac8", color:"#07080c", fontSize:7, fontFamily:"monospace", padding:"2px 8px", letterSpacing:1 }}>BEST VALUE</div>
+            <div className="bb" style={{ fontSize:16, letterSpacing:2, color:"#eeeae0", marginBottom:4 }}>ANALYST</div>
+            <div style={{ fontSize:22, color:"#5a9ac8", fontFamily:"monospace", marginBottom:10 }}>$59.99<span style={{ fontSize:10, color:"#3a4a5a" }}>/yr</span></div>
+            {["Everything in Investigator","37% savings vs monthly","Priority support","Early feature access","Analyst badge"].map(f => (
+              <div key={f} style={{ fontSize:8, color:"#5a6a7a", fontFamily:"monospace", marginBottom:4 }}>+ {f}</div>
+            ))}
+            <a href={STRIPE_ANNUAL} target="_blank" rel="noopener noreferrer"
+              style={{ display:"block", background:"#1a3a5a", border:"1px solid #5a9ac8", color:"#5a9ac8", padding:"9px 0", textAlign:"center", fontFamily:"monospace", fontSize:9, letterSpacing:1.5, textTransform:"uppercase", marginTop:12, cursor:"pointer" }}>
+              Subscribe Annual
+            </a>
           </div>
         </div>
+        <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace", textAlign:"center" }}>Powered by Stripe. Cancel anytime. No contracts.</div>
       </div>
     </div>
   );
 }
 
-// ─── PRIVACY MODAL ────────────────────────────────────────────────────────────
 export function PrivacyModal({ onClose }) {
   return (
-    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.88)", zIndex:9900, display:"flex", alignItems:"center", justifyContent:"center", padding:20 }}
-      onClick={e => e.target === e.currentTarget && onClose()}>
-      <div style={{ background:"#0b0d14", border:"1px solid #252d3d", width:"100%", maxWidth:600, maxHeight:"85vh", display:"flex", flexDirection:"column" }}>
-        <div style={{ padding:"18px 22px 14px", borderBottom:"1px solid #1c2330", display:"flex", justifyContent:"space-between", alignItems:"center", flexShrink:0 }}>
-          <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>PRIVACY POLICY</div>
-          <button onClick={onClose} style={{ background:"none", border:"none", color:"#4a5a6a", cursor:"pointer", fontSize:20, lineHeight:1 }}>✕</button>
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,.88)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:999, padding:16 }}>
+      <div style={{ background:"#07080c", border:"1px solid #1c2330", maxWidth:640, width:"100%", maxHeight:"80vh", overflow:"hidden", display:"flex", flexDirection:"column" }}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"16px 20px", borderBottom:"1px solid #1c2330" }}>
+          <div className="bb" style={{ fontSize:18, letterSpacing:2, color:"#eeeae0" }}>PRIVACY POLICY & TERMS</div>
+          <button onClick={onClose} style={{ background:"none", border:"none", color:"#3a4a5a", cursor:"pointer", fontSize:18 }}>x</button>
         </div>
-        <div style={{ overflowY:"auto", padding:"18px 22px", flex:1 }} className="sc">
-          <pre style={{ fontSize:11, color:"#7a8a9a", lineHeight:1.85, whiteSpace:"pre-wrap", fontFamily:"monospace" }}>{PRIVACY_POLICY}</pre>
+        <div className="sc" style={{ overflowY:"auto", padding:20 }}>
+          <pre style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", lineHeight:1.8, whiteSpace:"pre-wrap" }}>{PRIVACY_POLICY}</pre>
         </div>
-        <div style={{ padding:"14px 22px", borderTop:"1px solid #1c2330", flexShrink:0, textAlign:"right" }}>
-          <button onClick={onClose} style={{ background:"#b02020", border:"none", color:"#fff", padding:"8px 22px", fontFamily:"monospace", fontSize:10, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>Close</button>
+      </div>
+    </div>
+  );
+}
+
+export function SubmitSourceForm({ onClose, toast2 }) {
+  const [name, setName]         = useState("");
+  const [url, setUrl]           = useState("");
+  const [cat, setCat]           = useState("Blogs & Independent Research");
+  const [desc, setDesc]         = useState("");
+  const [why, setWhy]           = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const categories = [
+    "News & Investigative Journalism",
+    "Key Researchers & Authors",
+    "Blogs & Independent Research",
+    "YouTube Research Channels",
+    "Archives & Primary Documents",
+    "Biblical & Religious Research",
+    "Science & Forbidden Research",
+    "Podcasts & Audio",
+    "Other",
+  ];
+
+  const submit = () => {
+    if (!name.trim()) { toast2("Source name required"); return; }
+    if (!url.trim() || !url.startsWith("http")) { toast2("Valid URL required (must start with https://)"); return; }
+    if (!desc.trim()) { toast2("Brief description required"); return; }
+    console.log("SOURCE SUBMISSION:", { name, url, cat, desc, why, ts: new Date().toISOString() });
+    setSubmitted(true);
+    toast2("Source submitted for review - thank you!");
+  };
+
+  if (submitted) return (
+    <div style={{ textAlign:"center", padding:"20px 0" }}>
+      <div style={{ fontSize:20, marginBottom:10 }}>+</div>
+      <div style={{ fontSize:11, color:"#40c070", fontFamily:"monospace", marginBottom:8 }}>Source submitted for admin review</div>
+      <div style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", lineHeight:1.7 }}>If approved, it will appear in the Source Directory within 48 hours.</div>
+      <button onClick={onClose} style={{ marginTop:14, background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"7px 18px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Close</button>
+    </div>
+  );
+
+  return (
+    <div>
+      <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8, marginBottom:8 }}>
+        <div>
+          <div style={{ fontSize:7, color:"#5a9ac8", letterSpacing:1, textTransform:"uppercase", marginBottom:3, fontFamily:"monospace" }}>Source Name *</div>
+          <input value={name} onChange={e => setName(e.target.value)} placeholder="e.g. Wes Penre Papers" className="inp" />
         </div>
+        <div>
+          <div style={{ fontSize:7, color:"#5a9ac8", letterSpacing:1, textTransform:"uppercase", marginBottom:3, fontFamily:"monospace" }}>URL *</div>
+          <input value={url} onChange={e => setUrl(e.target.value)} placeholder="https://..." className="inp" />
+        </div>
+      </div>
+      <div style={{ marginBottom:8 }}>
+        <div style={{ fontSize:7, color:"#5a9ac8", letterSpacing:1, textTransform:"uppercase", marginBottom:3, fontFamily:"monospace" }}>Category</div>
+        <select value={cat} onChange={e => setCat(e.target.value)} style={{ width:"100%", background:"#07080c", border:"1px solid #1c2330", color:"#5a6a7a", padding:"7px 9px", fontFamily:"monospace", fontSize:10, outline:"none" }}>
+          {categories.map(c => <option key={c}>{c}</option>)}
+        </select>
+      </div>
+      <div style={{ marginBottom:8 }}>
+        <div style={{ fontSize:7, color:"#5a9ac8", letterSpacing:1, textTransform:"uppercase", marginBottom:3, fontFamily:"monospace" }}>Brief Description *</div>
+        <textarea value={desc} onChange={e => setDesc(e.target.value)} rows={2} placeholder="What does this source cover? Why is it valuable?" style={{ width:"100%", background:"#07080c", border:"1px solid #1c2330", color:"#ccc8be", padding:"8px 10px", fontFamily:"monospace", fontSize:11, outline:"none", resize:"vertical" }} />
+      </div>
+      <div style={{ marginBottom:12 }}>
+        <div style={{ fontSize:7, color:"#5a9ac8", letterSpacing:1, textTransform:"uppercase", marginBottom:3, fontFamily:"monospace" }}>Why Should It Be Added? (optional)</div>
+        <textarea value={why} onChange={e => setWhy(e.target.value)} rows={2} placeholder="e.g. Long-running independent researcher with 20+ years of documented work." style={{ width:"100%", background:"#07080c", border:"1px solid #1c2330", color:"#ccc8be", padding:"8px 10px", fontFamily:"monospace", fontSize:11, outline:"none", resize:"vertical" }} />
+      </div>
+      <div style={{ background:"#07080c", border:"1px solid #1c2330", padding:"9px 12px", marginBottom:12 }}>
+        <div style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", lineHeight:1.8 }}>
+          All submissions are reviewed before being added. Sources must be directly accessible at the URL provided.
+        </div>
+      </div>
+      <div style={{ display:"flex", gap:7 }}>
+        <button onClick={submit} style={{ background:"#1a2a3a", border:"1px solid #5a9ac8", color:"#5a9ac8", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1.5, cursor:"pointer", textTransform:"uppercase" }}>Submit Source</button>
+        <button onClick={onClose} style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"9px 14px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Cancel</button>
       </div>
     </div>
   );
