@@ -2,11 +2,17 @@
 export const ADMIN_USER = "nexusadmin";
 export const ADMIN_PASS = "N3xus@2025";
 
+// ── AI Configuration ──────────────────────────────────────────────────────────
+// Get a FREE API key at openrouter.ai — sign up, go to Keys, create one
+// Free models: mistralai/mistral-7b-instruct, google/gemma-3-27b-it:free, meta-llama/llama-3.1-8b-instruct:free
+export const OPENROUTER_KEY = "PASTE_YOUR_OPENROUTER_KEY_HERE";
+export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model — no billing required
+
 // ─── STRIPE ──────────────────────────────────────────────────────────────────
 export const STRIPE_MONTHLY = "https://buy.stripe.com/REPLACE_MONTHLY_LINK";
 export const STRIPE_ANNUAL  = "https://buy.stripe.com/REPLACE_ANNUAL_LINK";
 
-export const FREE_LIMIT = 9;
+export const FREE_LIMIT = 6;
 
 // ─── TOPICS ──────────────────────────────────────────────────────────────────
 export const TOPICS = [
@@ -38,6 +44,8 @@ export const TOPICS = [
   "Ancient Gods & Beings",
   "Sacred Geometry",
   "Atlantis & Lemuria",
+  "Remote Viewing & PSI",
+  "Portals & Stargates",
 ];
 
 export const REGIONS = [
@@ -168,6 +176,58 @@ export const SEED_STORIES = [
   {id:"s54",type:"research",source:"Gaia / Billy Carson",          sourceUrl:"https://www.gaia.com",                 time:"11h ago",topic:"Ancient Civilizations",       region:"🌍 Global",               title:"Ancient Beings as Engineers: The Göbekli Tepe Builders Knew Astronomy, Geometry, and Built Before Agriculture Existed", summary:"New research at Göbekli Tepe confirms the 12,000-year-old site encodes star maps — specifically Deneb, Arcturus, and the Pleiades — in its pillar arrangements. The builders had sophisticated astronomical knowledge, geometric precision, and organized labor capability — all predating the supposed invention of agriculture by 1,000 years. This overturns the model of a linear progression from primitive to advanced.",upvotes:5700,comments:841, credible:82,debunked:18,tags:["Gobekli Tepe","Astronomy","Ancient Beings","Pre-History"],premium:false},
   {id:"s55",type:"research",source:"Sitchin Archive",              sourceUrl:"https://sitchin.com",                  time:"12h ago",topic:"Ancient Civilizations",       region:"🌍 Global",               title:"Zecharia Sitchin: The Anunnaki Genetically Engineered Homo Sapiens 250,000 Years Ago — Sumerian Texts Decoded", summary:"Zecharia Sitchin's translations of Sumerian texts describe the Anunnaki creating humanity through genetic engineering — mixing their DNA with Homo erectus — to produce a slave race for mining gold. The Atrahasis Epic parallels the Genesis creation and flood accounts almost word for word. Mainstream archaeologists reject Sitchin's translations; alternative researchers point to the structural parallels as too precise to dismiss.",upvotes:6800,comments:1041,credible:45,debunked:55,tags:["Anunnaki","Sitchin","Genetic Engineering","Creation","Sumerian"],premium:true},
   {id:"s56",type:"research",source:"Robert Sepehr — YouTube",      sourceUrl:"https://www.youtube.com/@RobertSepehr", time:"13h ago",topic:"Hidden History",              region:"🌍 Global",               title:"The Aryan Mystery: Secret Societies, Blood Types, and the Hidden History of Humanity's True Origins", summary:"Anthropologist Robert Sepehr's research examines the role of blood type distribution, genetic haplogroups, and ancient migration patterns in understanding humanity's hidden origins. He explores connections between ancient Aryan peoples, Atlantis, the Vedic traditions, and the origins of secret societies — arguing that mainstream history has deliberately suppressed knowledge of pre-Flood civilizations.",upvotes:4200,comments:601, credible:48,debunked:52,tags:["Aryan","Blood Type","Haplogroup","Hidden History","Sepehr"],premium:true},
+
+  // ── COMPREHENSIVE DOLPHIN FILES ────────────────────────────────────────────
+  {id:"s57",type:"archive", source:"Wikipedia / USNI Proceedings",sourceUrl:"https://en.wikipedia.org/wiki/United_States_Navy_Marine_Mammal_Program",time:"1h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"US Navy Marine Mammal Program: Classified 1967–1992 — What the Black Budget Dolphin Program Actually Did", summary:"The US Navy Marine Mammal Program (NMMP) began in 1960 studying dolphin hydrodynamics for torpedo and submarine design. By 1963 it became an active training program. In 1967 it was classified as a black budget program. Declassified only in 1992 — but operational details remain sealed. At peak during the Reagan years: 150+ dolphins, $8M annual budget, deployed in 25 countries. Some researchers call it the Cetacean Intelligence Mission rather than its official name — suggesting the scope went far beyond mine detection.",upvotes:8200,comments:1401,credible:88,debunked:12,tags:["Navy","Dolphins","Classified","NMMP","Black Budget"],premium:false},
+
+  {id:"s58",type:"research",source:"History.com / Military History",sourceUrl:"https://www.history.com/articles/navy-marine-mammal-program-history-dolphins-sea-lions",time:"2h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"The 5 Operational Dolphin Teams: Mine Detection, Swimmer Killing Devices, Harbor Patrol, and What They Won't Confirm", summary:"The Navy officially acknowledges five operational dolphin teams. MK-4 and MK-7 detect tethered and bottom mines. MK-8 clears landing corridors for troop insertions. MK-6 uses dolphins for anti-swimmer harbor defense — the dolphin approaches from behind and bumps a device onto the diver's air tank triggering an explosive buoy alert. Unconfirmed analyst claims describe carbonic acid injection devices mounted on dolphin heads — fired on contact with enemy divers. The Navy has never confirmed or denied the full scope of MK-6 offensive capabilities.",upvotes:7100,comments:1102,credible:74,debunked:26,tags:["NMMP","MK6","Swimmer","Mine","Dolphins","Combat"],premium:false},
+
+  {id:"s59",type:"archive", source:"Military Marine Mammal Wikipedia / lflank.wordpress.com",sourceUrl:"https://en.wikipedia.org/wiki/Military_marine_mammal",time:"3h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"CIA Sent Scientist James Fitzgerald to Key West 1964 — Classified Dolphin Lab and the Intelligence Program Nobody Talks About", summary:"According to declassified sources, the CIA sent scientist James Fitzgerald to Key West, Florida in 1964 to establish a classified laboratory studying dolphins. The program ran parallel to the Navy NMMP — with the CIA angle focused on intelligence applications rather than mine detection. The lab's full scope, findings, and what happened to its research remain classified. This is the CIA's dolphin program that almost nobody knows existed alongside the Navy's.",upvotes:6800,comments:981,credible:62,debunked:38,tags:["CIA","Dolphins","James Fitzgerald","Key West","Classified"],premium:false},
+
+  {id:"s60",type:"research",source:"Supercluster / Vice",          sourceUrl:"https://www.supercluster.com/editorial/how-dolphins-on-lsd-shaped-the-search-for-extraterrestrial-intelligence",time:"4h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"Dr. John C. Lilly: CIA-Funded, NASA-Contracted, LSD-Injecting Dolphin Researcher Who Founded the Science of Interspecies Communication", summary:"Dr. John C. Lilly — physician, neuroscientist, inventor of the isolation tank — opened the Communication Research Institute in St. Thomas in the 1960s funded by NASA and the CIA. NASA wanted a model for communicating with extraterrestrial intelligence. The CIA wanted dolphins as underwater spies. In 1964 Lilly began injecting dolphins with LSD to enhance communication — documented in a 1965 conference paper. Dolphin vocalizations increased dramatically. He co-founded the Order of the Dolphins with Carl Sagan. The CIA's interest in Lilly — through MK-Ultra era consciousness programs — has been confirmed in documents released decades later.",upvotes:9100,comments:1502,credible:82,debunked:18,tags:["Lilly","CIA","NASA","LSD","MK-Ultra","Dolphins","SETI"],premium:false},
+
+  {id:"s61",type:"research",source:"VeteranLife / USNavy",          sourceUrl:"https://veteranlife.com/military-history/marine-mammal-program",time:"5h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"Vietnam War 1965–1975, Persian Gulf 1986–1988, Iraq War 2003: The Combat Deployments of US Military Dolphins That History Barely Covers", summary:"Navy dolphins were operationally deployed in Vietnam from 1965–1975 guarding ammunition piers from enemy divers. In the Persian Gulf they escorted Kuwaiti oil tankers and patrolled for mines during the Iran-Iraq War 1986–1988. In 2003 during the Iraq War K-Dog and other dolphins detected and marked over 100 anti-ship mines at the port of Umm Qasr — clearing the way for the initial troop landings. In 1996 six dolphins patrolled San Francisco Bay to protect the Republican National Convention. The Navy acknowledges deployments in 25 countries — the full list remains classified.",upvotes:7400,comments:1041,credible:91,debunked:9,tags:["Navy","Dolphins","Vietnam","Iraq","Persian Gulf","Combat"],premium:false},
+
+  {id:"s62",type:"research",source:"Historic Mysteries / Military Wiki",sourceUrl:"https://www.historicmysteries.com/history/military-marine-mammal/30639/",time:"6h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"Soviet and Russian Military Dolphins: Sevastopol, Iran Sale, Arctic Bases, and Two Pens Placed at Ukraine Invasion Harbor", summary:"The Soviet Union ran a parallel dolphin program at Sevastopol, Crimea. Unlike the US program which denies offensive training, the Soviets are believed to have equipped dolphins with weapons. After the USSR collapsed the program transferred to Ukraine — which sold the dolphins and the chief trainer to Iran in 2000. Russia reactivated the program in 2012. After the 2014 Crimea annexation Russia took over Ukraine's remaining dolphins. When Russia invaded Ukraine in 2022, satellite imagery confirmed two dolphin pens placed at the entrance to Sevastopol harbor — the Black Sea's largest naval base — and additional pens at the secretive Arctic Olenya Guba facility.",upvotes:8600,comments:1301,credible:85,debunked:15,tags:["Russia","Soviet","Dolphins","Sevastopol","Ukraine","Military","Iran"],premium:false},
+
+  {id:"s63",type:"research",source:"NOAA Fisheries / LegalClarity",  sourceUrl:"https://www.fisheries.noaa.gov/marine-life-distress/frequent-questions-feeding-or-harassing-marine-mammals-wild",time:"7h ago",topic:"Animal Intelligence",region:"🇺🇸 USA",title:"Marine Mammal Protection Act: Why It Is Illegal to Touch, Feed, Chase or Attempt to Interact With Wild Dolphins — and Why Researchers Think the Government Knows More Than It Says", summary:"The MMPA of 1972 makes it a federal crime to 'take' any marine mammal — defined as harass, hunt, capture, collect, or kill, including attempts. Penalties reach $100,000 per violation and one year imprisonment. Each dolphin in a pod = a separate violation. Verbal communication is not explicitly illegal — but any act that disrupts behavioral patterns qualifies as Level B harassment. The law applies to US citizens anywhere on Earth including international waters. Researchers note: you cannot legally interact with wild dolphins yet the Navy does so daily under congressional exemption. The 1986 MMPA amendment granted the Pentagon the right to take dolphins from the wild for 'national defense purposes' — a carve-out that exists in no other wildlife law.",upvotes:7800,comments:1201,credible:96,debunked:4,tags:["MMPA","Law","Dolphins","Pentagon","National Defense","Exemption"],premium:false},
+
+  {id:"s64",type:"research",source:"Give.do / The Print / Sonar",   sourceUrl:"https://wearesonar.org/dolphin-and-whale-nonhuman-personhood/",time:"8h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"Global Dolphin Personhood: India 2013, Malibu 2014, Pacific Islands 2025 — Governments Officially Declaring Dolphins Non-Human Persons", summary:"In 2013 India became the first nation to officially declare dolphins 'non-human persons' — banning all captive dolphin shows and stating it is 'morally unacceptable to keep them captive.' In 2014 Malibu's mayor passed a resolution granting dolphins and whales the right to freedom. In 2025 Pacific Island leaders granted cetaceans personhood status. The 2010 international Declaration of Rights for Cetaceans declared them persons with rights to life, freedom of movement, and not to be killed, captured, bred, or enslaved. The EU applied great ape research bans to cetaceans — calling them 'great apes of the water.'",upvotes:6900,comments:981,credible:90,debunked:10,tags:["Personhood","India","Dolphins","Rights","Non-Human","Global Law"],premium:false},
+
+  {id:"s65",type:"research",source:"Wild Dolphin Project / Cambridge Declaration",sourceUrl:"https://www.wilddolphinproject.org",time:"9h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"What We Actually Know About Dolphin Intelligence: Cambridge Declaration, Mirror Tests, Name Whistles, Culture, Grief — The Evidence Governments Don't Publicize", summary:"The 2012 Cambridge Declaration on Consciousness — signed in presence of Stephen Hawking — confirmed dolphins are conscious and self-aware. Dolphins pass the mirror self-recognition test (only humans, great apes, elephants, and magpies also pass). They choose unique name whistles before age one that are remembered 20+ years. Shark Bay Australia documents sponge tool use transmitted mother-to-daughter across three generations — qualifying as culture. Dr. Denise Herzing's 35-year Wild Dolphin Project documents syntax in communication, multigenerational dialect transmission, and grief — mothers carrying dead calves for weeks. A 2024 study confirmed dolphins imitate computer-generated sounds they have never heard.",upvotes:8400,comments:1302,credible:97,debunked:3,tags:["Consciousness","Cambridge","Mirror Test","Intelligence","Dolphins","Culture"],premium:false},
+
+  {id:"s66",type:"research",source:"Dr. Denise Herzing / WDP",       sourceUrl:"https://www.wilddolphinproject.org/media/scientific-publications/",time:"10h ago",topic:"Animal Intelligence",region:"🌍 Global",title:"What Global Governments May Be Hiding About Dolphins: Classified Programs, Suppressed Intelligence Research, and the Question Nobody Asks", summary:"Several layers of classification surround dolphin research: (1) The CIA's 1964 Key West lab — full scope classified. (2) NMMP operational details — still classified 30+ years after the program was 'declassified.' (3) Soviet weaponization details — never fully disclosed. (4) Whether communication research with dolphins produced results beyond what was published — John Lilly's CIA-funded work never fully disclosed. (5) North Korea reportedly developing its own military dolphin program in 2024. (6) Whether the 1986 MMPA national defense exemption was used to take dolphins for intelligence — not just military — purposes. The most classified intelligence programs globally involve three things that overlap: consciousness, communication, and non-human intelligence. Dolphins are the intersection of all three.",upvotes:9800,comments:1601,credible:55,debunked:45,tags:["Classified","CIA","Dolphins","Consciousness","Hidden","Intelligence"],premium:true},
+
+  // ── DAVID PAULIDES — MISSING 411 ──────────────────────────────────────────
+  {id:"s78",type:"research",source:"CanAm Missing / Missing411.com",  sourceUrl:"https://www.canammissing.com",time:"1h ago",topic:"Unresolved Events",region:"🇺🇸 USA",title:"Missing 411: David Paulides Documents 9,000+ Hours of Research Into Unexplained National Park Disappearances — Patterns That Defy Explanation", summary:"Former law enforcement officer David Paulides spent 9,000+ hours investigating disappearances in US National Parks after a ranger tipped him off to a disturbing pattern. His findings: victims disappear in good weather with no distress call. Bodies are found miles away in terrain search teams already covered. Clothing is missing or neatly arranged. No trail of passage. Berry bushes stripped near discovery sites. Victims are often found in or near water. The National Park Service refused his FOIA request for a list of missing persons — citing cost. No other government database tracks this.",upvotes:14200,comments:2102,credible:72,debunked:28,tags:["Missing 411","Paulides","National Parks","Disappearances","FOIA","Unexplained"],premium:false},
+
+  {id:"s79",type:"research",source:"Missing411.com / CanAm",          sourceUrl:"https://missing411.com",time:"2h ago",topic:"Unresolved Events",region:"🇺🇸 USA",title:"The Missing 411 Profile Points: 30+ Consistent Patterns Across Hundreds of Disappearances That Cannot Be Explained by Conventional Search Theory", summary:"Paulides identified 30+ profile points appearing consistently across cases: disappearances near boulder fields or granite outcroppings; victims last seen near berry patches; dogs cannot track scent; victims found in water despite not being near water when last seen; clothing found neatly folded or missing entirely; victims recovered with no memory of what happened; weather changes immediately after disappearance; discovery sites already searched multiple times. The clusters map to specific geographic zones. The NPS has never commented. Some researchers point to interdimensional portals. Others point to predatory human networks. The cases remain officially unexplained.",upvotes:12800,comments:1901,credible:65,debunked:35,tags:["Missing 411","Profile Points","National Parks","Paulides","Patterns"],premium:false},
+
+  {id:"s80",type:"research",source:"CanAm Missing Project",            sourceUrl:"https://www.canammissing.com",time:"3h ago",topic:"Unresolved Events",region:"🇺🇸 USA",title:"Missing 411: The Hunted — Experienced Hunters With Military Training Vanish in the Woods. Something Is Hunting Them Back", summary:"Paulides' 2019 documentary The Hunted focuses exclusively on experienced hunters — many with military backgrounds — who vanished in wilderness areas. These are not lost hikers. These are men with compass skills, survival training, and firearms who were in familiar territory. Several cases: hunters who called family to say they were coming home and never arrived. Shots fired with no casualty found. Weapons found but hunter gone. Paulides argues the pattern in hunter disappearances is distinct from civilian cases and suggests an active predatory intelligence.",upvotes:11400,comments:1701,credible:61,debunked:39,tags:["Missing 411","Hunters","Military","Paulides","Predator","Wilderness"],premium:false},
+
+  // ── REMOTE VIEWING GOVERNMENT FILES ───────────────────────────────────────
+  {id:"s67",type:"archive", source:"CIA Reading Room",              sourceUrl:"https://www.cia.gov/readingroom/collection/stargate",time:"1h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"Project STARGATE: The CIA's $20 Million 25-Year Psychic Espionage Program — Now Fully Declassified", summary:"Project STARGATE was the code name for a classified US Army / DIA program established 1978 at Fort Meade, Maryland to weaponize psychic phenomena for intelligence collection against the Soviet Union. Ran for over 20 years. $20 million budget confirmed. Physicists Hal Puthoff and Russell Targ at Stanford Research Institute were the lead scientists. CIA fully declassified 12 million pages of Stargate documents in 2017. The entire archive is searchable at the CIA Reading Room. Congressman Charles Rose stated in the House Intelligence Committee: 'It seemed like a hell of a cheap radar system — and if the Russians have it and we don't, we're in serious trouble.'",upvotes:11200,comments:1802,credible:95,debunked:5,tags:["Stargate","CIA","Remote Viewing","Declassified","DIA","Puthoff"],premium:false},
+
+  {id:"s68",type:"research",source:"War History Online / Decrypted Matrix",sourceUrl:"https://www.warhistoryonline.com/war-articles/project-stargate.html",time:"2h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"Ingo Swann: The Psychic Who Remote-Viewed Jupiter Before Pioneer-10 Got There — and Found a Ring Nobody Knew Existed", summary:"Ingo Swann — artist and psychic, co-creator of remote viewing — was tested at Stanford Research Institute in 1972. CIA funded his research. In 1973 Swann remote-viewed Jupiter before the Pioneer-10 flyby and described a ring around the planet. Scientists assumed he had confused it with Saturn. When Pioneer-10 reached Jupiter the ring was confirmed. Swann also remote-viewed classified Soviet facilities from coordinates alone — with results that convinced CIA analysts to continue funding. He later claimed to have remote-viewed extraterrestrial bases on the Moon.",upvotes:9400,comments:1401,credible:71,debunked:29,tags:["Ingo Swann","Remote Viewing","Jupiter","CIA","Pioneer","Moon"],premium:false},
+
+  {id:"s69",type:"research",source:"Decrypted Matrix / Black Vault",  sourceUrl:"https://decryptedmatrix.com/project-stargate-cia-classified-psychic-espionage-program/",time:"3h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"The Remote Viewers Who Described Soviet Nuclear Submarines, Hidden Weapons, and a Secret Mars Colony from a Locked Room", summary:"Project Stargate remote viewers — including Pat Price (retired police commissioner), Joe McMoneagle (Army intelligence), and others — were given nothing but geographic coordinates and asked to describe what was there. Pat Price described a classified Soviet facility in Siberia with extraordinary accuracy in 1974. McMoneagle's readings of Soviet submarine construction were reportedly used in operational intelligence. A 1984 session described structures on Mars from 1 million years ago — the transcript remains in the CIA archive. The program was officially terminated in 1995, but researchers argue it went black rather than dark.",upvotes:10100,comments:1601,credible:64,debunked:36,tags:["Stargate","Remote Viewing","Soviet","Mars","Pat Price","McMoneagle"],premium:false},
+
+  {id:"s70",type:"archive", source:"CIA Reading Room (direct PDF)",   sourceUrl:"https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-3.pdf",time:"4h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"CIA Gateway Process: Declassified 1983 Army Report Concludes Human Consciousness Can Leave the Body and Access Other Dimensions", summary:"A 1983 US Army Intelligence & Security Command analysis of the Monroe Institute's Gateway Experience — declassified and now freely downloadable from the CIA Reading Room — concludes that human consciousness can be separated from space-time and used to access information non-locally. The report uses physics, quantum mechanics, and holographic universe theory to explain how it works. The document was classified for 37 years. When released it went viral — millions read it. The Army concluded: it works, and the mechanism is rooted in physics not mysticism.",upvotes:14200,comments:2102,credible:88,debunked:12,tags:["CIA","Gateway Process","Consciousness","Monroe Institute","Declassified","OBE"],premium:false},
+
+  {id:"s71",type:"research",source:"Black Vault / IRP.fas.org",       sourceUrl:"https://irp.fas.org/program/collect/stargate.htm",time:"5h ago",topic:"Remote Viewing & PSI",region:"🇺🇸 USA",title:"Soviet Psychotronics: The USSR Spent 60 Million Rubles Annually on Psychic Warfare — Which Is Why the US Launched Stargate", summary:"The CIA launched the remote viewing program specifically because Soviet intelligence reports confirmed the USSR was spending the equivalent of $60 million annually on psychotronics — the weaponization of psychic phenomena. The CIA obtained a book by Canadian journalists Sheila Ostrander and Lynn Schroeder documenting Soviet PSI research and used it as justification to fund Puthoff and Targ. Both superpowers were simultaneously running classified psychic warfare programs throughout the Cold War. Neither has fully disclosed what they found.",upvotes:8800,comments:1301,credible:82,debunked:18,tags:["Soviet","Psychotronics","Cold War","CIA","Remote Viewing","USSR"],premium:false},
+
+  // ── PORTALS, STARGATES & INTERDIMENSIONAL RESEARCH ─────────────────────────
+  {id:"s72",type:"research",source:"Academic Block / Sacred Illusion",  sourceUrl:"https://www.academicblock.com/science/fringe-science/stargates-and-portals",time:"1h ago",topic:"Portals & Stargates",region:"🌍 Global",title:"Ancient Stargates: Sumerian Gate of Anu, Egyptian Osiris Portal, Tiahuanaco Gateway of the Sun — Ancient Civilizations Built Physical Portal Technology", summary:"Sumerian texts describe the Gate of Anu — a physical structure through which gods traversed dimensions. The Egyptian Book of the Dead describes 21 gates with guardians that souls must navigate. Tiahuanaco's Gateway of the Sun in Bolivia is aligned to precise astronomical coordinates and features carvings researchers argue depict portal activation sequences. Researcher and archaeologist Dr. Heather Lynn connects these to Anunnaki technology described in Sitchin's translations. Mike Ricksecker's Portals to the Stars documents physical portal research across ancient global sites.",upvotes:7800,comments:1102,credible:48,debunked:52,tags:["Stargate","Sumerian","Egypt","Tiahuanaco","Portal","Ancient"],premium:false},
+
+  {id:"s73",type:"research",source:"Sacred Illusion / MagellanTV",     sourceUrl:"https://www.sacredillusion.com/stargates-and-doors-to-nowhere-portals-illusions-or-entrances-to-elsewhere/",time:"2h ago",topic:"Portals & Stargates",region:"🇺🇸 USA",title:"The Montauk Project: Classified Time Travel, Mind Control, and Interdimensional Portals at Camp Hero Air Force Station 1943–1983", summary:"The Montauk Project — documented in books by Preston Nichols and Peter Moon — alleges that Camp Hero, Montauk NY, was the site of classified government experiments in time travel, mind control, and opening interdimensional portals from the 1940s through the 1980s. The theory connects to the 1943 Philadelphia Experiment in which the USS Eldridge reportedly vanished from a Philadelphia shipyard. A psychic named Duncan Cameron reportedly opened a time portal that created a tear in space-time that researchers claim was deliberately collapsed. The site is now Camp Hero State Park. The underground facilities remain sealed.",upvotes:8200,comments:1201,credible:38,debunked:62,tags:["Montauk","Time Travel","Portal","Camp Hero","Philadelphia Experiment","Classified"],premium:false},
+
+  {id:"s74",type:"research",source:"CERN / Israel First Substack",    sourceUrl:"https://home.cern/science/experiments/lhc",time:"3h ago",topic:"Portals & Stargates",region:"🌍 Global",title:"CERN Large Hadron Collider: Scientists Searching for 'Extra Dimensions' and Dark Matter — Critics Say It Already Opened Something", summary:"CERN has publicly stated that one of the goals of the Large Hadron Collider is to find evidence of extra dimensions and dark matter. In 2024 CERN activated the LHC during the solar eclipse and stated: 'What exactly we would detect would depend on the number of extra dimensions.' Critics argue this is portal research under a physics label. The LHC sits on the ancient site of St. Genis-Pouilly — a Roman town whose name derives from the Latin Appolliacum, built over a temple to Apollo described as a gateway to the underworld. CERN's campus features a statue of Shiva performing the Nataraja — the cosmic dance of creation and destruction.",upvotes:9100,comments:1502,credible:45,debunked:55,tags:["CERN","LHC","Extra Dimensions","Portal","Dark Matter","Shiva"],premium:false},
+
+  {id:"s75",type:"research",source:"Skinwalker Ranch / George Knapp",  sourceUrl:"https://skinwalker-ranch.com",time:"4h ago",topic:"Portals & Stargates",region:"🇺🇸 USA",title:"Skinwalker Ranch: Instrumented Scientific Research Confirms Anomalous Portal-Like Phenomena — DoD Funded Investigation", summary:"Skinwalker Ranch in Utah has been the subject of instrumented scientific investigation funded by the Department of Defense through the Advanced Aerospace Weapon System Applications Program (AAWSAP) — the same program that spawned the AATIP UAP investigation. Researchers document: UAP appearing and disappearing in specific sky locations consistently, cattle mutilation with surgical precision, poltergeist phenomena, and what instruments record as localized tears in space measuring magnetic, electromagnetic, and radiation anomalies simultaneously. Former DIA official Dr. James Lacatski led the DoD investigation. His findings remain classified.",upvotes:10400,comments:1601,credible:61,debunked:39,tags:["Skinwalker","Portal","DoD","AAWSAP","DIA","Classified","UAP"],premium:false},
+
+  {id:"s76",type:"research",source:"Iraq Stargate / Medium",          sourceUrl:"https://medium.com/@iram.ahmed1997/the-iraqi-stargate-conspiracy-a-modern-perspective-on-an-ancient-mystery-18d3cd39ff8f",time:"5h ago",topic:"Portals & Stargates",region:"🇮🇶 Iraq",title:"The Iraqi Stargate: Why the US Established Military Zones Around Ancient Sumerian Sites Immediately After Invasion in 2003", summary:"Researchers document that following the 2003 Iraq invasion, US forces established restricted military zones around ancient Sumerian sites including Ur, Nineveh, and Babylon — while the Baghdad Museum was looted of thousands of irreplaceable artifacts with no military intervention. Some claim soldiers reported time anomalies and electromagnetic disturbances near ancient sites. The theory: Sumerian tablets describe the Gate of Anu as a physical device, and the real objective of occupying Iraq was to control access to ancient portal technology buried beneath the oldest human civilization on Earth.",upvotes:8600,comments:1302,credible:35,debunked:65,tags:["Iraq","Stargate","Sumerian","2003","Artifacts","Gate of Anu"],premium:true},
+
+  {id:"s77",type:"research",source:"Thirdi.us / Tourism and Travel",   sourceUrl:"https://thirdi.us/blog/2024/07/unlocking-the-mysteries-of-stargates-portals-to-other-dimensions-and-realms/",time:"6h ago",topic:"Portals & Stargates",region:"🌍 Global",title:"Global Portal Sites: Mount Shasta, Sedona, Stonehenge, Machu Picchu, Easter Island — What Instruments Detect at Each Location", summary:"Researchers have documented measurable electromagnetic anomalies at every major ancient site associated with portal or vortex activity. Mount Shasta: Native American traditions of underground cities and interdimensional beings, plus measured magnetic anomalies. Sedona: Benjamin Lonetree's decade of magnetometer data. Stonehenge: confirmed solar and lunar alignment precision beyond architectural necessity. Machu Picchu: built on geological intersection of multiple fault lines creating piezoelectric energy. Easter Island: moai aligned to specific star systems. The common thread: all are built on granite and quartz formations that generate electromagnetic fields under tectonic pressure.",upvotes:7400,comments:1101,credible:55,debunked:45,tags:["Portals","Mount Shasta","Stonehenge","Sedona","Electromagnetic","Ancient Sites"],premium:false},
 ];
 
 
@@ -863,6 +923,107 @@ export const SOURCES = [
     ],
   },
 
+  // ══ REMOTE VIEWING, PSI & GOVERNMENT PSYCHIC PROGRAMS ════════════════════
+  {
+    label:"Remote Viewing, PSI & Government Psychic Programs",
+    type:"archive",
+    items:[
+      // Official declassified records
+      {n:"CIA Stargate Collection — 12 million pages declassified (official)",u:"https://www.cia.gov/readingroom/collection/stargate"},
+      {n:"CIA Gateway Process — 1983 Army consciousness report FREE PDF",u:"https://www.cia.gov/readingroom/docs/CIA-RDP96-00788R001700210016-3.pdf"},
+      {n:"IRP.fas.org — STAR GATE full program history & documents",   u:"https://irp.fas.org/program/collect/stargate.htm"},
+      {n:"Black Vault — Stargate declassified documents archive",      u:"https://www.theblackvault.com/documentarchive/project-star-gate/"},
+      // Key researchers & practitioners
+      {n:"Hal Puthoff — physicist & Stargate lead scientist research",  u:"https://www.esi-ea.org"},
+      {n:"Russell Targ — laser physicist & remote viewing researcher",  u:"https://www.espresearch.com"},
+      {n:"Ingo Swann — remote viewing co-creator official archive",    u:"https://www.biomindsuperpowers.com"},
+      {n:"Joe McMoneagle — Army Stargate viewer, official site",       u:"https://www.mceagle.com"},
+      {n:"Courtney Brown — Farsight Institute remote viewing",         u:"https://farsight.org"},
+      {n:"Monroe Institute — Gateway Process & OBE research",         u:"https://www.monroeinstitute.org"},
+      // Written research & analysis
+      {n:"Decrypted Matrix — Project Stargate full history",           u:"https://decryptedmatrix.com/project-stargate-cia-classified-psychic-espionage-program/"},
+      {n:"War History Online — CIA Remote Viewing & the Soviets",     u:"https://www.warhistoryonline.com/war-articles/project-stargate.html"},
+      {n:"Journal of Scientific Exploration — PSI research papers",   u:"https://journalofscientificexploration.org"},
+      {n:"Dean Radin — Institute of Noetic Sciences PSI research",    u:"https://www.deanradin.com"},
+      {n:"Society for Psychical Research — 140 years of PSI research (UK)",u:"https://www.spr.ac.uk"},
+      {n:"Rhine Research Center — remote viewing & PSI studies",      u:"https://www.rhine.org"},
+    ],
+  },
+
+  // ══ PORTALS, STARGATES & INTERDIMENSIONAL RESEARCH ════════════════════════
+  {
+    label:"Portals, Stargates & Interdimensional Research",
+    type:"research",
+    items:[
+      // Ancient sites & portal research
+      {n:"Mike Ricksecker — Portals to the Stars (Amazon)",            u:"https://www.amazon.com/dp/B0DK3YY7K6"},
+      {n:"Academic Block — Stargates & Portals full research article", u:"https://www.academicblock.com/science/fringe-science/stargates-and-portals"},
+      {n:"Sacred Illusion — Stargates & Doors to Nowhere",            u:"https://www.sacredillusion.com/stargates-and-doors-to-nowhere-portals-illusions-or-entrances-to-elsewhere/"},
+      {n:"Tourism & Travel — Global Stargate Sites mystery",          u:"https://www.tourismandtravel.org/2024/11/the-mystery-of-stargates-across-world.html"},
+      {n:"MagellanTV — Portals: Stonehenge, Pyramids, Dark Matter",   u:"https://www.magellantv.com/articles/portals-to-other-worlds-where-stonehenge-harry-potter-and-dark-matter-meet"},
+      {n:"Thirdi.us — Skinwalker Ranch, Mount Shasta, Stargates",     u:"https://thirdi.us/blog/2024/07/unlocking-the-mysteries-of-stargates-portals-to-other-dimensions-and-realms/"},
+      // Government research
+      {n:"Skinwalker Ranch — Official site & DoD investigation",      u:"https://skinwalker-ranch.com"},
+      {n:"AAWSAP / AATIP — Pentagon DoD anomalous program docs",      u:"https://www.aaro.mil"},
+      {n:"CERN — Official LHC extra dimensions research",             u:"https://home.cern/science/experiments/lhc"},
+      {n:"Montauk Project — Camp Hero State Park (former AF Station)", u:"https://www.nysparks.com/parks/41/details.aspx"},
+      // Theories & hidden knowledge
+      {n:"Medium — Iraqi Stargate: US Military Zones at Sumerian Sites",u:"https://medium.com/@iram.ahmed1997/the-iraqi-stargate-conspiracy-a-modern-perspective-on-an-ancient-mystery-18d3cd39ff8f"},
+      {n:"Awakening of a Thirdi — Metaphysical stargates research",   u:"https://thirdi.us/blog/2024/07/unlocking-the-mysteries-of-stargates-portals-to-other-dimensions-and-realms/"},
+      {n:"World History Encyclopedia — Sumerian Gate of Anu",         u:"https://www.worldhistory.org/article/216/the-myth-of-adapa/"},
+      {n:"Sedona Anomalies — Portal & vortex electromagnetic research",u:"https://sedonanomalies.com"},
+      {n:"Wes Penre — Interdimensional portals & grid research",      u:"https://wespenre.com/category/level-1-5-in-pdf/"},
+    ],
+  },
+
+  // ══ DOLPHINS — GOVERNMENT FILES, MILITARY PROGRAMS & INTELLIGENCE ═════════
+  {
+    label:"Dolphins — Military Programs, Government Files & Intelligence",
+    type:"research",
+    items:[
+      // Official government & military sources
+      {n:"US Navy NMMP — Official Navy Marine Mammal Program page",   u:"https://www.niwcpacific.navy.mil/marine-mammal/"},
+      {n:"NMMP Wikipedia — Full documented history (declassified)",   u:"https://en.wikipedia.org/wiki/United_States_Navy_Marine_Mammal_Program"},
+      {n:"Military Marine Mammal Wikipedia — Global programs incl. Soviet", u:"https://en.wikipedia.org/wiki/Military_marine_mammal"},
+      {n:"USNI Proceedings 2007 — Sleek Sailors: Navy Marine Mammal Program", u:"https://www.usni.org/magazines/proceedings/2007/may/oceans-sleek-sailors-navys-marine-mammal-program"},
+      {n:"History.com — How Dolphins Became Secret Cold War Weapons",  u:"https://www.history.com/articles/navy-marine-mammal-program-history-dolphins-sea-lions"},
+      {n:"VeteranLife — Exclusive NMMP Interview with Navy Commander", u:"https://veteranlife.com/military-history/marine-mammal-program"},
+      // The law — MMPA
+      {n:"NOAA Fisheries — Official MMPA dolphin harassment FAQ",     u:"https://www.fisheries.noaa.gov/marine-life-distress/frequent-questions-feeding-or-harassing-marine-mammals-wild"},
+      {n:"NOAA — Wild Dolphin Interaction Regulations (official PDF)", u:"https://nmssanctuaries.blob.core.windows.net/sanctuaries-prod/media/archive/dolphinsmart/pdfs/wd_interact_factsheet.pdf"},
+      {n:"LegalClarity — MMPA full law breakdown: what is and isn't illegal",u:"https://legalclarity.org/why-is-it-illegal-to-communicate-with-dolphins/"},
+      {n:"LegalClarity — Are Dolphins Protected Under US Law?",       u:"https://legalclarity.org/are-dolphins-protected-under-u-s-and-international-law/"},
+      {n:"LegalOverview — Is It Illegal to Talk to Dolphins? 2026",   u:"https://legaloverview.com/is-it-illegal-to-communicate-with-dolphins/"},
+      {n:"Dolphin Research Center — Marine Mammal Law full guide",    u:"https://dolphins.org/marine_mammal_law"},
+      {n:"NOAA Enforcement Hotline: (800) 853-1964 — Report violations 24/7",u:"https://www.fisheries.noaa.gov/contact/office-law-enforcement"},
+      // CIA & consciousness research
+      {n:"Vice — What We've Learned From Giving Dolphins LSD",        u:"https://www.vice.com/en/article/what-weve-learned-from-giving-dolphins-lsd/"},
+      {n:"Supercluster — How Dolphins on LSD Shaped the Search for ET Intelligence", u:"https://www.supercluster.com/editorial/how-dolphins-on-lsd-shaped-the-search-for-extraterrestrial-intelligence"},
+      {n:"Dr. John C. Lilly — Consciousness Research & Dolphin Programs",u:"https://troubledminds.substack.com/p/isolated-consciousness-the-collision"},
+      {n:"CIA MK-Ultra Connection to Dolphin Consciousness Research", u:"https://historiailliusitineris.com/john-c-lilly/"},
+      // Global personhood & rights
+      {n:"India 2013 — Non-Human Persons Declaration (The Print)",    u:"https://theprint.in/science/pacific-islands-leaders-grant-whales-dolphins-personhood-status-india-did-it-over-a-decade-ago/2036312/"},
+      {n:"Sonar — Dolphin & Whale Nonhuman Personhood global movement",u:"https://wearesonar.org/dolphin-and-whale-nonhuman-personhood/"},
+      {n:"Earth Island — What India's Dolphin Captivity Ban Means",   u:"https://www.earthisland.org/journal/index.php/articles/entry/what_indias_decision_to_ban_dolphin_captivity_means/"},
+      {n:"2010 Declaration of Rights for Cetaceans — Full text",      u:"https://www.cetaceanrights.org"},
+      {n:"SONAR Organization — Active cetacean personhood legislation campaign",u:"https://wearesonar.org"},
+      // Intelligence research
+      {n:"Wild Dolphin Project — Dr. Herzing 35-year peer-reviewed research",u:"https://www.wilddolphinproject.org/media/scientific-publications/"},
+      {n:"Cambridge Declaration on Consciousness 2012 — full text (PDF)",u:"https://fcmconference.org/img/CambridgeDeclarationOnConsciousness.pdf"},
+      {n:"Kimmela Center — Dr. Lori Marino dolphin brain & consciousness",u:"https://www.kimmela.org"},
+      {n:"Whale Sanctuary Project — Intelligence, cognition & emotion in cetaceans",u:"https://whalesanctuaryproject.org/intelligence-cognition-emotion-cetaceans/"},
+      {n:"Dolphin Research Center — Cognitive research archive",      u:"https://dolphins.org/research_spotlight"},
+      {n:"NOAA Ocean Explorer — US dolphin research programs",        u:"https://oceanexplorer.noaa.gov"},
+      {n:"Cetacean Society International — dolphin conservation research",u:"https://csiwhalesalive.org"},
+      {n:"Orion Magazine — Deep Intellect (Sy Montgomery, Dr. Herzing)",u:"https://orionmagazine.org/article/deep-intellect/"},
+      // Hidden history & declassified
+      {n:"Hidden History — Drafting Dolphins: Full military dolphin history",u:"https://lflank.wordpress.com/2016/04/05/drafting-dolphins-a-history-of-the-militarys-marine-mammal-program/"},
+      {n:"Historic Mysteries — Military Marine Mammals: History of Exploding Dolphins",u:"https://www.historicmysteries.com/history/military-marine-mammal/30639/"},
+      {n:"MEL Magazine — What's Going On With America's Navy Dolphins?",u:"https://melmagazine.com/en-us/story/navy-dolphins-program-history"},
+      {n:"Dolphins World — Full history of dolphins in military",     u:"https://www.dolphins-world.com/dolphins-in-the-military/"},
+    ],
+  },
+
   // ══ PODCASTS — CONSPIRACY, ANOMALOUS & HIDDEN KNOWLEDGE ══════════════════
   {
     label:"Podcasts — Conspiracy, Anomalous & Hidden Knowledge",
@@ -988,22 +1149,75 @@ export const SOURCES = [
     ],
   },
 
+  // ══ FORBIDDEN KNOWLEDGE & SUPPRESSED VIDEO PLATFORMS ═════════════════════
+  {
+    label:"Forbidden Knowledge — Video Platforms & Suppressed Research Sites",
+    type:"blog",
+    items:[
+      // The sites like Forbidden Knowledge TV
+      {n:"Forbidden Knowledge TV — Alexandra Bruce (forbiddenknowledgetv.net)",u:"https://forbiddenknowledgetv.net/home"},
+      {n:"Forbidden Knowledge TV — Substack newsletter archive",        u:"https://forbiddennews.substack.com"},
+      {n:"Forbidden Knowledge News — daily paranormal & suppressed research",u:"https://forbiddenknowledge.news"},
+      {n:"Forbidden Knowledge Network Podcast — Apple Podcasts",       u:"https://podcasts.apple.com/us/podcast/forbidden-knowledge-news/id1470192028"},
+      {n:"Dark Journalist — X-Series UAP & deep state investigations", u:"https://www.darkjournalist.com"},
+      {n:"The Solari Report — Catherine Austin Fitts, missing trillions",u:"https://home.solari.com"},
+      {n:"Redacted with Clayton Morris — daily suppressed news",        u:"https://www.redacted.inc"},
+      {n:"SGT Report — Sean Turnbull, deep state & financial research", u:"https://www.sgtreport.com"},
+      {n:"Need To Know News — dark journalism daily aggregator",        u:"https://needtoknow.news"},
+      {n:"The Vigilant Citizen — occult symbolism & pop culture decoding",u:"https://vigilantcitizen.com"},
+      {n:"Universe Inside You — ancient knowledge & consciousness YouTube",u:"https://www.youtube.com/@UniverseInsideYou"},
+      {n:"Zohar StarGate Ancient Discoveries — YouTube",               u:"https://www.youtube.com/@ZoharStarGateAncientDiscoveries"},
+      {n:"Universe Inside You — website",                              u:"https://universeinsideyou.net"},
+      {n:"Collective Evolution — consciousness & suppressed science",   u:"https://www.ce1.com"},
+      {n:"Prepare For Change — planetary liberation research",         u:"https://prepareforchange.net"},
+      {n:"Operation Disclosure Official — suppressed & classified research",u:"https://operationdisclosureofficial.com"},
+      {n:"Ascension Glossary — Laura Knight-Jadczyk hidden knowledge", u:"https://ascensionglossary.com"},
+      {n:"Era of Light — spiritual & suppressed news aggregator",       u:"https://eraoflight.com"},
+      {n:"Truth11 — suppressed science & government secrets",          u:"https://truth11.com"},
+      {n:"The Freedom Articles — Makia Freeman investigations",        u:"https://thefreedomarticles.com"},
+    ],
+  },
+
+  // ══ DAVID PAULIDES — MISSING 411 & CANAMMISSING ═══════════════════════════
+  {
+    label:"David Paulides — Missing 411 & CanAm Missing Research",
+    type:"research",
+    items:[
+      {n:"Missing411.com — Official David Paulides site & book store",  u:"https://missing411.com"},
+      {n:"CanAm Missing Project — canammissing.com (active case files)",u:"https://www.canammissing.com"},
+      {n:"David Paulides YouTube — investigative videos & new cases",   u:"https://www.youtube.com/@DavidPaulides"},
+      {n:"Missing 411 Western US — first book (Amazon)",               u:"https://www.amazon.com/s?k=Missing+411+Western+United+States+Paulides"},
+      {n:"Missing 411 Eastern US — second book (Amazon)",              u:"https://www.amazon.com/s?k=Missing+411+Eastern+United+States+Paulides"},
+      {n:"Missing 411 North America & Beyond (Amazon)",                u:"https://www.amazon.com/s?k=Missing+411+North+America+Beyond+Paulides"},
+      {n:"Missing 411 — The Hunted: Hunters Missing in North America",  u:"https://www.amazon.com/s?k=Missing+411+Hunters+Paulides"},
+      {n:"Missing 411 — Off The Grid: 7th book in the series",         u:"https://www.amazon.com/s?k=Missing+411+Off+Grid+Paulides"},
+      {n:"Missing 411 The Movie — documentary on Amazon Prime",        u:"https://www.amazon.com/s?k=Missing+411+movie+documentary"},
+      {n:"Missing 411 The Hunted — 2019 hunters documentary",          u:"https://www.amazon.com/s?k=Missing+411+Hunted+documentary"},
+      {n:"Hancock House Publishers — Official Missing 411 series",      u:"https://www.hancockhouse.com/collections/missing-411-series"},
+      {n:"Hangar 1 Publishing — David Paulides interview archive",      u:"https://hangar1publishing.com/blogs/news-1/episode-1-david-paulides-missing-411-series-and-the-hunted-documentary"},
+      {n:"r/Missing411 — Reddit community tracking cases",             u:"https://www.reddit.com/r/Missing411"},
+      {n:"North America Bigfoot Search — Paulides earlier Bigfoot research",u:"https://www.nabigfootsearch.com"},
+    ],
+  },
+
   // ══ ALTERNATIVE NEWS AGGREGATORS & LINK HUBS ══════════════════════════════
   {
     label:"Alternative News Aggregators & Link Hubs",
     type:"news",
     items:[
-      {n:"Natural News — Mike Adams alternative health & news",      u:"https://www.naturalnews.com"},
-      {n:"Infowars — Alex Jones (archived; take critically)",        u:"https://www.infowars.com"},
-      {n:"SGT Report — precious metals, deep state & health",        u:"https://www.sgtreport.com"},
-      {n:"State of the Nation — deep state & alternative news",      u:"https://stateofthenation.co"},
-      {n:"What Really Happened — Michael Rivero news aggregator",   u:"https://www.whatreallyhappened.com"},
-      {n:"The Tap Blog — UK alternative news aggregator",           u:"https://tapnewswire.com"},
-      {n:"GlobalResearch.ca — Michel Chossudovsky geopolitics",     u:"https://www.globalresearch.ca"},
-      {n:"21st Century Wire — Patrick Henningsen independent news",  u:"https://21stcenturywire.com"},
-      {n:"Need To Know News — dark journalism aggregator",           u:"https://needtoknow.news"},
-      {n:"The Vigilant Citizen — symbolism & pop culture decoding",  u:"https://vigilantcitizen.com"},
-      {n:"End of the American Dream — Michael Snyder economic news", u:"https://endoftheamericandream.com"},
+      {n:"Natural News — Mike Adams alternative health & news",         u:"https://www.naturalnews.com"},
+      {n:"Infowars — Alex Jones archive (take critically)",             u:"https://www.infowars.com"},
+      {n:"SGT Report — precious metals, deep state & health",           u:"https://www.sgtreport.com"},
+      {n:"State of the Nation — deep state & alternative news",         u:"https://stateofthenation.co"},
+      {n:"What Really Happened — Michael Rivero news aggregator",      u:"https://www.whatreallyhappened.com"},
+      {n:"The Tap Blog — UK alternative news aggregator",              u:"https://tapnewswire.com"},
+      {n:"GlobalResearch.ca — Michel Chossudovsky geopolitics",        u:"https://www.globalresearch.ca"},
+      {n:"21st Century Wire — Patrick Henningsen independent news",     u:"https://21stcenturywire.com"},
+      {n:"Need To Know News — dark journalism aggregator",              u:"https://needtoknow.news"},
+      {n:"The Vigilant Citizen — symbolism & pop culture decoding",     u:"https://vigilantcitizen.com"},
+      {n:"End of the American Dream — Michael Snyder economic news",    u:"https://endoftheamericandream.com"},
+      {n:"Drop Site News — Jeremy Scahill & Ryan Grim investigative",  u:"https://www.dropsitenews.com"},
+      {n:"Reckonin' — Substack investigative journalism hub",           u:"https://www.reckonin.com"},
     ],
   },
 
