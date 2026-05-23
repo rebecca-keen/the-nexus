@@ -2,6 +2,12 @@
 export const ADMIN_USER = "nexusadmin";
 export const ADMIN_PASS = "N3xus@2025";
 
+// ── AI Configuration ──────────────────────────────────────────────────────────
+// Get a FREE API key at openrouter.ai — sign up, go to Keys, create one
+// Free models: mistralai/mistral-7b-instruct, google/gemma-3-27b-it:free, meta-llama/llama-3.1-8b-instruct:free
+export const OPENROUTER_KEY = "PASTE_YOUR_OPENROUTER_KEY_HERE";
+export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model — no billing required
+
 // ─── STRIPE ──────────────────────────────────────────────────────────────────
 export const STRIPE_MONTHLY = "https://buy.stripe.com/REPLACE_MONTHLY_LINK";
 export const STRIPE_ANNUAL  = "https://buy.stripe.com/REPLACE_ANNUAL_LINK";

@@ -1,12 +1,35 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { CSS, VBadge, Sidebar, UpgradeModal, PrivacyModal } from './components.jsx';
+import { CSS, VBadge, Sidebar, UpgradeModal, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
   ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, VERDICTS, MEDIA_LIBRARY,
   SEED_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES, FREE_LIMIT,
-  autoVerdict, getType, fmtNum,
+  autoVerdict, getType, fmtNum, OPENROUTER_KEY, AI_MODEL,
 } from './data.js';
 
-// In-memory session — no localStorage needed, works everywhere
+// ── AI helper — OpenRouter (free tier, browser-safe) ─────────────────────────
+const callAI = async (system, userMsg, history = [], maxTokens = 900) => {
+  const messages = [
+    ...(history.length ? history.map(m => ({ role: m.role, content: m.content })) : []),
+    { role: "user", content: userMsg },
+  ];
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
+      "HTTP-Referer": "https://thenexusapp.com",
+      "X-Title": "The Nexus",
+    },
+    body: JSON.stringify({
+      model: AI_MODEL,
+      max_tokens: maxTokens,
+      messages: [{ role: "system", content: system }, ...messages],
+    }),
+  });
+  if (!res.ok) throw new Error(`AI error ${res.status}`);
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || "";
+};
 let _session = null;
 const saveSession = u => { _session = u; };
 const clearSession = () => { _session = null; };
@@ -49,6 +72,7 @@ export default function App() {
 
   // ── Community form ──────────────────────────────────────────────────────────
   const [showForm, setShowForm] = useState(false);
+  const [showSrc, setShowSrc]   = useState(false);
   const [np, setNp]             = useState({ title:"", body:"", topic:TOPICS[1], region:"🌍 Global", contentType:"research", confidence:"unverified", tags:"" });
   const [refs, setRefs]         = useState([{ label:"", url:"" }]);
   const [uploads, setUploads]   = useState([]);
@@ -81,18 +105,8 @@ export default function App() {
     setLoading(true);
     try {
       const used = stories.slice(0, 6).map(s => s.title).join("; ");
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 1200,
-          system: `Generate 5 investigative research stories as a JSON array. No markdown. Each object: {type:"news"|"blog"|"archive"|"research", source:"outlet name", sourceUrl:"url", topic:"one of: Government & Intelligence, Unresolved Events, Hidden History, Health & Science, Finance & Power, UAP & Anomalous, Ocean & Earth, Media & Disclosure, Surveillance, Ancient Civilizations", region:"flag + country", title:"specific headline", summary:"2-3 sentences with real names and document references", tags:["tag1","tag2","tag3"], credible:50-97, debunked:100-credible, upvotes:500-9000, comments:50-2000, premium:true}. Use real outlets. Do not repeat: ${used}`,
-          messages: [{ role:"user", content: hint ? `Focus on: ${hint}` : "Generate diverse stories across all topics" }],
-        }),
-      });
-      const data = await res.json();
-      const raw = data.content?.find(b => b.type === "text")?.text || "[]";
+      const system = `Generate 5 investigative research stories as a JSON array. No markdown, no backticks, output raw JSON only. Each object: {type:"news"|"blog"|"archive"|"research", source:"outlet name", sourceUrl:"url", topic:"one of: Government & Intelligence, Unresolved Events, Hidden History, Health & Science, Finance & Power, UAP & Anomalous, Ancient Civilizations, Forbidden Science, Lost Technology, Remote Viewing & PSI, Portals & Stargates, Animal Intelligence, Giants & Nephilim, Biblical & Religious Records", region:"flag + country", title:"specific headline", summary:"2-3 sentences with real names and document references", tags:["tag1","tag2","tag3"], credible:50-97, debunked:100-credible, upvotes:500-9000, comments:50-2000, premium:true}. Use real outlets. Do not repeat: ${used}`;
+      const raw = await callAI(system, hint ? `Focus on: ${hint}` : "Generate diverse stories across all topics", [], 1200);
       const parsed = JSON.parse(raw.replace(/```json|```/g, "").trim());
       const newStories = parsed.map((s, i) => ({ ...s, id:`ai-${Date.now()}-${i}`, time:`${i + 1}h ago` }));
       setStories(prev => [...newStories, ...prev]);
@@ -142,29 +156,20 @@ export default function App() {
     setChat(p => [...p, { role:"user", content:msg }]);
     setAiLoad(true);
     try {
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 900,
-          system: `You are an expert investigative analyst for The Nexus. Never use the word "conspiracy." Use: "disputed record," "unresolved event," "declassified program," "suppressed evidence."
+      const system = `You are an expert investigative analyst for The Nexus. Never use the word "conspiracy." Use: "disputed record," "unresolved event," "declassified program," "suppressed evidence."
 
 Format every response:
 **The Record:** [one sentence]
 **Evidence Supporting It:** [3-4 bullets with real sources, names, dates]
 **Official Position / Counter-Evidence:** [3-4 bullets]
 **Key Primary Sources:** [2-3 named documents or researchers]
-**Further Reading:** [suggest 1-2 from: JFK and the Unspeakable, One Nation Under Blackmail, Operation Paperclip, The Creature from Jekyll Island, Dark Alliance, Fingerprints of the Gods, Citizenfour, The Century of the Self, Inside Job, The Social Dilemma, Ancient Apocalypse, The Drone Papers, The CIA and the Media by Carl Bernstein]
+**Further Reading:** [suggest 1-2 relevant books or documentaries]
 
-Be precise. Max 360 words. Treat the reader as an intelligent adult.`,
-          messages: [...chat.map(m => ({ role:m.role, content:m.content })), { role:"user", content:msg }],
-        }),
-      });
-      const data = await res.json();
-      setChat(p => [...p, { role:"assistant", content:data.content?.find(b => b.type === "text")?.text || "Analysis unavailable." }]);
+Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
+      const reply = await callAI(system, msg, chat, 900);
+      setChat(p => [...p, { role:"assistant", content: reply || "Analysis unavailable." }]);
     } catch {
-      setChat(p => [...p, { role:"assistant", content:"Connection error. Please try again." }]);
+      setChat(p => [...p, { role:"assistant", content:"Connection error. Please check your OpenRouter API key in data.js — get a free key at openrouter.ai" }]);
     } finally { setAiLoad(false); }
   };
 
@@ -564,7 +569,8 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`,
                       </button>
                     ))}
                     {isPaid
-                      ? <button onClick={() => setShowForm(p => !p)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Record</button>
+                      ? <><button onClick={() => setShowForm(p => !p)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Record</button>
+                        <button onClick={() => setShowSrc(p => !p)} style={{ background:"#1a2a3a", border:"1px solid #5a9ac8", color:"#5a9ac8", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Source/Blog</button></>
                       : <button onClick={() => setShowUpgrade(true)} style={{ background:"transparent", border:"1px dashed #2a3a4a", color:"#2a3a4a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:.5, cursor:"pointer" }}>🔒 Upgrade to Post</button>
                     }
                   </div>
@@ -582,6 +588,20 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`,
                 )}
 
                 {/* Submission form */}
+                {/* Submit Source / Blog Form */}
+                {showSrc && isPaid && (
+                  <div className="fade" style={{ background:"#0b0d14", border:"1px solid #5a9ac8", padding:20, marginBottom:14 }}>
+                    <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
+                      <div>
+                        <div className="bb" style={{ fontSize:18, letterSpacing:2, color:"#eeeae0" }}>SUBMIT A SOURCE / BLOG / PAPER</div>
+                        <div style={{ fontSize:8, color:"#3a4a5a", marginTop:2, fontFamily:"monospace" }}>Suggest a researcher, blog, paper, or website to add to the Source Directory</div>
+                      </div>
+                      <button onClick={() => setShowSrc(false)} style={{ background:"none", border:"none", color:"#3a4a5a", cursor:"pointer", fontSize:16 }}>✕</button>
+                    </div>
+                    <SubmitSourceForm onClose={() => setShowSrc(false)} toast2={t2} />
+                  </div>
+                )}
+
                 {showForm && isPaid && (
                   <div className="fade" style={{ background:"#0b0d14", border:"1px solid #b02020", padding:20, marginBottom:14 }}>
                     <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
