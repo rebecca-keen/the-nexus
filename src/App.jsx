@@ -447,7 +447,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                       {/* Actions */}
                       <div style={{ display:"flex", gap:7, flexWrap:"wrap", marginBottom:16 }}>
                         {openStory.sourceUrl && <a href={openStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ background:"#b02020", color:"#fff", padding:"7px 16px", fontFamily:"monospace", fontSize:9, letterSpacing:.5 }}>Read Source ↗</a>}
-                        <button onClick={() => { setAiIn(`Analyze: "${openStory.title}"`); setView("ai"); }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a7a9a", padding:"7px 12px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>AI Analysis →</button>
                         <button onClick={() => { setSaved(p => ({ ...p, [openStory.id]:!p[openStory.id] })); toast2(saved[openStory.id] ? "Removed" : "Saved"); }} style={{ background:"transparent", border:"1px solid #1c2330", color:saved[openStory.id]?"#c08030":"#3a4a5a", padding:"7px 12px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>{saved[openStory.id] ? "★ Saved" : "☆ Save"}</button>
                         <button onClick={() => { setLibTopic(openStory.topic); setView("library"); }} style={{ background:"transparent", border:"1px solid #2a3a1a", color:"#4a7a4a", padding:"7px 12px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>📚 Related Reading →</button>
                       </div>
@@ -788,12 +787,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                         )}
                         <div style={{ display:"flex", gap:12, alignItems:"center", flexWrap:"wrap" }}>
                           <span style={{ fontSize:9, color:"#1c2a38", fontFamily:"monospace" }}>💬 {post.comments}</span>
-                          <button onClick={() => { setAiIn(`Analyze: "${post.title}"`); setView("ai"); }}
-                            style={{ background:"none", border:"none", color:"#2a3a4a", fontSize:9, cursor:"pointer", padding:0, fontFamily:"monospace" }}
-                            onMouseEnter={e => e.target.style.color="#5a7a9a"}
-                            onMouseLeave={e => e.target.style.color="#2a3a4a"}>
-                            🔬 AI Analysis
-                          </button>
                           {isAdmin && (
                             <>
                               <button onClick={() => { setPosts(p => p.map(pp => pp.id === post.id ? { ...pp, pinned:!pp.pinned } : pp)); toast2(post.pinned ? "Unpinned" : "Pinned"); }}
@@ -879,12 +872,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                           <div style={{ display:"flex", gap:12, alignItems:"center" }}>
                             <a href={post.permalink} target="_blank" rel="noopener noreferrer" style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace" }}>💬 {post.numComments}</a>
                             {!post.isSelf && <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ fontSize:9, color:"#3a5a7a", fontFamily:"monospace" }}>🔗 Link ↗</a>}
-                            <button onClick={() => { setAiIn(`Analyze: "${post.title}"`); setView("ai"); }}
-                              style={{ background:"none", border:"none", color:"#2a3a4a", fontSize:9, cursor:"pointer", padding:0, fontFamily:"monospace" }}
-                              onMouseEnter={e => e.target.style.color="#5a7a9a"}
-                              onMouseLeave={e => e.target.style.color="#2a3a4a"}>
-                              🔬 Analyze
-                            </button>
                           </div>
                         </div>
                       </div>
@@ -968,12 +955,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                             </div>
                             <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
                               <span style={{ fontSize:8, color:TYPE_CLR[m.type], fontFamily:"monospace" }}>{m.type === "book" ? "Read / Buy ↗" : "Watch ↗"}</span>
-                              <button onClick={e => { e.preventDefault(); e.stopPropagation(); setAiIn(`Tell me about "${m.title}" by ${m.author}`); setView("ai"); }}
-                                style={{ background:"none", border:"none", color:"#2a3a4a", fontSize:8, cursor:"pointer", padding:0, fontFamily:"monospace" }}
-                                onMouseEnter={e => e.target.style.color="#5a7a9a"}
-                                onMouseLeave={e => e.target.style.color="#2a3a4a"}>
-                                🔬 AI Analysis
-                              </button>
                             </div>
                           </a>
                         ))}
@@ -992,51 +973,22 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:12 }}>
                   <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>ANALYSIS ENGINE</div>
-                  <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>
-                    {isPaid ? "Unlimited queries · Powered by Claude AI" : chat.filter(m => m.role === "user").length < 5 ? `Free: ${5 - chat.filter(m => m.role === "user").length} of 5 queries remaining` : "Free limit reached — upgrade for unlimited"}
+                  <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>AI-powered investigative analysis — coming soon</div>
+                </div>
+                <div style={{ background:"#07080c", border:"1px solid #1c2330", padding:48, textAlign:"center" }}>
+                  <div style={{ fontSize:32, marginBottom:16 }}>🔬</div>
+                  <div className="bb" style={{ fontSize:18, letterSpacing:2, color:"#eeeae0", marginBottom:10 }}>ANALYSIS ENGINE</div>
+                  <div style={{ fontSize:10, color:"#3a4a5a", fontFamily:"monospace", lineHeight:1.8, maxWidth:420, margin:"0 auto 24px" }}>
+                    AI-powered analysis of unresolved events, classified programs, and suppressed history is currently being configured. Ask questions, get sourced breakdowns from all sides.
                   </div>
-                </div>
-
-                <div style={{ display:"flex", gap:5, flexWrap:"wrap", marginBottom:10 }}>
-                  {["Operation Northwoods","MK-Ultra programs","Epstein intelligence ties","WTC 7 collapse","Federal Reserve origins","Five Eyes surveillance","Ancient civilizations"].map(q => (
-                    <button key={q} onClick={() => setAiIn(q)}
-                      style={{ background:"transparent", border:"1px solid #1c2330", color:"#2a3a4a", padding:"3px 9px", fontFamily:"monospace", fontSize:8, cursor:"pointer", letterSpacing:.3, transition:"all .12s" }}
-                      onMouseEnter={e => { e.target.style.borderColor="#b02020"; e.target.style.color="#8a9aaa"; }}
-                      onMouseLeave={e => { e.target.style.borderColor="#1c2330"; e.target.style.color="#2a3a4a"; }}>
-                      {q}
-                    </button>
-                  ))}
-                </div>
-
-                <div className="sc" style={{ background:"#07080c", border:"1px solid #1c2330", height:420, overflowY:"auto", padding:16, marginBottom:10, display:"flex", flexDirection:"column", gap:14 }}>
-                  {chat.map((msg, i) => (
-                    <div key={i} style={{ display:"flex", gap:10, flexDirection:msg.role==="user"?"row-reverse":"row" }} className="fade">
-                      <div style={{ width:26, height:26, flexShrink:0, background:msg.role==="assistant"?"#b02020":"#1c2330", display:"flex", alignItems:"center", justifyContent:"center" }}>
-                        <span style={{ fontSize:9, fontWeight:500, color:"#fff", fontFamily:"monospace" }}>{msg.role === "assistant" ? "N" : "U"}</span>
-                      </div>
-                      <div style={{ maxWidth:"80%", background:msg.role==="assistant"?"#0b0d14":"#10131e", border:"1px solid #1c2330", padding:"10px 13px" }}>
-                        <div style={{ fontSize:12, lineHeight:1.75, color:msg.role==="assistant"?"#a8b8c8":"#7a8a9a", whiteSpace:"pre-wrap", fontFamily:"monospace" }}>{msg.content}</div>
-                      </div>
-                    </div>
-                  ))}
-                  {aiLoad && (
-                    <div style={{ display:"flex", gap:10 }}>
-                      <div style={{ width:26, height:26, background:"#b02020", display:"flex", alignItems:"center", justifyContent:"center" }}>
-                        <span style={{ fontSize:9, color:"#fff", fontFamily:"monospace" }}>N</span>
-                      </div>
-                      <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"10px 13px" }}>
-                        <span style={{ fontSize:11, color:"#2a3a4a", fontFamily:"monospace" }}>Analyzing…</span>
-                      </div>
-                    </div>
-                  )}
-                  <div ref={chatEnd} />
-                </div>
-
-                <div style={{ display:"flex", gap:7 }}>
-                  <input value={aiIn} onChange={e => setAiIn(e.target.value)} onKeyDown={e => e.key === "Enter" && sendAi()}
-                    placeholder="Ask about any unresolved event, record, or suppressed history…"
-                    style={{ flex:1, background:"#0b0d14", border:"1px solid #1c2330", color:"#ccc8be", padding:"9px 12px", fontFamily:"monospace", fontSize:12, outline:"none" }} />
-                  <button onClick={sendAi} disabled={aiLoad} style={{ background:"#b02020", border:"none", color:"#fff", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>Analyze →</button>
+                  <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginBottom:24 }}>
+                    {["Operation Northwoods","MK-Ultra","Epstein network","Ancient civilizations","Remote viewing","Dolphin programs"].map(q => (
+                      <span key={q} style={{ background:"#0b0d14", border:"1px solid #1c2330", color:"#2a3a4a", padding:"4px 10px", fontFamily:"monospace", fontSize:8 }}>{q}</span>
+                    ))}
+                  </div>
+                  <div style={{ background:"#0b0d14", border:"1px solid #1a3a1a", padding:"12px 20px", display:"inline-block" }}>
+                    <span style={{ fontSize:9, color:"#40c070", fontFamily:"monospace", letterSpacing:1 }}>✓ COMING IN NEXT UPDATE</span>
+                  </div>
                 </div>
               </div>
             </div>
