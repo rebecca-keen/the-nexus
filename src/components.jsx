@@ -18,6 +18,14 @@ a { text-decoration: none; color: inherit; }
 .card { background: #0b0d14; border: 1px solid #1c2330; transition: border-color .15s; }
 .card:hover { border-color: #2a3a4a; }
 @keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .sidebar-hide { display: none !important; }
+  .grid-2 { grid-template-columns: 1fr !important; }
+  .grid-4 { grid-template-columns: 1fr 1fr !important; }
+  .feed-layout { flex-direction: column !important; }
+}
 `;
 
 export function VBadge({ verdict }) {

@@ -249,71 +249,89 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
 
         {/* NAV */}
         <div style={{ background:"#07080c", borderBottom:"1px solid #1c2330", position:"sticky", top:0, zIndex:100 }}>
-          <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 16px", display:"flex", alignItems:"center", justifyContent:"space-between", height:48 }}>
-            <div style={{ display:"flex", alignItems:"center", gap:8, cursor:"pointer" }} onClick={() => setView("home")}>
+          <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 12px", display:"flex", alignItems:"center", justifyContent:"space-between", height:48 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:8, cursor:"pointer", flexShrink:0 }} onClick={() => setView("home")}>
               <div style={{ width:18, height:18, background:"#b02020", clipPath:"polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)" }} />
-              <span className="bb" style={{ fontSize:17, letterSpacing:3, color:"#eeeae0" }}>THE NEXUS</span>
+              <span className="bb" style={{ fontSize:16, letterSpacing:3, color:"#eeeae0" }}>THE NEXUS</span>
             </div>
-            <div style={{ display:"flex", alignItems:"center", gap:2 }}>
+            <div style={{ display:"flex", alignItems:"center", overflowX:"auto", gap:0 }}>
               {[["feed","Records"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
                 <button key={v} onClick={() => { setView(v); setOpenStory(null); if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
-                  style={{ background:"none", border:"none", borderBottom: view===v?"2px solid #b02020":"2px solid transparent", color:view===v?"#eeeae0":"#3a4a5a", padding:"0 10px", height:48, fontFamily:"monospace", fontSize:9, letterSpacing:1, textTransform:"uppercase", cursor:"pointer", transition:"color .15s" }}>
+                  style={{ background:"none", border:"none", borderBottom:view===v?"2px solid #b02020":"2px solid transparent", color:view===v?"#eeeae0":"#3a4a5a", padding:"0 9px", height:48, fontFamily:"monospace", fontSize:9, letterSpacing:.5, textTransform:"uppercase", cursor:"pointer", whiteSpace:"nowrap", flexShrink:0 }}>
                   {l}
                 </button>
               ))}
             </div>
-            <div style={{ display:"flex", alignItems:"center", gap:6 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:6, flexShrink:0 }}>
               {isAdmin && <span style={{ fontSize:8, color:"#e0c060", background:"#1e1808", border:"1px solid #4a3a10", padding:"2px 7px", fontFamily:"monospace" }}>ADMIN</span>}
               {isAdmin && <button onClick={() => { clearSession(); setUser({ plan:"free", isAdmin:false }); setView("home"); }} style={{ background:"none", border:"1px solid #1c2330", color:"#2a3a4a", padding:"3px 8px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Exit</button>}
             </div>
           </div>
         </div>
 
-        <div style={{ maxWidth:1100, margin:"0 auto", padding:"16px" }}>
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"16px 12px" }}>
 
           {/* HOME */}
           {view === "home" && (
             <div className="fade">
 
-              {/* Hero - compact */}
-              <div style={{ background:"linear-gradient(135deg,#0d1220,#07080c)", border:"1px solid #1c2330", borderTop:"2px solid #b02020", padding:"36px 32px 28px", marginBottom:12 }}>
-                <div style={{ fontSize:8, color:"#b02020", fontFamily:"monospace", letterSpacing:3, marginBottom:10 }}>INDEPENDENT RESEARCH PLATFORM</div>
-                <div className="bb" style={{ fontSize:"clamp(28px,5vw,56px)", letterSpacing:2, color:"#eeeae0", lineHeight:1, marginBottom:14 }}>
-                  QUESTIONS THE<br/><span style={{ color:"#b02020" }}>MAINSTREAM</span> STOPPED ASKING
+              {/* Hero */}
+              <div style={{ background:"linear-gradient(180deg,#0f1520,#07080c)", border:"1px solid #1c2330", padding:"clamp(28px,5vw,52px) clamp(20px,4vw,44px)", marginBottom:12, position:"relative", overflow:"hidden" }}>
+                <div style={{ position:"absolute", top:0, left:0, right:0, height:2, background:"linear-gradient(90deg,#b02020,#5a2a6a,#1a3a6a)" }} />
+                <div style={{ fontSize:8, color:"#b02020", fontFamily:"monospace", letterSpacing:3, textTransform:"uppercase", marginBottom:14, display:"flex", alignItems:"center", gap:8 }}>
+                  <span style={{ width:18, height:1, background:"#b02020", display:"inline-block" }} />
+                  Independent Research Platform
                 </div>
-                <div style={{ fontSize:13, color:"#5a6a7a", lineHeight:1.6, maxWidth:560, marginBottom:20, fontFamily:"monospace" }}>
-                  Investigative journalism, declassified records, whistleblower testimony, and disputed history — all source-linked, all free.
+                <div className="bb" style={{ fontSize:"clamp(32px,6vw,68px)", letterSpacing:2, color:"#eeeae0", lineHeight:.95, marginBottom:18 }}>
+                  SOME QUESTIONS<br />
+                  <span style={{ color:"#b02020" }}>NEVER GET</span><br />
+                  ANSWERED
+                </div>
+                <div className="bk" style={{ fontSize:"clamp(14px,2.5vw,18px)", fontWeight:300, color:"#7a8a9a", lineHeight:1.7, maxWidth:520, marginBottom:24, fontStyle:"italic" }}>
+                  The Nexus aggregates investigative journalism, declassified records, whistleblower testimony, and disputed history — for adults who ask questions the mainstream stopped asking.
                 </div>
                 <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-                  <button onClick={() => setView("feed")} style={{ background:"#b02020", border:"none", color:"#fff", padding:"10px 24px", fontFamily:"monospace", fontSize:10, letterSpacing:1.5, cursor:"pointer", textTransform:"uppercase" }}>Browse Records</button>
-                  <button onClick={() => setView("sources")} style={{ background:"transparent", border:"1px solid #2a3a4a", color:"#5a6a7a", padding:"10px 18px", fontFamily:"monospace", fontSize:10, cursor:"pointer" }}>Source Directory</button>
-                  <button onClick={() => setView("community")} style={{ background:"transparent", border:"1px solid #2a3a4a", color:"#5a6a7a", padding:"10px 18px", fontFamily:"monospace", fontSize:10, cursor:"pointer" }}>Community</button>
+                  <button onClick={() => setView("feed")} style={{ background:"#b02020", border:"none", color:"#fff", padding:"12px 26px", fontFamily:"monospace", fontSize:10, letterSpacing:1.5, cursor:"pointer", textTransform:"uppercase" }}>Enter the Archive →</button>
+                  <button onClick={() => setView("sources")} style={{ background:"transparent", border:"1px solid #3a4a5a", color:"#8a9aaa", padding:"11px 18px", fontFamily:"monospace", fontSize:10, letterSpacing:1, cursor:"pointer" }}>Browse Sources</button>
+                </div>
+                <div style={{ marginTop:16, fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>
+                  For independent research & education · Adults 18+ · All sources linked · No editorial position taken
                 </div>
               </div>
 
-              {/* Stats row */}
+              {/* AdSense slot — Google will auto-fill this */}
+              <div style={{ margin:"12px 0", textAlign:"center", minHeight:90, background:"#0b0d14", border:"1px solid #1c2330", display:"flex", alignItems:"center", justifyContent:"center" }}>
+                <ins className="adsbygoogle"
+                  style={{ display:"block", width:"100%", minHeight:90 }}
+                  data-ad-client="ca-pub-8145721366190659"
+                  data-ad-slot="auto"
+                  data-ad-format="horizontal"
+                  data-full-width-responsive="true" />
+              </div>
+
+              {/* Stats */}
               <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:8, marginBottom:12 }}>
                 {[
-                  { n:"86+",  l:"Records",       s:"& growing" },
-                  { n:"616+", l:"Sources",        s:"verified links" },
-                  { n:"200+", l:"Communities",    s:"Reddit & forums" },
-                  { n:"Free", l:"No Paywall",     s:"no sign-up needed" },
+                  { n:"86+",  l:"Records",      s:"& growing daily" },
+                  { n:"616+", l:"Sources",       s:"Books · Blogs · YouTube" },
+                  { n:"200+", l:"Communities",   s:"Reddit & forums" },
+                  { n:"Free", l:"No Paywall",    s:"No sign-up needed" },
                 ].map(s => (
-                  <div key={s.l} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"14px 12px", textAlign:"center" }}>
-                    <div className="bb" style={{ fontSize:24, letterSpacing:1, color:"#b02020", lineHeight:1 }}>{s.n}</div>
-                    <div style={{ fontSize:9, color:"#ccc8be", fontFamily:"monospace", marginTop:3 }}>{s.l}</div>
+                  <div key={s.l} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"14px 10px", textAlign:"center" }}>
+                    <div className="bb" style={{ fontSize:"clamp(18px,3vw,26px)", letterSpacing:1, color:"#b02020", lineHeight:1 }}>{s.n}</div>
+                    <div style={{ fontSize:9, color:"#ccc8be", fontFamily:"monospace", marginTop:4 }}>{s.l}</div>
                     <div style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.s}</div>
                   </div>
                 ))}
               </div>
 
-              {/* Topics grid */}
+              {/* What we cover */}
               <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"16px", marginBottom:12 }}>
-                <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>Browse by Topic</div>
+                <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>What We Cover</div>
                 <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
                   {TOPICS.filter(t => t !== "All Topics").map(t => (
                     <button key={t} onClick={() => { setFilters(f => ({ ...f, topic:t })); setView("feed"); }}
-                      style={{ background:"#07080c", border:"1px solid #1c2330", color:"#4a5a6a", padding:"5px 10px", fontFamily:"monospace", fontSize:8, cursor:"pointer", transition:"all .12s", letterSpacing:.5 }}
+                      style={{ background:"#07080c", border:"1px solid #1c2330", color:"#4a5a6a", padding:"5px 10px", fontFamily:"monospace", fontSize:8, cursor:"pointer", transition:"all .12s" }}
                       onMouseEnter={e => { e.currentTarget.style.borderColor="#b02020"; e.currentTarget.style.color="#ccc8be"; }}
                       onMouseLeave={e => { e.currentTarget.style.borderColor="#1c2330"; e.currentTarget.style.color="#4a5a6a"; }}>
                       {t}
@@ -322,29 +340,41 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 </div>
               </div>
 
-              {/* Recent records preview */}
+              {/* Latest records preview */}
               <div style={{ marginBottom:12 }}>
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8 }}>
                   <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace" }}>Latest Records</div>
                   <button onClick={() => setView("feed")} style={{ background:"none", border:"none", color:"#b02020", fontFamily:"monospace", fontSize:8, cursor:"pointer", letterSpacing:1 }}>View All →</button>
                 </div>
-                <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:6 }}>
+                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))", gap:6 }}>
                   {stories.slice(0,4).map(s => (
                     <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); }} className="card"
                       style={{ padding:"12px 14px", cursor:"pointer" }}>
-                      <div style={{ display:"flex", gap:6, marginBottom:5 }}>
+                      <div style={{ display:"flex", gap:6, marginBottom:5, flexWrap:"wrap" }}>
                         <span style={{ background:getType(s.type).bg, color:getType(s.type).text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{getType(s.type).label}</span>
                         <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.topic}</span>
                       </div>
-                      <div style={{ fontSize:12, color:"#ccc8be", lineHeight:1.3, fontFamily:"monospace" }}>{s.title.slice(0,80)}{s.title.length>80?"...":""}</div>
+                      <div style={{ fontSize:12, color:"#ccc8be", lineHeight:1.4, fontFamily:"monospace" }}>{s.title.slice(0,90)}{s.title.length>90?"...":""}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Footer note */}
-              <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace", textAlign:"center", padding:"8px 0" }}>
-                All content for independent research & education only. Adults 18+. All records link to original sources. No editorial position taken.
+              {/* About */}
+              <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"18px 20px", marginBottom:12 }}>
+                <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>About The Nexus</div>
+                <div style={{ fontSize:12, color:"#5a6a7a", fontFamily:"monospace", lineHeight:1.8 }}>
+                  The Nexus is an independent research platform aggregating declassified government documents, investigative journalism, whistleblower testimony, alternative history, ancient civilizations, UAP disclosure, paranormal research, and suppressed science. Every record links directly to its original source. No sign-up. No paywall. No editorial position.
+                </div>
+                <div style={{ marginTop:12, display:"flex", gap:8, flexWrap:"wrap" }}>
+                  <button onClick={() => setView("community")} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Join Community</button>
+                  <button onClick={() => setView("library")} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Media Library</button>
+                  <button onClick={() => setView("reddit")} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Reddit Feeds</button>
+                </div>
+              </div>
+
+              <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace", textAlign:"center", lineHeight:1.8 }}>
+                All content presented for independent research & educational purposes only. The Nexus does not endorse any position. All records link to original external sources. Not affiliated with any government, intelligence agency, political organization, or media company.
               </div>
             </div>
           )}
