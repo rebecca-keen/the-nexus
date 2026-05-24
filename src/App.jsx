@@ -247,129 +247,104 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
           </div>
         )}
 
-        {/* ── NAV ── */}
+        {/* NAV */}
         <div style={{ background:"#07080c", borderBottom:"1px solid #1c2330", position:"sticky", top:0, zIndex:100 }}>
-          <div style={{ maxWidth:1280, margin:"0 auto", padding:"0 20px", display:"flex", alignItems:"stretch", justifyContent:"space-between", height:50 }}>
+          <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 16px", display:"flex", alignItems:"center", justifyContent:"space-between", height:48 }}>
             <div style={{ display:"flex", alignItems:"center", gap:8, cursor:"pointer" }} onClick={() => setView("home")}>
-              <div style={{ width:20, height:20, background:"#b02020", clipPath:"polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)" }} />
-              <span className="bb" style={{ fontSize:18, letterSpacing:3, color:"#eeeae0" }}>THE NEXUS</span>
+              <div style={{ width:18, height:18, background:"#b02020", clipPath:"polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)" }} />
+              <span className="bb" style={{ fontSize:17, letterSpacing:3, color:"#eeeae0" }}>THE NEXUS</span>
             </div>
-
-            <div style={{ display:"flex", alignItems:"stretch" }}>
-              {[
-                ["home",      "Home"],
-                ["feed",      "Records"],
-                ["community", "Community"],
-                ["reddit",    "Reddit"],
-                ["library",   "📚 Library"],
-                ["ai",        "Analysis"],
-                ["sources",   "Sources"],
-                ...(isAdmin ? [["admin","⚙ Admin"]] : []),
-              ].map(([v, l]) => (
-                <button key={v} className={`nb ${view === v ? "on" : ""}`}
-                  onClick={() => {
-
-                    setView(v); setOpenStory(null);
-                    if (v === "reddit" && !rPosts.length) fetchReddit();
-                  }}>
+            <div style={{ display:"flex", alignItems:"center", gap:2 }}>
+              {[["feed","Records"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
+                <button key={v} onClick={() => { setView(v); setOpenStory(null); if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
+                  style={{ background:"none", border:"none", borderBottom: view===v?"2px solid #b02020":"2px solid transparent", color:view===v?"#eeeae0":"#3a4a5a", padding:"0 10px", height:48, fontFamily:"monospace", fontSize:9, letterSpacing:1, textTransform:"uppercase", cursor:"pointer", transition:"color .15s" }}>
                   {l}
                 </button>
               ))}
             </div>
-
-            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:6 }}>
               {isAdmin && <span style={{ fontSize:8, color:"#e0c060", background:"#1e1808", border:"1px solid #4a3a10", padding:"2px 7px", fontFamily:"monospace" }}>ADMIN</span>}
-              {isAdmin && <button onClick={() => { clearSession(); setUser({ plan:"free", isAdmin:false }); setView("home"); }} style={{ background:"none", border:"1px solid #1c2330", color:"#2a3a4a", padding:"4px 9px", fontFamily:"monospace", fontSize:9, cursor:"pointer", letterSpacing:.5 }}>Exit Admin</button>}
+              {isAdmin && <button onClick={() => { clearSession(); setUser({ plan:"free", isAdmin:false }); setView("home"); }} style={{ background:"none", border:"1px solid #1c2330", color:"#2a3a4a", padding:"3px 8px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Exit</button>}
             </div>
           </div>
         </div>
 
-        <div style={{ maxWidth:1280, margin:"0 auto", padding:"20px" }}>
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"16px" }}>
 
-          {/* ── HOME ── */}
+          {/* HOME */}
           {view === "home" && (
             <div className="fade">
-              {/* Hero */}
-              <div style={{ background:"linear-gradient(180deg,#0f1520,#07080c)", border:"1px solid #1c2330", padding:"52px 44px 44px", marginBottom:14, position:"relative", overflow:"hidden" }}>
-                <div style={{ position:"absolute", top:0, left:0, right:0, height:2, background:"linear-gradient(90deg,#b02020,#5a2a6a,#1a3a6a)" }} />
-                <div style={{ fontSize:9, color:"#b02020", fontFamily:"monospace", letterSpacing:3, textTransform:"uppercase", marginBottom:16, display:"flex", alignItems:"center", gap:10 }}>
-                  <span style={{ width:22, height:1, background:"#b02020", display:"inline-block" }} />
-                  Independent Research Platform
+
+              {/* Hero - compact */}
+              <div style={{ background:"linear-gradient(135deg,#0d1220,#07080c)", border:"1px solid #1c2330", borderTop:"2px solid #b02020", padding:"36px 32px 28px", marginBottom:12 }}>
+                <div style={{ fontSize:8, color:"#b02020", fontFamily:"monospace", letterSpacing:3, marginBottom:10 }}>INDEPENDENT RESEARCH PLATFORM</div>
+                <div className="bb" style={{ fontSize:"clamp(28px,5vw,56px)", letterSpacing:2, color:"#eeeae0", lineHeight:1, marginBottom:14 }}>
+                  QUESTIONS THE<br/><span style={{ color:"#b02020" }}>MAINSTREAM</span> STOPPED ASKING
                 </div>
-                <div className="bb" style={{ fontSize:"clamp(36px,6vw,70px)", letterSpacing:2, color:"#eeeae0", lineHeight:.9, marginBottom:20 }}>
-                  SOME QUESTIONS<br />
-                  <span style={{ color:"#b02020" }}>NEVER GET</span><br />
-                  ANSWERED
+                <div style={{ fontSize:13, color:"#5a6a7a", lineHeight:1.6, maxWidth:560, marginBottom:20, fontFamily:"monospace" }}>
+                  Investigative journalism, declassified records, whistleblower testimony, and disputed history — all source-linked, all free.
                 </div>
-                <div className="bk" style={{ fontSize:18, fontWeight:300, color:"#7a8a9a", lineHeight:1.7, maxWidth:520, marginBottom:30, fontStyle:"italic" }}>
-                  The Nexus aggregates investigative journalism, declassified records, whistleblower testimony, and disputed history — for adults who ask questions the mainstream stopped asking.
-                </div>
-                <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
-                  <button onClick={() => setView("feed")} style={{ background:"#b02020", border:"none", color:"#fff", padding:"13px 30px", fontFamily:"monospace", fontSize:11, letterSpacing:1.5, cursor:"pointer", textTransform:"uppercase" }}>Enter the Archive →</button>
-                  <button onClick={() => setView("sources")} style={{ background:"transparent", border:"1px solid #3a4a5a", color:"#8a9aaa", padding:"12px 22px", fontFamily:"monospace", fontSize:10, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>Browse Sources</button>
-                </div>
-                <div style={{ marginTop:18, fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>
-                  ◆ For independent research & education · Adults 18+ · All sources linked · No editorial position taken
+                <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                  <button onClick={() => setView("feed")} style={{ background:"#b02020", border:"none", color:"#fff", padding:"10px 24px", fontFamily:"monospace", fontSize:10, letterSpacing:1.5, cursor:"pointer", textTransform:"uppercase" }}>Browse Records</button>
+                  <button onClick={() => setView("sources")} style={{ background:"transparent", border:"1px solid #2a3a4a", color:"#5a6a7a", padding:"10px 18px", fontFamily:"monospace", fontSize:10, cursor:"pointer" }}>Source Directory</button>
+                  <button onClick={() => setView("community")} style={{ background:"transparent", border:"1px solid #2a3a4a", color:"#5a6a7a", padding:"10px 18px", fontFamily:"monospace", fontSize:10, cursor:"pointer" }}>Community</button>
                 </div>
               </div>
 
-              {/* What's Inside */}
-              <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:14 }}>
-                <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"22px 22px" }}>
-                  <div style={{ fontSize:9, color:"#40c070", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>Records & Research</div>
-                  {["86+ investigative records & growing","Declassified CIA, FBI & NSA documents","Whistleblower testimony archives","Ancient civilizations & hidden history","UAP & government disclosure records","Missing 411, paranormal & cryptid cases","Dolphins, remote viewing, portals & more"].map(f => (
-                    <div key={f} style={{ display:"flex", gap:8, marginBottom:7 }}>
-                      <span style={{ color:"#b02020", flexShrink:0, fontSize:11 }}>→</span>
-                      <span style={{ fontSize:11, color:"#7a8a9a", fontFamily:"monospace", lineHeight:1.4 }}>{f}</span>
-                    </div>
-                  ))}
-                  <button onClick={() => setView("feed")} style={{ marginTop:14, background:"#b02020", border:"none", color:"#fff", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", width:"100%" }}>Browse All Records →</button>
-                </div>
-                <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"22px 22px" }}>
-                  <div style={{ fontSize:9, color:"#5a9ac8", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>Sources & Community</div>
-                  {["616+ verified sources — no duplicates","200+ Reddit communities indexed","Books, documentaries & research papers","Netflix & Amazon documentaries listed","YouTube channels & podcast archives","Free PDFs — CIA Gateway, Book of Enoch","Community board — post findings & evidence"].map(f => (
-                    <div key={f} style={{ display:"flex", gap:8, marginBottom:7 }}>
-                      <span style={{ color:"#5a9ac8", flexShrink:0, fontSize:11 }}>→</span>
-                      <span style={{ fontSize:11, color:"#7a8a9a", fontFamily:"monospace", lineHeight:1.4 }}>{f}</span>
-                    </div>
-                  ))}
-                  <button onClick={() => setView("sources")} style={{ marginTop:14, background:"transparent", border:"1px solid #5a9ac8", color:"#5a9ac8", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", width:"100%" }}>Browse Source Directory →</button>
-                </div>
-              </div>
-
-              {/* Stats */}
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:8, marginBottom:14 }}>
+              {/* Stats row */}
+              <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:8, marginBottom:12 }}>
                 {[
-                  { n:"616+",  l:"Verified Sources",    s:"Books · Blogs · Archives · YouTube" },
-                  { n:"200+",  l:"Reddit Communities",  s:"Conspiracy · UAP · Ancient · Paranormal" },
-                  { n:"62",    l:"Source Categories",   s:"Fully organized & searchable" },
-                  { n:"100%",  l:"Free Access",         s:"No paywall · No sign-up needed" }
+                  { n:"86+",  l:"Records",       s:"& growing" },
+                  { n:"616+", l:"Sources",        s:"verified links" },
+                  { n:"200+", l:"Communities",    s:"Reddit & forums" },
+                  { n:"Free", l:"No Paywall",     s:"no sign-up needed" },
                 ].map(s => (
-                  <div key={s.l} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"16px 14px", textAlign:"center" }}>
-                    <div className="bb" style={{ fontSize:26, letterSpacing:1, color:"#eeeae0", lineHeight:1 }}>{s.n}</div>
-                    <div style={{ fontSize:9, color:"#5a6a7a", fontFamily:"monospace", marginTop:4, marginBottom:2 }}>{s.l}</div>
+                  <div key={s.l} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"14px 12px", textAlign:"center" }}>
+                    <div className="bb" style={{ fontSize:24, letterSpacing:1, color:"#b02020", lineHeight:1 }}>{s.n}</div>
+                    <div style={{ fontSize:9, color:"#ccc8be", fontFamily:"monospace", marginTop:3 }}>{s.l}</div>
                     <div style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.s}</div>
                   </div>
                 ))}
               </div>
 
-              {/* Topics */}
-              <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"18px 20px", marginBottom:12 }}>
-                <div style={{ fontSize:9, color:"#3a4a5a", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>What We Cover — Click to Explore</div>
-                <div style={{ display:"flex", gap:7, flexWrap:"wrap" }}>
+              {/* Topics grid */}
+              <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"16px", marginBottom:12 }}>
+                <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>Browse by Topic</div>
+                <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
                   {TOPICS.filter(t => t !== "All Topics").map(t => (
                     <button key={t} onClick={() => { setFilters(f => ({ ...f, topic:t })); setView("feed"); }}
-                      style={{ background:"#07080c", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:9, cursor:"pointer", transition:"all .12s" }}
+                      style={{ background:"#07080c", border:"1px solid #1c2330", color:"#4a5a6a", padding:"5px 10px", fontFamily:"monospace", fontSize:8, cursor:"pointer", transition:"all .12s", letterSpacing:.5 }}
                       onMouseEnter={e => { e.currentTarget.style.borderColor="#b02020"; e.currentTarget.style.color="#ccc8be"; }}
-                      onMouseLeave={e => { e.currentTarget.style.borderColor="#1c2330"; e.currentTarget.style.color="#5a6a7a"; }}>
+                      onMouseLeave={e => { e.currentTarget.style.borderColor="#1c2330"; e.currentTarget.style.color="#4a5a6a"; }}>
                       {t}
                     </button>
                   ))}
                 </div>
               </div>
 
-              <div style={{ background:"#07080c", border:"1px dashed #1c2330", padding:"11px 14px" }}>
-                <div style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace", lineHeight:1.8 }}>◆ All content is presented for independent research and educational purposes only. The Nexus does not endorse any position as true or false. Credibility ratings are community-sourced. All records link to original external sources. Not affiliated with any government, intelligence agency, political organization, or media company.</div>
+              {/* Recent records preview */}
+              <div style={{ marginBottom:12 }}>
+                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8 }}>
+                  <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace" }}>Latest Records</div>
+                  <button onClick={() => setView("feed")} style={{ background:"none", border:"none", color:"#b02020", fontFamily:"monospace", fontSize:8, cursor:"pointer", letterSpacing:1 }}>View All →</button>
+                </div>
+                <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:6 }}>
+                  {stories.slice(0,4).map(s => (
+                    <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); }} className="card"
+                      style={{ padding:"12px 14px", cursor:"pointer" }}>
+                      <div style={{ display:"flex", gap:6, marginBottom:5 }}>
+                        <span style={{ background:getType(s.type).bg, color:getType(s.type).text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{getType(s.type).label}</span>
+                        <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.topic}</span>
+                      </div>
+                      <div style={{ fontSize:12, color:"#ccc8be", lineHeight:1.3, fontFamily:"monospace" }}>{s.title.slice(0,80)}{s.title.length>80?"...":""}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Footer note */}
+              <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace", textAlign:"center", padding:"8px 0" }}>
+                All content for independent research & education only. Adults 18+. All records link to original sources. No editorial position taken.
               </div>
             </div>
           )}
