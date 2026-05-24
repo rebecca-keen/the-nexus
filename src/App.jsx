@@ -44,7 +44,7 @@ export default function App() {
   // ── User state ─────────────────────────────────────────────────────────────
   const [user, setUser]         = useState({ plan:"free", isAdmin:false });
   const isAdmin = user.isAdmin;
-  const isPaid  = isAdmin || user.plan === "monthly" || user.plan === "annual";
+  const isPaid  = true; // All content free - monetized via AdSense
 
   // ── Navigation ──────────────────────────────────────────────────────────────
   const [view, setView]         = useState("home");
@@ -149,9 +149,6 @@ export default function App() {
   // ── AI chat ───────────────────────────────────────────────────────────────────
   const sendAi = async () => {
     if (!aiIn.trim() || aiLoad) return;
-    if (!isPaid && chat.filter(m => m.role === "user").length >= 5) {
-      toast2("Free: 5 AI queries. Upgrade for unlimited."); return;
-    }
     const msg = aiIn.trim(); setAiIn("");
     setChat(p => [...p, { role:"user", content:msg }]);
     setAiLoad(true);
@@ -235,20 +232,9 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
     return 0;
   });
 
-  // Free: show first 6 regardless of premium flag — paywall wall appears after record 6
-  // Paid: show all, but hide premium-flagged records only if not subscribed
-  const visibleStories = isPaid
-    ? filteredStories
-    : filteredStories.slice(0, FREE_VISIBLE);
-
-  const hiddenCount = isPaid ? 0 : Math.max(0, stories.length - FREE_VISIBLE);
-  const premiumLocked = isPaid ? 0 : stories.filter(s => s.premium).length;
-
-  // Topics and regions shown in sidebar — free users see limited list
-  const FREE_TOPICS = ["All Topics","Government & Intelligence","Ancient Civilizations","Hidden History","UAP & Anomalous","Giants & Nephilim","Biblical & Religious Records","Animal Intelligence"];
-  const FREE_REGIONS = ["All Regions","🇺🇸 USA","🌍 Global","🇪🇬 Egypt","🌎 South America"];
-  const visibleTopics  = isPaid ? TOPICS  : FREE_TOPICS;
-  const visibleRegions = isPaid ? REGIONS : FREE_REGIONS;
+  const visibleStories = filteredStories;
+  const visibleTopics  = TOPICS;
+  const visibleRegions = REGIONS;
 
   // ── Shared sidebar props ──────────────────────────────────────────────────────
   const sidebarProps = { filters, setFilters, isPaid, isAdmin, onFetch:fetchMore, onUpgrade:() => setShowUpgrade(true), visibleTopics, visibleRegions };
@@ -279,7 +265,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 ["home",      "Home"],
                 ["feed",      "Records"],
                 ["community", "Community"],
-                ["reddit",    isPaid ? "Reddit" : "Reddit 🔒"],
+                ["reddit",    "Reddit"],
                 ["library",   "📚 Library"],
                 ["ai",        "Analysis"],
                 ["sources",   "Sources"],
@@ -287,7 +273,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
               ].map(([v, l]) => (
                 <button key={v} className={`nb ${view === v ? "on" : ""}`}
                   onClick={() => {
-                    if (v === "reddit" && !isPaid) { setShowUpgrade(true); return; }
+
                     setView(v); setOpenStory(null);
                     if (v === "reddit" && !rPosts.length) fetchReddit();
                   }}>
@@ -298,8 +284,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
 
             <div style={{ display:"flex", alignItems:"center", gap:8 }}>
               {isAdmin && <span style={{ fontSize:8, color:"#e0c060", background:"#1e1808", border:"1px solid #4a3a10", padding:"2px 7px", fontFamily:"monospace" }}>ADMIN</span>}
-              {isPaid && !isAdmin && <span style={{ fontSize:8, color:"#40c070", background:"#0a1a0a", border:"1px solid #1a4a1a", padding:"2px 7px", fontFamily:"monospace" }}>{user.plan === "annual" ? "ANALYST" : "INVESTIGATOR"}</span>}
-              {!isPaid && <button onClick={() => setShowUpgrade(true)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"5px 14px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>Upgrade →</button>}
               {isAdmin && <button onClick={() => { clearSession(); setUser({ plan:"free", isAdmin:false }); setView("home"); }} style={{ background:"none", border:"1px solid #1c2330", color:"#2a3a4a", padding:"4px 9px", fontFamily:"monospace", fontSize:9, cursor:"pointer", letterSpacing:.5 }}>Exit Admin</button>}
             </div>
           </div>
@@ -399,7 +383,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                   <div>
                     <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>OPEN RECORDS</div>
-                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{visibleStories.length} records · {isPaid ? "full access" : "hundreds more locked — upgrade to unlock"}</div>
+                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{visibleStories.length} records · full access</div>
                   </div>
                   <button onClick={() => fetchMore()} disabled={loading}
                     style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"5px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
@@ -530,40 +514,14 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                     })}
 
 
-                    {/* Hard paywall — only show when free user hits the 6-record cap */}
-                    {!isPaid && filteredStories.length > FREE_VISIBLE && (
-                      <div style={{ margin:"18px 0 0", background:"#07080c", border:"1px solid #b02020", padding:"28px 24px", textAlign:"center" }}>
-                        {/* Blurred preview cards */}
-                        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:6, marginBottom:18, opacity:0.18, filter:"blur(2px)", pointerEvents:"none", userSelect:"none" }}>
-                          {filteredStories.slice(FREE_VISIBLE, FREE_VISIBLE + 4).map(s => (
-                            <div key={s.id} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"10px 12px", textAlign:"left" }}>
-                              <div style={{ fontSize:7, color:"#b02020", fontFamily:"monospace", marginBottom:4 }}>{s.topic?.toUpperCase()}</div>
-                              <div style={{ fontSize:9, color:"#ccc8be", fontFamily:"monospace", lineHeight:1.4 }}>{s.title?.slice(0, 60)}…</div>
-                            </div>
-                          ))}
-                        </div>
-                        <div style={{ fontSize:11, color:"#b02020", fontFamily:"monospace", letterSpacing:2, marginBottom:8 }}>🔒 HUNDREDS OF RECORDS LOCKED</div>
-                        <div className="bb" style={{ fontSize:22, letterSpacing:2, color:"#eeeae0", marginBottom:10 }}>You've reached the free limit</div>
-                        <div style={{ fontSize:10, color:"#3a4a5a", marginBottom:20, lineHeight:1.8, fontFamily:"monospace", maxWidth:480, margin:"0 auto 20px" }}>
-                          Free access includes {FREE_VISIBLE} records.<br/>
-                          Upgrade to unlock <strong style={{ color:"#eeeae0" }}>hundreds of records</strong>, live Reddit feeds, and community access.
-                        </div>
-                        <div style={{ display:"flex", gap:10, justifyContent:"center", flexWrap:"wrap" }}>
-                          <button onClick={() => setShowUpgrade(true)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"12px 28px", fontFamily:"monospace", fontSize:11, letterSpacing:2, cursor:"pointer", textTransform:"uppercase" }}>Unlock All Records →</button>
-                          <button onClick={() => setShowUpgrade(true)} style={{ background:"transparent", border:"1px solid #3a4a5a", color:"#5a9ac8", padding:"12px 20px", fontFamily:"monospace", fontSize:10, cursor:"pointer" }}>See plans</button>
-                        </div>
-                      </div>
-                    )}
 
-                    {/* Load more — paid users only */}
-                    {isPaid && (
-                      <div style={{ padding:"14px 0", textAlign:"center" }}>
-                        <button onClick={() => fetchMore()} disabled={loading}
-                          style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"8px 24px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
-                          {loading ? "Loading…" : "↓ Load More Records"}
-                        </button>
-                      </div>
-                    )}
+                    {/* Load more records */}
+                    <div style={{ padding:"14px 0", textAlign:"center" }}>
+                      <button onClick={() => fetchMore()} disabled={loading}
+                        style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"8px 24px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
+                        {loading ? "Loading..." : "Load More Records"}
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
@@ -587,28 +545,15 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                         {s}
                       </button>
                     ))}
-                    {isPaid
-                      ? <><button onClick={() => setShowForm(p => !p)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Record</button>
+                    <><button onClick={() => setShowForm(p => !p)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Record</button>
                         <button onClick={() => setShowSrc(p => !p)} style={{ background:"#1a2a3a", border:"1px solid #5a9ac8", color:"#5a9ac8", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Source/Blog</button></>
-                      : <button onClick={() => setShowUpgrade(true)} style={{ background:"transparent", border:"1px dashed #2a3a4a", color:"#2a3a4a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:.5, cursor:"pointer" }}>🔒 Upgrade to Post</button>
-                    }
+                    
                   </div>
                 </div>
 
-                {!isPaid && (
-                  <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"8px 12px", marginBottom:12, display:"flex", alignItems:"center", gap:10 }}>
-                    <span style={{ fontSize:12 }}>🔒</span>
-                    <span style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace" }}>
-                      Free access is read-only.{" "}
-                      <button onClick={() => setShowUpgrade(true)} style={{ background:"none", border:"none", color:"#b02020", fontFamily:"monospace", fontSize:9, cursor:"pointer", padding:0, textDecoration:"underline" }}>Unlock full access</button>
-                      {" "}to post findings, upload evidence, and save records.
-                    </span>
-                  </div>
-                )}
-
                 {/* Submission form */}
                 {/* Submit Source / Blog Form */}
-                {showSrc && isPaid && (
+                {showSrc && (
                   <div className="fade" style={{ background:"#0b0d14", border:"1px solid #5a9ac8", padding:20, marginBottom:14 }}>
                     <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                       <div>
@@ -621,7 +566,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                   </div>
                 )}
 
-                {showForm && isPaid && (
+                {showForm && (
                   <div className="fade" style={{ background:"#0b0d14", border:"1px solid #b02020", padding:20, marginBottom:14 }}>
                     <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                       <div>
@@ -825,18 +770,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
             <div style={{ display:"flex", gap:0 }}>
               <Sidebar {...sidebarProps} />
               <div style={{ flex:1 }}>
-                {!isPaid && (
-                  <div style={{ background:"#0b0d14", border:"1px solid #b0202044", padding:"16px 20px", marginBottom:14, display:"flex", alignItems:"center", gap:14 }}>
-                    <span style={{ fontSize:22 }}>🔒</span>
-                    <div>
-                      <div style={{ fontSize:12, color:"#ccc8be", fontFamily:"monospace", marginBottom:5 }}>Reddit Communities — Paid Access Only</div>
-                      <div style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", lineHeight:1.6 }}>Live Reddit feeds from r/conspiracy, r/UFOs, r/HighStrangeness, and more are included in paid plans. Free access includes all other platform features.</div>
-                    </div>
-                    <button onClick={() => setShowUpgrade(true)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"10px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", flexShrink:0, marginLeft:"auto" }}>Unlock →</button>
-                  </div>
-                )}
-                {isPaid && (
-                  <>
+                <>
                     <div style={{ display:"flex", gap:5, flexWrap:"wrap", marginBottom:14 }}>
                       {REDDIT_SUBS.map(s => (
                         <button key={s.name} onClick={() => { setSub(s); fetchReddit(s, rSort); }}
@@ -883,13 +817,12 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                           {post.preview && <img src={post.preview} alt="" style={{ maxHeight:160, maxWidth:"100%", objectFit:"cover", border:"1px solid #1c2330", marginBottom:5, display:"block" }} onError={e => e.target.style.display="none"} />}
                           <div style={{ display:"flex", gap:12, alignItems:"center" }}>
                             <a href={post.permalink} target="_blank" rel="noopener noreferrer" style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace" }}>💬 {post.numComments}</a>
-                            {!post.isSelf && <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ fontSize:9, color:"#3a5a7a", fontFamily:"monospace" }}>🔗 Link ↗</a>}
+                            {!post.isSelf && <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ fontSize:9, color:"#3a5a7a", fontFamily:"monospace" }}>Link</a>}
                           </div>
                         </div>
                       </div>
                     ))}
                   </>
-                )}
               </div>
             </div>
           )}
@@ -1140,7 +1073,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
               <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>For independent research only · Adults 18+</span>
             </div>
             <div style={{ display:"flex", gap:10, alignItems:"center" }}>
-              {!isPaid && <button onClick={() => setShowUpgrade(true)} style={{ background:"none", border:"none", color:"#b02020", fontFamily:"monospace", fontSize:8, cursor:"pointer", textDecoration:"underline", padding:0 }}>Unlock Full Access</button>}
               {/* Hidden admin — double-click the dot */}
               <span
                 onDoubleClick={() => {
@@ -1162,7 +1094,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
 
         {/* Modals */}
         {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
-        {showUpgrade && <UpgradeModal onClose={() => setShowUpgrade(false)} />}
       </div>
     </>
   );
