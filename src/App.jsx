@@ -399,7 +399,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                   <div>
                     <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>OPEN RECORDS</div>
-                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{visibleStories.length} records · {isPaid ? "full access" : `${hiddenCount}+ locked — upgrade to unlock`}</div>
+                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{visibleStories.length} records · {isPaid ? "full access" : "hundreds more locked — upgrade to unlock"}</div>
                   </div>
                   <button onClick={() => fetchMore()} disabled={loading}
                     style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"5px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
@@ -542,11 +542,11 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                             </div>
                           ))}
                         </div>
-                        <div style={{ fontSize:11, color:"#b02020", fontFamily:"monospace", letterSpacing:2, marginBottom:8 }}>🔒 {filteredStories.length - FREE_VISIBLE}+ RECORDS LOCKED</div>
+                        <div style={{ fontSize:11, color:"#b02020", fontFamily:"monospace", letterSpacing:2, marginBottom:8 }}>🔒 HUNDREDS OF RECORDS LOCKED</div>
                         <div className="bb" style={{ fontSize:22, letterSpacing:2, color:"#eeeae0", marginBottom:10 }}>You've reached the free limit</div>
                         <div style={{ fontSize:10, color:"#3a4a5a", marginBottom:20, lineHeight:1.8, fontFamily:"monospace", maxWidth:480, margin:"0 auto 20px" }}>
                           Free access includes {FREE_VISIBLE} records.<br/>
-                          Upgrade to unlock <strong style={{ color:"#eeeae0" }}>all {stories.length}+ records</strong>, live Reddit feeds, and community access.
+                          Upgrade to unlock <strong style={{ color:"#eeeae0" }}>hundreds of records</strong>, live Reddit feeds, and community access.
                         </div>
                         <div style={{ display:"flex", gap:10, justifyContent:"center", flexWrap:"wrap" }}>
                           <button onClick={() => setShowUpgrade(true)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"12px 28px", fontFamily:"monospace", fontSize:11, letterSpacing:2, cursor:"pointer", textTransform:"uppercase" }}>Unlock All Records →</button>
