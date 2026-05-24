@@ -306,41 +306,45 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 </div>
                 <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
                   <button onClick={() => setView("feed")} style={{ background:"#b02020", border:"none", color:"#fff", padding:"13px 30px", fontFamily:"monospace", fontSize:11, letterSpacing:1.5, cursor:"pointer", textTransform:"uppercase" }}>Enter the Archive →</button>
-                  <button onClick={() => setShowUpgrade(true)} style={{ background:"transparent", border:"1px solid #3a4a5a", color:"#8a9aaa", padding:"12px 22px", fontFamily:"monospace", fontSize:10, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>View Plans</button>
+                  <button onClick={() => setView("sources")} style={{ background:"transparent", border:"1px solid #3a4a5a", color:"#8a9aaa", padding:"12px 22px", fontFamily:"monospace", fontSize:10, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>Browse Sources</button>
                 </div>
                 <div style={{ marginTop:18, fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>
                   ◆ For independent research & education · Adults 18+ · All sources linked · No editorial position taken
                 </div>
               </div>
 
-              {/* Free vs Paid */}
+              {/* What's Inside */}
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:14 }}>
                 <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"22px 22px" }}>
-                  <div style={{ fontSize:9, color:"#40c070", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>✓ Free — No sign-up needed</div>
-                  {["8 open investigative records","Declassified documents & FOIA releases","Community board — read & upvote","Full media & reference library","Source directory — 23+ outlets","5 AI analysis queries per session"].map(f => (
-                    <div key={f} style={{ display:"flex", gap:8, marginBottom:7 }}>
-                      <span style={{ color:"#40c070", flexShrink:0, fontSize:11 }}>✓</span>
-                      <span style={{ fontSize:11, color:"#7a8a9a", fontFamily:"monospace", lineHeight:1.4 }}>{f}</span>
-                    </div>
-                  ))}
-                  <button onClick={() => setView("feed")} style={{ marginTop:14, background:"transparent", border:"1px solid #2a4a2a", color:"#40c070", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", width:"100%" }}>Browse Free Records →</button>
-                </div>
-                <div style={{ background:"#0b0d14", border:"1px solid #b0202044", padding:"22px 22px", position:"relative" }}>
-                  <div style={{ position:"absolute", top:-1, right:22, background:"#b02020", color:"#fff", padding:"2px 10px", fontFamily:"monospace", fontSize:8, letterSpacing:1 }}>UNLOCK MORE</div>
-                  <div style={{ fontSize:9, color:"#b02020", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>🔒 Full Access — Paid Plans</div>
-                  {["Unlimited investigative records","Full live Reddit community feeds","Unlimited AI analysis queries","Post findings & upload evidence","Save & organize your research","Verified researcher badge"].map(f => (
+                  <div style={{ fontSize:9, color:"#40c070", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>Records & Research</div>
+                  {["86+ investigative records & growing","Declassified CIA, FBI & NSA documents","Whistleblower testimony archives","Ancient civilizations & hidden history","UAP & government disclosure records","Missing 411, paranormal & cryptid cases","Dolphins, remote viewing, portals & more"].map(f => (
                     <div key={f} style={{ display:"flex", gap:8, marginBottom:7 }}>
                       <span style={{ color:"#b02020", flexShrink:0, fontSize:11 }}>→</span>
                       <span style={{ fontSize:11, color:"#7a8a9a", fontFamily:"monospace", lineHeight:1.4 }}>{f}</span>
                     </div>
                   ))}
-                  <button onClick={() => setShowUpgrade(true)} style={{ marginTop:14, background:"#b02020", border:"none", color:"#fff", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", width:"100%" }}>See Plans — from $7.99/mo →</button>
+                  <button onClick={() => setView("feed")} style={{ marginTop:14, background:"#b02020", border:"none", color:"#fff", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", width:"100%" }}>Browse All Records →</button>
+                </div>
+                <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"22px 22px" }}>
+                  <div style={{ fontSize:9, color:"#5a9ac8", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>Sources & Community</div>
+                  {["616+ verified sources — no duplicates","200+ Reddit communities indexed","Books, documentaries & research papers","Netflix & Amazon documentaries listed","YouTube channels & podcast archives","Free PDFs — CIA Gateway, Book of Enoch","Community board — post findings & evidence"].map(f => (
+                    <div key={f} style={{ display:"flex", gap:8, marginBottom:7 }}>
+                      <span style={{ color:"#5a9ac8", flexShrink:0, fontSize:11 }}>→</span>
+                      <span style={{ fontSize:11, color:"#7a8a9a", fontFamily:"monospace", lineHeight:1.4 }}>{f}</span>
+                    </div>
+                  ))}
+                  <button onClick={() => setView("sources")} style={{ marginTop:14, background:"transparent", border:"1px solid #5a9ac8", color:"#5a9ac8", padding:"9px 20px", fontFamily:"monospace", fontSize:9, letterSpacing:1, cursor:"pointer", textTransform:"uppercase", width:"100%" }}>Browse Source Directory →</button>
                 </div>
               </div>
 
               {/* Stats */}
               <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:8, marginBottom:14 }}>
-                {[{ n:"23+", l:"Indexed sources", s:"News · Blogs · Archives" }, { n:"6", l:"Reddit communities", s:"Live feeds for paid users" }, { n:"27", l:"Books & documentaries", s:"In the Library" }, { n:"100%", l:"Source linked", s:"Every record cites original" }].map(s => (
+                {[
+                  { n:"616+",  l:"Verified Sources",    s:"Books · Blogs · Archives · YouTube" },
+                  { n:"200+",  l:"Reddit Communities",  s:"Conspiracy · UAP · Ancient · Paranormal" },
+                  { n:"62",    l:"Source Categories",   s:"Fully organized & searchable" },
+                  { n:"100%",  l:"Free Access",         s:"No paywall · No sign-up needed" }
+                ].map(s => (
                   <div key={s.l} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"16px 14px", textAlign:"center" }}>
                     <div className="bb" style={{ fontSize:26, letterSpacing:1, color:"#eeeae0", lineHeight:1 }}>{s.n}</div>
                     <div style={{ fontSize:9, color:"#5a6a7a", fontFamily:"monospace", marginTop:4, marginBottom:2 }}>{s.l}</div>
