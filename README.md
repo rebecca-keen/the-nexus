@@ -4,7 +4,7 @@
 
 An independent investigative research platform aggregating declassified records, whistleblower testimony, and disputed history. For adults who ask questions the mainstream stopped asking.
 
-🌐 **Live:**([(nexusverse.app//)]
+🌐 **Live:**([(nexusverse.app)]
 
 ---
 
