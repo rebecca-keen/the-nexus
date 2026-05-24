@@ -8,11 +8,7 @@ export const ADMIN_PASS = "N3xus@2025";
 export const OPENROUTER_KEY = "PASTE_YOUR_OPENROUTER_KEY_HERE";
 export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model  -  no billing required
 
-// --- STRIPE ------------------------------------------------------------------
-export const STRIPE_MONTHLY = "https://buy.stripe.com/REPLACE_MONTHLY_LINK";
-export const STRIPE_ANNUAL  = "https://buy.stripe.com/REPLACE_ANNUAL_LINK";
 
-export const FREE_LIMIT = 6;
 
 // --- TOPICS ------------------------------------------------------------------
 export const TOPICS = [

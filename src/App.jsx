@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { CSS, VBadge, Sidebar, UpgradeModal, PrivacyModal, SubmitSourceForm } from './components.jsx';
+import { CSS, VBadge, Sidebar, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
   ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, VERDICTS, MEDIA_LIBRARY,
-  SEED_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES, FREE_LIMIT,
+  SEED_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES,
   autoVerdict, getType, fmtNum, OPENROUTER_KEY, AI_MODEL,
 } from './data.js';
 
@@ -87,7 +87,6 @@ export default function App() {
   const chatEnd = useRef(null);
 
   // ── Modals ──────────────────────────────────────────────────────────────────
-  const [showUpgrade, setShowUpgrade] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
 
   // ── Refs ────────────────────────────────────────────────────────────────────
@@ -105,7 +104,7 @@ export default function App() {
     setLoading(true);
     try {
       const used = stories.slice(0, 6).map(s => s.title).join("; ");
-      const system = `Generate 5 investigative research stories as a JSON array. No markdown, no backticks, output raw JSON only. Each object: {type:"news"|"blog"|"archive"|"research", source:"outlet name", sourceUrl:"url", topic:"one of: Government & Intelligence, Unresolved Events, Hidden History, Health & Science, Finance & Power, UAP & Anomalous, Ancient Civilizations, Forbidden Science, Lost Technology, Remote Viewing & PSI, Portals & Stargates, Animal Intelligence, Giants & Nephilim, Biblical & Religious Records", region:"flag + country", title:"specific headline", summary:"2-3 sentences with real names and document references", tags:["tag1","tag2","tag3"], credible:50-97, debunked:100-credible, upvotes:500-9000, comments:50-2000, premium:true}. Use real outlets. Do not repeat: ${used}`;
+      const system = `Generate 5 investigative research stories as a JSON array. No markdown, no backticks, output raw JSON only. Each object: {type:"news"|"blog"|"archive"|"research", source:"outlet name", sourceUrl:"url", topic:"one of: Government & Intelligence, Unresolved Events, Hidden History, Health & Science, Finance & Power, UAP & Anomalous, Ancient Civilizations, Forbidden Science, Lost Technology, Remote Viewing & PSI, Portals & Stargates, Animal Intelligence, Giants & Nephilim, Biblical & Religious Records", region:"flag + country", title:"specific headline", summary:"2-3 sentences with real names and document references", tags:["tag1","tag2","tag3"], credible:50-97, debunked:100-credible, upvotes:500-9000, comments:50-2000}. Use real outlets. Do not repeat: ${used}`;
       const raw = await callAI(system, hint ? `Focus on: ${hint}` : "Generate diverse stories across all topics", [], 1200);
       const parsed = JSON.parse(raw.replace(/```json|```/g, "").trim());
       const newStories = parsed.map((s, i) => ({ ...s, id:`ai-${Date.now()}-${i}`, time:`${i + 1}h ago` }));
@@ -205,9 +204,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
 
   // ── Filtered stories ──────────────────────────────────────────────────────────
   const { topic, region, srcType, sortBy, search, verdict } = filters;
-  // Free users: show first 6 of ALL stories (don't filter out premium before the cap)
-  const FREE_VISIBLE = 6;
-
   const filteredStories = stories.filter(s => {
     // Topic / region / source / verdict / search filters apply to everyone
     if (topic !== "All Topics" && s.topic?.trim() !== topic.trim()) return false;
@@ -233,11 +229,10 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
   });
 
   const visibleStories = filteredStories;
-  const visibleTopics  = TOPICS;
-  const visibleRegions = REGIONS;
+  
 
   // ── Shared sidebar props ──────────────────────────────────────────────────────
-  const sidebarProps = { filters, setFilters, isPaid, isAdmin, onFetch:fetchMore, onUpgrade:() => setShowUpgrade(true), visibleTopics, visibleRegions };
+  const sidebarProps = { filters, setFilters, isAdmin, onFetch:fetchMore, visibleTopics:TOPICS, visibleRegions:REGIONS };
 
   // ──────────────────────────────────────────────────────────────────────────────
   return (
@@ -991,7 +986,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 </div>
 
                 <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:8, marginBottom:16 }}>
-                  {[{ l:"Total Stories", v:stories.length, c:"#5a9ac8" }, { l:"Community Posts", v:posts.length, c:"#40c070" }, { l:"Free Records", v:stories.filter(s => !s.premium).length, c:"#a070d0" }, { l:"Premium Records", v:stories.filter(s => s.premium).length, c:"#e0c060" }].map(s => (
+                  {[{ l:"Total Stories", v:stories.length, c:"#5a9ac8" }, { l:"Community Posts", v:posts.length, c:"#40c070" }, { l:"Total Sources", v:619, c:"#a070d0" }, { l:"Reddit Subs", v:24, c:"#e0c060" }].map(s => (
                     <div key={s.l} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"12px 14px" }}>
                       <div style={{ fontSize:8, color:"#2a3a4a", marginBottom:4, fontFamily:"monospace" }}>{s.l}</div>
                       <div className="bb" style={{ fontSize:22, letterSpacing:1, color:s.c }}>{s.v}</div>
@@ -1046,7 +1041,6 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                     "Create Investigator product — $7.99/month recurring",
                     "Create Analyst product — $59.99/year recurring",
                     "Copy both Payment Link URLs",
-                    "Update STRIPE_MONTHLY and STRIPE_ANNUAL in src/data.js",
                     "Set up Google Play Billing when submitting to Play Store",
                     "Set up Apple In-App Purchase when submitting to App Store",
                   ].map((item, i) => (
