@@ -100,10 +100,7 @@ export default function App() {
   const toast2 = msg => { setToast(msg); setTimeout(() => setToast(null), 2200); };
 
   // ── Fetch more stories ───────────────────────────────────────────────────────
-  const AI_READY = OPENROUTER_KEY && OPENROUTER_KEY !== "PASTE_YOUR_OPENROUTER_KEY_HERE";
-
   const fetchMore = useCallback(async (hint = "") => {
-    if (!AI_READY) { toast2("All records shown — more added regularly"); return; }
     setLoading(true);
     try {
       const used = stories.slice(0, 6).map(s => s.title).join("; ");
@@ -395,18 +392,13 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                       {filters.topic !== "All Topics" && <span style={{ color:"#b02020", marginLeft:6 }}>· {filters.topic}</span>}
                     </div>
                   </div>
-                  {AI_READY && (
-                    <button onClick={() => fetchMore()} disabled={loading}
-                      style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"5px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
-                      {loading ? "Loading..." : "Load More"}
-                    </button>
-                  )}
+
                 </div>
 
                 {/* Story detail */}
                 {openStory && (
                   <div className="fade">
-                    <button onClick={() => setOpenStory(null)} style={{ background:"none", border:"none", color:"#3a4a5a", fontFamily:"monospace", fontSize:10, cursor:"pointer", marginBottom:12, padding:0 }}>← Back</button>
+                    <button onClick={() => setOpenStory(null)} style={{ background:"#0b0d14", border:"1px solid #2a3a4a", color:"#8a9aaa", fontFamily:"monospace", fontSize:10, cursor:"pointer", marginBottom:14, padding:"6px 14px", display:"flex", alignItems:"center", gap:6 }}>← Back to Records</button>
                     <div className="card" style={{ padding:22 }}>
                       {/* Header */}
                       <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", marginBottom:10 }}>
