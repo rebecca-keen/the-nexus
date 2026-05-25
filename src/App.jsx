@@ -241,7 +241,7 @@ function App() {
               <span className="bb" style={{ fontSize:16, letterSpacing:3, color:"#eeeae0" }}>THE NEXUS</span>
             </div>
             <div style={{ display:"flex", alignItems:"center", overflowX:"auto", gap:0 }}>
-              {[["feed","Records"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
+              {[["home","Home"],["feed","Records"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
                 <button key={v} onClick={() => { setView(v); setOpenStory(null); window.history.pushState({}, '', v==="home" ? '/' : '/'+v); document.title = 'The Nexus - Independent Research Platform'; if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
                   style={{ background:"none", border:"none", borderBottom:view===v?"2px solid #b02020":"2px solid transparent", color:view===v?"#eeeae0":"#3a4a5a", padding:"0 9px", height:48, fontFamily:"monospace", fontSize:9, letterSpacing:.5, textTransform:"uppercase", cursor:"pointer", whiteSpace:"nowrap", flexShrink:0 }}>
                   {l}
