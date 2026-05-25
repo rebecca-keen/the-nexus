@@ -1,4 +1,5 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate, useParams, useLocation } from 'react-router-dom';
 import { CSS, VBadge, Sidebar, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
   ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, VERDICTS, MEDIA_LIBRARY,
@@ -40,7 +41,7 @@ const CONF_LABELS = { confirmed:"✓ Confirmed", likely:"↑ Likely", contested:
 const CONF_COLORS = { confirmed:{bg:"#0d2010",c:"#40c070",b:"#1a4a1a"}, likely:{bg:"#0d1a10",c:"#60c080",b:"#1a3a1a"}, contested:{bg:"#1e1808",c:"#c0a020",b:"#3a3010"}, unverified:{bg:"#1a1008",c:"#c07020",b:"#3a2010"} };
 const CT_LABELS = { research:"🔬 Research", document:"📄 Document", sighting:"👁 Sighting", tip:"💡 Tip", rebuttal:"⚖ Counter", media:"📷 Media" };
 
-export default function App() {
+function App() {
   // ── User state ─────────────────────────────────────────────────────────────
   const [user, setUser]         = useState({ plan:"free", isAdmin:false });
   const isAdmin = user.isAdmin;
@@ -367,7 +368,7 @@ export default function App() {
                 {/* Story detail */}
                 {openStory && (
                   <div className="fade">
-                    <button onClick={() => setOpenStory(null)} style={{ background:"#0b0d14", border:"1px solid #2a3a4a", color:"#8a9aaa", fontFamily:"monospace", fontSize:10, cursor:"pointer", marginBottom:14, padding:"6px 14px", display:"flex", alignItems:"center", gap:6 }}>← Back to Records</button>
+                    <button onClick={() => { setOpenStory(null); document.title = "The Nexus - Independent Research Platform"; window.history.pushState({}, "", "/"); }} style={{ background:"#0b0d14", border:"1px solid #2a3a4a", color:"#8a9aaa", fontFamily:"monospace", fontSize:10, cursor:"pointer", marginBottom:14, padding:"6px 14px", display:"flex", alignItems:"center", gap:6 }}>← Back to Records</button>
                     <div className="card" style={{ padding:22 }}>
                       {/* Header */}
                       <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", marginBottom:10 }}>
@@ -1104,3 +1105,21 @@ export default function App() {
     </>
   );
 }
+
+// Slug helper
+const toSlug = str => (str || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
+
+// Router wrapper — provides unique URLs for each record
+function AppWithRouter() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/records/:slug" element={<App />} />
+        <Route path="*" element={<App />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default AppWithRouter;
