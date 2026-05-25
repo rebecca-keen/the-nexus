@@ -600,7 +600,7 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                       </div>
                       <button onClick={() => setShowSrc(false)} style={{ background:"none", border:"none", color:"#3a4a5a", cursor:"pointer", fontSize:16 }}>✕</button>
                     </div>
-                    <SubmitSourceForm onClose={() => setShowSrc(false)} toast2={t2} />
+                    <SubmitSourceForm onClose={() => setShowSrc(false)} toast2={toast2} />
                   </div>
                 )}
 
