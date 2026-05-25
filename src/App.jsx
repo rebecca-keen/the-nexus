@@ -56,7 +56,6 @@ export default function App() {
   const [votes,   setVotes]     = useState({});
   const [verdicts, setVerdicts] = useState({});
   const [saved,   setSaved]     = useState({});
-  const [loading, setLoading]   = useState(false);
 
   // ── Filters ─────────────────────────────────────────────────────────────────
   const [filters, setFilters]   = useState({ topic:"All Topics", region:"All Regions", srcType:"All Sources", sortBy:"Latest", search:"", verdict:"All" });
@@ -81,9 +80,6 @@ export default function App() {
   const [cSort, setCSort]       = useState("Hot");
 
   // ── AI chat ─────────────────────────────────────────────────────────────────
-  const [chat, setChat]         = useState([{ role:"assistant", content:"I analyze unresolved events, disputed records, and suppressed history. Ask about any topic — evidence from all sides with primary sources and relevant book/documentary recommendations." }]);
-  const [aiIn, setAiIn]         = useState("");
-  const [aiLoad, setAiLoad]     = useState(false);
   const chatEnd = useRef(null);
 
   // ── Modals ──────────────────────────────────────────────────────────────────
@@ -101,7 +97,6 @@ export default function App() {
 
   // ── Fetch more stories ───────────────────────────────────────────────────────
   const fetchMore = useCallback(async (hint = "") => {
-    setLoading(true);
     try {
       const used = stories.slice(0, 6).map(s => s.title).join("; ");
       const system = `Generate 5 investigative research stories as a JSON array. No markdown, no backticks, output raw JSON only. Each object: {type:"news"|"blog"|"archive"|"research", source:"outlet name", sourceUrl:"url", topic:"one of: Government & Intelligence, Unresolved Events, Hidden History, Health & Science, Finance & Power, UAP & Anomalous, Ancient Civilizations, Forbidden Science, Lost Technology, Remote Viewing & PSI, Portals & Stargates, Animal Intelligence, Giants & Nephilim, Biblical & Religious Records", region:"flag + country", title:"specific headline", summary:"2-3 sentences with real names and document references", tags:["tag1","tag2","tag3"], credible:50-97, debunked:100-credible, upvotes:500-9000, comments:50-2000}. Use real outlets. Do not repeat: ${used}`;
@@ -111,7 +106,6 @@ export default function App() {
       setStories(prev => [...newStories, ...prev]);
       toast2(`✓ ${newStories.length} new records loaded`);
     } catch { toast2("All records loaded — check back soon for more"); }
-    finally { setLoading(false); }
   }, [stories]);
 
   // Stories load from SEED_STORIES in data.js — no API call needed on mount
