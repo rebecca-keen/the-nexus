@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { VERDICTS, TOPICS, REGIONS, PRIVACY_POLICY, getType } from './data.js';
+import { TOPICS, REGIONS, PRIVACY_POLICY } from './data.js';
 
 export const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');

@@ -30,7 +30,7 @@ const callAI = async (system, userMsg, history = [], maxTokens = 900) => {
   const data = await res.json();
   return data.choices?.[0]?.message?.content || "";
 };
-let _session = null;
+let _session = null; // eslint-disable-line
 const saveSession = u => { _session = u; };
 const clearSession = () => { _session = null; };
 
@@ -44,7 +44,7 @@ export default function App() {
   // ── User state ─────────────────────────────────────────────────────────────
   const [user, setUser]         = useState({ plan:"free", isAdmin:false });
   const isAdmin = user.isAdmin;
-  const isPaid  = true; // All content free - monetized via AdSense
+  const isPaid  = true; // eslint-disable-line no-unused-vars
 
   // ── Navigation ──────────────────────────────────────────────────────────────
   const [view, setView]         = useState("home");
@@ -146,28 +146,6 @@ export default function App() {
   }, [sub, rSort]);
 
   // ── AI chat ───────────────────────────────────────────────────────────────────
-  const sendAi = async () => {
-    if (!aiIn.trim() || aiLoad) return;
-    const msg = aiIn.trim(); setAiIn("");
-    setChat(p => [...p, { role:"user", content:msg }]);
-    setAiLoad(true);
-    try {
-      const system = `You are an expert investigative analyst for The Nexus. Never use the word "conspiracy." Use: "disputed record," "unresolved event," "declassified program," "suppressed evidence."
-
-Format every response:
-**The Record:** [one sentence]
-**Evidence Supporting It:** [3-4 bullets with real sources, names, dates]
-**Official Position / Counter-Evidence:** [3-4 bullets]
-**Key Primary Sources:** [2-3 named documents or researchers]
-**Further Reading:** [suggest 1-2 relevant books or documentaries]
-
-Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
-      const reply = await callAI(system, msg, chat, 900);
-      setChat(p => [...p, { role:"assistant", content: reply || "Analysis unavailable." }]);
-    } catch {
-      setChat(p => [...p, { role:"assistant", content:"Connection error. Please check your OpenRouter API key in data.js — get a free key at openrouter.ai" }]);
-    } finally { setAiLoad(false); }
-  };
 
   // ── File uploads ──────────────────────────────────────────────────────────────
   const handleFiles = files => Array.from(files).forEach(f => {
