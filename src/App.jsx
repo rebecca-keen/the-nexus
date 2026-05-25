@@ -80,7 +80,6 @@ export default function App() {
   const [cSort, setCSort]       = useState("Hot");
 
   // ── AI chat ─────────────────────────────────────────────────────────────────
-  const chatEnd = useRef(null);
 
   // ── Modals ──────────────────────────────────────────────────────────────────
   const [showPrivacy, setShowPrivacy] = useState(false);
@@ -88,8 +87,6 @@ export default function App() {
   // ── Refs ────────────────────────────────────────────────────────────────────
   const imgRef = useRef(null);
   const docRef = useRef(null);
-
-  useEffect(() => { chatEnd.current?.scrollIntoView({ behavior:"smooth" }); }, [chat]);
 
   // ── Toast ────────────────────────────────────────────────────────────────────
   const [toast, setToast] = useState(null);
