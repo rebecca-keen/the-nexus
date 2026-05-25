@@ -845,10 +845,10 @@ export default function App() {
                 </div>
 
                 <div style={{ display:"flex", gap:6, marginBottom:14, flexWrap:"wrap", alignItems:"center" }}>
-                  {["All","Books","Documentaries","Films","Articles"].map(t => (
+                  {["All","Books","Documentaries","Films","Articles","Podcasts"].map(t => (
                     <button key={t} onClick={() => setLibType(t)}
                       style={{ background:libType===t?"#1c2330":"transparent", border:`1px solid ${libType===t?"#3a4a5a":"#1c2330"}`, color:libType===t?"#ccc8be":"#2a3a4a", padding:"4px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer", textTransform:"uppercase", transition:"all .12s" }}>
-                      {{ All:"All Types", Books:"📖 Books", Documentaries:"🎬 Docs", Films:"🎥 Films", Articles:"📰 Articles" }[t]}
+                      {{ All:"All Types", Books:"Books", Documentaries:"Docs", Films:"Films", Articles:"Articles", Podcasts:"Podcasts" }[t]}
                     </button>
                   ))}
                   <select value={libTopic} onChange={e => setLibTopic(e.target.value)} style={{ background:"#0b0d14", border:"1px solid #1c2330", color:"#4a5a6a", padding:"4px 8px", fontFamily:"monospace", fontSize:8, outline:"none" }}>
@@ -862,7 +862,7 @@ export default function App() {
                 </div>
 
                 {(() => {
-                  const tm = { Books:"book", Documentaries:"documentary", Films:"film", Articles:"article" };
+                  const tm = { Books:"book", Documentaries:"documentary", Films:"film", Articles:"article", Podcasts:"podcast" };
                   const filt = MEDIA_LIBRARY.filter(m => {
                     if (libType !== "All" && m.type !== tm[libType]) return false;
                     if (libTopic !== "All Topics" && m.topic !== libTopic) return false;
@@ -874,7 +874,7 @@ export default function App() {
                   });
                   if (!filt.length) return <div style={{ fontSize:10, color:"#1c2a38", textAlign:"center", padding:32, fontFamily:"monospace" }}>No results. Try clearing filters.</div>;
                   const groups = ["book","documentary","film","article"].map(type => ({ type, items:filt.filter(m => m.type === type) })).filter(g => g.items.length > 0);
-                  const tLabel = { book:"BOOKS", documentary:"DOCUMENTARIES", film:"FILMS", article:"ARTICLES" };
+                  const tLabel = { book:"BOOKS", documentary:"DOCUMENTARIES", film:"FILMS", article:"ARTICLES", podcast:"PODCASTS" };
                   return groups.map(group => (
                     <div key={group.type} style={{ marginBottom:26 }}>
                       <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:10, paddingBottom:6, borderBottom:"1px solid #1c2330" }}>
