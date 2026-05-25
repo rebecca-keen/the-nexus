@@ -384,7 +384,20 @@ function App() {
                 {/* Story detail */}
                 {openStory && (
                   <div className="fade">
-                    <button onClick={() => { setOpenStory(null); document.title = "The Nexus - Independent Research Platform"; window.history.pushState({}, "", "/"); }} style={{ background:"#0b0d14", border:"1px solid #2a3a4a", color:"#8a9aaa", fontFamily:"monospace", fontSize:10, cursor:"pointer", marginBottom:14, padding:"6px 14px", display:"flex", alignItems:"center", gap:6 }}>← Back to Records</button>
+                    <div style={{ display:"flex", gap:8, marginBottom:14, flexWrap:"wrap" }}>
+                      <button onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }}
+                        style={{ background:"#0b0d14", border:"1px solid #2a3a4a", color:"#8a9aaa", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
+                        ← Back to Records
+                      </button>
+                      <button onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); document.title = "The Nexus - Independent Research Platform"; }}
+                        style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
+                        Home
+                      </button>
+                      <button onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }}
+                        style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
+                        Reset Filters
+                      </button>
+                    </div>
                     <div className="card" style={{ padding:22 }}>
                       {/* Header */}
                       <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", marginBottom:10 }}>
