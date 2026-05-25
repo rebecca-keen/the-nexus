@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { CSS, VBadge, Sidebar, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
   ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, VERDICTS, MEDIA_LIBRARY,
