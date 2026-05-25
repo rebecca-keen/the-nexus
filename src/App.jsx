@@ -100,7 +100,10 @@ export default function App() {
   const toast2 = msg => { setToast(msg); setTimeout(() => setToast(null), 2200); };
 
   // ── Fetch more stories ───────────────────────────────────────────────────────
+  const AI_READY = OPENROUTER_KEY && OPENROUTER_KEY !== "PASTE_YOUR_OPENROUTER_KEY_HERE";
+
   const fetchMore = useCallback(async (hint = "") => {
+    if (!AI_READY) { toast2("All records shown — more added regularly"); return; }
     setLoading(true);
     try {
       const used = stories.slice(0, 6).map(s => s.title).join("; ");
@@ -110,11 +113,11 @@ export default function App() {
       const newStories = parsed.map((s, i) => ({ ...s, id:`ai-${Date.now()}-${i}`, time:`${i + 1}h ago` }));
       setStories(prev => [...newStories, ...prev]);
       toast2(`✓ ${newStories.length} new records loaded`);
-    } catch { toast2("Could not fetch records — try again"); }
+    } catch { toast2("All records loaded — check back soon for more"); }
     finally { setLoading(false); }
   }, [stories]);
 
-  useEffect(() => { fetchMore(); }, []); // Load initial stories on mount
+  // Stories load from SEED_STORIES in data.js — no API call needed on mount
 
   // ── Fetch Reddit ─────────────────────────────────────────────────────────────
   const fetchReddit = useCallback(async (s = sub, srt = rSort) => {
@@ -387,12 +390,17 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                   <div>
                     <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>OPEN RECORDS</div>
-                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{visibleStories.length} records · full access</div>
+                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>
+                      {visibleStories.length} of {stories.length} records
+                      {filters.topic !== "All Topics" && <span style={{ color:"#b02020", marginLeft:6 }}>· {filters.topic}</span>}
+                    </div>
                   </div>
-                  <button onClick={() => fetchMore()} disabled={loading}
-                    style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"5px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
-                    {loading ? "Loading…" : "↻ Load More"}
-                  </button>
+                  {AI_READY && (
+                    <button onClick={() => fetchMore()} disabled={loading}
+                      style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"5px 12px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
+                      {loading ? "Loading..." : "Load More"}
+                    </button>
+                  )}
                 </div>
 
                 {/* Story detail */}
@@ -519,12 +527,14 @@ Be precise. Max 360 words. Treat the reader as an intelligent adult.`;
 
 
 
-                    {/* Load more records */}
-                    <div style={{ padding:"14px 0", textAlign:"center" }}>
-                      <button onClick={() => fetchMore()} disabled={loading}
-                        style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"8px 24px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>
-                        {loading ? "Loading..." : "Load More Records"}
-                      </button>
+                    {/* End of records */}
+                    <div style={{ padding:"18px 0", textAlign:"center", borderTop:"1px solid #0e1018", marginTop:8 }}>
+                      <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace", marginBottom:8 }}>
+                        {filters.topic !== "All Topics" ? `Showing all ${visibleStories.length} records for "${filters.topic}"` : `Showing all ${visibleStories.length} records`}
+                      </div>
+                      <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>
+                        New records added regularly · Check back soon
+                      </div>
                     </div>
                   </div>
                 )}
