@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://nexusverse.app/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2026-05-25</lastmod>
+  </url>
+
+  <!-- ============================================
+       ADD YOUR ARTICLE URLS BELOW — one <url> block per story
+       Replace YOUR-ARTICLE-SLUG with the actual URL path
+       Example: https://nexusverse.app/operation-paperclip
+  =============================================== -->
+
+  <!--
+  <url>
+    <loc>https://nexusverse.app/YOUR-ARTICLE-SLUG</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <news:news>
+      <news:publication>
+        <news:name>The Nexus</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-25</news:publication_date>
+      <news:title>YOUR ARTICLE TITLE HERE</news:title>
+    </news:news>
+  </url>
+  -->
+
+</urlset>
