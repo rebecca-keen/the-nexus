@@ -366,7 +366,6 @@ export const MEDIA_LIBRARY = [
 ];
 
 // --- SOURCE DIRECTORY ---------------------------------------------------------
-];
 export const SOURCES = [
 
   // RESEARCHERS & AUTHORS  -  OFFICIAL SITES
