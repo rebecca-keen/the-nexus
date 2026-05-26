@@ -1561,6 +1561,72 @@ export const SOURCES = [
       {n:"Gaia - consciousness & ancient civilizations",              u:"https://www.youtube.com/@GaiaVideo"},
       {n:"Jimmy - conspiracy documentaries",                          u:"https://www.youtube.com/@JimmyFlatbush"},
     ],
+  },,
+// STATE PARKS, NATIONAL PARKS & MISSING PERSONS
+  {
+    label:"State Parks, National Parks & Missing Persons Research",
+    type:"research",
+    items:[
+      {n:"David Paulides YouTube - CanAm Missing Project",                     u:"https://www.youtube.com/@canammissingproject"},
+      {n:"National Park Service - Missing Persons (official)",                 u:"https://www.nps.gov/subjects/search-and-rescue/missing-persons.htm"},
+      {n:"NPS SOSP - Search & Rescue statistics",                              u:"https://www.nps.gov/subjects/search-and-rescue/statistics.htm"},
+      {n:"NPS FOIA Library - Freedom of Information requests",                 u:"https://www.nps.gov/aboutus/foia/foia-reading-room.htm"},
+      {n:"IBTimes - Missing 411: UFO Theorists Claim Parks Are Hunting Grounds",u:"https://www.ibtimes.co.uk/unexplained-disappearances-national-parks-ufo-theories-1798086"},
+      {n:"The Why Files - Missing 411 YouTube episode",                        u:"https://www.youtube.com/results?search_query=why+files+missing+411"},
+      {n:"Mysterious Universe - Missing 411 articles archive",                 u:"https://mysteriousuniverse.org/?s=missing+411"},
+      {n:"Hancock House Publishers - Missing 411 full book series",            u:"https://www.hancockhouse.com/collections/missing-411-series"},
+      {n:"Missing People UK - international missing persons database",          u:"https://www.missingpeople.org.uk"},
+      {n:"National Missing and Unidentified Persons System (NamUs)",           u:"https://www.namus.gov"},
+    ],
+  },
+
+  // MISSING 411 PODCASTS - APPLE, SPOTIFY & YOUTUBE
+  {
+    label:"Missing 411 - Podcasts, Interviews & Documentaries",
+    type:"podcast",
+    items:[
+      {n:"Missing 411: Strange Disappearances in National Parks - Apple",       u:"https://podcasts.apple.com/us/podcast/missing-411-strange-disappearances-in-national-parks/id1618084297?i=1000681913201"},
+      {n:"David Paulides Missing 411 - Where Did the Road Go? - Apple",        u:"https://podcasts.apple.com/us/podcast/david-paulides-missing-411-the-devils-in-the-detail/id597316507?i=1000768166942"},
+      {n:"Missing 411 - Disappearances in National Parks - Spotify",           u:"https://open.spotify.com/episode/1JO1TJiVwZvlDELeD7bmEH"},
+      {n:"13 O Clock Podcast - Ep 431: David Paulides & Missing 411",         u:"https://13oclockpodcast.wordpress.com/2024/11/21/episode-431-david-paulides-missing-411-and-some-creepy-national-park-disappearances/"},
+      {n:"Missing 411 Movie - Amazon Prime",                                   u:"https://www.amazon.com/dp/B074BPKD4C"},
+      {n:"Missing 411: The Hunted - Amazon Prime",                             u:"https://www.amazon.com/dp/B07ZNQJ3JG"},
+      {n:"Gaia TV - Beyond Belief: Missing 411 with David Paulides",           u:"https://www.gaia.com/video/missing-411-part-1"},
+    ],
+  },
+
+  // PORTALS, STARGATES & INTERDIMENSIONAL RESEARCH
+  {
+    label:"Portals, Stargates & Interdimensional - Articles, Podcasts, Videos",
+    type:"research",
+    items:[
+      {n:"Mike Ricksecker - Portals to the Stars (official site)",             u:"https://www.mikericksecker.com/"},
+      {n:"Mike Ricksecker - Portals to the Stars on Amazon",                   u:"https://www.amazon.com/dp/B0DK3YY7K6"},
+      {n:"Stargates and Portals on Earth - Mirela Gorjanu (Amazon)",           u:"https://www.amazon.com/Stargates-Portals-Earth-Interdimensional-ForgottenOrigins/dp/B0FD3WZDSF"},
+      {n:"Strange and Unexplained - Mike Ricksecker Portals ep (Spotify)",     u:"https://open.spotify.com/episode/0YXpcKI5YTovPFqrHqFaB7"},
+      {n:"Earth Ancients Podcast - Mike Ricksecker Portals to the Stars",      u:"https://www.spreaker.com/podcast/earth-ancients--2790919"},
+      {n:"Occult Symbolism Podcast - Portals Deep Dive (Isaac Weishaupt)",     u:"https://podcasts.apple.com/us/podcast/occult-symbolism-and-pop-culture-with-isaac-weishaupt/id977436455"},
+      {n:"Gaia - What Is a Stargate? (article)",                               u:"https://www.gaia.com/article/what-stargate"},
+      {n:"Gaia - Stargates: Hidden Portals on Earth (article)",                u:"https://www.gaia.com/article/stargates-hidden-portals-eart"},
+      {n:"Project Camelot - Portal & Stargate whistleblower interviews",       u:"https://projectcamelotportal.com"},
+      {n:"r/Portals - Reddit community",                                       u:"https://www.reddit.com/r/Portals"},
+    ],
+  },
+
+  // STATE PARKS & WILDERNESS DISAPPEARANCE ARTICLES
+  {
+    label:"State Parks, Wilderness & Unexplained Disappearance Articles",
+    type:"blog",
+    items:[
+      {n:"Outside Magazine - The Enduring Mystery of Missing 411",             u:"https://www.outsideonline.com/outdoor-adventure/exploration-survival/missing-411-david-paulides-national-parks/"},
+      {n:"Popular Mechanics - Why People Keep Disappearing in National Parks", u:"https://www.popularmechanics.com/science/a34583655/missing-411-national-parks-disappearances/"},
+      {n:"Atlas Obscura - The Most Mysterious National Park Disappearances",   u:"https://www.atlasobscura.com/articles/missing-411-national-parks"},
+      {n:"All That Is Interesting - Missing 411 Unexplained Cases",            u:"https://allthatsinteresting.com/missing-411"},
+      {n:"The Lineup - Most Baffling Missing 411 Cases",                       u:"https://the-line-up.com/missing-411"},
+      {n:"Grunge - The Truth About Missing 411",                               u:"https://www.grunge.com/534783/the-truth-about-missing-411/"},
+      {n:"Historic Mysteries - Missing 411 Pattern Evidence",                  u:"https://www.historicmysteries.com/missing-411/"},
+      {n:"Mysterious Universe - Portals and Missing People (article archive)", u:"https://mysteriousuniverse.org/?s=portal+missing"},
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
