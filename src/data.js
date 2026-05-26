@@ -14,35 +14,36 @@ export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model  -  no billi
 // --- TOPICS ------------------------------------------------------------------
 export const TOPICS = [
   "All Topics",
+  "UAP & Anomalous",
+  "Aliens & Extraterrestrial",
   "Government & Intelligence",
   "Unresolved Events",
   "Hidden History",
-  "Health & Science",
-  "Finance & Power",
-  "UAP & Anomalous",
-  "Ocean & Earth",
-  "Media & Disclosure",
-  "Surveillance",
   "Ancient Civilizations",
+  "Ancient Gods & Beings",
+  "Lost Technology",
+  "Portals & Stargates",
+  "Remote Viewing & PSI",
+  "Secret Societies",
+  "Finance & Power",
+  "Health & Science",
+  "Vaccines & Big Pharma",
+  "Ticks & Bioweapons",
+  "Food & Biotech",
+  "Forbidden Science",
+  "Consciousness & Mind",
+  "Simulation & Reality",
+  "Frequency & Energy",
+  "DNA & Genetics",
+  "Ocean & Earth",
   "Giants & Nephilim",
   "Biblical & Religious Records",
   "Animal Intelligence",
-  "Forbidden Science",
-  "Lost Technology",
-  "Secret Societies",
-  "Geopolitics & Deep State",
-  "Vaccines & Big Pharma",
-  "Food & Biotech",
-  "Ticks & Bioweapons",
-  "DNA & Genetics",
-  "Frequency & Energy",
-  "Consciousness & Mind",
-  "Simulation & Reality",
-  "Ancient Gods & Beings",
-  "Sacred Geometry",
   "Atlantis & Lemuria",
-  "Remote Viewing & PSI",
-  "Portals & Stargates",
+  "Sacred Geometry",
+  "Media & Disclosure",
+  "Surveillance",
+  "Geopolitics & Deep State",
 ];
 
 export const REGIONS = [
@@ -286,6 +287,13 @@ export const SEED_STORIES = [
   {id:"s109",type:"research", source:"SETI / Galileo Project / Breakthrough",sourceUrl:"https://www.seti.org",                                                                          time:"19h ago", topic:"UAP & Anomalous",  region:"Global", title:"Are We Alone? SETI, the Drake Equation, and Why Scientists Who Spent Careers Searching for ET Are Now Taking UAP Seriously", summary:"The scientific establishment's attitude toward extraterrestrial intelligence has shifted dramatically since 2017. SETI researchers who spent decades searching the cosmos are now engaging with UAP data. The Drake Equation suggests millions of potential civilizations exist. The Fermi Paradox asks why we have not detected them. The UAP phenomenon offers a third possibility: they are already here and have been for some time. Dr. Avi Loeb argues Oumuamua the interstellar object may have been artificial. Breakthrough Listen has allocated telescope time to UAP research.", upvotes:16100, comments:2301, credible:71, debunked:29, tags:["SETI","Drake Equation","Fermi Paradox","Extraterrestrial","Loeb","Oumuamua"], premium:false},
 
   {id:"s110",type:"archive",  source:"FBI Vault / NSA FOIA",                sourceUrl:"https://vault.fbi.gov/UFO",                                                                     time:"20h ago", topic:"UAP & Anomalous",  region:"USA",    title:"FBI Vault UFO Files: Crashed Disc Reports, Roswell Documents, and the Hottel Memo That Described Three Recovered Saucers", summary:"The FBI Vault has released thousands of pages of UFO-related files. Among the most discussed: the 1950 Guy Hottel memo describing an FBI informant reporting that three flying saucers and three bodies of human shape but only 3 feet tall were recovered in New Mexico. The FBI states the memo was unverified. Roswell-era documents are also available. The Vault includes correspondence between J. Edgar Hoover and the Army Air Force about UFO secrecy. The NSA has separately released its UFO files including signals intelligence analyses.", upvotes:20400, comments:2901, credible:70, debunked:30, tags:["FBI","Vault","Hottel","Roswell","Bodies","NSA","Declassified"], premium:false},
+
+
+  {id:"s111",type:"research", source:"Britannica / History.com",            sourceUrl:"https://www.britannica.com/topic/UFO",                                                           time:"21h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"The Case for Alien Life: Fermi Paradox, Drake Equation, and Why Scientists Now Believe Extraterrestrial Intelligence Almost Certainly Exists", summary:"The Drake Equation estimates between 1,000 and millions of communicating civilizations should exist in the Milky Way alone. The Fermi Paradox asks why we have not detected them. Modern answers include: civilizations destroy themselves, they communicate in ways we cannot detect, or they are already here and interacting with us. With 300 billion stars in our galaxy and confirmed exoplanets in habitable zones, the mathematical probability of Earth being the only intelligent life is effectively zero. The question has shifted from whether to how.", upvotes:18900, comments:2801, credible:88, debunked:12, tags:["Fermi Paradox","Drake Equation","Extraterrestrial","Life","Galaxy","Math"], premium:false},
+
+  {id:"s112",type:"research", source:"SETI Institute / NASA Exoplanets",   sourceUrl:"https://www.seti.org",                                                                           time:"22h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Exoplanet Revolution: NASA Has Confirmed 5,500+ Planets - Dozens in Habitable Zones With Conditions for Life as We Know It", summary:"NASA's Kepler and TESS missions have confirmed over 5,500 exoplanets with thousands more candidates. Scientists have identified dozens of planets in habitable zones with liquid water potential. The James Webb Space Telescope has detected chemical signatures in exoplanet atmospheres consistent with biological processes. The 2024 discovery of K2-18b atmospheric data showed possible signatures of dimethyl sulfide - a chemical produced only by living organisms on Earth. The search for technosignatures has expanded to include radio signals, laser pulses, and megastructure detection.", upvotes:16400, comments:2301, credible:92, debunked:8, tags:["Exoplanets","NASA","JWST","Habitable","Life","SETI","Biosignatures"], premium:false},
+
+  {id:"s113",type:"research", source:"Dr. Jacques Vallee / Jacques Vallee", sourceUrl:"https://www.jacquesvallee.net",                                                                  time:"23h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Jacques Vallee: UFOs Are Not Extraterrestrial Spacecraft - They Are Interdimensional Control Systems That Have Been Here for Centuries", summary:"Computer scientist and astronomer Dr. Jacques Vallee - who inspired the character Lacombe in Close Encounters of the Third Kind and was the first researcher to computerize the US Defense Department's ARPA network - argues the extraterrestrial hypothesis is wrong. His interdimensional hypothesis posits UAP are a control system that has interacted with human consciousness for thousands of years, manifesting in ways that match the beliefs of each era. The same phenomenon appeared as angels and demons before spacecraft. Vallee's research has influenced both the scientific establishment and classified government programs.", upvotes:14700, comments:2101, credible:72, debunked:28, tags:["Vallee","Interdimensional","Control System","Consciousness","ETH","Close Encounters"], premium:false},
 
 ];
 
