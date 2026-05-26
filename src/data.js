@@ -1627,6 +1627,120 @@ export const SOURCES = [
       {n:"Historic Mysteries - Missing 411 Pattern Evidence",                  u:"https://www.historicmysteries.com/missing-411/"},
       {n:"Mysterious Universe - Portals and Missing People (article archive)", u:"https://mysteriousuniverse.org/?s=portal+missing"},
     ],
+  },,
+// CIA DECLASSIFIED FILES - BY TOPIC (OFFICIAL FOIA READING ROOM)
+  {
+    label:"CIA Declassified Files - MK-Ultra, Mind Control & Human Experiments",
+    type:"archive",
+    items:[
+      {n:"CIA FOIA - MK-Ultra Full Collection (searchable)",               u:"https://www.cia.gov/readingroom/search/site/mkultra"},
+      {n:"CIA FOIA - Sidney Gottlieb Senate Testimony 1975 (NSArchive)",   u:"https://nsarchive.gwu.edu/briefing-book/dnsa-intelligence/2025-10-30/top-secret-testimony-cias-mkultra-chief-50-years-later"},
+      {n:"CIA FOIA - MK-Ultra Subproject Files (all 150 subprojects)",     u:"https://www.cia.gov/readingroom/collection/mkultra-declassified-documents"},
+      {n:"CIA FOIA - Family Jewels Documents (CIA illegal activities)",    u:"https://www.cia.gov/readingroom/collection/family-jewels"},
+      {n:"CIA FOIA - Frank Olson Case Files (suspicious 1953 death)",      u:"https://www.cia.gov/readingroom/search/site/frank+olson"},
+      {n:"National Security Archive - CIA Behavioral Sciences Collection", u:"https://nsarchive.gwu.edu/briefing-book/dnsa-intelligence/2024-12-23/cia-behavior-control-experiments-focus-new-scholarly"},
+      {n:"John Marks FOIA Archive - Manchurian Candidate Research Papers", u:"https://nsarchive.gwu.edu/project/john-marks-papers"},
+      {n:"Poisoner in Chief - Stephen Kinzer (NYT journalist, Gottlieb bio)",u:"https://www.penguinrandomhouse.com/books/568736/poisoner-in-chief-by-stephen-kinzer/"},
+      {n:"Search for Manchurian Candidate - John Marks (1979, free online)",u:"https://www.namebase.org/books/marks.html"},
+    ],
+  },
+
+  {
+    label:"CIA Declassified Files - UFO, UAP & Unexplained Phenomena",
+    type:"archive",
+    items:[
+      {n:"CIA FOIA - UFOs: Fact or Fiction? (official collection)",        u:"https://www.cia.gov/readingroom/collection/ufos-fact-or-fiction"},
+      {n:"CIA FOIA - UFO search (700+ declassified documents)",            u:"https://www.cia.gov/readingroom/search/site/ufo"},
+      {n:"CIA - CIA Role in Study of UFOs 1947-1990 (official article)",   u:"https://www.cia.gov/readingroom/document/0005517742"},
+      {n:"CIA FOIA - Flying Saucers 1952 Robertson Panel documents",       u:"https://www.cia.gov/readingroom/search/site/flying+saucers"},
+      {n:"CIA FOIA - Unidentified Flying Objects 1976 briefing",           u:"https://www.cia.gov/readingroom/document/0000015391"},
+      {n:"NSA FOIA - UFO documents (NSA declassified files)",              u:"https://www.nsa.gov/Helpful-Links/NSA-FOIA/Declassification-Transparency-Initiatives/Historical-Releases/UFO/"},
+      {n:"FBI Vault - UFO files (Project Blue Book era)",                  u:"https://vault.fbi.gov/UFO"},
+      {n:"DIA FOIA - Advanced Aerospace Threat (AATIP) documents",        u:"https://www.dia.mil/FOIA/"},
+      {n:"AARO - Pentagon UAP declassified reports (official)",            u:"https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf"},
+    ],
+  },
+
+  {
+    label:"CIA Declassified Files - Remote Viewing & Psychic Programs",
+    type:"archive",
+    items:[
+      {n:"CIA - Did CIA Study Psychic Powers? (official confirmation)",    u:"https://www.cia.gov/stories/story/ask-molly-did-cia-really-study-psychic-powers/"},
+      {n:"CIA FOIA - Evaluation of Remote Viewing Program",               u:"https://www.cia.gov/readingroom/document/cia-rdp96-00791r000200180005-5"},
+      {n:"CIA FOIA - Parapsychology in Intelligence (Kenneth Kress)",      u:"https://www.cia.gov/readingroom/search/site/parapsychology"},
+      {n:"CIA FOIA - Psychic Spies Reported (1995 document)",             u:"https://www.cia.gov/readingroom/document/cia-rdp96-00791r000100030073-5"},
+      {n:"NSA FOIA - Handwritten Notes on Psychic Powers & Remote Viewing",u:"https://www.cia.gov/readingroom/print/1863168"},
+    ],
+  },
+
+  {
+    label:"CIA Declassified Files - Ticks, Bioweapons & Plum Island",
+    type:"archive",
+    items:[
+      {n:"Malone Institute - Declassified Docs Link Bioweapons to Lyme (2026)",u:"https://maloneinstitute.org/blog/declassified-documents-link-us-bioweapons-program-to-lyme-disease-outbreak"},
+      {n:"Dr. Robert Malone Substack - Declassified Bioweapons & Lyme",   u:"https://www.malone.news/p/declassified-documents-link-us-bioweapons"},
+      {n:"CIA FOIA - Operation Paperclip documents (Nazi scientists in US)",u:"https://www.cia.gov/readingroom/search/site/paperclip"},
+      {n:"National Security Archive - Operation Paperclip collection",     u:"https://nsarchive.gwu.edu/project/operation-paperclip"},
+      {n:"Annie Jacobsen - Operation Paperclip (investigative book)",      u:"https://www.hachettebookgroup.com/titles/annie-jacobsen/operation-paperclip/9780316221245/"},
+      {n:"Fort Detrick History - Official Army bioweapons research history",u:"https://mrmc.amedd.army.mil/index.cfm?pageid=about_us.history"},
+    ],
+  },
+
+  {
+    label:"CIA Declassified Files - JFK, Assassinations & Political Operations",
+    type:"archive",
+    items:[
+      {n:"CIA FOIA - JFK Assassination Records (thousands of files)",      u:"https://www.cia.gov/readingroom/collection/jfk-assassination-records"},
+      {n:"National Archives - JFK Records Collection (full searchable)",   u:"https://www.archives.gov/research/jfk"},
+      {n:"CIA FOIA - Operation Northwoods (false flag proposals)",         u:"https://www.cia.gov/readingroom/search/site/northwoods"},
+      {n:"CIA FOIA - Operation Mockingbird (media infiltration files)",    u:"https://www.cia.gov/readingroom/search/site/mockingbird"},
+      {n:"CIA FOIA - COINTELPRO documents (FBI political surveillance)",   u:"https://vault.fbi.gov/cointel-pro"},
+      {n:"Carl Bernstein - CIA and the Media (Rolling Stone 1977)",        u:"https://www.carlbernstein.com/the-cia-and-the-media-rolling-stone-10-20-1977"},
+      {n:"National Security Archive - JFK 60 Years Later briefing book",  u:"https://nsarchive.gwu.edu/briefing-book/jfk/2023-11-21/jfk-assassination-60-years-later"},
+    ],
+  },
+
+  {
+    label:"CIA Declassified Files - Finance, Federal Reserve & Banking Control",
+    type:"archive",
+    items:[
+      {n:"CIA FOIA - Economic Intelligence files (searchable)",            u:"https://www.cia.gov/readingroom/search/site/federal+reserve"},
+      {n:"Church Committee Reports - Banking & Intelligence (1975-1976)",  u:"https://www.intelligence.senate.gov/resources/intelligence-related-commissions"},
+      {n:"NSA FOIA - ECHELON financial surveillance documents",            u:"https://www.nsa.gov/Helpful-Links/NSA-FOIA/"},
+      {n:"National Security Archive - CIA Economic Operations history",    u:"https://nsarchive.gwu.edu/project/cia-covert-operations"},
+      {n:"Fed Reserve FOIA - Freedom of Information requests to the Fed",  u:"https://www.federalreserve.gov/apps/foia/ViewDeterminations.aspx"},
+      {n:"Treasury FOIA - Financial intelligence declassified records",    u:"https://home.treasury.gov/footer/freedom-of-information-act"},
+    ],
+  },
+
+  {
+    label:"CIA Declassified Files - Surveillance, Mind Control & Social Engineering",
+    type:"archive",
+    items:[
+      {n:"CIA FOIA - CHAOS Operation (domestic surveillance 1967-1974)",   u:"https://www.cia.gov/readingroom/search/site/operation+chaos"},
+      {n:"CIA FOIA - Project ARTICHOKE (pre-MKUltra interrogation)",       u:"https://www.cia.gov/readingroom/search/site/artichoke"},
+      {n:"CIA FOIA - Project BLUEBIRD (earliest behavior control)",        u:"https://www.cia.gov/readingroom/search/site/bluebird"},
+      {n:"NSA FOIA - PRISM surveillance program documents (post-Snowden)", u:"https://www.nsa.gov/Helpful-Links/NSA-FOIA/Declassification-Transparency-Initiatives/"},
+      {n:"Church Committee - Intelligence Activities & Rights of Americans",u:"https://www.senate.gov/artandhistory/history/common/investigations/ChurchCommittee.htm"},
+      {n:"Snowden Archive - The Intercept NSA document collection",        u:"https://theintercept.com/snowden-sidtoday/"},
+    ],
+  },
+
+  {
+    label:"Key Investigative Journalists & Authors - Government Secrets",
+    type:"research",
+    items:[
+      {n:"Stephen Kinzer - Poisoner in Chief (MK-Ultra / Gottlieb)",       u:"https://stephenkinzer.com"},
+      {n:"Tom O Neill - Chaos: Manson, CIA & Secret History of the Sixties",u:"https://www.tomoneill.net"},
+      {n:"Annie Jacobsen - Operation Paperclip & Area 51 (investigative)",  u:"https://anniejacobsen.com"},
+      {n:"Carl Bernstein - CIA & Media (Rolling Stone archive)",            u:"https://www.carlbernstein.com"},
+      {n:"James Bamford - NSA investigative author (The Puzzle Palace)",    u:"https://jamesbamford.com"},
+      {n:"Tim Weiner - Legacy of Ashes (Pulitzer, CIA history)",           u:"https://www.penguinrandomhouse.com/books/291850/legacy-of-ashes-by-tim-weiner/"},
+      {n:"Bob Woodward - The CIA investigative archive (Washington Post)",  u:"https://www.washingtonpost.com/people/bob-woodward/"},
+      {n:"Glenn Greenwald - The Intercept NSA/Snowden files",              u:"https://theintercept.com/staff/glenn-greenwald/"},
+      {n:"Jeremy Scahill - Dirty Wars (CIA drone kill list reporting)",    u:"https://dirtywars.org"},
+      {n:"Nick Davies - Hack Attack (phone hacking & intelligence)",       u:"https://www.theguardian.com/profile/nickdavies"},
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
