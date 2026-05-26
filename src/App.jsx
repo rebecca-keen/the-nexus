@@ -107,6 +107,38 @@ function App() {
     // When openStory is null, URL is reset by the button that triggered the close
   }, [openStory]);
 
+  // On load: check URL and open matching story if on a /records/ path
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/records/')) {
+      const urlSlug = path.replace('/records/', '').replace(/\/$/, '');
+      if (urlSlug) {
+        const match = SEED_STORIES.find(s => toSlug(s.title) === urlSlug);
+        if (match) {
+          setOpenStory(match);
+          setView('feed');
+          document.title = match.title + ' - The Nexus';
+        } else {
+          // No exact match - go to feed and show all records
+          setView('feed');
+        }
+      }
+    } else if (path.startsWith('/sources')) {
+      setView('sources');
+    } else if (path.startsWith('/community')) {
+      setView('community');
+    } else if (path.startsWith('/library')) {
+      setView('library');
+    } else if (path.startsWith('/reddit')) {
+      setView('reddit');
+    } else if (path.startsWith('/records')) {
+      setView('feed');
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
+
 
 
   // ── Fetch more stories ───────────────────────────────────────────────────────
