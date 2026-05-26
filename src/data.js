@@ -1,4 +1,5 @@
 // --- ADMIN -------------------------------------------------------------------
+
 export const ADMIN_USER = "nexusadmin";
 export const ADMIN_PASS = "N3xus@2025";
 
@@ -1471,46 +1472,33 @@ export const SOURCES = [
       {n:"World Economic Forum  -  Davos elite network (official)",          u:"https://www.weforum.org"},
     ],
   },
-];
-
   // FINANCE, FEDERAL RESERVE & INDEPENDENT JOURNALISM
   {
     label:"Finance, Federal Reserve & Independent Journalism",
     type:"research",
     items:[
-      // Primary research
-      {n:"G. Edward Griffin - Creature from Jekyll Island (official)",  u:"https://www.realityzone.com/creaturejekyllisland.html"},
-      {n:"Federal Reserve - Official FRED Economic Data",               u:"https://fred.stlouisfed.org"},
-      {n:"Federal Reserve - Official site (know thy enemy)",            u:"https://www.federalreserve.gov"},
-      {n:"Fed Audit - Audit the Fed Campaign (Ron Paul)",               u:"https://www.auditthefed.com"},
-      {n:"End The Fed - Ron Paul Institute",                            u:"https://ronpaulinstitute.org"},
-      {n:"Mises Institute - Austrian Economics research",               u:"https://mises.org"},
-      {n:"Corbett Report - Century of Enslavement: The Fed",           u:"https://www.corbettreport.com/federalreserve/"},
-      // Podcasts - Apple
-      {n:"Lex Fridman Podcast - Apple Podcasts",                       u:"https://podcasts.apple.com/us/podcast/lex-fridman-podcast/id1434243584"},
-      {n:"Corbett Report Podcast - Apple Podcasts",                    u:"https://podcasts.apple.com/us/podcast/the-corbett-report/id836339988"},
-      {n:"Stuff They Don't Want You to Know - Apple Podcasts",         u:"https://podcasts.apple.com/us/podcast/stuff-they-dont-want-you-to-know/id415278000"},
-      {n:"The Solari Report - Apple Podcasts",                         u:"https://podcasts.apple.com/us/podcast/the-solari-report/id1151527809"},
-      {n:"Hidden Secrets of Money - Mike Maloney (Apple Podcasts)",    u:"https://podcasts.apple.com/us/podcast/hidden-secrets-of-money/id617694920"},
-      {n:"We Study Billionaires - The Investor's Podcast (Apple)",     u:"https://podcasts.apple.com/us/podcast/we-study-billionaires/id928933489"},
-      // Podcasts - Spotify
-      {n:"Lex Fridman Podcast - Spotify",                              u:"https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL"},
-      {n:"Corbett Report - Spotify",                                   u:"https://open.spotify.com/show/3OhEHWkBDlVKFKqwAFCJzT"},
-      {n:"The Glenn Beck Program - Spotify (Fed/finance coverage)",    u:"https://open.spotify.com/show/5MpEYzWjHbOLPMaIPmFRRx"},
-      {n:"Hidden Forces - Demetri Kofinas - Spotify",                  u:"https://open.spotify.com/show/0TqBbBXTSk7JKLlDiWCmTI"},
-      // YouTube
-      {n:"Lex Fridman - YouTube Channel",                              u:"https://www.youtube.com/@lexfridman"},
-      {n:"Mike Maloney - Hidden Secrets of Money - YouTube",           u:"https://www.youtube.com/@MikeMaloneyGold"},
-      {n:"Corbett Report - YouTube",                                   u:"https://www.youtube.com/@corbettreport"},
-      {n:"RT Documentary - Banking Exposed - YouTube",                 u:"https://www.youtube.com/results?search_query=federal+reserve+documentary"},
-      {n:"Zeitgeist: Addendum (Federal Reserve) - YouTube FREE",       u:"https://www.youtube.com/watch?v=Ez6oRDQj2WI"},
-      // Independent journalists
-      {n:"Lee Fang - The Intercept - finance & lobbying",              u:"https://theintercept.com/staff/leefang/"},
-      {n:"Naked Capitalism - banking & finance investigative blog",     u:"https://www.nakedcapitalism.com"},
-      {n:"Wall Street On Parade - independent Wall Street journalism",  u:"https://wallstreetonparade.com"},
+      {n:"G. Edward Griffin - Creature from Jekyll Island",           u:"https://www.realityzone.com/creaturejekyllisland.html"},
+      {n:"Federal Reserve - Official FRED Economic Data",             u:"https://fred.stlouisfed.org"},
+      {n:"Fed Audit - Audit the Fed Campaign (Ron Paul)",             u:"https://www.auditthefed.com"},
+      {n:"Mises Institute - Austrian Economics research",             u:"https://mises.org"},
+      {n:"Corbett Report - Century of Enslavement: The Fed",         u:"https://www.corbettreport.com/federalreserve/"},
+      {n:"Solari Report - Catherine Austin Fitts - Missing Trillions",u:"https://home.solari.com"},
+      {n:"Lex Fridman Podcast - Apple Podcasts",                     u:"https://podcasts.apple.com/us/podcast/lex-fridman-podcast/id1434243584"},
+      {n:"Corbett Report Podcast - Apple Podcasts",                  u:"https://podcasts.apple.com/us/podcast/the-corbett-report/id836339988"},
+      {n:"Hidden Secrets of Money - Apple Podcasts",                 u:"https://podcasts.apple.com/us/podcast/hidden-secrets-of-money/id617694920"},
+      {n:"Lex Fridman Podcast - Spotify",                            u:"https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL"},
+      {n:"Hidden Forces - Demetri Kofinas - Spotify",                u:"https://open.spotify.com/show/0TqBbBXTSk7JKLlDiWCmTI"},
+      {n:"Lex Fridman - YouTube Channel",                            u:"https://www.youtube.com/@lexfridman"},
+      {n:"Mike Maloney - Hidden Secrets of Money - YouTube",         u:"https://www.youtube.com/@MikeMaloneyGold"},
+      {n:"Zeitgeist: Addendum (Federal Reserve) - YouTube FREE",     u:"https://www.youtube.com/watch?v=Ez6oRDQj2WI"},
+      {n:"Matt Taibbi Substack - Wall Street investigations",        u:"https://taibbi.substack.com"},
+      {n:"Whitney Webb - Unlimited Hangout - financial elite",       u:"https://unlimitedhangout.com"},
+      {n:"Zero Hedge - financial markets & central bank criticism",   u:"https://www.zerohedge.com"},
+      {n:"Naked Capitalism - banking & finance investigative blog",   u:"https://www.nakedcapitalism.com"},
+      {n:"Wall Street On Parade - independent Wall Street journalism",u:"https://wallstreetonparade.com"},
     ],
   },
-
+];
 
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
 thenexusapp.com | Effective: \${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
