@@ -1741,6 +1741,140 @@ export const SOURCES = [
       {n:"Jeremy Scahill - Dirty Wars (CIA drone kill list reporting)",    u:"https://dirtywars.org"},
       {n:"Nick Davies - Hack Attack (phone hacking & intelligence)",       u:"https://www.theguardian.com/profile/nickdavies"},
     ],
+  },,
+// UFO / UAP / ALIENS - OFFICIAL GOVERNMENT DISCLOSURE (2024-2026)
+  {
+    label:"UFO / UAP - Official Government Disclosure & Documents",
+    type:"archive",
+    items:[
+      {n:"ODNI - 2024 Consolidated Annual Report on UAP (official)",       u:"https://www.dni.gov/index.php/newsroom/reports-publications/reports-publications-2024/3832-2024-consolidated-annual-report-on-unidentified-anomalous-phenomena"},
+      {n:"NARA - UAP Records Collection (National Archives 2024)",         u:"https://www.archives.gov/research/topics/uap-records"},
+      {n:"Trump UAP Executive Order Files - Second Tranche (May 2026)",    u:"https://www.newsnationnow.com/space/ufo/ufo-videos-second-files-coulthart-loeb-elizondo/"},
+      {n:"Congress House UAP Subcommittee Hearings - Full transcripts",    u:"https://oversight.house.gov/search/?q=UAP"},
+      {n:"Senate Intelligence Committee - UAP Legislation archive",        u:"https://www.intelligence.senate.gov/topics/uap-ufo"},
+      {n:"NASA UAP Study - Independent Report 2023 (official)",            u:"https://science.nasa.gov/uap"},
+    ],
+  },
+
+  // UFO / UAP - KEY WHISTLEBLOWERS & INSIDERS
+  {
+    label:"UFO / UAP - Key Whistleblowers, Insiders & Congressional Testimony",
+    type:"research",
+    items:[
+      {n:"David Grusch - Official Congressional Testimony July 2023 (YouTube)", u:"https://www.youtube.com/watch?v=KQ7Dw-739VY"},
+      {n:"David Grusch - NewsNation Interview with Ross Coulthart (first interview)", u:"https://www.newsnationnow.com/space/ufo/watch-full-interview-with-ufo-whistleblower-david-grusch/"},
+      {n:"Luis Elizondo - Official Site & AATIP Disclosure",               u:"https://elizondouap.com"},
+      {n:"Luis Elizondo - Imminent: Inside the Pentagon UAP Task Force (book)", u:"https://www.penguinrandomhouse.com/books/741839/imminent-by-luis-elizondo/"},
+      {n:"Bob Lazar - Official Site (Area 51 / S-4 whistleblower)",        u:"https://boblazar.com"},
+      {n:"Bob Lazar - George Knapp Original 1989 Interview (YouTube)",     u:"https://www.youtube.com/watch?v=4MuNHzFw11E"},
+      {n:"David Fravor - Tic Tac UAP Pilot (60 Minutes interview)",        u:"https://www.youtube.com/watch?v=FownGBGkMbA"},
+      {n:"Ryan Graves - Americans for Safe Aerospace (UAP pilot reports)", u:"https://www.safeaerospace.org"},
+      {n:"Dr. James Lacatski - AAWSAP program director",                   u:"https://www.amazon.com/Skinwalkers-Pentagon-Inside-Secret-Program/dp/1949501485"},
+      {n:"Dr. Eric Davis - physicist & UAP crash retrieval researcher",    u:"https://www.theblackvault.com/casefiles/physicist-dr-eric-davis-on-ufo-crash-retrievals/"},
+    ],
+  },
+
+  // UFO / UAP - INVESTIGATIVE JOURNALISTS & AUTHORS
+  {
+    label:"UFO / UAP - Investigative Journalists & Key Authors",
+    type:"research",
+    items:[
+      {n:"Ross Coulthart - NewsNation Reality Check (leading UAP journalist)", u:"https://www.newsnationnow.com/author/ross-coulthart/"},
+      {n:"Ross Coulthart - In Plain Sight (book: UAP through journalist lens)", u:"https://www.harpercollins.com/products/in-plain-sight-ross-coulthart"},
+      {n:"George Knapp - Investigation Alien (2024 Netflix documentary)",   u:"https://www.netflix.com/title/81706448"},
+      {n:"Leslie Kean - UFOs: Generals, Pilots & Government Officials (book)", u:"https://www.penguinrandomhouse.com/books/208399/ufos-by-leslie-kean/"},
+      {n:"Ralph Blumenthal & Leslie Kean - 2017 NYT UAP scoop (full article)", u:"https://www.nytimes.com/2017/12/16/us/politics/unidentified-aerial-phenomena.html"},
+      {n:"The Debrief - UAP/UFO investigative journalism hub",              u:"https://thedebrief.org"},
+      {n:"The Debrief - David Grusch original story by Kean & Blumenthal", u:"https://thedebrief.org/intelligence-officials-say-u-s-has-retrieved-non-human-craft/"},
+      {n:"UAP Digest - credible UAP developments tracker",                 u:"https://www.uapdigest.com"},
+      {n:"Liberation Times - UAP investigative journalism UK",              u:"https://www.liberationtimes.com"},
+    ],
+  },
+
+  // UFO / UAP - SCIENTIFIC RESEARCHERS & INSTITUTIONS
+  {
+    label:"UFO / UAP - Scientific Researchers & Academic Institutions",
+    type:"research",
+    items:[
+      {n:"Sol Foundation - UAP & consciousness research institute",        u:"https://www.sol.foundation"},
+      {n:"MUFON Case Management System - searchable sightings database",   u:"https://mufoncms.com"},
+      {n:"CEFAA - Chilean government UAP agency (official)",               u:"https://www.cefaa.gob.cl"},
+      {n:"GEIPAN - French government UFO agency (official)",               u:"https://www.cnes.fr/en/web/CNES-en/5489-geipan.php"},
+      {n:"NARCAP - National Aviation Reporting Center on Anomalous Phenomena", u:"https://www.narcap.org"},
+      {n:"SCU - Scientific Coalition for UAP Studies",                     u:"https://www.explorescu.org"},
+    ],
+  },
+
+  // UFO / UAP - PODCASTS (APPLE PODCASTS)
+  {
+    label:"UFO / UAP / Aliens - Podcasts on Apple Podcasts",
+    type:"podcast",
+    items:[
+      {n:"Point of Convergence - Dr. Matthew Roberts UAP (Apple)",         u:"https://podcasts.apple.com/us/podcast/point-of-convergence-uap/id1623812678"},
+      {n:"Need to Know - Ross Coulthart & Bryce Zabel (Apple)",            u:"https://podcasts.apple.com/us/podcast/need-to-know-with-coulthart-and-zabel/id1628925667"},
+      {n:"UFO Rabbit Hole - deep dive UAP cases (Apple)",                  u:"https://podcasts.apple.com/us/podcast/ufo-rabbit-hole/id1501837381"},
+      {n:"Somewhere in the Skies - Ryan Sprague (Apple)",                  u:"https://podcasts.apple.com/us/podcast/somewhere-in-the-skies/id1072017026"},
+      {n:"The Alien Theorist Podcast (Apple)",                             u:"https://podcasts.apple.com/us/podcast/alien-theorist-podcast/id1477836961"},
+      {n:"UFO Classified - Erica Lukes (Apple)",                           u:"https://podcasts.apple.com/us/podcast/ufo-classified/id988451706"},
+      {n:"The Richard Dolan Show (Apple)",                                  u:"https://podcasts.apple.com/us/podcast/the-richard-dolan-show/id1578281425"},
+      {n:"Alien UFO Podcast (Apple)",                                       u:"https://podcasts.apple.com/us/podcast/alien-ufo-podcast/id1602263087"},
+      {n:"Expanded Perspectives - UAP & paranormal (Apple)",               u:"https://podcasts.apple.com/us/podcast/expanded-perspectives/id580687027"},
+      {n:"That UFO Podcast (Apple)",                                        u:"https://podcasts.apple.com/us/podcast/that-ufo-podcast/id1511121397"},
+    ],
+  },
+
+  // UFO / UAP - PODCASTS (SPOTIFY)
+  {
+    label:"UFO / UAP / Aliens - Podcasts on Spotify",
+    type:"podcast",
+    items:[
+      {n:"Need to Know - Ross Coulthart & Bryce Zabel (Spotify)",          u:"https://open.spotify.com/show/0Af0LFwNUdpE7oL3V5hOvU"},
+      {n:"Somewhere in the Skies - Ryan Sprague (Spotify)",                u:"https://open.spotify.com/show/14TG7QDKBKT8YIJJw5WT5G"},
+      {n:"UFO Rabbit Hole (Spotify)",                                       u:"https://open.spotify.com/show/3d53HgT1jCJq1pR7P8M8AP"},
+      {n:"Point of Convergence UAP (Spotify)",                             u:"https://open.spotify.com/show/5gKd5eGcnr00RJPFMYWb6k"},
+      {n:"The Saucer Life (Spotify)",                                       u:"https://open.spotify.com/show/4bnqC3EHSEb7kMfxDGNp9Q"},
+      {n:"Strange Arrivals (Spotify)",                                      u:"https://open.spotify.com/show/3loxLpMHFfh0sVxwH9iWO5"},
+      {n:"UFO Warning (Spotify)",                                           u:"https://open.spotify.com/show/2L1JNOW3D1KbVTGcmJGnl4"},
+      {n:"Alien Theorist Podcast (Spotify)",                               u:"https://open.spotify.com/show/1pF6lTvBvdpGI8HFDMiVqO"},
+    ],
+  },
+
+  // UFO / UAP - YOUTUBE CHANNELS
+  {
+    label:"UFO / UAP / Aliens - Key YouTube Channels",
+    type:"podcast",
+    items:[
+      {n:"NewsNation UFO - Ross Coulthart & Reality Check",                u:"https://www.youtube.com/@NewsNation"},
+      {n:"UFO Jesus - UAP research & analysis YouTube",                    u:"https://www.youtube.com/@UFOJesusTwitch"},
+      {n:"Cristina Gomez - Engaging the Phenomenon YouTube",               u:"https://www.youtube.com/@EngagingThePhenomenon"},
+      {n:"Chris Lehto - UAP analysis & pilot perspective",                 u:"https://www.youtube.com/@ChrisLehto"},
+      {n:"Alien Disclosure Files 2024 documentary series YouTube",         u:"https://www.youtube.com/playlist?list=PLC_WFVOH2WJTUYuBXC9rcLNDHnylIBqJi"},
+      {n:"Project Unity - Jay Anderson UAP community YouTube",             u:"https://www.youtube.com/@ProjectUnity1"},
+      {n:"UFO Proof - compilation & analysis channel",                     u:"https://www.youtube.com/@UFOProof"},
+    ],
+  },
+
+  // UFO / UAP - WEBSITES, FORUMS & DATABASES
+  {
+    label:"UFO / UAP / Aliens - Websites, Databases & Research Forums",
+    type:"blog",
+    items:[
+      {n:"UFO Stalker - MUFON sightings map (real-time global)",           u:"https://www.ufostalker.com"},
+      {n:"UFO Evidence - comprehensive sightings archive",                  u:"https://www.ufoevidence.org"},
+      {n:"UAP Media UK - British UAP news & research",                     u:"https://www.uapmedia.uk"},
+      {n:"UFOdB - photo and video database",                               u:"https://www.ufodb.com"},
+      {n:"National UFO Center - Filer Files research",                     u:"https://nationalufocenter.com"},
+      {n:"Phenomenon Radio - UAP research community",                      u:"https://www.phenomenonradio.com"},
+      {n:"UAPX - UAP experience sharing community",                        u:"https://uapx.com"},
+    ],
+  },
+
+  // UFO / UAP - KEY REDDIT COMMUNITIES
+  {
+    label:"UFO / UAP / Aliens - Reddit Communities",
+    type:"user",
+    items:[
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
