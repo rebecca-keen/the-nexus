@@ -1482,7 +1482,6 @@ export const SOURCES = [
       {n:"Fed Audit - Audit the Fed Campaign (Ron Paul)",             u:"https://www.auditthefed.com"},
       {n:"Mises Institute - Austrian Economics research",             u:"https://mises.org"},
       {n:"Corbett Report - Century of Enslavement: The Fed",         u:"https://www.corbettreport.com/federalreserve/"},
-      {n:"Solari Report - Catherine Austin Fitts - Missing Trillions",u:"https://home.solari.com"},
       {n:"Lex Fridman Podcast - Apple Podcasts",                     u:"https://podcasts.apple.com/us/podcast/lex-fridman-podcast/id1434243584"},
       {n:"Corbett Report Podcast - Apple Podcasts",                  u:"https://podcasts.apple.com/us/podcast/the-corbett-report/id836339988"},
       {n:"Hidden Secrets of Money - Apple Podcasts",                 u:"https://podcasts.apple.com/us/podcast/hidden-secrets-of-money/id617694920"},
@@ -1491,15 +1490,79 @@ export const SOURCES = [
       {n:"Lex Fridman - YouTube Channel",                            u:"https://www.youtube.com/@lexfridman"},
       {n:"Mike Maloney - Hidden Secrets of Money - YouTube",         u:"https://www.youtube.com/@MikeMaloneyGold"},
       {n:"Zeitgeist: Addendum (Federal Reserve) - YouTube FREE",     u:"https://www.youtube.com/watch?v=Ez6oRDQj2WI"},
-      {n:"Matt Taibbi Substack - Wall Street investigations",        u:"https://taibbi.substack.com"},
-      {n:"Whitney Webb - Unlimited Hangout - financial elite",       u:"https://unlimitedhangout.com"},
-      {n:"Zero Hedge - financial markets & central bank criticism",   u:"https://www.zerohedge.com"},
       {n:"Naked Capitalism - banking & finance investigative blog",   u:"https://www.nakedcapitalism.com"},
       {n:"Wall Street On Parade - independent Wall Street journalism",u:"https://wallstreetonparade.com"},
     ],
   },
-];
 
+  // EMERGING & ADDITIONAL SOURCES - 2025-2026
+  {
+    label:"Independent Journalists & Investigators",
+    type:"blog",
+    items:[
+      {n:"Seymour Hersh - SubStack (Pulitzer Prize investigative)",    u:"https://seymourhersh.substack.com"},
+      {n:"Glenn Greenwald - System Update (Rumble)",                  u:"https://rumble.com/c/GGreenwald"},
+      {n:"Aaron Mate - The Grayzone",                                 u:"https://thegrayzone.com/author/aaron-mate/"},
+      {n:"Max Blumenthal - The Grayzone",                             u:"https://thegrayzone.com/author/max-blumenthal/"},
+      {n:"Kit Klarenberg - The Grayzone",                             u:"https://thegrayzone.com/author/kit-klarenberg/"},
+      {n:"Michael Shellenberger - Public Substack",                   u:"https://public.substack.com"},
+      {n:"Barry Weiss - The Free Press",                              u:"https://www.thefp.com"},
+      {n:"Racket News - Matt Taibbi",                                 u:"https://www.racket.news"},
+      {n:"Mintcast - MintPress News Podcast",                         u:"https://www.mintpressnews.com/podcast"},
+      {n:"Due Dissidence - independent left journalism",              u:"https://www.duedissidence.com"},
+      {n:"Caitlin Johnstone - Notes From The Edge (Substack)",        u:"https://caitlinjohnstone.substack.com"},
+    ],
+  },
+
+  // APPLE PODCASTS - KEY SHOWS
+  {
+    label:"Apple Podcasts - Key Research Shows",
+    type:"podcast",
+    items:[
+      {n:"Joe Rogan Experience - Apple Podcasts",                     u:"https://podcasts.apple.com/us/podcast/the-joe-rogan-experience/id360084272"},
+      {n:"Theories of Everything - Apple Podcasts",                   u:"https://podcasts.apple.com/us/podcast/theories-of-everything-with-curt-jaimungal/id1521855810"},
+      {n:"Conspiracy Theories - Parcast (Apple)",                     u:"https://podcasts.apple.com/us/podcast/conspiracy-theories/id1311230024"},
+      {n:"Stuff They Dont Want You to Know - Apple",                  u:"https://podcasts.apple.com/us/podcast/stuff-they-dont-want-you-to-know/id415278000"},
+      {n:"Mysterious Universe - Apple Podcasts",                      u:"https://podcasts.apple.com/au/podcast/mysterious-universe/id296539674"},
+      {n:"Ground Zero with Clyde Lewis - Apple",                      u:"https://podcasts.apple.com/us/podcast/ground-zero-with-clyde-lewis/id285235482"},
+      {n:"Coast to Coast AM - Apple Podcasts",                        u:"https://podcasts.apple.com/us/podcast/coast-to-coast-am/id291036546"},
+      {n:"The Why Files - Apple Podcasts",                            u:"https://podcasts.apple.com/us/podcast/the-why-files/id1564976503"},
+      {n:"Dark Journalist - Apple Podcasts",                          u:"https://podcasts.apple.com/us/podcast/dark-journalist/id967168629"},
+      {n:"Blurry Creatures - Apple Podcasts",                         u:"https://podcasts.apple.com/us/podcast/blurry-creatures/id1550055321"},
+      {n:"Into the Impossible - Apple Podcasts",                      u:"https://podcasts.apple.com/us/podcast/into-the-impossible-with-brian-keating/id1341324183"},
+    ],
+  },
+
+  // SPOTIFY - KEY RESEARCH SHOWS
+  {
+    label:"Spotify - Key Research Shows",
+    type:"podcast",
+    items:[
+      {n:"Joe Rogan Experience - Spotify",                            u:"https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk"},
+      {n:"Mysterious Universe - Spotify",                             u:"https://open.spotify.com/show/5fOe6DwMCLnwbGHyEBkPYz"},
+      {n:"Stuff They Dont Want You to Know - Spotify",                u:"https://open.spotify.com/show/0oMbJCkEK8sJ4DNBg4Pvaq"},
+      {n:"Theories of Everything - Spotify",                          u:"https://open.spotify.com/show/6ohYKMUIgJMrMqVs36vBBi"},
+      {n:"The Why Files - Spotify",                                   u:"https://open.spotify.com/show/7wFQMa8c4VTalqlzk5RYub"},
+      {n:"Ground Zero with Clyde Lewis - Spotify",                    u:"https://open.spotify.com/show/4DvTkLXYNkSPJTAI0vCOgt"},
+      {n:"DarkHorse Podcast - Spotify",                               u:"https://open.spotify.com/show/7BqTqQacGbqaGTN9R6yxBk"},
+    ],
+  },
+
+  // YOUTUBE CHANNELS - ADDITIONAL RESEARCH
+  {
+    label:"YouTube Channels - Additional Research",
+    type:"podcast",
+    items:[
+      {n:"Sabine Hossenfelder - Science Without Gobbledygook",        u:"https://www.youtube.com/@SabineHossenfelder"},
+      {n:"PBS Space Time - frontier physics",                         u:"https://www.youtube.com/@pbsspacetime"},
+      {n:"Anton Petrov - daily space & science news",                 u:"https://www.youtube.com/@whatdamath"},
+      {n:"Dark5 - top 5 mysteries & unexplained",                     u:"https://www.youtube.com/@dark5tv"},
+      {n:"Bright Insight - ancient history alternative",              u:"https://www.youtube.com/@BrightInsight6"},
+      {n:"Gaia - consciousness & ancient civilizations",              u:"https://www.youtube.com/@GaiaVideo"},
+      {n:"Jimmy - conspiracy documentaries",                          u:"https://www.youtube.com/@JimmyFlatbush"},
+    ],
+  },
+];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
 thenexusapp.com | Effective: \${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
 

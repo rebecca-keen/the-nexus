@@ -559,7 +559,7 @@ function App() {
                             </div>
                             <div style={{ display:"flex", gap:8 }}>
                               {s.tags?.map(tg => <span key={tg} style={{ fontSize:7, color:"#1c2a38", fontFamily:"monospace" }}>#{tg}</span>)}
-                              <span style={{ fontSize:9, color:"#1c2a38", marginLeft:"auto", fontFamily:"monospace" }}>💬 {fmtNum(s.comments)}</span>
+
                             </div>
                           </div>
                         </div>
@@ -798,7 +798,7 @@ function App() {
                           </div>
                         )}
                         <div style={{ display:"flex", gap:12, alignItems:"center", flexWrap:"wrap" }}>
-                          <span style={{ fontSize:9, color:"#1c2a38", fontFamily:"monospace" }}>💬 {post.comments}</span>
+
                           {isAdmin && (
                             <>
                               <button onClick={() => { setPosts(p => p.map(pp => pp.id === post.id ? { ...pp, pinned:!pp.pinned } : pp)); toast2(post.pinned ? "Unpinned" : "Pinned"); }}
@@ -871,7 +871,7 @@ function App() {
                           {post.selftext && <div style={{ fontSize:9, color:"#2a3a4a", lineHeight:1.55, marginBottom:5, fontFamily:"monospace" }}>{post.selftext}{post.selftext.length >= 240 ? "…" : ""}</div>}
                           {post.preview && <img src={post.preview} alt="" style={{ maxHeight:160, maxWidth:"100%", objectFit:"cover", border:"1px solid #1c2330", marginBottom:5, display:"block" }} onError={e => e.target.style.display="none"} />}
                           <div style={{ display:"flex", gap:12, alignItems:"center" }}>
-                            <a href={post.permalink} target="_blank" rel="noopener noreferrer" style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace" }}>💬 {post.numComments}</a>
+
                             {!post.isSelf && <a href={post.url} target="_blank" rel="noopener noreferrer" style={{ fontSize:9, color:"#3a5a7a", fontFamily:"monospace" }}>Link</a>}
                           </div>
                         </div>
