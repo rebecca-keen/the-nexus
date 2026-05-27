@@ -454,7 +454,6 @@ export const SOURCES = [
       {n:"Cymatics.org  -  Sound frequency & visible matter",      u:"https://www.cymatics.org"},
       {n:"Sacred Geometry International",                        u:"https://sacredgeometryinternational.com"},
       {n:"Drunvalo Melchizedek  -  Flower of Life & Merkaba",     u:"https://www.gaia.com/article/drunvalo-melchizedek"},
-      {n:"Gaia  -  Consciousness, spirituality & UAP platform",   u:"https://www.gaia.com"},
       {n:"Simulation Argument  -  Nick Bostrom original paper",   u:"https://www.simulation-argument.com/simulation.pdf"},
       {n:"Rizwan Virk  -  Simulation Theory research",            u:"https://www.zenentrepreneur.com"},
       {n:"The Monroe Institute  -  Consciousness & OBE research",  u:"https://www.monroeinstitute.org"},
@@ -1502,7 +1501,6 @@ export const SOURCES = [
     items:[
       {n:"Thunderbolts Project  -  YouTube channel",                         u:"https://www.youtube.com/@ThunderboltsProject"},
       {n:"Plasma Cosmology  -  Hannes Alfven Nobel laureate research",       u:"https://www.plasma-universe.com"},
-      {n:"Alternative Cosmology Group  -  peer-reviewed outsider papers",    u:"https://www.thunderbolts.info"},
       {n:"Big Think  -  Problems with the Standard Cosmological Model",      u:"https://bigthink.com/starts-with-a-bang/"},
       {n:"Wallace Thornhill  -  Electric Universe Theory",                   u:"https://www.holoscience.com"},
       {n:"r/ElectricUniverse  -  Reddit community",                          u:"https://www.reddit.com/r/ElectricUniverse"},
@@ -1654,7 +1652,6 @@ export const SOURCES = [
       {n:"Mike Ricksecker - Portals to the Stars on Amazon",                   u:"https://www.amazon.com/dp/B0DK3YY7K6"},
       {n:"Stargates and Portals on Earth - Mirela Gorjanu (Amazon)",           u:"https://www.amazon.com/Stargates-Portals-Earth-Interdimensional-ForgottenOrigins/dp/B0FD3WZDSF"},
       {n:"Strange and Unexplained - Mike Ricksecker Portals ep (Spotify)",     u:"https://open.spotify.com/episode/0YXpcKI5YTovPFqrHqFaB7"},
-      {n:"Earth Ancients Podcast - Mike Ricksecker Portals to the Stars",      u:"https://www.spreaker.com/podcast/earth-ancients--2790919"},
       {n:"Occult Symbolism Podcast - Portals Deep Dive (Isaac Weishaupt)",     u:"https://podcasts.apple.com/us/podcast/occult-symbolism-and-pop-culture-with-isaac-weishaupt/id977436455"},
       {n:"Gaia - What Is a Stargate? (article)",                               u:"https://www.gaia.com/article/what-stargate"},
       {n:"Gaia - Stargates: Hidden Portals on Earth (article)",                u:"https://www.gaia.com/article/stargates-hidden-portals-eart"},
@@ -1924,6 +1921,154 @@ export const SOURCES = [
     label:"UFO / UAP / Aliens - Reddit Communities",
     type:"user",
     items:[
+    ],
+  },,
+// PORTALS & STARGATES - GREENLAND & ARCTIC ANOMALIES
+  {
+    label:"Portals & Stargates - Greenland, Camp Century & Arctic Anomalies",
+    type:"research",
+    items:[
+      {n:"NASA - City Under the Ice: Camp Century Discovered 2024 (official)",   u:"https://science.nasa.gov/earth/earth-observatory/new-view-of-the-city-under-the-ice-153616/"},
+      {n:"ScienceAlert - NASA Discovers Secret Army Base Under Greenland Ice",    u:"https://www.sciencealert.com/nasa-discovers-secret-army-base-buried-under-decades-of-ice"},
+      {n:"BGR - NASA Found Secret US Military Base Buried in Greenland Ice",     u:"https://www.bgr.com/2003369/nasa-found-secret-us-military-base-buried-greenland-ice-shelf/"},
+      {n:"National Geographic - Camp Century: Secret Nuclear Base & Climate",    u:"https://www.nationalgeographic.com/history/article/camp-century-nasa-greenland-us-military"},
+      {n:"Earth.com - City Under the Ice: Camp Century Full Coverage",           u:"https://www.earth.com/news/city-under-the-ice-secret-base-camp-found-in-greenland/"},
+      {n:"Eos.org Podcast - Toxic City Under the Ice (Camp Century)",            u:"https://eos.org/articles/podcast-toxic-city-under-the-ice"},
+      {n:"YouTube - Secret Cold War Missile Base Unearthed in Greenland by NASA",u:"https://www.youtube.com/watch?v=s6oNMPK9xIs"},
+      {n:"NASA - Greenland Magnetic Anomaly Research (GRACE satellite data)",    u:"https://svs.gsfc.nasa.gov/31156/"},
+      {n:"ScienceAlert - NASA Tracking Vast Anomaly in Earth Magnetic Field",    u:"https://www.sciencealert.com/nasa-is-tracking-a-vast-anomaly-growing-in-earths-magnetic-field"},
+      {n:"NASA Science - SAA South Atlantic Anomaly tracking (official)",        u:"https://science.nasa.gov/science-research/earth-science/"},
+    ],
+  },
+
+  // PORTALS & STARGATES - AUSTRALIA, ULURU & ABORIGINAL SACRED SITES
+  {
+    label:"Portals & Stargates - Australia, Uluru & Aboriginal Dreamtime",
+    type:"research",
+    items:[
+      {n:"Sacred Sites - Uluru (Ayers Rock) & Kata Tjuta World Pilgrimage Guide",u:"https://sacredsites.com/oceania/australia/uluru_ayers_rock.html"},
+      {n:"Beyond Harmonics - Uluru Sacred Energy Vortex (article)",             u:"https://www.beyondharmonics.org/places/uluru"},
+      {n:"Sentient Metaphysics - Australia Vortex Locations & Energy Sites",     u:"https://sentientmetaphysics.com/vortex-locations-au/"},
+      {n:"Uluru-Kata Tjuta National Park - Official Australian Government site", u:"https://parksaustralia.gov.au/uluru/"},
+      {n:"Star Nations News - Uluru-Kata Tjuta-Atilla Trinity Portals",          u:"https://starnationsnews.com/2020/10/16/uluru-kata-tjuta-atilla-trinity-portals/"},
+      {n:"Gaia - Aboriginal Dreamtime & the Songlines (sacred geography)",       u:"https://www.gaia.com/article/aboriginal-dreamtime"},
+      {n:"YouTube - Uluru Portal & Sacred Energy: Ancient Aboriginal Mystery",   u:"https://www.youtube.com/results?search_query=uluru+portal+sacred+energy+aboriginal"},
+      {n:"YouTube - Australia Sacred Sites & Portals Documentary",               u:"https://www.youtube.com/results?search_query=australia+sacred+sites+portals+documentary"},
+      {n:"Mysterious Universe - Australian Dreamtime & Anomalous Phenomena",     u:"https://mysteriousuniverse.org/?s=australia+aboriginal"},
+      {n:"Gaia - Earth Chakras: The 7 Power Centres of the Planet",              u:"https://www.gaia.com/article/earth-chakras-power-centres"},
+    ],
+  },
+
+  // PORTALS & STARGATES - GLOBAL SACRED SITES & VORTEX RESEARCH
+  {
+    label:"Portals & Stargates - Global Sacred Sites, Vortex & Electromagnetic Research",
+    type:"research",
+    items:[
+      {n:"Sacred Sites - Martin Gray World Pilgrimage Guide (500+ sacred sites)",u:"https://sacredsites.com"},
+      {n:"The Why Files - Portals, Stargates & Ancient Technology YouTube",      u:"https://www.youtube.com/results?search_query=why+files+portals+stargates"},
+      {n:"Bright Insight - Mount Shasta Portals & Ancient Tunnels YouTube",      u:"https://www.youtube.com/results?search_query=bright+insight+mount+shasta"},
+      {n:"Earth Chakras & Vortex Sites - Robert Coon (original researcher)",     u:"https://www.earthchakras.org"},
+      {n:"YouTube - Stonehenge Portal Theory & Electromagnetic Anomalies",       u:"https://www.youtube.com/results?search_query=stonehenge+portal+electromagnetic"},
+      {n:"YouTube - Peru Nazca Lines Portal & Ancient Astronaut Research",       u:"https://www.youtube.com/results?search_query=nazca+lines+portal+ancient+astronaut"},
+    ],
+  },
+
+  // ANCIENT CIVILIZATIONS - EXPANDED SOURCES
+  {
+    label:"Ancient Civilizations - Expanded Articles, Podcasts & YouTube",
+    type:"research",
+    items:[
+      {n:"Ancient Architects - YouTube (Egypt, megalithic sites, mysteries)",    u:"https://www.youtube.com/@AncientArchitects"},
+      {n:"UnchartedX - YouTube (precision stonework & advanced ancient tech)",   u:"https://www.youtube.com/@UnchartedX"},
+      {n:"Megalithomania - YouTube (megalithic sites worldwide)",                u:"https://www.youtube.com/@megalithomania"},
+      {n:"Gaia - Ancient Civilizations series (full streaming series)",          u:"https://www.gaia.com/series/ancient-civilizations"},
+      {n:"Forbidden History Podcast - Jamie Theakston (Apple Podcasts)",         u:"https://podcasts.apple.com/gb/podcast/forbidden-history-with-jamie-theakston/id1547398084"},
+      {n:"Ancient Mysteries Podcast - multiple hosts (Apple Podcasts)",          u:"https://podcasts.apple.com/us/podcast/ancient-mysteries/id1438893363"},
+      {n:"The Mystery of History Podcast (Apple Podcasts)",                      u:"https://podcasts.apple.com/us/podcast/the-mystery-of-history/id1476253824"},
+      {n:"The Ancients - History Hit Podcast (Spotify)",                         u:"https://open.spotify.com/show/3XHBmHkKNpAlISIBOXjHjD"},
+      {n:"Ancient Wisdom Podcast - Freddy Silva (Spotify)",                      u:"https://open.spotify.com/show/2f7dQG7tYS5P1MkdNuLPIX"},
+    ],
+  },
+
+  // CONSCIOUSNESS & MIND - EXPANDED SOURCES
+  {
+    label:"Consciousness & Mind - Articles, Podcasts & YouTube",
+    type:"research",
+    items:[
+      {n:"HeartMath Institute - heart-brain coherence & consciousness research", u:"https://www.heartmath.org"},
+      {n:"Dean Radin - IONS chief scientist (consciousness research papers)",    u:"https://deanradin.com"},
+      {n:"Lex Fridman Podcast - Consciousness episodes (YouTube)",               u:"https://www.youtube.com/results?search_query=lex+fridman+consciousness"},
+      {n:"Closer to Truth - consciousness & philosophy series (YouTube)",        u:"https://www.youtube.com/@CloserToTruth"},
+      {n:"The Consciousness Podcast - various researchers (Spotify)",            u:"https://open.spotify.com/show/3qv8BS8TXFqcYF5b7rlAh1"},
+      {n:"Center for Consciousness Studies - University of Arizona (official)",  u:"https://consciousness.arizona.edu"},
+      {n:"Journal of Consciousness Studies - peer-reviewed (free abstracts)",   u:"https://www.ingentaconnect.com/content/imp/jcs"},
+      {n:"Global Consciousness Project - Princeton (successor to Noosphere)",   u:"https://gcpdot.com"},
+    ],
+  },
+
+  // REMOTE VIEWING & PSI - EXPANDED SOURCES
+  {
+    label:"Remote Viewing & PSI - Official Sites, Podcasts & YouTube",
+    type:"research",
+    items:[
+      {n:"International Remote Viewing Association (IRVA) - official site",      u:"https://www.irva.org"},
+      {n:"Skip Atwater - Remote Viewing at the Monroe Institute",                u:"https://www.monroeinstitute.org/blogs/bob-monroe-s-lab"},
+      {n:"Paul H. Smith - official site (military remote viewer, trainer)",      u:"https://www.rviewer.com"},
+      {n:"Daz Smith - Remote Viewing Blog & CRV research",                       u:"https://www.remoteviewed.com"},
+      {n:"Farsight Institute - Dr. Courtney Brown remote viewing research",      u:"https://www.farsight.org"},
+      {n:"Gaia - Stargate Secrets: Remote Viewing Documentary Series",           u:"https://www.gaia.com/series/remote-viewing"},
+      {n:"YouTube - CIA Remote Viewing Program Full Documentary",                u:"https://www.youtube.com/results?search_query=CIA+remote+viewing+documentary"},
+      {n:"The Remote Viewing Podcast - Daz Smith (Apple Podcasts)",              u:"https://podcasts.apple.com/us/podcast/the-remote-viewing-podcast/id1571433497"},
+      {n:"Remote Viewing Podcast - Stephan Schwartz (Spotify)",                  u:"https://open.spotify.com/show/1q7xdTHfpqDSCPUxlj6Mxd"},
+      {n:"Mysteries of the Mind Podcast - remote viewing & psi (Apple)",        u:"https://podcasts.apple.com/us/podcast/mysteries-of-the-mind/id1560451866"},
+    ],
+  },
+
+  // HIDDEN HISTORY & SUPPRESSED ARCHAEOLOGY - EXPANDED
+  {
+    label:"Hidden History & Suppressed Archaeology - Articles, YouTube & Podcasts",
+    type:"research",
+    items:[
+      {n:"Andrew Collins - author & researcher (Gobekli Tepe, Denisovans)",      u:"https://www.andrewcollins.com"},
+      {n:"Robert Bauval - Orion Correlation Theory official site",               u:"https://www.robertbauval.co.uk"},
+      {n:"Brien Foerster - YouTube (elongated skulls, Inca stonework)",          u:"https://www.youtube.com/@BrienFoerster"},
+      {n:"Freddy Silva - Invisible Temple (sacred sites & hidden history)",      u:"https://invisibletemple.com"},
+      {n:"Hidden History Channel - YouTube (suppressed archaeology)",            u:"https://www.youtube.com/results?search_query=hidden+history+channel+archaeology"},
+      {n:"The Lost History Channel TKTC - YouTube",                              u:"https://www.youtube.com/@TheLostHistoryChannel"},
+      {n:"Unearthed Podcast - archaeology mysteries (Apple Podcasts)",           u:"https://podcasts.apple.com/us/podcast/unearthed/id1500007551"},
+      {n:"The Archaeology Podcast Network (multiple shows)",                     u:"https://www.archaeologypodcastnetwork.com"},
+      {n:"Megalithomania Podcast - megalithic sites worldwide (Apple Podcasts)", u:"https://podcasts.apple.com/gb/podcast/megalithomania/id1527700741"},
+    ],
+  },
+
+  // SECRET SOCIETIES & ELITE NETWORKS - EXPANDED
+  {
+    label:"Secret Societies & Elite Networks - Articles, Podcasts & YouTube",
+    type:"research",
+    items:[
+      {n:"Lyndon LaRouche - Executive Intelligence Review (EIR) archive",        u:"https://larouchepub.com"},
+      {n:"Anthony Sutton - Wall Street & the Bolshevik Revolution (free PDF)",   u:"https://www.voltairenet.org/IMG/pdf/Sutton_Wall_Street_-_Bolshevik_Revolution.pdf"},
+      {n:"Carrol Quigley - Tragedy & Hope (establishment history classic)",      u:"https://archive.org/details/tragedyhope00quig"},
+      {n:"Corbett Report - Secret Societies deep dives (article archive)",       u:"https://www.corbettreport.com/?s=secret+societies"},
+      {n:"YouTube - Albert Pike & Freemasonry Documentary",                      u:"https://www.youtube.com/results?search_query=albert+pike+freemasonry+documentary"},
+      {n:"YouTube - Skull and Bones & Yale Secret Society Documentary",          u:"https://www.youtube.com/results?search_query=skull+and+bones+documentary"},
+      {n:"YouTube - Bohemian Grove Infiltration Alex Jones Documentary",         u:"https://www.youtube.com/watch?v=DjMFKMcQqkU"},
+      {n:"Illuminati Watcher - symbolism research & analysis blog",              u:"https://illuminatiwatcher.com"},
+      {n:"Secret Arcana - esoteric symbolism research",                          u:"https://secretarcana.com"},
+      {n:"Tin Foil Hat With Sam Tripoli - Podcast (Apple Podcasts)",             u:"https://podcasts.apple.com/us/podcast/tin-foil-hat-with-sam-tripoli/id1169745989"},
+    ],
+  },
+
+  // HEALTH & SCIENCE - VACCINES, BIG PHARMA EXPANDED
+  {
+    label:"Health & Science - Vaccines, Big Pharma & Suppressed Medicine",
+    type:"research",
+    items:[
+      {n:"Pierre Kory Substack - FLCCC Alliance (suppressed treatments)",        u:"https://pierrekory.substack.com"},
+      {n:"Brownstone Institute - public health policy criticism",                u:"https://brownstone.org"},
+      {n:"Epoch Health - investigative health journalism",                       u:"https://www.theepochtimes.com/health"},
+      {n:"YouTube - Terrain Theory vs Germ Theory Documentary",                  u:"https://www.youtube.com/results?search_query=terrain+theory+germ+theory+documentary"},
+      {n:"YouTube - Big Pharma Exposed Documentary Playlist",                    u:"https://www.youtube.com/results?search_query=big+pharma+exposed+documentary"},
     ],
   },
 ];
