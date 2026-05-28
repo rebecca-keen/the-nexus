@@ -2070,6 +2070,195 @@ export const SOURCES = [
       {n:"YouTube - Terrain Theory vs Germ Theory Documentary",                  u:"https://www.youtube.com/results?search_query=terrain+theory+germ+theory+documentary"},
       {n:"YouTube - Big Pharma Exposed Documentary Playlist",                    u:"https://www.youtube.com/results?search_query=big+pharma+exposed+documentary"},
     ],
+  },,
+// ALIENS & EXTRATERRESTRIAL - KEY RESEARCHERS & AUTHORS
+  {
+    label:"Aliens & Extraterrestrial - Key Researchers, Authors & Investigators",
+    type:"research",
+    items:[
+      {n:"Richard Dolan - official site (history of UFO cover-up)",           u:"https://www.richarddolanpress.com"},
+      {n:"Nick Pope - official site (UK MoD UFO investigator)",               u:"https://nickpope.net"},
+      {n:"Stanton Friedman - nuclear physicist ufologist archive",            u:"https://stantonfriedman.com"},
+      {n:"David Jacobs - Temple University alien abduction researcher",       u:"https://www.ufoabduction.com"},
+      {n:"Whitley Strieber - Communion author & Unknown Country",             u:"https://www.unknowncountry.com"},
+      {n:"Travis Walton - official site (1975 abduction case)",               u:"https://traviswalton.net"},
+      {n:"Timothy Good - Above Top Secret author official site",              u:"https://timothygood.co.uk"},
+      {n:"D.W. Pasulka - American Cosmic author (Notre Dame professor)",      u:"https://www.harpercollins.com/products/american-cosmic-d-w-pasulka"},
+      {n:"Stephen Bassett - Paradigm Research Group (disclosure activist)",   u:"https://paradigmresearchgroup.org"},
+      {n:"Kathleen Marden - MUFON director of research & abduction studies",  u:"https://www.kathleenmarden.com"},
+      {n:"Peter Robbins - Rendlesham Forest researcher & author",             u:"https://www.peterrobbinsauthor.com"},
+      {n:"Kevin Randle - author & UFO investigator (Roswell)",                u:"https://kevinrandle.blogspot.com"},
+      {n:"Grant Cameron - presidential UFO research (presidentialufo.com)",   u:"https://www.presidentialufo.com"},
+      {n:"Bryce Zabel - Need to Know co-host & author",                       u:"https://medium.com/@brycezabel"},
+    ],
+  },
+
+  // ALIENS & EXTRATERRESTRIAL - BOOKS (VERIFIED PUBLISHER LINKS)
+  {
+    label:"Aliens & Extraterrestrial - Essential Books (Publisher Links)",
+    type:"research",
+    items:[
+      {n:"Communion - Whitley Strieber (1987 landmark abduction account)",    u:"https://www.unknowncountry.com/communion"},
+      {n:"Above Top Secret - Timothy Good (1987 global UFO cover-up)",        u:"https://timothygood.co.uk/books/"},
+      {n:"Passport to Magonia - Jacques Vallee (1969 interdimensional theory)",u:"https://www.amazon.com/dp/0809236354"},
+      {n:"American Cosmic - D.W. Pasulka (religion & UAP phenomenon)",        u:"https://global.oup.com/academic/product/american-cosmic-9780190692889"},
+      {n:"The Day After Roswell - Philip Corso (Army officer, 1997)",         u:"https://www.amazon.com/dp/0671017675"},
+      {n:"The 37th Parallel - Ben Mezrich (UFO investigator true story)",     u:"https://www.simonandschuster.com/books/The-37th-Parallel/Ben-Mezrich/9781476765570"},
+      {n:"Skinwalkers at the Pentagon - Lacatski, Colm & Knapp (AAWSAP)",    u:"https://www.amazon.com/dp/1949501485"},
+      {n:"UFOs and Nukes - Robert Hastings (nuclear facilities incidents)",   u:"https://www.ufohastings.com"},
+      {n:"The Alien Agendas - Richard Dolan (2020 comprehensive overview)",   u:"https://www.richarddolanpress.com/the-alien-agendas"},
+    ],
+  },
+
+  // ALIENS & EXTRATERRESTRIAL - DOCUMENTARIES (ALL PLATFORMS)
+  {
+    label:"Aliens & Extraterrestrial - Documentaries Across All Platforms",
+    type:"research",
+    items:[
+      {n:"The Phenomenon - James Fox (Amazon Prime 2020)",                    u:"https://www.amazon.com/dp/B08MC4KKKH"},
+      {n:"Bob Lazar: Area 51 & Flying Saucers - Jeremy Corbell (Netflix)",   u:"https://www.netflix.com/title/81014324"},
+      {n:"Unacknowledged - Steven Greer (Amazon Prime 2017)",                 u:"https://www.amazon.com/dp/B06Y5SFKK2"},
+      {n:"I Know What I Saw - James Fox (2009 documentary)",                  u:"https://www.youtube.com/watch?v=cM-T5qXo2VE"},
+      {n:"The UFO Disclosure Documentary - Free YouTube Full",                u:"https://www.youtube.com/results?search_query=UFO+disclosure+documentary+full"},
+      {n:"Communion Film 1989 - Whitley Strieber (YouTube)",                  u:"https://www.youtube.com/results?search_query=communion+1989+whitley+strieber"},
+      {n:"Fire in the Sky 1993 - Travis Walton abduction film (IMDB)",        u:"https://www.imdb.com/title/tt0106912/"},
+      {n:"Hangar 1: The UFO Files - History Channel (Amazon Prime)",          u:"https://www.amazon.com/dp/B00JEW0I8G"},
+      {n:"Ancient Aliens - Full Series (History Channel / Amazon)",           u:"https://www.amazon.com/s?k=ancient+aliens+history+channel"},
+      {n:"Extraordinary: The Stan Romanek Story (Netflix)",                   u:"https://www.netflix.com/title/80113192"},
+    ],
+  },
+
+  // ALIENS & EXTRATERRESTRIAL - BLOGS & INDEPENDENT RESEARCHERS
+  {
+    label:"Aliens & Extraterrestrial - Blogs, Forums & Independent Researchers",
+    type:"blog",
+    items:[
+      {n:"UFO Blogger - case files & sighting reports",                       u:"https://www.ufoblogger.com"},
+      {n:"Chuck Zukowski - UFO investigator & Roswell researcher blog",       u:"https://www.ufonut.com"},
+      {n:"Preston Dennett - author & researcher blog (abductions)",           u:"https://prestondennett.weebly.com"},
+    ],
+  },
+
+  // ANCIENT CIVILIZATIONS - MORE RESEARCHERS & SOURCES
+  {
+    label:"Ancient Civilizations - More Researchers, Podcasts & YouTube",
+    type:"research",
+    items:[
+      {n:"Randall Carlson - Kosmographia podcast & official site",            u:"https://www.randallcarlson.com"},
+      {n:"Randall Carlson - Kosmographia on Spotify",                         u:"https://open.spotify.com/show/5lBcN9bRkDLqCqOEeQlFD1"},
+      {n:"John Anthony West - official site (Egypt & Egyptology alternative)", u:"https://jawest.net"},
+      {n:"Robert Schoch - official site (Sphinx water erosion research)",     u:"https://www.robertschoch.com"},
+      {n:"Walter Cruttenden - Binary Research Institute (precession theory)", u:"https://binaryresearchinstitute.com"},
+      {n:"Kosmographia Podcast - Randall Carlson (Apple Podcasts)",           u:"https://podcasts.apple.com/us/podcast/kosmographia-the-randall-carlson-podcast/id1457785237"},
+      {n:"Matrix Wisdom YouTube - ancient mysteries & hidden history",        u:"https://www.youtube.com/@MatrixWisdom"},
+    ],
+  },
+
+  // GOVERNMENT & INTELLIGENCE - MORE INVESTIGATIVE SOURCES
+  {
+    label:"Government & Intelligence - More Investigative Journalists & Sources",
+    type:"research",
+    items:[
+      {n:"Brainwashed Podcast - CIA MKUltra investigations (Apple)",          u:"https://podcasts.apple.com/us/podcast/brainwashed/id1628768999"},
+      {n:"Declassified UK - UK intelligence & military secrets",              u:"https://www.declassifieduk.org"},
+      {n:"Redacted - Clayton Morris investigative news YouTube",              u:"https://www.youtube.com/@Redacted"},
+      {n:"The Jimmy Dore Show - political commentary & investigation",        u:"https://www.youtube.com/@thejimmydoreshow"},
+      {n:"Russell Brand Stay Free - alternative news & investigation",        u:"https://www.youtube.com/@RussellBrand"},
+      {n:"George Webb Investigates - crowdsourced deep state research",       u:"https://www.youtube.com/@GeorgeWebb"},
+      {n:"Dark Journalist - X Series & deep state research",                  u:"https://darkjournalist.com"},
+      {n:"Newsbud - Sibel Edmonds (FBI whistleblower) investigative media",   u:"https://www.newsbud.com"},
+    ],
+  },
+
+  // FINANCE & POWER - MORE BOOKS & INVESTIGATORS
+  {
+    label:"Finance & Power - More Books, Investigators & Resources",
+    type:"research",
+    items:[
+      {n:"Ellen Brown - Web of Debt author & Public Banking Institute",       u:"https://ellenbrown.com"},
+      {n:"Patrick Wood - Technocracy News (technocratic control system)",     u:"https://www.technocracy.news"},
+      {n:"James Rickards - Currency Wars author official site",               u:"https://jamesrickards.com"},
+      {n:"Mike Maloney - Hidden Secrets of Money official site",              u:"https://goldsilver.com/blog/"},
+      {n:"Peter Schiff - Euro Pacific Capital & gold investment research",    u:"https://www.schiffradio.com"},
+      {n:"Max Keiser - financial corruption & Bitcoin commentary",            u:"https://www.youtube.com/@maxkeiser6827"},
+      {n:"Positive Money - campaigning for monetary reform (UK)",             u:"https://positivemoney.org"},
+      {n:"American Monetary Institute - monetary reform research",            u:"https://www.monetary.org"},
+      {n:"Dark to Light Podcast - government corruption (Apple Podcasts)",    u:"https://podcasts.apple.com/us/podcast/dark-to-light-with-frank-di-marco/id1442108588"},
+      {n:"Making a Killing Podcast - global corruption (Spotify)",            u:"https://open.spotify.com/show/2c7yqJq8i7Wj2xMOD8hqMx"},
+      {n:"Financial Rebellion - Catherine Austin Fitts (CHD TV)",             u:"https://childrenshealthdefense.org/community-forum/chd-tv/shows-and-films/financial-rebellion/"},
+      {n:"Web of Debt Blog - Ellen Brown monetary system research",           u:"https://www.webofdebt.com"},
+    ],
+  },
+
+  // HEALTH & BIOWEAPONS - MORE INVESTIGATORS & SOURCES
+  {
+    label:"Health, Bioweapons & Big Pharma - More Investigators & Sources",
+    type:"research",
+    items:[
+      {n:"Dr. Meryl Nass - anthrax & bioweapons investigative physician",     u:"https://merylnass.substack.com"},
+      {n:"Dr. Geert Vanden Bossche - vaccinologist whistleblower",            u:"https://www.geertvandenbossche.org"},
+      {n:"Dr. Tess Lawrie - Evidence-Based Medicine Consultancy",             u:"https://www.bird-group.org"},
+      {n:"Dr. Sherri Tenpenny - vaccine research & official site",            u:"https://vaxxter.com"},
+      {n:"America's Frontline Doctors - suppressed treatment research",       u:"https://americasfrontlinedoctors.org"},
+      {n:"Trial Site News - clinical trial & pharma investigative journalism",u:"https://trialsitenews.com"},
+      {n:"Health Impact News - vaccine injury & suppressed health research",  u:"https://healthimpactnews.com"},
+      {n:"Principia Scientific - peer review & science integrity",            u:"https://principia-scientific.com"},
+      {n:"The Expose - UK health & government accountability journalism",     u:"https://expose-news.com"},
+      {n:"Children Health Defense CHD TV - RFK Jr. (full archive)",          u:"https://childrenshealthdefense.org/community-forum/chd-tv/"},
+    ],
+  },
+
+  // MISSING PERSONS & CRYPTIDS - MORE SOURCES
+  {
+    label:"Missing Persons, Cryptids & Wilderness Anomalies - More Sources",
+    type:"research",
+    items:[
+      {n:"Bigfoot 911 - John Bruner research & investigations",               u:"https://www.bigfoot911.org"},
+      {n:"Finding Bigfoot - Animal Planet series (IMDB)",                     u:"https://www.imdb.com/title/tt1877100/"},
+      {n:"Crypto Four Corners - JC Johnson cryptid research archive",         u:"https://www.youtube.com/@CryptoFourCorners"},
+      {n:"Sasquatch Chronicles - Wes Germer podcast (Apple Podcasts)",        u:"https://podcasts.apple.com/us/podcast/sasquatch-chronicles/id905378685"},
+      {n:"Sasquatch Chronicles - Wes Germer podcast (Spotify)",               u:"https://open.spotify.com/show/2t4NcQfyNZa3hM7b6e2Tcg"},
+      {n:"Missing Persons Advocacy Network (MPAN)",                           u:"https://www.missingpersonsadvocacynetwork.com"},
+      {n:"The Charley Project - cold case missing persons database",          u:"https://www.charleyproject.org"},
+      {n:"Doe Network - international missing & unidentified persons",        u:"https://www.doenetwork.org"},
+      {n:"Bob Gymlan - YouTube Bigfoot & cryptid research channel",           u:"https://www.youtube.com/@BobGymlan"},
+      {n:"Bigfoot Field Researchers Organization (BFRO)",                     u:"https://www.bfro.net"},
+      {n:"Dogman Encounters Radio - Podcast (Apple Podcasts)",                u:"https://podcasts.apple.com/us/podcast/dogman-encounters-radio/id1020031213"},
+    ],
+  },
+
+  // SIMULATION THEORY & CONSCIOUSNESS - MORE SOURCES
+  {
+    label:"Simulation Theory, Consciousness & Reality - More Sources",
+    type:"research",
+    items:[
+      {n:"Donald Hoffman - Case Against Reality official site",               u:"https://www.donaldhoffman.com"},
+      {n:"Tom Campbell YouTube - consciousness & simulation theory",          u:"https://www.youtube.com/@TomCampbell9"},
+      {n:"Analytic Idealism - Bernardo Kastrup official site",                u:"https://www.bernardokastrup.com"},
+      {n:"Bernardo Kastrup YouTube - consciousness & metaphysics",            u:"https://www.youtube.com/@bernardokastrup"},
+      {n:"Federico Faggin - consciousness physics (inventor of Intel chip)",  u:"https://www.fagginfoundation.org"},
+      {n:"Simulation Hypothesis - Rizwan Virk official site & book",          u:"https://www.zenentrepreneur.com/simulation-hypothesis"},
+      {n:"The Simulation Hypothesis Podcast (Apple Podcasts)",                u:"https://podcasts.apple.com/us/podcast/the-simulation-hypothesis-podcast/id1474423522"},
+      {n:"Mindscape - Sean Carroll physics & philosophy podcast (Spotify)",   u:"https://open.spotify.com/show/622lzLABHNlt0tqaLOFQnI"},
+    ],
+  },
+
+  // DEEP STATE & GEOPOLITICS - MORE SOURCES
+  {
+    label:"Deep State, Geopolitics & Hidden Power - More Sources",
+    type:"research",
+    items:[
+      {n:"Peter Dale Scott - Deep State author & researcher",                 u:"https://www.peterdalescott.net"},
+      {n:"Mike Lofgren - The Deep State book & essays",                       u:"https://billmoyers.com/2014/02/21/anatomy-of-the-deep-state/"},
+      {n:"Strategic Culture Foundation - geopolitics research",               u:"https://www.strategic-culture.su"},
+      {n:"Voltaire Network - Thierry Meyssan geopolitics investigation",      u:"https://www.voltairenet.org"},
+      {n:"Truthout - independent progressive journalism & investigation",     u:"https://truthout.org"},
+      {n:"OCCRP - Organized Crime & Corruption Reporting Project",            u:"https://www.occrp.org"},
+      {n:"International Consortium of Investigative Journalists (ICIJ)",      u:"https://www.icij.org"},
+      {n:"Forbidden Knowledge TV - Alexandra Bruce investigative blog",       u:"https://forbiddenknowledgetv.net"},
+      {n:"Empire Files - Abby Martin investigative journalism",               u:"https://www.youtube.com/@EmpireFiles"},
+      {n:"The Duran - Alexander Mercouris geopolitical analysis",             u:"https://www.youtube.com/@TheDuran"},
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
