@@ -1046,35 +1046,97 @@ function App() {
             <div style={{ display:"flex", gap:0 }}>
               <Sidebar {...sidebarProps} />
               <div style={{ flex:1 }}>
-                <div style={{ marginBottom:16 }}>
+                <div style={{ marginBottom:12 }}>
                   <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>SOURCE DIRECTORY</div>
                   <div style={{ fontSize:8, color:"#1c2a38", marginTop:3, fontFamily:"monospace" }}>
                     {SOURCES.reduce((acc, g) => acc + g.items.length, 0)} sources across {SOURCES.length} categories · All links open in new tab
                   </div>
                 </div>
-                {SOURCES.map(group => {
-                  const t = getType(group.type);
+
+                {/* Source filters */}
+                <div style={{ display:"flex", gap:6, marginBottom:14, flexWrap:"wrap", alignItems:"center" }}>
+                  {["All","Research","Podcasts","Blogs","Archives","Community"].map(f => {
+                    const typeMap = { Research:"research", Podcasts:"podcast", Blogs:"blog", Archives:"archive", Community:"user" };
+                    const active = (f === "All" && !filters.srcType.startsWith("src:")) ||
+                                   (f !== "All" && filters.srcType === "src:" + f);
+                    return (
+                      <button key={f}
+                        onClick={() => setFilters(p => ({ ...p, srcType: f === "All" ? "All Sources" : "src:" + f }))}
+                        style={{ background:active?"#1c2330":"transparent", border:`1px solid ${active?"#3a4a5a":"#1c2330"}`, color:active?"#ccc8be":"#2a3a4a", padding:"4px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer", textTransform:"uppercase" }}>
+                        {f}
+                      </button>
+                    );
+                  })}
+                  <input
+                    value={filters.search}
+                    onChange={e => setFilters(p => ({ ...p, search:e.target.value }))}
+                    placeholder="Search sources..."
+                    style={{ background:"#07080c", border:"1px solid #1c2330", color:"#ccc8be", padding:"4px 10px", fontFamily:"monospace", fontSize:9, outline:"none", flex:1, minWidth:160, maxWidth:280 }}
+                  />
+                  {(filters.search || filters.srcType !== "All Sources") && (
+                    <button onClick={() => setFilters(p => ({ ...p, search:"", srcType:"All Sources" }))}
+                      style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"4px 10px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>
+                      Clear
+                    </button>
+                  )}
+                </div>
+
+                {/* Filtered source groups */}
+                {(() => {
+                  const typeMap = { "src:Research":"research", "src:Podcasts":"podcast", "src:Blogs":"blog", "src:Archives":"archive", "src:Community":"user" };
+                  const activeType = typeMap[filters.srcType] || null;
+                  const searchTerm = filters.search.toLowerCase();
+
+                  const filteredGroups = SOURCES
+                    .map(group => {
+                      if (activeType && group.type !== activeType) return null;
+                      const filteredItems = searchTerm
+                        ? group.items.filter(item => item.n.toLowerCase().includes(searchTerm) || item.u.toLowerCase().includes(searchTerm))
+                        : group.items;
+                      if (filteredItems.length === 0) return null;
+                      return { ...group, items: filteredItems };
+                    })
+                    .filter(Boolean);
+
+                  const totalShown = filteredGroups.reduce((acc, g) => acc + g.items.length, 0);
+
                   return (
-                    <div key={group.label} style={{ marginBottom:22 }}>
-                      <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8, paddingBottom:6, borderBottom:"1px solid #1c2330" }}>
-                        <span style={{ background:t.bg, color:t.text, padding:"1px 6px", fontFamily:"monospace", fontSize:7, letterSpacing:.5 }}>{t.label}</span>
-                        <span style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace" }}>{group.label}</span>
-                        <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>({group.items.length})</span>
+                    <>
+                      <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace", marginBottom:10 }}>
+                        Showing {totalShown} sources across {filteredGroups.length} categories
+                        {filters.search && <span style={{ color:"#b02020", marginLeft:6 }}>matching "{filters.search}"</span>}
                       </div>
-                      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))", gap:5 }}>
-                        {group.items.map(item => (
-                          <a key={item.n} href={item.u} target="_blank" rel="noopener noreferrer"
-                            style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"9px 12px", display:"flex", alignItems:"center", justifyContent:"space-between", transition:"border-color .12s" }}
-                            onMouseEnter={e => e.currentTarget.style.borderColor=t.text+"44"}
-                            onMouseLeave={e => e.currentTarget.style.borderColor="#1c2330"}>
-                            <span style={{ fontSize:10, color:"#7a8a9a", fontFamily:"monospace" }}>{item.n}</span>
-                            <span style={{ color:"#2a3a4a", fontSize:10 }}>↗</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
+                      {filteredGroups.map(group => {
+                        const t = getType(group.type);
+                        return (
+                          <div key={group.label} style={{ marginBottom:20 }}>
+                            <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8, paddingBottom:6, borderBottom:"1px solid #1c2330" }}>
+                              <span style={{ background:t.bg, color:t.text, padding:"1px 6px", fontFamily:"monospace", fontSize:7, letterSpacing:.5 }}>{t.label}</span>
+                              <span style={{ fontSize:9, color:"#2a3a4a", fontFamily:"monospace" }}>{group.label}</span>
+                              <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>({group.items.length})</span>
+                            </div>
+                            <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))", gap:5 }}>
+                              {group.items.map(item => (
+                                <a key={item.n} href={item.u} target="_blank" rel="noopener noreferrer"
+                                  style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"9px 12px", display:"flex", alignItems:"center", justifyContent:"space-between", transition:"border-color .12s" }}
+                                  onMouseEnter={e => e.currentTarget.style.borderColor=t.text+"44"}
+                                  onMouseLeave={e => e.currentTarget.style.borderColor="#1c2330"}>
+                                  <span style={{ fontSize:10, color:"#7a8a9a", fontFamily:"monospace" }}>{item.n}</span>
+                                  <span style={{ color:"#2a3a4a", fontSize:10 }}>↗</span>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
+                      {filteredGroups.length === 0 && (
+                        <div style={{ textAlign:"center", padding:"40px 0", color:"#2a3a4a", fontFamily:"monospace", fontSize:11 }}>
+                          No sources found · Try a different filter or search term
+                        </div>
+                      )}
+                    </>
                   );
-                })}
+                })()}
               </div>
             </div>
           )}
