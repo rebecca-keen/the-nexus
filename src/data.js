@@ -2282,6 +2282,137 @@ export const SOURCES = [
       {n:"Empire Files - Abby Martin investigative journalism",               u:"https://www.youtube.com/@EmpireFiles"},
       {n:"The Duran - Alexander Mercouris geopolitical analysis",             u:"https://www.youtube.com/@TheDuran"},
     ],
+  },,
+// PODCASTS - UAP / ALIEN / PARANORMAL (APPLE PODCASTS - VERIFIED)
+  {
+    label:"Podcasts - UAP, Alien & Paranormal (Apple Podcasts - Verified)",
+    type:"podcast",
+    items:[
+      {n:"FADE to BLACK - Jimmy Church (UFO/paranormal/conspiracy) Apple",      u:"https://podcasts.apple.com/us/podcast/fade-to-black-w-jimmy-church-podcast/id1844708065"},
+      {n:"UFO Chronicles Podcast - Nik Hunter (witness accounts) Apple",        u:"https://podcasts.apple.com/gb/podcast/ufo-chronicles-podcast/id1488874171"},
+      {n:"Podcast UFO - Martin Willis (close encounters) Apple",                u:"https://podcasts.apple.com/us/podcast/podcast-ufo/id550891984"},
+      {n:"Monsters Among Us - Derek Hayes (paranormal witness accounts) Apple", u:"https://podcasts.apple.com/us/podcast/monsters-among-us/id1081827018"},
+      {n:"Strange Planet - Richard Syrett (UFO/conspiracy/paranormal) Apple",   u:"https://podcasts.apple.com/us/podcast/strange-planet/id1200361736"},
+    ],
+  },
+
+  // PODCASTS - UAP / ALIEN / PARANORMAL (SPOTIFY - VERIFIED)
+  {
+    label:"Podcasts - UAP, Alien & Paranormal (Spotify - Verified)",
+    type:"podcast",
+    items:[
+      {n:"FADE to BLACK - Jimmy Church (UFO/paranormal) Spotify",               u:"https://open.spotify.com/show/0rhitA6q5dRp9kpnakF80C"},
+      {n:"UFO Chronicles Podcast - Nik Hunter Spotify",                         u:"https://open.spotify.com/show/5EE7HbNItkQQbJdtZCHt88"},
+      {n:"Expanded Perspectives - Kyle & Cameron Spotify",                      u:"https://open.spotify.com/show/5BYaXomPmGiUDSiPkByMeC"},
+      {n:"Monsters Among Us - Derek Hayes Spotify",                             u:"https://open.spotify.com/show/6qU7bpasF6O7jMTRzeFCiL"},
+    ],
+  },
+
+  // YOUTUBE - UAP / ALIEN SPECIFIC CHANNELS (VERIFIED)
+  {
+    label:"YouTube - UAP & Alien Specific Channels (Verified)",
+    type:"podcast",
+    items:[
+      {n:"UFO Chronicles Podcast YouTube - witness encounter accounts",         u:"https://www.youtube.com/@UFOChroniclesPodcast"},
+      {n:"FADE to BLACK - Jimmy Church YouTube (UFO/paranormal live radio)",    u:"https://www.youtube.com/@JimmyChurch"},
+      {n:"Expanded Perspectives YouTube - ancient history & UFO",               u:"https://www.youtube.com/@ExpandedPerspectives"},
+      {n:"Podcast UFO YouTube - close encounter interviews",                    u:"https://www.youtube.com/@podcastufo"},
+      {n:"UAP Society YouTube - scientific UAP research & analysis",            u:"https://www.youtube.com/@UAPSociety"},
+      {n:"The Black Vault YouTube - John Greenewald FOIA & UAP analysis",      u:"https://www.youtube.com/@TheBlackVault"},
+      {n:"Disclosure Team YouTube - UAP disclosure news & analysis",            u:"https://www.youtube.com/@DisclosureTeam"},
+      {n:"OPUS - Organization for Paranormal Understanding & Support YouTube",  u:"https://www.youtube.com/@OPUSParanormal"},
+      {n:"Beyond Science YouTube - Mike Chen (paranormal & mysteries)",         u:"https://www.youtube.com/@BeyondScienceTV"},
+    ],
+  },
+
+  // PODCASTS - CONSPIRACY & GOVERNMENT (APPLE - VERIFIED)
+  {
+    label:"Podcasts - Conspiracy, Government & Deep State (Apple - Verified)",
+    type:"podcast",
+    items:[
+      {n:"The Corbett Report Podcast (Apple)",                                   u:"https://podcasts.apple.com/us/podcast/the-corbett-report-podcast/id836339988"},
+      {n:"CovertAction Bulletin Podcast - CIA investigations (Apple)",           u:"https://podcasts.apple.com/us/podcast/covertaction-bulletin/id1600685707"},
+      {n:"American Conspiracy - true government cover-ups (Apple)",             u:"https://podcasts.apple.com/us/podcast/american-conspiracy/id1594498010"},
+      {n:"Tales from the Rabbit Hole - Mick West (skeptic/debunker) Apple",    u:"https://podcasts.apple.com/us/podcast/tales-from-the-rabbit-hole-podcast/id1487718935"},
+      {n:"Skeptoid - Brian Dunning (science vs conspiracy) Apple",              u:"https://podcasts.apple.com/us/podcast/skeptoid/id206601988"},
+    ],
+  },
+
+  // PODCASTS - ANCIENT HISTORY & ALTERNATIVE (APPLE - VERIFIED)
+  {
+    label:"Podcasts - Ancient History & Alternative Research (Apple - Verified)",
+    type:"podcast",
+    items:[
+      {n:"The Ancients - History Hit (academic ancient history) Apple",         u:"https://podcasts.apple.com/us/podcast/the-ancients/id1467621237"},
+      {n:"The Lost History Channel Podcast (Apple)",                            u:"https://podcasts.apple.com/us/podcast/the-lost-history-channel-tktc/id1477071771"},
+    ],
+  },
+
+  // PODCASTS - ANCIENT HISTORY & ALTERNATIVE (SPOTIFY - VERIFIED)
+  {
+    label:"Podcasts - Ancient History & Alternative Research (Spotify - Verified)",
+    type:"podcast",
+    items:[
+      {n:"Blurry Creatures Spotify",                                             u:"https://open.spotify.com/show/3qHNV03FLMFXx5ZDOnGqQk"},
+    ],
+  },
+
+  // YOUTUBE - ANCIENT HISTORY & ALTERNATIVE (VERIFIED CHANNELS)
+  {
+    label:"YouTube - Ancient History & Alternative Research (Verified Channels)",
+    type:"podcast",
+    items:[
+      {n:"Graham Hancock Official YouTube",                                      u:"https://www.youtube.com/@GrahamHancockDotCom"},
+      {n:"Mystery History YouTube - ancient anomalies & suppressed history",     u:"https://www.youtube.com/@MysteryHistory2"},
+    ],
+  },
+
+  // YOUTUBE - PARANORMAL & CRYPTIDS (VERIFIED CHANNELS)
+  {
+    label:"YouTube - Paranormal, Cryptids & Mysteries (Verified Channels)",
+    type:"podcast",
+    items:[
+      {n:"Nukes Top 5 - top 5 mysteries & unexplained (3.4M subs) YouTube",    u:"https://www.youtube.com/@NukesTop5"},
+      {n:"Let Me Explain - paranormal investigation YouTube",                   u:"https://www.youtube.com/@LetMeExplainStudios"},
+      {n:"Thoughty2 - unexplained history & mysteries YouTube",                 u:"https://www.youtube.com/@Thoughty2"},
+      {n:"Huff Paranormal - life after death research YouTube (1.6M subs)",    u:"https://www.youtube.com/@HuffParanormal"},
+      {n:"Top5s - paranormal & true horror YouTube (4.6M subs)",               u:"https://www.youtube.com/@Top5s"},
+      {n:"Paranormal Files - haunted locations & investigation YouTube",        u:"https://www.youtube.com/@TheParanormalFiles"},
+      {n:"Bedtime Stories - horror & true paranormal YouTube",                  u:"https://www.youtube.com/@BedroomStoriesYT"},
+    ],
+  },
+
+  // YOUTUBE - GOVERNMENT, INTELLIGENCE & DEEP STATE (VERIFIED)
+  {
+    label:"YouTube - Government, Intelligence & Deep State (Verified Channels)",
+    type:"podcast",
+    items:[
+      {n:"Corbett Report YouTube - James Corbett deep state research",          u:"https://www.youtube.com/@corbettreport"},
+      {n:"Kim Iversen YouTube - independent political commentary",              u:"https://www.youtube.com/@KimIversen"},
+      {n:"Valuetainment - Patrick Bet-David deep dive interviews YouTube",      u:"https://www.youtube.com/@Valuetainment"},
+      {n:"Dark Journalist - X Series YouTube",                                  u:"https://www.youtube.com/@DarkJournalist"},
+    ],
+  },
+
+  // YOUTUBE - SCIENCE, CONSCIOUSNESS & FORBIDDEN TOPICS (VERIFIED)
+  {
+    label:"YouTube - Science, Consciousness & Forbidden Topics (Verified)",
+    type:"podcast",
+    items:[
+      {n:"Eric Weinstein - The Portal YouTube",                                 u:"https://www.youtube.com/@EricWeinsteinPhD"},
+    ],
+  },
+
+  // KEY ARTICLES - DIRECT LINKS TO SPECIFIC INVESTIGATIVE PIECES
+  {
+    label:"Key Articles - Direct Links to Specific Investigative Pieces",
+    type:"blog",
+    items:[
+      {n:"The Intercept - The Drone Papers (Oct 2015)",                         u:"https://theintercept.com/drone-papers/"},
+      {n:"The Guardian - NSA collecting phone records of millions (Snowden)",   u:"https://www.theguardian.com/world/2013/jun/06/nsa-phone-records-verizon-court-order"},
+      {n:"Washington Post - PRISM program (Snowden disclosures 2013)",          u:"https://www.washingtonpost.com/investigations/us-intelligence-mining-data-from-nine-us-internet-companies-in-broad-secret-program/2013/06/06/3a0c0da8-cebf-11e2-8845-d970ccb04497_story.html"},
+      {n:"New Yorker - Seymour Hersh on Abu Ghraib (May 2004)",                u:"https://www.newyorker.com/magazine/2004/05/10/torture-at-abu-ghraib"},
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
