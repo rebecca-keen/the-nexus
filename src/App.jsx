@@ -104,8 +104,24 @@ function App() {
       const meta = document.querySelector('meta[name="description"]');
       if (meta) meta.setAttribute('content', openStory.summary ? openStory.summary.slice(0, 160) : openStory.title);
     }
-    // When openStory is null, URL is reset by the button that triggered the close
   }, [openStory]);
+
+  // Update URL when topic filter changes
+  useEffect(() => {
+    if (view === 'feed' && !openStory) {
+      if (filters.topic && filters.topic !== 'All Topics') {
+        const slug = filters.topic.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        window.history.pushState({}, '', '/records/topic/' + slug);
+        document.title = filters.topic + ' - The Nexus Records';
+      } else if (filters.search) {
+        window.history.pushState({}, '', '/records?q=' + encodeURIComponent(filters.search));
+        document.title = 'Search: ' + filters.search + ' - The Nexus';
+      } else {
+        window.history.pushState({}, '', '/records');
+        document.title = 'Open Records - The Nexus';
+      }
+    }
+  }, [filters.topic, filters.search, view, openStory]); // eslint-disable-line
 
   // On load: check URL and open matching story if on a /records/ path
   useEffect(() => {
@@ -365,7 +381,7 @@ function App() {
                 <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>What We Cover</div>
                 <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
                   {TOPICS.filter(t => t !== "All Topics").map(t => (
-                    <button key={t} onClick={() => { setFilters(f => ({ ...f, topic:t })); setView("feed"); }}
+                    <button key={t} onClick={() => { setFilters(f => ({ ...f, topic:t })); setView("feed"); const slug = t.toLowerCase().replace(/[^a-z0-9]+/g,"-"); window.history.pushState({}, "", "/records/topic/" + slug); document.title = t + " - The Nexus"; }}
                       style={{ background:"#07080c", border:"1px solid #1c2330", color:"#4a5a6a", padding:"5px 10px", fontFamily:"monospace", fontSize:8, cursor:"pointer", transition:"all .12s" }}
                       onMouseEnter={e => { e.currentTarget.style.borderColor="#b02020"; e.currentTarget.style.color="#ccc8be"; }}
                       onMouseLeave={e => { e.currentTarget.style.borderColor="#1c2330"; e.currentTarget.style.color="#4a5a6a"; }}>
