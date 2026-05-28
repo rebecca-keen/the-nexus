@@ -2413,6 +2413,124 @@ export const SOURCES = [
       {n:"Washington Post - PRISM program (Snowden disclosures 2013)",          u:"https://www.washingtonpost.com/investigations/us-intelligence-mining-data-from-nine-us-internet-companies-in-broad-secret-program/2013/06/06/3a0c0da8-cebf-11e2-8845-d970ccb04497_story.html"},
       {n:"New Yorker - Seymour Hersh on Abu Ghraib (May 2004)",                u:"https://www.newyorker.com/magazine/2004/05/10/torture-at-abu-ghraib"},
     ],
+  },,
+// PODCASTS - UFO/UAP TOP RANKED (APPLE + SPOTIFY VERIFIED LINKS)
+  {
+    label:"Podcasts - UFO & UAP Top Ranked (Apple & Spotify Verified)",
+    type:"podcast",
+    items:[
+      {n:"Mysterious Universe - Aaron Wright & Benjamin Grundy (Apple 7.7K reviews)",  u:"https://podcasts.apple.com/us/podcast/mysterious-universe/id329937558"},
+      {n:"Mysterious Universe - Spotify (#32 US charts)",                              u:"https://open.spotify.com/show/2jUIHJh8tpRxk6YLafhswz"},
+      {n:"That UFO Podcast - Spotify (#32 US charts)",                                 u:"https://open.spotify.com/show/1ZKd55G0F5RgvOafSZcOYv"},
+      {n:"Somewhere in the Skies - Ryan Sprague (Apple)",                              u:"https://podcasts.apple.com/us/podcast/somewhere-in-the-skies/id1227858637"},
+      {n:"Somewhere in the Skies - Spotify (#36 US charts)",                           u:"https://open.spotify.com/show/1g0MSTxiHo4KvtrUxhr6II"},
+      {n:"UAP Unidentified Alien Podcast - Stephen Diener (Apple 627 reviews)",        u:"https://podcasts.apple.com/us/podcast/uap-unidentified-alien-podcast/id1575781850"},
+      {n:"UAP Unidentified Alien Podcast - Spotify (#28 US charts)",                   u:"https://open.spotify.com/show/5hTisJljTVk2VnGvxgRFSJ"},
+      {n:"UFO Warning - breaking UAP news (Apple)",                                    u:"https://podcasts.apple.com/us/podcast/ufo-warning/id1484595516"},
+    ],
+  },
+
+  // PODCASTS - PARANORMAL TOP RANKED (APPLE + SPOTIFY VERIFIED)
+  {
+    label:"Podcasts - Paranormal Top Ranked (Apple & Spotify Verified)",
+    type:"podcast",
+    items:[
+      {n:"Last Podcast On The Left - #5 Spotify US (Apple 61K reviews)",               u:"https://podcasts.apple.com/us/podcast/last-podcast-on-the-left/id437299706"},
+      {n:"Last Podcast On The Left - Spotify (#5 US charts)",                          u:"https://open.spotify.com/show/3yZg2MCkf31pPXiG4nznrg"},
+      {n:"Spooked - KQED/Snap Judgment true supernatural (Apple #6 US)",               u:"https://podcasts.apple.com/us/podcast/spooked/id1279361017"},
+      {n:"Spooked - Spotify",                                                            u:"https://open.spotify.com/show/76571Rfl3m7PLJQZKQIGCT"},
+      {n:"Uncanny - BBC Danny Robins paranormal (Apple #7 GB, 3.8K reviews)",          u:"https://podcasts.apple.com/us/podcast/uncanny/id1589938734"},
+      {n:"Uncanny - BBC Spotify (#7 GB charts)",                                        u:"https://open.spotify.com/show/2j4VI8Zd5wvUqbK3mFFlAH"},
+      {n:"After Dark: Myths Misdeeds & Paranormal - History Hit (Apple)",               u:"https://podcasts.apple.com/fi/podcast/after-dark-myths-misdeeds-the-paranormal/id1705694900"},
+      {n:"After Dark - History Hit Spotify (#8 GB charts)",                             u:"https://open.spotify.com/show/2cWW36Ju9af7X3JqF7VmLT"},
+    ],
+  },
+
+  // PODCASTS - CONSPIRACY & TRUTH (APPLE + SPOTIFY VERIFIED)
+  {
+    label:"Podcasts - Conspiracy, Truth & Deep Research (Apple & Spotify Verified)",
+    type:"podcast",
+    items:[
+      {n:"Tin Foil Hat With Sam Tripoli - Spotify",                                     u:"https://open.spotify.com/show/6pLZn0WNSzWeSL7hP5cPiX"},
+      {n:"Corbett Report - Spotify",                                                    u:"https://open.spotify.com/show/3OhEHWkBDlVKFKqwAFCJzT"},
+    ],
+  },
+
+  // PODCASTS - ANCIENT HISTORY EXPANDED (APPLE + SPOTIFY VERIFIED)
+  {
+    label:"Podcasts - Ancient History & Alternative Research Expanded (Verified)",
+    type:"podcast",
+    items:[
+      {n:"Dan Snow History Hit - mainstream history (Apple)",                            u:"https://podcasts.apple.com/us/podcast/dan-snows-history-hit/id1057699502"},
+    ],
+  },
+
+  // PODCASTS - CONSCIOUSNESS, PSI & FORBIDDEN SCIENCE (VERIFIED)
+  {
+    label:"Podcasts - Consciousness, PSI & Forbidden Science (Apple & Spotify Verified)",
+    type:"podcast",
+    items:[
+      {n:"The Portal - Eric Weinstein (Apple)",                                          u:"https://podcasts.apple.com/us/podcast/the-portal/id1469999563"},
+      {n:"DarkHorse Podcast - Bret Weinstein (Apple)",                                  u:"https://podcasts.apple.com/us/podcast/darkhorse-podcast/id1471581521"},
+      {n:"Mindscape - Sean Carroll Apple",                                               u:"https://podcasts.apple.com/us/podcast/sean-carrolls-mindscape-science-philosophy-culture/id1406534739"},
+      {n:"Hidden Forces - Demetri Kofinas Apple",                                        u:"https://podcasts.apple.com/us/podcast/hidden-forces/id1205359334"},
+    ],
+  },
+
+  // PODCASTS - HEALTH, VACCINES & BIG PHARMA (VERIFIED)
+  {
+    label:"Podcasts - Health, Vaccines & Big Pharma Research (Apple & Spotify Verified)",
+    type:"podcast",
+    items:[
+      {n:"The Highwire with Del Bigtree - Apple Podcasts",                              u:"https://podcasts.apple.com/us/podcast/the-highwire-with-del-bigtree/id1454872369"},
+      {n:"The Highwire - Spotify",                                                       u:"https://open.spotify.com/show/6muAEYrJOFbKbH1uo1B3A6"},
+      {n:"Dr. Peter McCullough Podcast - Apple",                                         u:"https://podcasts.apple.com/us/podcast/courageous-discourse-with-peter-mccullough-john-leake/id1628942575"},
+      {n:"Dr. Robert Malone - Apple Podcasts",                                           u:"https://podcasts.apple.com/us/podcast/malone-institute-podcast/id1613645789"},
+      {n:"Brownstone Institute Podcast - Apple",                                         u:"https://podcasts.apple.com/us/podcast/brownstone-institute/id1603801915"},
+      {n:"CHD TV - Children Health Defense (Apple)",                                     u:"https://podcasts.apple.com/us/podcast/chd-tv/id1532939034"},
+      {n:"FLCCC Alliance Podcast - Apple",                                               u:"https://podcasts.apple.com/us/podcast/the-flccc-alliance-podcast/id1580476882"},
+      {n:"Epoch Health Podcast - Apple",                                                 u:"https://podcasts.apple.com/us/podcast/epoch-health/id1603826523"},
+    ],
+  },
+
+  // PODCASTS - MISSING PERSONS, CRYPTIDS & WILDERNESS (VERIFIED)
+  {
+    label:"Podcasts - Missing Persons, Cryptids & Wilderness Anomalies (Verified)",
+    type:"podcast",
+    items:[
+      {n:"Missing 411 Strange Disappearances (Apple)",                                  u:"https://podcasts.apple.com/us/podcast/missing-411-strange-disappearances-in-national-parks/id1618084297"},
+      {n:"Where Did the Road Go? - Seriah Azkath (Apple)",                              u:"https://podcasts.apple.com/us/podcast/where-did-the-road-go/id597316507"},
+      {n:"13 O Clock Podcast - paranormal true crime (Apple)",                          u:"https://podcasts.apple.com/us/podcast/13-o-clock/id968824259"},
+      {n:"Cryptonaut Podcast - cryptid research (Apple)",                               u:"https://podcasts.apple.com/us/podcast/cryptonaut-podcast/id1454813085"},
+      {n:"Bigfoot Society Podcast (Apple)",                                              u:"https://podcasts.apple.com/us/podcast/bigfoot-society/id1444738614"},
+      {n:"Dogman Encounters - Spotify",                                                  u:"https://open.spotify.com/show/5AZQkFntd2X7Rhi18UUv0j"},
+      {n:"Where Did the Road Go? - Spotify",                                            u:"https://open.spotify.com/show/5BCsNVjU3g5uOFjJPVHBDU"},
+    ],
+  },
+
+  // PODCASTS - FINANCE, DEEP STATE & GEOPOLITICS (VERIFIED)
+  {
+    label:"Podcasts - Finance, Deep State & Geopolitics (Apple & Spotify Verified)",
+    type:"podcast",
+    items:[
+      {n:"Solari Report - Catherine Austin Fitts (Apple)",                              u:"https://podcasts.apple.com/us/podcast/the-solari-report/id1151527809"},
+      {n:"We Study Billionaires - Investor's Podcast (Apple)",                          u:"https://podcasts.apple.com/us/podcast/we-study-billionaires-the-investor-s-podcast/id928933489"},
+      {n:"Peter Schiff Radio - gold & dollar collapse (Apple)",                        u:"https://podcasts.apple.com/us/podcast/the-peter-schiff-show-podcast/id404963432"},
+      {n:"Financial Rebellion - Catherine Austin Fitts Spotify",                       u:"https://open.spotify.com/show/3LHtFoQGYqXOeVNUoP0gH1"},
+      {n:"Making Sense - Sam Harris deep issues (Apple)",                               u:"https://podcasts.apple.com/us/podcast/making-sense-with-sam-harris/id733163012"},
+      {n:"Geopolitics & Empire - Hrvoje Moric (Apple)",                                u:"https://podcasts.apple.com/us/podcast/geopolitics-empire/id1453746093"},
+    ],
+  },
+
+  // PODCASTS - REMOTE VIEWING, PSI & METAPHYSICAL (VERIFIED)
+  {
+    label:"Podcasts - Remote Viewing, PSI & Metaphysical (Apple & Spotify Verified)",
+    type:"podcast",
+    items:[
+      {n:"The Unexplained - Howard Hughes (Apple)",                                     u:"https://podcasts.apple.com/us/podcast/the-unexplained-with-howard-hughes/id266621475"},
+      {n:"As You Wish Talk Radio - ECETI Ranch (Apple)",                               u:"https://podcasts.apple.com/us/podcast/as-you-wish-talk-radio/id1451534773"},
+      {n:"Curious Minds - science & unexplained phenomena (Apple)",                    u:"https://podcasts.apple.com/us/podcast/curious-minds-a-science-podcast/id988560546"},
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
