@@ -2542,6 +2542,25 @@ export const SOURCES = [
       {n:"White House - Official News & Executive Orders",                   u:"https://www.whitehouse.gov/news/"},
       {n:"White House - Presidential Actions Archive",                       u:"https://www.whitehouse.gov/presidential-actions/"},
     ],
+  },,
+// FATHER STEPHEN DE YOUNG - ORTHODOX THEOLOGY & BIBLICAL RESEARCH
+  {
+    label:"Fr. Stephen De Young - Orthodox Theology, Nephilim & Biblical Cosmology",
+    type:"research",
+    items:[
+      {n:"Fr. Stephen De Young - Ancient Faith contributor page (books, podcasts, blog)", u:"https://www.ancientfaith.com/contributors/stephen_deyoung"},
+      {n:"The Lord of Spirits Podcast - Fr. De Young & Fr. Damick (Apple Podcasts)",      u:"https://podcasts.apple.com/us/podcast/the-lord-of-spirits/id1531206254"},
+      {n:"The Lord of Spirits - Spotify",                                                  u:"https://open.spotify.com/show/4VB1bnzXJiXiUYHJHLV4g6"},
+      {n:"The Lord of Spirits - Official site (Ancient Faith Radio)",                     u:"https://www.ancientfaith.com/podcasts/lordofspirits"},
+      {n:"The Whole Counsel of God Podcast - Fr. De Young verse by verse (Apple)",        u:"https://podcasts.apple.com/us/podcast/the-whole-counsel-of-god/id1193439458"},
+      {n:"The Whole Counsel of God - Ancient Faith Radio (official)",                     u:"https://www.ancientfaith.com/podcasts/wholecounsel"},
+      {n:"The Whole Counsel Blog - Fr. Stephen De Young",                                  u:"https://blogs.ancientfaith.com/wholecounsel/"},
+      {n:"Fr. De Young on The Symbolic World Podcast - Ep 308 Biblical Symbolism (Apple)",u:"https://podcasts.apple.com/za/podcast/308-fr-stephen-de-young-biblical-symbolism/id1386867488?i=1000628854980"},
+      {n:"The Religion of the Apostles - Fr. De Young book (Ancient Faith Publishing)",   u:"https://store.ancientfaith.com/the-religion-of-the-apostles/"},
+      {n:"The Whole Counsel of God - Fr. De Young book (Ancient Faith Publishing)",       u:"https://store.ancientfaith.com/the-whole-counsel-of-god/"},
+      {n:"Tucker Carlson Show - Apple Podcasts (search Fr. Stephen De Young episodes)",   u:"https://podcasts.apple.com/us/podcast/the-tucker-carlson-show/id1752867424"},
+      {n:"Tucker Carlson Show - tuckercarlson.com (official site)",                       u:"https://tuckercarlson.com"},
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
