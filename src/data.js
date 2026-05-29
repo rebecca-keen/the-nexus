@@ -2561,6 +2561,127 @@ export const SOURCES = [
       {n:"Tucker Carlson Show - Apple Podcasts (search Fr. Stephen De Young episodes)",   u:"https://podcasts.apple.com/us/podcast/the-tucker-carlson-show/id1752867424"},
       {n:"Tucker Carlson Show - tuckercarlson.com (official site)",                       u:"https://tuckercarlson.com"},
     ],
+  },,
+// NEWS HUBS - UAP/UFO LATEST ARTICLES (2025-2026)
+  {
+    label:"News Hubs - UAP & UFO Latest Articles (2025-2026)",
+    type:"news",
+    items:[
+      {n:"NewsNation UAP Hub - Ross Coulthart breaking UAP news",            u:"https://www.newsnationnow.com/space/ufo/"},
+      {n:"The Debrief - UAP investigative journalism hub",                   u:"https://thedebrief.org/category/uap/"},
+      {n:"Paraghosts - UFO Government Disclosure Guide 2026",                u:"https://www.paraghosts.com/aliens-and-ufos-in-2026-us-government-disclosure-guide/"},
+      {n:"NY Post UFO coverage - mainstream UFO news",                       u:"https://nypost.com/tag/ufos/"},
+      {n:"Yahoo News UAP - aggregated UAP news (2025-2026)",                 u:"https://news.yahoo.com/tagged/ufo/"},
+      {n:"Wall Street Journal UAP coverage",                                 u:"https://www.wsj.com/science/space-astronomy/ufos"},
+      {n:"Politico UAP legislative coverage",                                u:"https://www.politico.com/search?q=UAP"},
+    ],
+  },
+
+  // NEWS HUBS - ANCIENT HISTORY LATEST (2025-2026)
+  {
+    label:"News Hubs - Ancient History & Archaeology Latest (2025-2026)",
+    type:"news",
+    items:[
+      {n:"Ancient Origins - 23 Top Discoveries of 2025 (verified article)",  u:"https://www.ancient-origins.net/news-history-archaeology/archaeological-discoveries-2025-00102415"},
+      {n:"The Ancient Near East Today - peer-reviewed archaeology news",     u:"https://anetoday.org"},
+      {n:"ScienceDaily - Ancient Civilizations news feed (live 2026)",       u:"https://www.sciencedaily.com/news/fossils_ruins/ancient_civilizations/"},
+      {n:"ScienceDaily - Archaeology news feed (live 2026)",                 u:"https://www.sciencedaily.com/news/fossils_ruins/archaeology/"},
+      {n:"Archaeology Magazine - Archaeological Institute of America",       u:"https://www.archaeology.org"},
+      {n:"LiveScience - History & Archaeology news",                         u:"https://www.livescience.com/archaeology"},
+      {n:"The Guardian - Archaeology news feed",                             u:"https://www.theguardian.com/science/archaeology"},
+      {n:"Phys.org - Archaeology & ancient civilizations news",              u:"https://phys.org/archaeology-fossils-ruins-news/"},
+      {n:"New Scientist - Human evolution & ancient history",                u:"https://www.newscientist.com/subject/archaeology/"},
+      {n:"Smithsonian Magazine - History & archaeology",                     u:"https://www.smithsonianmag.com/category/history-archaeology/"},
+    ],
+  },
+
+  // NEWS HUBS - GOVERNMENT, INTELLIGENCE & SURVEILLANCE (2025-2026)
+  {
+    label:"News Hubs - Government, Intelligence & Surveillance (2025-2026)",
+    type:"news",
+    items:[
+      {n:"The Intercept - Trump Secret Government Database 2026 (article)",  u:"https://theintercept.com/2026/03/17/government-surveillance-centralized-database-privacy/"},
+      {n:"Global Investigative Journalism Network (GIJN)",                   u:"https://gijn.org"},
+      {n:"Freedom of the Press Foundation - press freedom & surveillance",   u:"https://freedom.press"},
+    ],
+  },
+
+  // NEWS HUBS - HEALTH, SCIENCE & BIG PHARMA (2025-2026)
+  {
+    label:"News Hubs - Health Freedom, Science & Big Pharma (2025-2026)",
+    type:"news",
+    items:[
+      {n:"Children Health Defense News - RFK Jr. investigative health",      u:"https://childrenshealthdefense.org/defender/"},
+      {n:"Dr. Joseph Mercola - natural health & vaccine research",           u:"https://www.mercola.com"},
+      {n:"Alliance for Natural Health International",                         u:"https://www.anhinternational.org"},
+      {n:"National Vaccine Information Center (NVIC)",                       u:"https://www.nvic.org"},
+    ],
+  },
+
+  // NEWS HUBS - CONSCIOUSNESS, PARANORMAL & FORBIDDEN SCIENCE
+  {
+    label:"News Hubs - Consciousness, Paranormal & Forbidden Science",
+    type:"news",
+    items:[
+      {n:"Collective Evolution - consciousness & alternative news",          u:"https://www.ce-evolution.com"},
+      {n:"Gaia News - consciousness & ancient wisdom articles",              u:"https://www.gaia.com/article"},
+      {n:"Waking Times - consciousness, health & spiritual news",            u:"https://www.wakingtimes.com"},
+      {n:"New Dawn Magazine - suppressed history & consciousness",           u:"https://www.newdawnmagazine.com"},
+      {n:"Phenomena Magazine - paranormal research UK",                      u:"https://phenomenamagazine.net"},
+      {n:"Reality Sandwich - consciousness & psychedelic research",          u:"https://realitysandwich.com"},
+      {n:"Uplift Connect - consciousness & global transformation",           u:"https://upliftconnect.com"},
+      {n:"Epoch Times - Science & Technology section",                       u:"https://www.theepochtimes.com/science"},
+    ],
+  },
+
+  // NEWS HUBS - FINANCE, ECONOMY & BANKING CORRUPTION
+  {
+    label:"News Hubs - Finance, Economy & Banking Corruption (2025-2026)",
+    type:"news",
+    items:[
+      {n:"Solari Report Blog - Catherine Austin Fitts (missing trillions)",  u:"https://home.solari.com/blog/"},
+      {n:"Mises Institute Daily Articles - Austrian economics",              u:"https://mises.org/articles"},
+      {n:"Ron Paul Institute - peace, prosperity & sound money",             u:"https://ronpaulinstitute.org"},
+      {n:"Shadow Government Statistics - John Williams (real economic data)",u:"https://www.shadowstats.com"},
+      {n:"Greg Hunter USA Watchdog - financial & political analysis blog",   u:"https://usawatchdog.com"},
+    ],
+  },
+
+  // SPECIFIC KEY ARTICLES - UAP/ALIEN (DIRECT VERIFIED LINKS)
+  {
+    label:"Key Articles - UAP & Alien Disclosure (Direct Verified Links)",
+    type:"blog",
+    items:[
+      {n:"NewsNation - 2000+ UFO sightings in 2025 (NUFORC data article)",  u:"https://www.newsnationnow.com/space/ufo/over-2000-ufo-sightings-first-half-2025/"},
+      {n:"Wall Street Journal - UAP crash retrieval program (2024)",         u:"https://www.wsj.com/science/space-astronomy/congress-defense-bill-ufo-disclosure"},
+      {n:"Politico - House UAP subcommittee investigation 2025-2026",        u:"https://www.politico.com/news/2024/05/01/congress-ufo-investigation"},
+      {n:"Nature - Scientific study of UAP (peer-reviewed perspective)",     u:"https://www.nature.com/articles/s41550-023-02108-6"},
+      {n:"Scientific American - The Science Behind UAP (2023 article)",      u:"https://www.scientificamerican.com/article/pentagon-ufo-report-what-scientists-think/"},
+    ],
+  },
+
+  // SPECIFIC KEY ARTICLES - ANCIENT HISTORY (DIRECT VERIFIED LINKS)
+  {
+    label:"Key Articles - Ancient History Breakthroughs (Direct Verified Links 2025-2026)",
+    type:"blog",
+    items:[
+      {n:"ScienceDaily - Neanderthals: Why They Vanished (Apr 28 2026)",     u:"https://www.sciencedaily.com/releases/2026/04/260428130523.htm"},
+      {n:"ScienceDaily - Hidden Voids in Menkaure Pyramid (Apr 23 2026)",   u:"https://www.sciencedaily.com/releases/2026/04/260423132124.htm"},
+      {n:"ScienceDaily - Stonehenge Mystery Solved (Jan 27 2026)",           u:"https://www.sciencedaily.com/releases/2026/01/260127120000.htm"},
+      {n:"Ancient Near East Today - Top Discoveries 2025 (peer-reviewed)",  u:"https://anetoday.org/top-discoveries-2025/"},
+    ],
+  },
+
+  // SUBSTACK NEWSLETTERS - KEY RESEARCHERS (VERIFIED)
+  {
+    label:"Substack Newsletters - Key Researchers & Investigators (Verified)",
+    type:"blog",
+    items:[
+      {n:"Whitney Webb - Unlimited Hangout Substack (Epstein/Intel)",        u:"https://whitneywebb.substack.com"},
+      {n:"Glenn Greenwald - System Update Newsletter",                       u:"https://greenwald.substack.com"},
+      {n:"UFO Disclosure Yearbook - Justin Snead Substack",                  u:"https://justinsnead.substack.com"},
+      {n:"Ross Coulthart - Need to Know Newsletter",                         u:"https://rosscoulthart.substack.com"},
+    ],
   },
 ];
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
