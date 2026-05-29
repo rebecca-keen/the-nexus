@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { BrowserRouter, Routes, Route, useNavigate, useParams, useLocation } from 'react-router-dom';
 import { CSS, VBadge, Sidebar, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
@@ -43,6 +44,20 @@ const CT_LABELS = { research:"🔬 Research", document:"📄 Document", sighting
 
 const toSlug = str => (str || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
 
+// Convert relative time strings to readable dates for display
+const fmtDate = (timeStr) => {
+  if (!timeStr) return '';
+  // If it looks like a relative time ("6h ago", "2d ago") convert to approx date
+  const hoursMatch = timeStr.match(/^(\d+)h ago/);
+  const daysMatch  = timeStr.match(/^(\d+)d? ago/);
+  if (hoursMatch || daysMatch) {
+    const hrs = hoursMatch ? parseInt(hoursMatch[1]) : parseInt(daysMatch[1]) * 24;
+    const d = new Date(Date.now() - hrs * 3600000);
+    return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+  }
+  return timeStr;
+};
+
 function App() {
   // ── User state ─────────────────────────────────────────────────────────────
   const [user, setUser]         = useState({ plan:"free", isAdmin:false });
@@ -86,6 +101,8 @@ function App() {
 
   // ── Modals ──────────────────────────────────────────────────────────────────
   const [showPrivacy, setShowPrivacy] = useState(false);
+  const [focusMode, setFocusMode] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   // ── Refs ────────────────────────────────────────────────────────────────────
   const imgRef = useRef(null);
@@ -330,14 +347,31 @@ function App() {
               <div style={{ width:18, height:18, background:"#b02020", clipPath:"polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)" }} />
               <span className="bb" style={{ fontSize:16, letterSpacing:3, color:"#eeeae0" }}>THE NEXUS</span>
             </div>
-            <div style={{ display:"flex", alignItems:"center", overflowX:"auto", gap:0 }}>
-              {[["home","Home"],["feed","Records"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
-                <button key={v} onClick={() => { setView(v); setOpenStory(null); window.history.pushState({}, '', v==="home" ? '/' : '/'+v); if(v==="home") setFilters({ topic:'All Topics', region:'All Regions', srcType:'All Sources', verdict:'All', sortBy:'Latest', search:'' }); document.title = 'The Nexus - Independent Research Platform'; if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
+            {/* Desktop nav */}
+            <div style={{ display:"flex", alignItems:"center", overflowX:"auto", gap:0 }} className="desktop-nav">
+              {[["home","Home"],["feed","Records"],["saved","Saved"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
+                <button key={v} onClick={() => { setView(v); setOpenStory(null); setMobileMenu(false); window.history.pushState({}, '', v==="home" ? '/' : '/'+v); if(v==="home") setFilters({ topic:'All Topics', region:'All Regions', srcType:'All Sources', verdict:'All', sortBy:'Latest', search:'' }); document.title = 'The Nexus - Independent Research Platform'; if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
                   style={{ background:"none", border:"none", borderBottom:view===v?"2px solid #b02020":"2px solid transparent", color:view===v?"#eeeae0":"#3a4a5a", padding:"0 9px", height:48, fontFamily:"monospace", fontSize:9, letterSpacing:.5, textTransform:"uppercase", cursor:"pointer", whiteSpace:"nowrap", flexShrink:0 }}>
                   {l}
                 </button>
               ))}
             </div>
+            {/* Mobile dropdown menu */}
+            {mobileMenu && (
+              <div style={{ position:"fixed", top:56, left:0, right:0, background:"#0b0d14", borderBottom:"1px solid #1c2330", zIndex:1000, padding:"8px 0" }}>
+                {[["home","Home"],["feed","Records"],["saved","Saved"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"]].map(([v,l]) => (
+                  <button key={v} onClick={() => { setView(v); setOpenStory(null); setMobileMenu(false); window.history.pushState({},'',' /'+v); if(v==="home") setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
+                    style={{ display:"block", width:"100%", background:view===v?"#1c2330":"none", border:"none", borderLeft:view===v?"3px solid #b02020":"3px solid transparent", color:view===v?"#eeeae0":"#5a6a7a", padding:"12px 20px", fontFamily:"monospace", fontSize:11, letterSpacing:1, textTransform:"uppercase", cursor:"pointer", textAlign:"left" }}>
+                    {l}
+                  </button>
+                ))}
+              </div>
+            )}
+            {/* Mobile hamburger */}
+            <button onClick={() => setMobileMenu(m => !m)} className="mobile-hamburger"
+              style={{ display:"none", background:"none", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 10px", cursor:"pointer", fontFamily:"monospace", fontSize:14 }}>
+              {mobileMenu ? "x" : "="}
+            </button>
             <div style={{ display:"flex", alignItems:"center", gap:6, flexShrink:0 }}>
               {isAdmin && <span style={{ fontSize:8, color:"#e0c060", background:"#1e1808", border:"1px solid #4a3a10", padding:"2px 7px", fontFamily:"monospace" }}>ADMIN</span>}
               {isAdmin && <button onClick={() => { clearSession(); setUser({ plan:"free", isAdmin:false }); setView("home"); }} style={{ background:"none", border:"1px solid #1c2330", color:"#2a3a4a", padding:"3px 8px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Exit</button>}
@@ -361,6 +395,10 @@ function App() {
               <button onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}
                 style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
                 Reset & Browse All
+              </button>
+              <button onClick={() => setFocusMode(f => !f)}
+                style={{ background:focusMode?"#1a2030":"transparent", border:`1px solid ${focusMode?"#3a4a6a":"#1c2330"}`, color:focusMode?"#8a9aaa":"#3a4a5a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px", marginLeft:"auto" }}>
+                {focusMode ? "⊡ Exit Focus" : "⊠ Focus Mode"}
               </button>
             </div>
           )}
@@ -476,7 +514,7 @@ function App() {
           {/* ── RECORDS (FEED) ── */}
           {view === "feed" && (
             <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+              {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                   <div>
@@ -514,13 +552,13 @@ function App() {
                           ? <a href={openStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize:10, color:"#5a9ac8", fontFamily:"monospace" }}>{openStory.source} ↗</a>
                           : <span style={{ fontSize:10, color:"#5a7a9a", fontFamily:"monospace" }}>{openStory.source}</span>
                         }
-                        <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{openStory.time} · {openStory.region}</span>
+                        <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{fmtDate(openStory.time)} · {openStory.region}</span>
                         <VBadge verdict={verdicts[openStory.id] || autoVerdict(openStory.credible)} />
                       </div>
                       <div className="bk" style={{ fontSize:22, color:"#eeeae0", lineHeight:1.25, marginBottom:12 }}>{openStory.title}</div>
                       <div className="bk" style={{ fontSize:15, fontWeight:300, color:"#7a8a9a", lineHeight:1.8, marginBottom:18, fontStyle:"italic" }}>{openStory.summary}</div>
                       <div style={{ display:"flex", gap:5, flexWrap:"wrap", marginBottom:18 }}>
-                        {openStory.tags?.map(t => <span key={t} style={{ fontSize:8, background:"#10131e", border:"1px solid #1c2330", color:"#3a4a5a", padding:"1px 7px", fontFamily:"monospace" }}>#{t}</span>)}
+                        {openStory.tags?.map(t => <span key={t} onClick={() => { setFilters(f => ({...f, search:t})); setOpenStory(null); window.history.pushState({},""," /records?q="+t); }} style={{ fontSize:8, background:"#10131e", border:"1px solid #1c2330", color:"#3a4a5a", padding:"1px 7px", fontFamily:"monospace", cursor:"pointer" }} title={"Search: "+t}>#{t}</span>)}
                       </div>
 
                       {/* Credibility */}
@@ -639,7 +677,7 @@ function App() {
                             <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", marginBottom:4 }}>
                               <span style={{ background:t.bg, color:t.text, padding:"1px 5px", fontSize:7, fontFamily:"monospace", letterSpacing:.4 }}>{t.label}</span>
                               <span style={{ fontSize:9, color:"#3a5a7a", fontFamily:"monospace" }}>{s.source}</span>
-                              <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{s.time} · {s.region}</span>
+                              <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{fmtDate(s.time)} · {s.region}</span>
                               <VBadge verdict={verdicts[s.id] || autoVerdict(s.credible)} />
                             </div>
                             <div className="bk" style={{ fontSize:14, color:"#d8d0c4", lineHeight:1.3, marginBottom:4 }}>{s.title}</div>
@@ -648,7 +686,7 @@ function App() {
                               <div style={{ height:"100%", width:`${s.credible}%`, background:"linear-gradient(90deg,#2a6a2a,#40c070)" }} />
                             </div>
                             <div style={{ display:"flex", gap:8 }}>
-                              {s.tags?.map(tg => <span key={tg} style={{ fontSize:7, color:"#1c2a38", fontFamily:"monospace" }}>#{tg}</span>)}
+                              {s.tags?.map(tg => <span key={tg} onClick={e => { e.stopPropagation(); setFilters(f => ({...f, search:tg})); }} style={{ fontSize:7, color:"#1c2a38", fontFamily:"monospace", cursor:"pointer" }} title={"Search: "+tg}>#{tg}</span>)}
 
                             </div>
                           </div>
@@ -701,10 +739,57 @@ function App() {
             </div>
           )}
 
+
+          {/* SAVED RECORDS */}
+          {view === "saved" && (
+            <div style={{ display:"flex", gap:0 }}>
+              <Sidebar {...sidebarProps} />
+              <div style={{ flex:1 }}>
+                <div style={{ marginBottom:14 }}>
+                  <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>SAVED RECORDS</div>
+                  <div style={{ fontSize:8, color:"#1c2a38", marginTop:3, fontFamily:"monospace" }}>
+                    {Object.keys(saved).filter(id => saved[id]).length} saved · Session only · Clears on page refresh
+                  </div>
+                </div>
+                {Object.keys(saved).filter(id => saved[id]).length === 0 ? (
+                  <div style={{ textAlign:"center", padding:"60px 0", color:"#2a3a4a", fontFamily:"monospace" }}>
+                    <div style={{ fontSize:24, marginBottom:12, opacity:.3 }}>*</div>
+                    <div style={{ fontSize:11 }}>No saved records yet</div>
+                    <div style={{ fontSize:9, marginTop:6, color:"#1c2a38" }}>Click "Save" on any record to bookmark it here</div>
+                    <button onClick={() => setView("feed")} style={{ marginTop:16, background:"#b02020", border:"none", color:"#fff", padding:"8px 20px", fontFamily:"monospace", fontSize:9, cursor:"pointer", letterSpacing:1 }}>Browse Records</button>
+                  </div>
+                ) : (
+                  <>
+                    <div style={{ marginBottom:8, textAlign:"right" }}>
+                      <button onClick={() => setSaved({})} style={{ background:"transparent", border:"1px solid #1c2330", color:"#3a4a5a", padding:"4px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Clear All</button>
+                    </div>
+                    {stories.filter(s => saved[s.id]).map(s => {
+                      const t = getType(s.type);
+                      return (
+                        <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); }} className="card fade"
+                          style={{ padding:"14px 16px", marginBottom:8, cursor:"pointer" }}>
+                          <div style={{ display:"flex", gap:6, marginBottom:6, alignItems:"center" }}>
+                            <span style={{ background:t.bg, color:t.text, padding:"1px 6px", fontFamily:"monospace", fontSize:7 }}>{t.label}</span>
+                            <span style={{ fontSize:8, color:"#5a9ac8", fontFamily:"monospace" }}>{s.source}</span>
+                            <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace", marginLeft:"auto" }}>{s.topic}</span>
+                          </div>
+                          <div style={{ fontSize:14, color:"#eeeae0", lineHeight:1.4, marginBottom:6 }}>{s.title}</div>
+                          <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
+                            {s.tags?.slice(0,4).map(tg => <span key={tg} style={{ fontSize:7, color:"#1c2a38", fontFamily:"monospace" }}>#{tg}</span>)}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* ── COMMUNITY ── */}
           {view === "community" && (
             <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+              {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:14, flexWrap:"wrap", gap:8 }}>
                   <div>
@@ -941,7 +1026,7 @@ function App() {
           {/* ── REDDIT ── */}
           {view === "reddit" && (
             <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+              {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <>
                     <div style={{ display:"flex", gap:5, flexWrap:"wrap", marginBottom:14 }}>
@@ -1003,7 +1088,7 @@ function App() {
           {/* ── LIBRARY ── */}
           {view === "library" && (
             <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+              {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:14 }}>
                   <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>MEDIA & REFERENCE LIBRARY</div>
@@ -1087,7 +1172,7 @@ function App() {
           {/* ── AI ANALYSIS ── */}
           {view === "ai" && (
             <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+              {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:12 }}>
                   <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>ANALYSIS ENGINE</div>
@@ -1115,7 +1200,7 @@ function App() {
           {/* ── SOURCES ── */}
           {view === "sources" && (
             <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+              {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:12 }}>
                   <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>SOURCE DIRECTORY</div>
@@ -1215,7 +1300,7 @@ function App() {
           {/* ── ADMIN ── */}
           {view === "admin" && isAdmin && (
             <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+              {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ background:"#1e1808", border:"1px solid #4a3a10", padding:"12px 16px", marginBottom:16, display:"flex", alignItems:"center", gap:10 }}>
                   <span style={{ fontSize:18 }}>⚙️</span>
@@ -1328,6 +1413,7 @@ function App() {
 
         {/* Modals */}
         {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
+        <Analytics />
       </div>
     </>
   );

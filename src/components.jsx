@@ -20,12 +20,19 @@ a { text-decoration: none; color: inherit; }
 @keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
 
 /* Mobile responsive */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .sidebar-hide { display: none !important; }
   .grid-2 { grid-template-columns: 1fr !important; }
   .grid-4 { grid-template-columns: 1fr 1fr !important; }
   .feed-layout { flex-direction: column !important; }
+  .desktop-nav { display: none !important; }
+  .mobile-hamburger { display: flex !important; }
 }
+@media (min-width: 769px) {
+  .mobile-hamburger { display: none !important; }
+}
+/* Focus mode */
+body.focus-mode .sidebar { display: none !important; }
 `;
 
 export function VBadge({ verdict }) {
