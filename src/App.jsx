@@ -243,7 +243,7 @@ function App() {
     // Region filter - exact match
     if (region !== "All Regions" && s.region?.trim() !== region.trim()) return false;
     // Record type filter (News / Research / Archive / Podcast)
-    if (srcType !== "All Sources" && srcType !== "All") {
+    if (srcType && srcType !== "All Sources" && srcType !== "All Types" && srcType !== "All") {
       const typeMap = { "News":"news", "Research":"research", "Archive":"archive", "Podcast":"podcast", "Blog":"blog" };
       const mapped = typeMap[srcType];
       if (mapped && s.type !== mapped) return false;
@@ -267,7 +267,10 @@ function App() {
     if (sortBy === "Most Upvoted")  return b.upvotes - a.upvotes;
     if (sortBy === "Most Credible") return b.credible - a.credible;
     if (sortBy === "Least Credible") return a.credible - b.credible;
-    return 0;
+    // "Latest" = reverse order of stories array (highest ID = newest)
+    const idA = parseInt(a.id.replace(/\D/g,'')) || 0;
+    const idB = parseInt(b.id.replace(/\D/g,'')) || 0;
+    return idB - idA;
   });
 
   const visibleStories = filteredStories;
