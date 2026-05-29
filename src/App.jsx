@@ -95,14 +95,45 @@ function App() {
   const [toast, setToast] = useState(null);
   const toast2 = msg => { setToast(msg); setTimeout(() => setToast(null), 2200); };
 
-  // Update URL + page title when a story opens (SEO only - not on close)
+  // Update URL, title, and Open Graph tags when a story opens (SEO)
   useEffect(() => {
     if (openStory) {
       const slug = toSlug(openStory.title);
       window.history.pushState({}, '', '/records/' + slug);
       document.title = openStory.title + ' - The Nexus';
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute('content', openStory.summary ? openStory.summary.slice(0, 160) : openStory.title);
+      const desc = openStory.summary ? openStory.summary.slice(0, 160) : openStory.title;
+      // Meta description
+      let meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute('content', desc);
+      // Open Graph tags
+      const setOG = (prop, val) => {
+        let el = document.querySelector(`meta[property="${prop}"]`);
+        if (!el) { el = document.createElement('meta'); el.setAttribute('property', prop); document.head.appendChild(el); }
+        el.setAttribute('content', val);
+      };
+      setOG('og:title', openStory.title + ' - The Nexus');
+      setOG('og:description', desc);
+      setOG('og:url', 'https://nexusverse.app/records/' + slug);
+      setOG('og:type', 'article');
+      setOG('og:site_name', 'The Nexus');
+      setOG('og:image', 'https://nexusverse.app/og-image.png');
+      // Twitter card
+      const setTW = (name, val) => {
+        let el = document.querySelector(`meta[name="${name}"]`);
+        if (!el) { el = document.createElement('meta'); el.setAttribute('name', name); document.head.appendChild(el); }
+        el.setAttribute('content', val);
+      };
+      setTW('twitter:card', 'summary_large_image');
+      setTW('twitter:title', openStory.title + ' - The Nexus');
+      setTW('twitter:description', desc);
+      setTW('twitter:image', 'https://nexusverse.app/og-image.png');
+    } else {
+      // Reset to defaults when no story open
+      document.title = 'The Nexus - Independent Research Platform';
+      const setOG = (prop, val) => { const el = document.querySelector(`meta[property="${prop}"]`); if (el) el.setAttribute('content', val); };
+      setOG('og:title', 'The Nexus - Independent Research Platform');
+      setOG('og:description', 'Investigative journalism, declassified records, whistleblower testimony, and disputed history.');
+      setOG('og:url', 'https://nexusverse.app/');
     }
   }, [openStory]);
 
@@ -626,6 +657,34 @@ function App() {
                     })}
 
 
+
+
+                      {/* Related Records */}
+                      {openStory && (() => {
+                        const related = stories
+                          .filter(s => s.id !== openStory.id && (
+                            s.topic === openStory.topic ||
+                            openStory.tags?.some(t => s.tags?.includes(t))
+                          ))
+                          .slice(0, 4);
+                        return related.length > 0 ? (
+                          <div style={{ borderTop:"1px solid #1c2330", marginTop:20, paddingTop:16 }}>
+                            <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>Related Records</div>
+                            <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))", gap:6 }}>
+                              {related.map(r => (
+                                <div key={r.id} onClick={() => { setOpenStory(r); window.scrollTo(0,0); }}
+                                  className="card" style={{ padding:"10px 14px", cursor:"pointer" }}>
+                                  <div style={{ display:"flex", gap:5, marginBottom:4 }}>
+                                    <span style={{ background:getType(r.type).bg, color:getType(r.type).text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{getType(r.type).label}</span>
+                                    <span style={{ fontSize:7, color:"#2a3a4a", fontFamily:"monospace" }}>{r.topic}</span>
+                                  </div>
+                                  <div style={{ fontSize:11, color:"#8a9aaa", fontFamily:"monospace", lineHeight:1.3 }}>{r.title.slice(0,90)}{r.title.length>90?"...":""}</div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null;
+                      })()}
 
                     {/* End of records */}
                     <div style={{ padding:"18px 0", textAlign:"center", borderTop:"1px solid #0e1018", marginTop:8 }}>
