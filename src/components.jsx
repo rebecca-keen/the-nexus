@@ -59,9 +59,11 @@ export function Sidebar({ filters, setFilters, isAdmin, onFetch, visibleTopics, 
       <select value={region} onChange={e => set("region", e.target.value)} style={sel}>
         {regions.map(r => <option key={r}>{r}</option>)}
       </select>
+      <div style={{ fontSize:7, color:"#2a3a4a", fontFamily:"monospace", marginBottom:2, marginTop:2 }}>Record Type</div>
       <select value={srcType} onChange={e => set("srcType", e.target.value)} style={sel}>
-        {["All Sources","News","Blogs","Archives","Research","Podcasts","Community"].map(s => <option key={s}>{s}</option>)}
+        {["All Sources","News","Research","Archive","Podcast","Blog"].map(s => <option key={s}>{s}</option>)}
       </select>
+      <div style={{ fontSize:7, color:"#2a3a4a", fontFamily:"monospace", marginBottom:2, marginTop:2 }}>Verdict</div>
       <select value={verdict} onChange={e => set("verdict", e.target.value)} style={sel}>
         {["All","Confirmed","Likely","Contested","Unverified","Refuted"].map(v => <option key={v}>{v}</option>)}
       </select>

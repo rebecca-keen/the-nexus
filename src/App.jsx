@@ -238,26 +238,35 @@ function App() {
   // ── Filtered stories ──────────────────────────────────────────────────────────
   const { topic, region, srcType, sortBy, search, verdict } = filters;
   const filteredStories = stories.filter(s => {
-    // Topic / region / source / verdict / search filters apply to everyone
+    // Topic filter
     if (topic !== "All Topics" && s.topic?.trim() !== topic.trim()) return false;
+    // Region filter - exact match
     if (region !== "All Regions" && s.region?.trim() !== region.trim()) return false;
-    if (srcType !== "All Sources") {
-      const m = { News:"news", Blogs:"blog", Archives:"archive", Research:"research", Podcasts:"podcast", Community:"user" };
-      if (m[srcType] && s.type !== m[srcType]) return false;
+    // Record type filter (News / Research / Archive / Podcast)
+    if (srcType !== "All Sources" && srcType !== "All") {
+      const typeMap = { "News":"news", "Research":"research", "Archive":"archive", "Podcast":"podcast", "Blog":"blog" };
+      const mapped = typeMap[srcType];
+      if (mapped && s.type !== mapped) return false;
     }
+    // Verdict filter
     if (verdict !== "All") {
       const ev = verdicts[s.id] || autoVerdict(s.credible);
       if (ev !== verdict.toLowerCase()) return false;
     }
+    // Search filter - title, summary, tags, source name
     if (search) {
       const q = search.toLowerCase();
-      if (!s.title.toLowerCase().includes(q) && !s.summary.toLowerCase().includes(q) && !s.tags?.some(t => t.toLowerCase().includes(q))) return false;
+      if (!s.title?.toLowerCase().includes(q) &&
+          !s.summary?.toLowerCase().includes(q) &&
+          !s.tags?.some(t => t.toLowerCase().includes(q)) &&
+          !s.source?.toLowerCase().includes(q) &&
+          !s.topic?.toLowerCase().includes(q)) return false;
     }
     return true;
   }).sort((a, b) => {
     if (sortBy === "Most Upvoted")  return b.upvotes - a.upvotes;
-    if (sortBy === "Most Discussed") return b.comments - a.comments;
     if (sortBy === "Most Credible") return b.credible - a.credible;
+    if (sortBy === "Least Credible") return a.credible - b.credible;
     return 0;
   });
 
