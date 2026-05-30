@@ -650,6 +650,18 @@ function App() {
                 </div>
               </div>
 
+              {/* Support Banner */}
+              <div style={{ background:"linear-gradient(135deg,#0f1218,#1a1008)", border:"1px solid #3a2a0a", borderRadius:4, padding:"18px 22px", marginBottom:32, display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:12 }}>
+                <div>
+                  <div style={{ fontSize:11, color:"#c08030", fontFamily:"monospace", letterSpacing:1, marginBottom:4 }}>THE NEXUS IS FREE · NO ADS · NO PAYWALL</div>
+                  <div style={{ fontSize:13, color:"#8a7a5a", lineHeight:1.6 }}>If this archive has been useful, consider buying a coffee to keep it running.</div>
+                </div>
+                <a href="https://buymeacoffee.com/thenexus" target="_blank" rel="noopener noreferrer"
+                  style={{ display:"inline-flex", alignItems:"center", gap:8, background:"#FFDD00", color:"#000", padding:"10px 20px", fontFamily:"monospace", fontSize:11, fontWeight:700, textDecoration:"none", borderRadius:4, letterSpacing:.5, whiteSpace:"nowrap", flexShrink:0 }}>
+                  ☕ Buy Me a Coffee
+                </a>
+              </div>
+
               {/* Browse by Topic */}
               <div>
                 <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
@@ -1320,12 +1332,17 @@ function App() {
         {/* ── FOOTER ── */}
         <div style={{ borderTop:"1px solid #1c2330", marginTop:32, padding:"12px 20px", background:"#07080c" }}>
           <div style={{ maxWidth:1280, margin:"0 auto", display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:6, alignItems:"center" }}>
-            <div style={{ display:"flex", gap:12, alignItems:"center" }}>
+            <div style={{ display:"flex", gap:12, alignItems:"center", flexWrap:"wrap" }}>
               <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>© 2025 The Nexus · thenexusapp.com</span>
               <span style={{ color:"#1c2330", fontSize:8 }}>·</span>
               <button onClick={() => setShowPrivacy(true)} style={{ background:"none", border:"none", color:"#3a4a5a", fontFamily:"monospace", fontSize:8, cursor:"pointer", textDecoration:"underline", padding:0 }}>Privacy Policy</button>
               <span style={{ color:"#1c2330", fontSize:8 }}>·</span>
               <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>For independent research only · Adults 18+</span>
+              <span style={{ color:"#1c2330", fontSize:8 }}>·</span>
+              <a href="https://buymeacoffee.com/thenexus" target="_blank" rel="noopener noreferrer"
+                style={{ display:"inline-flex", alignItems:"center", gap:5, background:"#FFDD00", color:"#000", padding:"4px 10px", fontFamily:"monospace", fontSize:8, fontWeight:700, textDecoration:"none", borderRadius:3, letterSpacing:.5 }}>
+                ☕ Support The Nexus
+              </a>
             </div>
             <div style={{ display:"flex", gap:10, alignItems:"center" }}>
               {/* Hidden admin — double-click the dot */}
