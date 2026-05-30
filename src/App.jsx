@@ -379,26 +379,22 @@ function App() {
           </div>
         </div>
 
-        <div style={{ maxWidth:1100, margin:"0 auto", padding:"16px 12px" }}>
+        <div className="nexus-shell">
 
           {/* GLOBAL BACK BAR - shows on any view when a story is open */}
           {openStory && (
-            <div style={{ display:"flex", gap:8, marginBottom:14, flexWrap:"wrap", padding:"8px 0", borderBottom:"1px solid #1c2330" }}>
-              <button onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }}
-                style={{ background:"#0b0d14", border:"1px solid #2a3a4a", color:"#8a9aaa", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
-                &larr; Back to Records
+            <div className="back-bar" style={{ marginBottom:0 }}>
+              <button className="back-btn back-btn-primary" onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus"; }}>
+                ← Records
               </button>
-              <button onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); document.title = "The Nexus"; }}
-                style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
+              <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); }}>
                 Home
               </button>
-              <button onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}
-                style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
-                Reset & Browse All
+              <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}>
+                Reset
               </button>
-              <button onClick={() => setFocusMode(f => !f)}
-                style={{ background:focusMode?"#1a2030":"transparent", border:`1px solid ${focusMode?"#3a4a6a":"#1c2330"}`, color:focusMode?"#8a9aaa":"#3a4a5a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px", marginLeft:"auto" }}>
-                {focusMode ? "⊡ Exit Focus" : "⊠ Focus Mode"}
+              <button className="back-btn back-btn-ghost" onClick={() => setFocusMode(f => !f)} style={{ marginLeft:"auto", color:focusMode?"#8a9aaa":"#3a4a5a", borderColor:focusMode?"#3a4a6a":"#1c2330" }}>
+                {focusMode ? "⊡ Exit Focus" : "⊠ Focus"}
               </button>
             </div>
           )}
@@ -513,13 +509,13 @@ function App() {
 
           {/* ── RECORDS (FEED) ── */}
           {view === "feed" && (
-            <div style={{ display:"flex", gap:0 }}>
-              {!focusMode && <Sidebar {...sidebarProps} />}
-              <div style={{ flex:1 }}>
+            <div className="feed-wrap">
+              {!focusMode && <div className="nexus-sidebar"><Sidebar {...sidebarProps} /></div>}
+              <div className={focusMode ? "feed-main-full" : "feed-main"}>
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
                   <div>
-                    <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>OPEN RECORDS</div>
-                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>
+                    <div className="sec-head">OPEN RECORDS</div>
+                    <div className="sec-sub">
                       {visibleStories.length} of {stories.length} records
                       {filters.topic !== "All Topics" && <span style={{ color:"#b02020", marginLeft:6 }}>· {filters.topic}</span>}
                     </div>
@@ -530,21 +526,18 @@ function App() {
                 {/* Story detail */}
                 {openStory && (
                   <div className="fade">
-                    <div style={{ display:"flex", gap:8, marginBottom:14, flexWrap:"wrap" }}>
-                      <button onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }}
-                        style={{ background:"#0b0d14", border:"1px solid #2a3a4a", color:"#8a9aaa", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
-                        ← Back to Records
+                    <div className="back-bar">
+                      <button className="back-btn back-btn-primary" onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus"; }}>
+                        ← Records
                       </button>
-                      <button onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); document.title = "The Nexus - Independent Research Platform"; }}
-                        style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
+                      <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); }}>
                         Home
                       </button>
-                      <button onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }}
-                        style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"6px 14px" }}>
-                        Reset Filters
+                      <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}>
+                        Reset
                       </button>
                     </div>
-                    <div className="card" style={{ padding:22 }}>
+                    <div className="rec-detail">
                       {/* Header */}
                       <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", marginBottom:10 }}>
                         <span style={{ background:getType(openStory.type).bg, color:getType(openStory.type).text, padding:"1px 6px", fontFamily:"monospace", fontSize:8, letterSpacing:.5 }}>{getType(openStory.type).label}</span>
@@ -555,8 +548,8 @@ function App() {
                         <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{fmtDate(openStory.time)} · {openStory.region}</span>
                         <VBadge verdict={verdicts[openStory.id] || autoVerdict(openStory.credible)} />
                       </div>
-                      <div className="bk" style={{ fontSize:22, color:"#eeeae0", lineHeight:1.25, marginBottom:12 }}>{openStory.title}</div>
-                      <div className="bk" style={{ fontSize:15, fontWeight:300, color:"#7a8a9a", lineHeight:1.8, marginBottom:18, fontStyle:"italic" }}>{openStory.summary}</div>
+                      <h1 className="rec-detail-title">{openStory.title}</h1>
+                      <p className="rec-detail-summary">{openStory.summary}</p>
                       <div style={{ display:"flex", gap:5, flexWrap:"wrap", marginBottom:18 }}>
                         {openStory.tags?.map(t => <span key={t} onClick={() => { setFilters(f => ({...f, search:t})); setOpenStory(null); window.history.pushState({},""," /records?q="+t); }} style={{ fontSize:8, background:"#10131e", border:"1px solid #1c2330", color:"#3a4a5a", padding:"1px 7px", fontFamily:"monospace", cursor:"pointer" }} title={"Search: "+t}>#{t}</span>)}
                       </div>
@@ -667,27 +660,24 @@ function App() {
                     {visibleStories.map(s => {
                       const t = getType(s.type); const v = votes[s.id];
                       return (
-                        <div key={s.id} className="card fade" style={{ display:"flex", padding:"11px 13px 11px 9px", marginBottom:3, cursor:"pointer" }} onClick={() => setOpenStory(s)}>
-                          <div style={{ width:38, flexShrink:0, display:"flex", flexDirection:"column", alignItems:"center", gap:3, paddingTop:2 }} onClick={e => e.stopPropagation()}>
-                            <button style={{ background:v==="up"?"#0a2010":"none", border:`1px solid ${v==="up"?"#2a6a2a":"#1c2330"}`, color:v==="up"?"#40c070":"#2a3a4a", width:26, height:22, cursor:"pointer", fontSize:10, display:"flex", alignItems:"center", justifyContent:"center" }} onClick={() => { if (!v) setVotes(p => ({ ...p, [s.id]:"up" })); }}>▲</button>
-                            <span style={{ fontSize:11, color:"#4a5a6a", fontFamily:"monospace" }}>{fmtNum(s.upvotes)}</span>
-                            <button style={{ background:v==="dn"?"#200a0a":"none", border:`1px solid ${v==="dn"?"#6a2a2a":"#1c2330"}`, color:v==="dn"?"#c04040":"#2a3a4a", width:26, height:22, cursor:"pointer", fontSize:10, display:"flex", alignItems:"center", justifyContent:"center" }} onClick={() => { if (!v) setVotes(p => ({ ...p, [s.id]:"dn" })); }}>▼</button>
+                        <div key={s.id} className="rec-card fade" onClick={() => setOpenStory(s)}>
+                          <div className="rec-votes" onClick={e => e.stopPropagation()}>
+                            <button className="rec-vote-btn" style={{ background:v==="up"?"#0a2010":"transparent", border:`1px solid ${v==="up"?"#2a6a2a":"#1c2330"}`, color:v==="up"?"#40c070":"#2a3a4a" }} onClick={() => { if (!v) setVotes(p => ({ ...p, [s.id]:"up" })) }}>▲</button>
+                            <span className="rec-vote-count">{fmtNum(s.upvotes)}</span>
+                            <button className="rec-vote-btn" style={{ background:v==="dn"?"#200a0a":"transparent", border:`1px solid ${v==="dn"?"#6a2a2a":"#1c2330"}`, color:v==="dn"?"#c04040":"#2a3a4a" }} onClick={() => { if (!v) setVotes(p => ({ ...p, [s.id]:"dn" })) }}>▼</button>
                           </div>
-                          <div style={{ flex:1, minWidth:0 }}>
-                            <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", marginBottom:4 }}>
-                              <span style={{ background:t.bg, color:t.text, padding:"1px 5px", fontSize:7, fontFamily:"monospace", letterSpacing:.4 }}>{t.label}</span>
-                              <span style={{ fontSize:9, color:"#3a5a7a", fontFamily:"monospace" }}>{s.source}</span>
-                              <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{fmtDate(s.time)} · {s.region}</span>
+                          <div className="rec-body">
+                            <div className="rec-meta">
+                              <span className="rec-type" style={{ background:t.bg, color:t.text }}>{t.label}</span>
+                              <span className="rec-source">{s.source}</span>
+                              <span className="rec-date">{fmtDate(s.time)} · {s.region}</span>
                               <VBadge verdict={verdicts[s.id] || autoVerdict(s.credible)} />
                             </div>
-                            <div className="bk" style={{ fontSize:14, color:"#d8d0c4", lineHeight:1.3, marginBottom:4 }}>{s.title}</div>
-                            <div style={{ fontSize:9, color:"#2a3a4a", lineHeight:1.55, marginBottom:5, fontFamily:"monospace" }}>{s.summary?.slice(0, 130)}…</div>
-                            <div style={{ height:2, background:"#1c2330", marginBottom:4, maxWidth:180 }}>
-                              <div style={{ height:"100%", width:`${s.credible}%`, background:"linear-gradient(90deg,#2a6a2a,#40c070)" }} />
-                            </div>
-                            <div style={{ display:"flex", gap:8 }}>
-                              {s.tags?.map(tg => <span key={tg} onClick={e => { e.stopPropagation(); setFilters(f => ({...f, search:tg})); }} style={{ fontSize:7, color:"#1c2a38", fontFamily:"monospace", cursor:"pointer" }} title={"Search: "+tg}>#{tg}</span>)}
-
+                            <div className="bk rec-title">{s.title}</div>
+                            <div className="rec-summary">{s.summary?.slice(0, 140)}…</div>
+                            <div className="rec-credbar"><div style={{ height:"100%", width:`${s.credible}%`, background:"linear-gradient(90deg,#1a5a1a,#40c070)", borderRadius:2 }} /></div>
+                            <div className="rec-tags">
+                              {s.tags?.map(tg => <span key={tg} className="rec-tag" onClick={e => { e.stopPropagation(); setFilters(f => ({...f, search:tg})); }}>#{tg}</span>)}
                             </div>
                           </div>
                         </div>
@@ -742,8 +732,8 @@ function App() {
 
           {/* SAVED RECORDS */}
           {view === "saved" && (
-            <div style={{ display:"flex", gap:0 }}>
-              <Sidebar {...sidebarProps} />
+            <div className="feed-wrap">
+              <div className="nexus-sidebar"><Sidebar {...sidebarProps} /></div>
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:14 }}>
                   <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>SAVED RECORDS</div>
@@ -788,7 +778,7 @@ function App() {
 
           {/* ── COMMUNITY ── */}
           {view === "community" && (
-            <div style={{ display:"flex", gap:0 }}>
+            <div className="feed-wrap">
               {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:14, flexWrap:"wrap", gap:8 }}>
@@ -1025,7 +1015,7 @@ function App() {
 
           {/* ── REDDIT ── */}
           {view === "reddit" && (
-            <div style={{ display:"flex", gap:0 }}>
+            <div className="feed-wrap">
               {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <>
@@ -1087,7 +1077,7 @@ function App() {
 
           {/* ── LIBRARY ── */}
           {view === "library" && (
-            <div style={{ display:"flex", gap:0 }}>
+            <div className="feed-wrap">
               {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:14 }}>
@@ -1171,7 +1161,7 @@ function App() {
 
           {/* ── AI ANALYSIS ── */}
           {view === "ai" && (
-            <div style={{ display:"flex", gap:0 }}>
+            <div className="feed-wrap">
               {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:12 }}>
@@ -1199,7 +1189,7 @@ function App() {
 
           {/* ── SOURCES ── */}
           {view === "sources" && (
-            <div style={{ display:"flex", gap:0 }}>
+            <div className="feed-wrap">
               {!focusMode && <Sidebar {...sidebarProps} />}
               <div style={{ flex:1 }}>
                 <div style={{ marginBottom:12 }}>
