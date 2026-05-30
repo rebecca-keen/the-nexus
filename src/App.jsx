@@ -354,6 +354,87 @@ function App() {
                   style={{ background:"none", border:"none", borderBottom:view===v?"2px solid #b02020":"2px solid transparent", color:view===v?"#eeeae0":"#3a4a5a", padding:"0 9px", height:48, fontFamily:"monospace", fontSize:9, letterSpacing:.5, textTransform:"uppercase", cursor:"pointer", whiteSpace:"nowrap", flexShrink:0 }}>
                   {l}
                 </button>
+              ))}
+            </div>
+            {/* Mobile hamburger */}
+            {mobileMenu && (
+              <div style={{ position:"fixed", top:56, left:0, right:0, background:"#0b0d14", borderBottom:"1px solid #1c2330", zIndex:1000, padding:"8px 0" }}>
+                {[["home","Home"],["feed","Records"],["saved","Saved"],["sources","Sources"],["researchers","Researchers"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"]].map(([v,l]) => (
+                  <button key={v} onClick={() => { setView(v); setOpenStory(null); setMobileMenu(false); window.history.pushState({},'','/' +v); if(v==="home") setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
+                    style={{ display:"block", width:"100%", background:view===v?"#1c2330":"none", border:"none", borderLeft:view===v?"3px solid #b02020":"3px solid transparent", color:view===v?"#eeeae0":"#5a6a7a", padding:"12px 20px", fontFamily:"monospace", fontSize:11, letterSpacing:1, textTransform:"uppercase", cursor:"pointer", textAlign:"left" }}>
+                    {l}
+                  </button>
+                ))}
+              </div>
+            )}
+            <button onClick={() => setMobileMenu(m => !m)} className="mobile-hamburger"
+              style={{ display:"none", background:"none", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 10px", cursor:"pointer", fontFamily:"monospace", fontSize:14 }}>
+              {mobileMenu ? "x" : "="}
+            </button>
+          </div>
+        </div>
+
+        {/* Global back bar */}
+        <div className="nexus-shell">
+          {openStory && (
+            <div className="back-bar" style={{ marginBottom:0 }}>
+              <button className="back-btn back-btn-primary" onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus"; }}>
+                ← Records
+              </button>
+              <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); }}>
+                Home
+              </button>
+              <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}>
+                Reset
+              </button>
+              <button className="back-btn back-btn-ghost" onClick={() => setFocusMode(f => !f)} style={{ marginLeft:"auto", color:focusMode?"#8a9aaa":"#3a4a5a", borderColor:focusMode?"#3a4a6a":"#1c2330" }}>
+                {focusMode ? "⊡ Exit Focus" : "⊠ Focus"}
+              </button>
+            </div>
+          )}
+
+          {/* ── FEED ── */}
+          {view === "feed" && (
+            <div className="feed-wrap">
+              {!focusMode && <div className="nexus-sidebar"><Sidebar {...sidebarProps} /></div>}
+              <div className={focusMode ? "feed-main-full" : "feed-main"}>
+                <div style={{ marginBottom:8 }}>
+                  <div className="sec-head">OPEN RECORDS</div>
+                  <div className="sec-sub">
+                    {visibleStories.length} of {stories.length} records
+                    {filters.topic !== "All Topics" && <span style={{ color:"#b02020", marginLeft:6 }}>· {filters.topic}</span>}
+                  </div>
+                </div>
+
+                {/* Open story detail */}
+                {openStory && (
+                  <div>
+                    <div className="back-bar">
+                      <button className="back-btn back-btn-primary" onClick={() => { setOpenStory(null); setFocusMode(false); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }}>
+                        &larr; Back
+                      </button>
+                      <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); }}>
+                        Home
+                      </button>
+                      <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}>
+                        Reset
+                      </button>
+                      <button className="back-btn back-btn-ghost" onClick={() => setFocusMode(f => !f)} style={{ marginLeft:"auto", color:focusMode?"#8a9aaa":"#3a4a5a" }}>
+                        {focusMode ? "⊡ Exit Focus" : "⊠ Focus"}
+                      </button>
+                    </div>
+
+                    <div className="rec-detail">
+                      <div className="rec-detail-meta">
+                        <span className="rec-type" style={{ background:getType(openStory.type).bg, color:getType(openStory.type).text }}>{getType(openStory.type).label}</span>
+                        <a href={openStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize:10, color:"#5a9ac8", fontFamily:"monospace" }}>{openStory.source} ↗</a>
+                        <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{fmtDate(openStory.time)} · {openStory.region}</span>
+                        <VBadge verdict={verdicts[openStory.id] || autoVerdict(openStory.credible)} />
+                      </div>
+                      <h1 className="rec-detail-title">{openStory.title}</h1>
+                      <p className="rec-detail-summary">{openStory.summary}</p>
+                      <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:16 }}>
+                        {openStory.tags?.map(t => <span key={t} onClick={() => { setFilters(f => ({...f, search:t})); setOpenStory(null); window.history.pushState({}, '', '/records?q='+encodeURIComponent(t)); }} style={{ fontSize:8, background:"#10131e", border:"1px solid #1c2330", color:"#3a4a5a", padding:"1px 7px", fontFamily:"monospace", cursor:"pointer" }} title={"Search: "+t}>#{t}</span>)}
                       </div>
 
                       {/* Actions */}
@@ -1328,6 +1409,7 @@ function App() {
           )}
 
         </div>
+        </div>
 
         {/* ── FOOTER ── */}
         <div style={{ borderTop:"1px solid #1c2330", marginTop:32, padding:"12px 20px", background:"#07080c" }}>
@@ -1364,7 +1446,7 @@ function App() {
           </div>
         </div>
 
-        {{/* Modals */}
+        {/* Modals */}
         {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
         <Analytics />
       </div>
