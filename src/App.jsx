@@ -330,7 +330,6 @@ function App() {
   return (
     <>
       <style>{CSS}</style>
-      {/* balance */}
       <div style={{ minHeight:"100vh", background:"#07080c", color:"#ccc8be" }}>
 
         {/* Toast */}
@@ -375,8 +374,8 @@ function App() {
         </div>
 
         {/* Global back bar */}
-        <div className="nexus-shell">
-          {openStory && (
+        {openStory && (
+          <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 16px" }}>
             <div className="back-bar" style={{ marginBottom:0 }}>
               <button className="back-btn back-btn-primary" onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus"; }}>
                 ← Records
@@ -391,7 +390,10 @@ function App() {
                 {focusMode ? "⊡ Exit Focus" : "⊠ Focus"}
               </button>
             </div>
-          )}
+          </div>
+        )}
+
+        <div className="nexus-shell">
 
           {/* ── FEED ── */}
           {view === "feed" && (
@@ -579,6 +581,7 @@ function App() {
                 )}
               </div>
             </div>
+          </div>
           )}
 
 
@@ -766,6 +769,9 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
           )}
 
 
@@ -1408,7 +1414,6 @@ function App() {
             </div>
           )}
 
-        </div>
         </div>
 
         {/* ── FOOTER ── */}
