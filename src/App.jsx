@@ -495,7 +495,7 @@ function App() {
                   The Nexus is an independent research platform aggregating declassified government documents, investigative journalism, whistleblower testimony, alternative history, ancient civilizations, UAP disclosure, paranormal research, and suppressed science. Every record links directly to its original source. No sign-up. No paywall. No editorial position.
                 </div>
                 <div style={{ marginTop:12, display:"flex", gap:8, flexWrap:"wrap" }}>
-                  <button onClick={() => { setView("community"); window.history.pushState({}, "", "/community"); document.title = "The Nexus - Community"; }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Join Community</button>
+                  <button onClick={() => { setView("community"); window.history.pushState({}, "", "/community"); document.title = "The Nexus - Community"; }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Community Board →</button>
                   <button onClick={() => { setView("library"); window.history.pushState({}, "", "/library"); document.title = "The Nexus - Library"; }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Media Library</button>
                   <button onClick={() => { setView("reddit"); window.history.pushState({}, "", "/reddit"); document.title = "The Nexus - Reddit"; }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Reddit Feeds</button>
                 </div>
@@ -784,7 +784,7 @@ function App() {
                 <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:14, flexWrap:"wrap", gap:8 }}>
                   <div>
                     <div className="bb" style={{ fontSize:20, letterSpacing:2, color:"#eeeae0" }}>COMMUNITY BOARD</div>
-                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>Field reports · Evidence · Analysis · Source links required</div>
+                    <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>Submit records, evidence & source links · All posts publicly visible · No sign-up required</div>
                   </div>
                   <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap" }}>
                     {["Hot","New","Top"].map(s => (
