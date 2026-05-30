@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, useNavigate, useParams, useLocation } fro
 import { CSS, VBadge, Sidebar, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
   ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, VERDICTS, MEDIA_LIBRARY,
-  SEED_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES,
+  SEED_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES, RESEARCHERS,
   autoVerdict, getType, fmtNum, OPENROUTER_KEY, AI_MODEL,
 } from './data.js';
 
@@ -71,7 +71,6 @@ function App() {
   // ── Content state ───────────────────────────────────────────────────────────
   const [stories, setStories]   = useState(SEED_STORIES);
   const [posts,   setPosts]     = useState(SEED_POSTS);
-  const [votes,   setVotes]     = useState({});
   const [verdicts, setVerdicts] = useState({});
   const [saved,   setSaved]     = useState({});
 
@@ -102,6 +101,7 @@ function App() {
   // ── Modals ──────────────────────────────────────────────────────────────────
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [focusMode, setFocusMode] = useState(false);
+  const [activeResearcher, setActiveResearcher] = useState(null);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   // ── Refs ────────────────────────────────────────────────────────────────────
@@ -312,7 +312,6 @@ function App() {
     }
     return true;
   }).sort((a, b) => {
-    if (sortBy === "Most Upvoted")  return b.upvotes - a.upvotes;
     if (sortBy === "Most Credible") return b.credible - a.credible;
     if (sortBy === "Least Credible") return a.credible - b.credible;
     // "Latest" = reverse order of stories array (highest ID = newest)
@@ -331,6 +330,7 @@ function App() {
   return (
     <>
       <style>{CSS}</style>
+      {/* balance */}
       <div style={{ minHeight:"100vh", background:"#07080c", color:"#ccc8be" }}>
 
         {/* Toast */}
@@ -349,236 +349,11 @@ function App() {
             </div>
             {/* Desktop nav */}
             <div style={{ display:"flex", alignItems:"center", overflowX:"auto", gap:0 }} className="desktop-nav">
-              {[["home","Home"],["feed","Records"],["saved","Saved"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
-                <button key={v} onClick={() => { setView(v); setOpenStory(null); setMobileMenu(false); window.history.pushState({}, '', v==="home" ? '/' : '/'+v); if(v==="home") setFilters({ topic:'All Topics', region:'All Regions', srcType:'All Sources', verdict:'All', sortBy:'Latest', search:'' }); document.title = 'The Nexus - Independent Research Platform'; if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
+              {[["home","Home"],["feed","Records"],["saved","Saved"],["sources","Sources"],["researchers","Researchers"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"],...(isAdmin?[["admin","Admin"]]:[])].map(([v,l]) => (
+                <button key={v} onClick={() => { setView(v); setOpenStory(null); setMobileMenu(false); window.history.pushState({}, '', v==="home" ? '/' : '/'+v); if(v==="home") setFilters({ topic:'All Topics', region:'All Regions', srcType:'All Sources', verdict:'All', sortBy:'Latest', search:'' }); document.title = 'The Nexus'; if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
                   style={{ background:"none", border:"none", borderBottom:view===v?"2px solid #b02020":"2px solid transparent", color:view===v?"#eeeae0":"#3a4a5a", padding:"0 9px", height:48, fontFamily:"monospace", fontSize:9, letterSpacing:.5, textTransform:"uppercase", cursor:"pointer", whiteSpace:"nowrap", flexShrink:0 }}>
                   {l}
                 </button>
-              ))}
-            </div>
-            {/* Mobile dropdown menu */}
-            {mobileMenu && (
-              <div style={{ position:"fixed", top:56, left:0, right:0, background:"#0b0d14", borderBottom:"1px solid #1c2330", zIndex:1000, padding:"8px 0" }}>
-                {[["home","Home"],["feed","Records"],["saved","Saved"],["sources","Sources"],["community","Community"],["reddit","Reddit"],["library","Library"],["ai","Analysis"]].map(([v,l]) => (
-                  <button key={v} onClick={() => { setView(v); setOpenStory(null); setMobileMenu(false); window.history.pushState({},'',' /'+v); if(v==="home") setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); if(v==="reddit"&&!rPosts.length) fetchReddit(); }}
-                    style={{ display:"block", width:"100%", background:view===v?"#1c2330":"none", border:"none", borderLeft:view===v?"3px solid #b02020":"3px solid transparent", color:view===v?"#eeeae0":"#5a6a7a", padding:"12px 20px", fontFamily:"monospace", fontSize:11, letterSpacing:1, textTransform:"uppercase", cursor:"pointer", textAlign:"left" }}>
-                    {l}
-                  </button>
-                ))}
-              </div>
-            )}
-            {/* Mobile hamburger */}
-            <button onClick={() => setMobileMenu(m => !m)} className="mobile-hamburger"
-              style={{ display:"none", background:"none", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 10px", cursor:"pointer", fontFamily:"monospace", fontSize:14 }}>
-              {mobileMenu ? "x" : "="}
-            </button>
-            <div style={{ display:"flex", alignItems:"center", gap:6, flexShrink:0 }}>
-              {isAdmin && <span style={{ fontSize:8, color:"#e0c060", background:"#1e1808", border:"1px solid #4a3a10", padding:"2px 7px", fontFamily:"monospace" }}>ADMIN</span>}
-              {isAdmin && <button onClick={() => { clearSession(); setUser({ plan:"free", isAdmin:false }); setView("home"); }} style={{ background:"none", border:"1px solid #1c2330", color:"#2a3a4a", padding:"3px 8px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Exit</button>}
-            </div>
-          </div>
-        </div>
-
-        <div className="nexus-shell">
-
-          {/* GLOBAL BACK BAR - shows on any view when a story is open */}
-          {openStory && (
-            <div className="back-bar" style={{ marginBottom:0 }}>
-              <button className="back-btn back-btn-primary" onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus"; }}>
-                ← Records
-              </button>
-              <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); }}>
-                Home
-              </button>
-              <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}>
-                Reset
-              </button>
-              <button className="back-btn back-btn-ghost" onClick={() => setFocusMode(f => !f)} style={{ marginLeft:"auto", color:focusMode?"#8a9aaa":"#3a4a5a", borderColor:focusMode?"#3a4a6a":"#1c2330" }}>
-                {focusMode ? "⊡ Exit Focus" : "⊠ Focus"}
-              </button>
-            </div>
-          )}
-
-          {/* HOME */}
-          {view === "home" && (
-            <div className="fade">
-
-              {/* Hero */}
-              <div style={{ background:"linear-gradient(180deg,#0f1520,#07080c)", border:"1px solid #1c2330", padding:"clamp(28px,5vw,52px) clamp(20px,4vw,44px)", marginBottom:12, position:"relative", overflow:"hidden" }}>
-                <div style={{ position:"absolute", top:0, left:0, right:0, height:2, background:"linear-gradient(90deg,#b02020,#5a2a6a,#1a3a6a)" }} />
-                <div style={{ fontSize:8, color:"#b02020", fontFamily:"monospace", letterSpacing:3, textTransform:"uppercase", marginBottom:14, display:"flex", alignItems:"center", gap:8 }}>
-                  <span style={{ width:18, height:1, background:"#b02020", display:"inline-block" }} />
-                  Independent Research Platform
-                </div>
-                <div className="bb" style={{ fontSize:"clamp(32px,6vw,68px)", letterSpacing:2, color:"#eeeae0", lineHeight:.95, marginBottom:18 }}>
-                  SOME QUESTIONS<br />
-                  <span style={{ color:"#b02020" }}>NEVER GET</span><br />
-                  ANSWERED
-                </div>
-                <div className="bk" style={{ fontSize:"clamp(14px,2.5vw,18px)", fontWeight:300, color:"#7a8a9a", lineHeight:1.7, maxWidth:520, marginBottom:24, fontStyle:"italic" }}>
-                  The Nexus aggregates investigative journalism, declassified records, whistleblower testimony, and disputed history — for adults who ask questions the mainstream stopped asking.
-                </div>
-                <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-                  <button onClick={() => { setView("feed"); setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }} style={{ background:"#b02020", border:"none", color:"#fff", padding:"12px 26px", fontFamily:"monospace", fontSize:10, letterSpacing:1.5, cursor:"pointer", textTransform:"uppercase" }}>Enter the Archive →</button>
-                  <button onClick={() => { setView("sources"); window.history.pushState({}, "", "/sources"); document.title = "The Nexus - Sources"; }} style={{ background:"transparent", border:"1px solid #3a4a5a", color:"#8a9aaa", padding:"11px 18px", fontFamily:"monospace", fontSize:10, letterSpacing:1, cursor:"pointer" }}>Browse Sources</button>
-                </div>
-                <div style={{ marginTop:16, fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>
-                  For independent research & education · Adults 18+ · All sources linked · No editorial position taken
-                </div>
-              </div>
-
-              {/* AdSense slot — Google will auto-fill this */}
-              <div style={{ margin:"12px 0", textAlign:"center", minHeight:90, background:"#0b0d14", border:"1px solid #1c2330", display:"flex", alignItems:"center", justifyContent:"center" }}>
-                <ins className="adsbygoogle"
-                  style={{ display:"block", width:"100%", minHeight:90 }}
-                  data-ad-client="ca-pub-8145721366190659"
-                  data-ad-slot="auto"
-                  data-ad-format="horizontal"
-                  data-full-width-responsive="true" />
-              </div>
-
-              {/* Stats */}
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:8, marginBottom:12 }}>
-                {[
-                  { n:"86+",  l:"Records",      s:"& growing daily" },
-                  { n:"616+", l:"Sources",       s:"Books · Blogs · YouTube" },
-                  { n:"200+", l:"Communities",   s:"Reddit & forums" },
-                  { n:"Free", l:"No Paywall",    s:"No sign-up needed" },
-                ].map(s => (
-                  <div key={s.l} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"14px 10px", textAlign:"center" }}>
-                    <div className="bb" style={{ fontSize:"clamp(18px,3vw,26px)", letterSpacing:1, color:"#b02020", lineHeight:1 }}>{s.n}</div>
-                    <div style={{ fontSize:9, color:"#ccc8be", fontFamily:"monospace", marginTop:4 }}>{s.l}</div>
-                    <div style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.s}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* What we cover */}
-              <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"16px", marginBottom:12 }}>
-                <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>What We Cover</div>
-                <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
-                  {TOPICS.filter(t => t !== "All Topics").map(t => (
-                    <button key={t} onClick={() => { setFilters(f => ({ ...f, topic:t })); setView("feed"); const slug = t.toLowerCase().replace(/[^a-z0-9]+/g,"-"); window.history.pushState({}, "", "/records/topic/" + slug); document.title = t + " - The Nexus"; }}
-                      style={{ background:"#07080c", border:"1px solid #1c2330", color:"#4a5a6a", padding:"5px 10px", fontFamily:"monospace", fontSize:8, cursor:"pointer", transition:"all .12s" }}
-                      onMouseEnter={e => { e.currentTarget.style.borderColor="#b02020"; e.currentTarget.style.color="#ccc8be"; }}
-                      onMouseLeave={e => { e.currentTarget.style.borderColor="#1c2330"; e.currentTarget.style.color="#4a5a6a"; }}>
-                      {t}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Latest records preview */}
-              <div style={{ marginBottom:12 }}>
-                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8 }}>
-                  <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace" }}>Latest Records</div>
-                  <button onClick={() => { setView("feed"); setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus - Open Records"; }} style={{ background:"none", border:"none", color:"#b02020", fontFamily:"monospace", fontSize:8, cursor:"pointer", letterSpacing:1 }}>View All →</button>
-                </div>
-                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))", gap:6 }}>
-                  {stories.slice(0,4).map(s => (
-                    <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); }} className="card"
-                      style={{ padding:"12px 14px", cursor:"pointer" }}>
-                      <div style={{ display:"flex", gap:6, marginBottom:5, flexWrap:"wrap" }}>
-                        <span style={{ background:getType(s.type).bg, color:getType(s.type).text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{getType(s.type).label}</span>
-                        <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.topic}</span>
-                      </div>
-                      <div style={{ fontSize:12, color:"#ccc8be", lineHeight:1.4, fontFamily:"monospace" }}>{s.title.slice(0,90)}{s.title.length>90?"...":""}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* About */}
-              <div style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"18px 20px", marginBottom:12 }}>
-                <div style={{ fontSize:8, color:"#3a4a5a", letterSpacing:1.5, textTransform:"uppercase", fontFamily:"monospace", marginBottom:10 }}>About The Nexus</div>
-                <div style={{ fontSize:12, color:"#5a6a7a", fontFamily:"monospace", lineHeight:1.8 }}>
-                  The Nexus is an independent research platform aggregating declassified government documents, investigative journalism, whistleblower testimony, alternative history, ancient civilizations, UAP disclosure, paranormal research, and suppressed science. Every record links directly to its original source. No sign-up. No paywall. No editorial position.
-                </div>
-                <div style={{ marginTop:12, display:"flex", gap:8, flexWrap:"wrap" }}>
-                  <button onClick={() => { setView("community"); window.history.pushState({}, "", "/community"); document.title = "The Nexus - Community"; }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Community Board →</button>
-                  <button onClick={() => { setView("library"); window.history.pushState({}, "", "/library"); document.title = "The Nexus - Library"; }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Media Library</button>
-                  <button onClick={() => { setView("reddit"); window.history.pushState({}, "", "/reddit"); document.title = "The Nexus - Reddit"; }} style={{ background:"transparent", border:"1px solid #1c2330", color:"#5a6a7a", padding:"6px 12px", fontFamily:"monospace", fontSize:8, cursor:"pointer" }}>Reddit Feeds</button>
-                </div>
-              </div>
-
-              <div style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace", textAlign:"center", lineHeight:1.8 }}>
-                All content presented for independent research & educational purposes only. The Nexus does not endorse any position. All records link to original external sources. Not affiliated with any government, intelligence agency, political organization, or media company.
-              </div>
-            </div>
-          )}
-
-          {/* ── RECORDS (FEED) ── */}
-          {view === "feed" && (
-            <div className="feed-wrap">
-              {!focusMode && <div className="nexus-sidebar"><Sidebar {...sidebarProps} /></div>}
-              <div className={focusMode ? "feed-main-full" : "feed-main"}>
-                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14 }}>
-                  <div>
-                    <div className="sec-head">OPEN RECORDS</div>
-                    <div className="sec-sub">
-                      {visibleStories.length} of {stories.length} records
-                      {filters.topic !== "All Topics" && <span style={{ color:"#b02020", marginLeft:6 }}>· {filters.topic}</span>}
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Story detail */}
-                {openStory && (
-                  <div className="fade">
-                    <div className="back-bar">
-                      <button className="back-btn back-btn-primary" onClick={() => { setOpenStory(null); window.history.pushState({}, "", "/records"); document.title = "The Nexus"; }}>
-                        ← Records
-                      </button>
-                      <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setView("home"); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/"); }}>
-                        Home
-                      </button>
-                      <button className="back-btn back-btn-ghost" onClick={() => { setOpenStory(null); setFilters({ topic:"All Topics", region:"All Regions", srcType:"All Sources", verdict:"All", sortBy:"Latest", search:"" }); window.history.pushState({}, "", "/records"); }}>
-                        Reset
-                      </button>
-                    </div>
-                    <div className="rec-detail">
-                      {/* Header */}
-                      <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", marginBottom:10 }}>
-                        <span style={{ background:getType(openStory.type).bg, color:getType(openStory.type).text, padding:"1px 6px", fontFamily:"monospace", fontSize:8, letterSpacing:.5 }}>{getType(openStory.type).label}</span>
-                        {openStory.sourceUrl
-                          ? <a href={openStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize:10, color:"#5a9ac8", fontFamily:"monospace" }}>{openStory.source} ↗</a>
-                          : <span style={{ fontSize:10, color:"#5a7a9a", fontFamily:"monospace" }}>{openStory.source}</span>
-                        }
-                        <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>{fmtDate(openStory.time)} · {openStory.region}</span>
-                        <VBadge verdict={verdicts[openStory.id] || autoVerdict(openStory.credible)} />
-                      </div>
-                      <h1 className="rec-detail-title">{openStory.title}</h1>
-                      <p className="rec-detail-summary">{openStory.summary}</p>
-                      <div style={{ display:"flex", gap:5, flexWrap:"wrap", marginBottom:18 }}>
-                        {openStory.tags?.map(t => <span key={t} onClick={() => { setFilters(f => ({...f, search:t})); setOpenStory(null); window.history.pushState({},""," /records?q="+t); }} style={{ fontSize:8, background:"#10131e", border:"1px solid #1c2330", color:"#3a4a5a", padding:"1px 7px", fontFamily:"monospace", cursor:"pointer" }} title={"Search: "+t}>#{t}</span>)}
-                      </div>
-
-                      {/* Credibility */}
-                      <div style={{ background:"#07080c", border:"1px solid #1c2330", padding:14, marginBottom:12 }}>
-                        <div style={{ fontSize:8, color:"#1c2a38", letterSpacing:1, marginBottom:8, textTransform:"uppercase", fontFamily:"monospace" }}>Community Credibility</div>
-                        <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}>
-                          <span style={{ fontSize:10, color:"#40c070", fontFamily:"monospace" }}>Accurate {openStory.credible}%</span>
-                          <span style={{ fontSize:10, color:"#c04040", fontFamily:"monospace" }}>{openStory.debunked}% Refuted</span>
-                        </div>
-                        <div className="cbar"><div className="cfill" style={{ width:`${openStory.credible}%` }} /></div>
-                        <div style={{ display:"flex", gap:7, marginTop:10 }}>
-                          <button onClick={() => { if (!votes[openStory.id]) { setVotes(p => ({ ...p, [openStory.id]:"up" })); toast2("Marked accurate"); } }}
-                            style={{ flex:1, background:votes[openStory.id]==="up"?"#0a2010":"transparent", border:`1px solid ${votes[openStory.id]==="up"?"#2a6a2a":"#1c2330"}`, color:votes[openStory.id]==="up"?"#40c070":"#3a4a5a", padding:"6px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>▲ Accurate</button>
-                          <button onClick={() => { if (!votes[openStory.id]) { setVotes(p => ({ ...p, [openStory.id]:"dn" })); toast2("Marked refuted"); } }}
-                            style={{ flex:1, background:votes[openStory.id]==="dn"?"#200a0a":"transparent", border:`1px solid ${votes[openStory.id]==="dn"?"#6a2a2a":"#1c2330"}`, color:votes[openStory.id]==="dn"?"#c04040":"#3a4a5a", padding:"6px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>▼ Refuted</button>
-                        </div>
-                        <div style={{ marginTop:10, borderTop:"1px solid #1c2330", paddingTop:8 }}>
-                          <div style={{ fontSize:8, color:"#1c2a38", letterSpacing:1, marginBottom:6, textTransform:"uppercase", fontFamily:"monospace" }}>Your Verdict</div>
-                          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:4 }}>
-                            {Object.entries(VERDICTS).map(([k, v]) => (
-                              <button key={k} onClick={() => { setVerdicts(p => ({ ...p, [openStory.id]:k })); toast2(`Verdict: ${v.label}`); }}
-                                style={{ background:verdicts[openStory.id]===k?v.color:"transparent", border:`1px solid ${verdicts[openStory.id]===k?v.border:"#1c2330"}`, color:verdicts[openStory.id]===k?v.text:"#2a3a4a", padding:"4px 3px", fontFamily:"monospace", fontSize:8, cursor:"pointer", transition:"all .12s" }}>
-                                {v.icon} {v.short}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
                       </div>
 
                       {/* Actions */}
@@ -658,14 +433,10 @@ function App() {
                 {!openStory && (
                   <div>
                     {visibleStories.map(s => {
-                      const t = getType(s.type); const v = votes[s.id];
+                      const t = getType(s.type);
                       return (
                         <div key={s.id} className="rec-card fade" onClick={() => setOpenStory(s)}>
-                          <div className="rec-votes" onClick={e => e.stopPropagation()}>
-                            <button className="rec-vote-btn" style={{ background:v==="up"?"#0a2010":"transparent", border:`1px solid ${v==="up"?"#2a6a2a":"#1c2330"}`, color:v==="up"?"#40c070":"#2a3a4a" }} onClick={() => { if (!v) setVotes(p => ({ ...p, [s.id]:"up" })) }}>▲</button>
-                            <span className="rec-vote-count">{fmtNum(s.upvotes)}</span>
-                            <button className="rec-vote-btn" style={{ background:v==="dn"?"#200a0a":"transparent", border:`1px solid ${v==="dn"?"#6a2a2a":"#1c2330"}`, color:v==="dn"?"#c04040":"#2a3a4a" }} onClick={() => { if (!v) setVotes(p => ({ ...p, [s.id]:"dn" })) }}>▼</button>
-                          </div>
+
                           <div className="rec-body">
                             <div className="rec-meta">
                               <span className="rec-type" style={{ background:t.bg, color:t.text }}>{t.label}</span>
@@ -725,6 +496,181 @@ function App() {
                     </div>
                   </div>
                 )}
+              </div>
+            </div>
+          )}
+
+
+          {/* ── RESEARCHERS ── */}
+          {view === "researchers" && (
+            <div className="nexus-shell" style={{ paddingTop:24, paddingBottom:48 }}>
+              {activeResearcher ? (
+                /* ── RESEARCHER DETAIL ── */
+                <div>
+                  <div className="back-bar">
+                    <button className="back-btn back-btn-primary" onClick={() => setActiveResearcher(null)}>← Researchers</button>
+                    <button className="back-btn back-btn-ghost" onClick={() => { setView("home"); setActiveResearcher(null); window.history.pushState({},""," /"); }}>Home</button>
+                  </div>
+                  <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginBottom:28 }}>
+                    <div style={{ flex:1, minWidth:260 }}>
+                      <div style={{ fontSize:9, color:"#b02020", letterSpacing:2, textTransform:"uppercase", fontFamily:"monospace", marginBottom:6 }}>{activeResearcher.role}</div>
+                      <h1 style={{ fontSize:28, color:"#eeeae0", fontWeight:700, marginBottom:8, letterSpacing:1 }}>{activeResearcher.name}</h1>
+                      <p style={{ fontSize:14, color:"#6a7a8a", lineHeight:1.8, marginBottom:16 }}>{activeResearcher.bio}</p>
+                      <div style={{ display:"flex", gap:6, flexWrap:"wrap", marginBottom:16 }}>
+                        {activeResearcher.topics.map(t => (
+                          <button key={t} onClick={() => { setFilters(f => ({...f, topic:t})); setView("feed"); setActiveResearcher(null); }}
+                            style={{ background:"#0b0d14", border:"1px solid #1c2330", color:"#5a9ac8", padding:"4px 12px", fontFamily:"monospace", fontSize:9, cursor:"pointer", borderRadius:20 }}>
+                            {t}
+                          </button>
+                        ))}
+                      </div>
+                      <a href={activeResearcher.url} target="_blank" rel="noopener noreferrer"
+                        style={{ display:"inline-block", background:"#b02020", color:"#fff", padding:"8px 18px", fontFamily:"monospace", fontSize:9, letterSpacing:1 }}>
+                        Official Site ↗
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Related Records */}
+                  <div style={{ marginBottom:24 }}>
+                    <div style={{ fontSize:9, color:"#3a4a5a", letterSpacing:2, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12, paddingBottom:8, borderBottom:"1px solid #1c2330" }}>Related Records</div>
+                    <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))", gap:8 }}>
+                      {stories.filter(s => activeResearcher.tags.some(tag => s.tags?.includes(tag) || s.title?.toLowerCase().includes(tag.toLowerCase()))).slice(0,6).map(s => {
+                        const t = getType(s.type);
+                        return (
+                          <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); setActiveResearcher(null); }} className="rec-card" style={{ cursor:"pointer" }}>
+                            <div className="rec-body">
+                              <div className="rec-meta">
+                                <span className="rec-type" style={{ background:t.bg, color:t.text }}>{t.label}</span>
+                                <span className="rec-source">{s.source}</span>
+                              </div>
+                              <div className="rec-title">{s.title.slice(0,80)}{s.title.length>80?"...":""}</div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {stories.filter(s => activeResearcher.tags.some(tag => s.tags?.includes(tag) || s.title?.toLowerCase().includes(tag.toLowerCase()))).length === 0 && (
+                      <div style={{ color:"#2a3a4a", fontFamily:"monospace", fontSize:11 }}>No records found — try searching their name in Records</div>
+                    )}
+                  </div>
+
+                  {/* Related Library */}
+                  {activeResearcher.books.length > 0 && (
+                    <div style={{ marginBottom:24 }}>
+                      <div style={{ fontSize:9, color:"#3a4a5a", letterSpacing:2, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12, paddingBottom:8, borderBottom:"1px solid #1c2330" }}>Books & Documentaries</div>
+                      <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                        {MEDIA_LIBRARY.filter(m => activeResearcher.books.some(b => m.title.includes(b.split(" - ")[0]))).map(m => (
+                          <a key={m.id} href={m.url} target="_blank" rel="noopener noreferrer"
+                            style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"10px 14px", display:"block", minWidth:180, maxWidth:240 }}>
+                            <div style={{ fontSize:8, color:"#3a4a5a", fontFamily:"monospace", marginBottom:3 }}>{m.type.toUpperCase()} · {m.year}</div>
+                            <div style={{ fontSize:12, color:"#ccc8be" }}>{m.title}</div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Related Podcasts */}
+                  {activeResearcher.podcasts.length > 0 && (
+                    <div>
+                      <div style={{ fontSize:9, color:"#3a4a5a", letterSpacing:2, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12, paddingBottom:8, borderBottom:"1px solid #1c2330" }}>Podcasts & Appearances</div>
+                      <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                        {activeResearcher.podcasts.map(pod => {
+                          const src = SOURCES.flatMap(g => g.items).find(i => i.n.includes(pod.split(" - ")[0]) || pod.includes(i.n.split(" - ")[0]));
+                          return src ? (
+                            <a key={pod} href={src.u} target="_blank" rel="noopener noreferrer"
+                              style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"8px 14px", fontFamily:"monospace", fontSize:10, color:"#5a9ac8" }}>
+                              {pod} ↗
+                            </a>
+                          ) : (
+                            <span key={pod} style={{ background:"#0b0d14", border:"1px solid #1c2330", padding:"8px 14px", fontFamily:"monospace", fontSize:10, color:"#3a4a5a" }}>{pod}</span>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                /* ── RESEARCHER GRID ── */
+                <div>
+                  <div style={{ marginBottom:24 }}>
+                    <div className="sec-head">RESEARCHERS</div>
+                    <div className="sec-sub">Key investigators, journalists, scientists and whistleblowers behind the records</div>
+                  </div>
+                  <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:10 }}>
+                    {RESEARCHERS.map(r => (
+                      <div key={r.id} onClick={() => setActiveResearcher(r)} className="card"
+                        style={{ padding:"18px 20px", cursor:"pointer", border:"1px solid #1a2030", transition:"border-color .15s" }}
+                        onMouseEnter={e => e.currentTarget.style.borderColor="#2a4a6a"}
+                        onMouseLeave={e => e.currentTarget.style.borderColor="#1a2030"}>
+                        <div style={{ fontSize:9, color:"#b02020", letterSpacing:1, textTransform:"uppercase", fontFamily:"monospace", marginBottom:4 }}>{r.role}</div>
+                        <div style={{ fontSize:18, color:"#eeeae0", fontWeight:700, marginBottom:6 }}>{r.name}</div>
+                        <div style={{ fontSize:11, color:"#4a5a6a", lineHeight:1.7, marginBottom:10 }}>{r.bio.slice(0,160)}...</div>
+                        <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
+                          {r.topics.slice(0,2).map(t => (
+                            <span key={t} style={{ fontSize:8, background:"#0b0d14", border:"1px solid #1c2330", color:"#3a5a7a", padding:"2px 8px", fontFamily:"monospace" }}>{t}</span>
+                          ))}
+                          <span style={{ fontSize:8, color:"#b02020", fontFamily:"monospace", marginLeft:"auto" }}>{r.country}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* THIS WEEK — Latest Disclosures on home */}
+          {view === "home" && (
+            <div className="nexus-shell" style={{ paddingTop:0, paddingBottom:48 }}>
+              <div style={{ marginBottom:32 }}>
+                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
+                  <div style={{ width:8, height:8, borderRadius:"50%", background:"#b02020" }} />
+                  <div style={{ fontSize:10, letterSpacing:3, color:"#b02020", fontFamily:"monospace", textTransform:"uppercase" }}>Latest Disclosures</div>
+                  <div style={{ flex:1, height:1, background:"#1c2330" }} />
+                  <button onClick={() => { setView("feed"); setFilters(f => ({...f, sortBy:"Latest"})); window.history.pushState({},"","/records"); }} style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace", background:"none", border:"none", cursor:"pointer" }}>View All →</button>
+                </div>
+                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:8 }}>
+                  {stories.slice(-6).reverse().map(s => {
+                    const t = getType(s.type);
+                    return (
+                      <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); window.history.pushState({},"","/records/"+toSlug(s.title)); }} className="card"
+                        style={{ padding:"14px 16px", cursor:"pointer", border:"1px solid #1c2330", position:"relative" }}>
+                        <div style={{ position:"absolute", top:10, right:10, background:"#b02020", color:"#fff", fontSize:7, padding:"1px 7px", fontFamily:"monospace", letterSpacing:1 }}>NEW</div>
+                        <div style={{ display:"flex", gap:5, marginBottom:6, alignItems:"center" }}>
+                          <span style={{ background:t.bg, color:t.text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{t.label}</span>
+                          <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.topic}</span>
+                        </div>
+                        <div style={{ fontSize:13, color:"#c8c0b4", lineHeight:1.4, fontWeight:500, marginBottom:6 }}>{s.title.slice(0,90)}{s.title.length>90?"...":""}</div>
+                        <div style={{ fontSize:10, color:"#2a3a4a", fontFamily:"monospace" }}>{s.source}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Browse by Topic */}
+              <div>
+                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
+                  <div style={{ fontSize:10, letterSpacing:3, color:"#3a4a5a", fontFamily:"monospace", textTransform:"uppercase" }}>Browse by Topic</div>
+                  <div style={{ flex:1, height:1, background:"#1c2330" }} />
+                </div>
+                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))", gap:6 }}>
+                  {TOPICS.filter(t => t !== "All Topics").map(t => {
+                    const count = stories.filter(s => s.topic === t).length;
+                    if (!count) return null;
+                    return (
+                      <button key={t} onClick={() => { setFilters(f => ({...f, topic:t})); setView("feed"); window.history.pushState({},"","/records/topic/"+t.toLowerCase().replace(/[^a-z0-9]+/g,"-")); }}
+                        style={{ background:"#0b0d14", border:"1px solid #1a2030", color:"#7a8a9a", padding:"12px 14px", fontFamily:"monospace", fontSize:10, cursor:"pointer", textAlign:"left", transition:"all .15s", borderRadius:3 }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor="#2a4a6a"; e.currentTarget.style.color="#ccc8be"; }}
+                        onMouseLeave={e => { e.currentTarget.style.borderColor="#1a2030"; e.currentTarget.style.color="#7a8a9a"; }}>
+                        <div style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace", marginBottom:3 }}>{count} records</div>
+                        {t}
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           )}
@@ -1401,7 +1347,7 @@ function App() {
           </div>
         </div>
 
-        {/* Modals */}
+        {{/* Modals */}
         {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
         <Analytics />
       </div>
