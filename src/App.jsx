@@ -705,8 +705,13 @@ function App() {
           )}
 
           {/* THIS WEEK — Latest Disclosures on home */}
+          
+
+          {/* ── HOME ── */}
           {view === "home" && (
-            <div className="nexus-shell" style={{ paddingTop:0, paddingBottom:48 }}>
+            <div>
+
+              {/* Latest Disclosures */}
               <div style={{ marginBottom:32 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
                   <div style={{ width:8, height:8, borderRadius:"50%", background:"#b02020" }} />
@@ -746,7 +751,7 @@ function App() {
               </div>
 
               {/* Browse by Topic */}
-              <div>
+              <div style={{ marginBottom:32 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
                   <div style={{ fontSize:10, letterSpacing:3, color:"#3a4a5a", fontFamily:"monospace", textTransform:"uppercase" }}>Browse by Topic</div>
                   <div style={{ flex:1, height:1, background:"#1c2330" }} />
@@ -767,11 +772,10 @@ function App() {
                   })}
                 </div>
               </div>
+
             </div>
-          </div>
-        </div>
-      </div>
           )}
+
 
 
           {/* SAVED RECORDS */}
@@ -1412,8 +1416,6 @@ function App() {
               </div>
             </div>
           )}
-
-        </div>
 
         {/* ── FOOTER ── */}
         <div style={{ borderTop:"1px solid #1c2330", marginTop:32, padding:"12px 20px", background:"#07080c" }}>
