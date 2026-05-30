@@ -1417,6 +1417,8 @@ function App() {
             </div>
           )}
 
+        </div>{/* ── end nexus-shell ── */}
+
         {/* ── FOOTER ── */}
         <div style={{ borderTop:"1px solid #1c2330", marginTop:32, padding:"12px 20px", background:"#07080c" }}>
           <div style={{ maxWidth:1280, margin:"0 auto", display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:6, alignItems:"center" }}>
