@@ -124,6 +124,7 @@ body { -webkit-font-smoothing: antialiased; }
 /* ── MOBILE ──────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .nexus-sidebar { display: none; }
+  .home-grid { grid-template-columns: 1fr !important; }
   .feed-main { padding: 14px 0 32px 0; }
   .feed-main-full { padding: 14px 0 32px 0; }
   .rec-title { font-size: 13px; }

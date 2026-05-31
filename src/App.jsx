@@ -711,62 +711,135 @@ function App() {
           {view === "home" && (
             <div>
 
-              {/* Latest Disclosures */}
-              <div style={{ marginBottom:32 }}>
-                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
-                  <div style={{ width:8, height:8, borderRadius:"50%", background:"#b02020" }} />
-                  <div style={{ fontSize:10, letterSpacing:3, color:"#b02020", fontFamily:"monospace", textTransform:"uppercase" }}>Latest Disclosures</div>
-                  <div style={{ flex:1, height:1, background:"#1c2330" }} />
-                  <button onClick={() => { setView("feed"); setFilters(f => ({...f, sortBy:"Latest"})); window.history.pushState({},"","/records"); }} style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace", background:"none", border:"none", cursor:"pointer" }}>View All →</button>
-                </div>
-                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:8 }}>
-                  {stories.slice(-6).reverse().map(s => {
-                    const t = getType(s.type);
-                    return (
-                      <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); window.history.pushState({},"","/records/"+toSlug(s.title)); }} className="card"
-                        style={{ padding:"14px 16px", cursor:"pointer", border:"1px solid #1c2330", position:"relative" }}>
-                        <div style={{ position:"absolute", top:10, right:10, background:"#b02020", color:"#fff", fontSize:7, padding:"1px 7px", fontFamily:"monospace", letterSpacing:1 }}>NEW</div>
-                        <div style={{ display:"flex", gap:5, marginBottom:6, alignItems:"center" }}>
-                          <span style={{ background:t.bg, color:t.text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{t.label}</span>
-                          <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace" }}>{s.topic}</span>
-                        </div>
-                        <div style={{ fontSize:13, color:"#c8c0b4", lineHeight:1.4, fontWeight:500, marginBottom:6 }}>{s.title.slice(0,90)}{s.title.length>90?"...":""}</div>
-                        <div style={{ fontSize:10, color:"#2a3a4a", fontFamily:"monospace" }}>{s.source}</div>
-                      </div>
-                    );
-                  })}
-                </div>
+              {/* ── QUICK NAV STRIP ── */}
+              <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:32, padding:"16px 0", borderBottom:"1px solid #1c2330" }}>
+                {[
+                  { label:"Open Records", icon:"▦", view:"feed", color:"#b02020" },
+                  { label:"Researchers", icon:"◈", view:"researchers", color:"#4a7aaa" },
+                  { label:"Sources", icon:"◎", view:"sources", color:"#4a8a4a" },
+                  { label:"Library", icon:"◉", view:"library", color:"#8a6a2a" },
+                  { label:"Community", icon:"◇", view:"community", color:"#6a4aaa" },
+                ].map(item => (
+                  <button key={item.view} onClick={() => { setView(item.view); window.history.pushState({},"","/"+item.view); }}
+                    style={{ display:"flex", alignItems:"center", gap:8, background:"#0b0d14", border:"1px solid #1c2330", color:"#8a9aaa", padding:"10px 18px", fontFamily:"monospace", fontSize:10, cursor:"pointer", borderRadius:3, transition:"all .15s", letterSpacing:.5 }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor=item.color; e.currentTarget.style.color=item.color; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor="#1c2330"; e.currentTarget.style.color="#8a9aaa"; }}>
+                    <span style={{ fontSize:14 }}>{item.icon}</span> {item.label}
+                  </button>
+                ))}
+                <div style={{ flex:1 }} />
+                <span style={{ fontSize:9, color:"#1c2a38", fontFamily:"monospace", alignSelf:"center" }}>{stories.length} records · {SOURCES.reduce((a,g)=>a+g.items.length,0)} sources</span>
               </div>
 
-              {/* Support Banner */}
-              <div style={{ background:"linear-gradient(135deg,#0f1218,#1a1008)", border:"1px solid #3a2a0a", borderRadius:4, padding:"18px 22px", marginBottom:32, display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:12 }}>
+              {/* ── MAIN GRID ── */}
+              <div className="home-grid" style={{ display:"grid", gridTemplateColumns:"1fr 320px", gap:24, marginBottom:32 }}>
+
+                {/* LEFT — Latest Disclosures */}
                 <div>
-                  <div style={{ fontSize:11, color:"#c08030", fontFamily:"monospace", letterSpacing:1, marginBottom:4 }}>THE NEXUS IS FREE · NO ADS · NO PAYWALL</div>
-                  <div style={{ fontSize:13, color:"#8a7a5a", lineHeight:1.6 }}>If this archive has been useful, consider buying a coffee to keep it running.</div>
+                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:16 }}>
+                    <div style={{ width:3, height:18, background:"#b02020" }} />
+                    <div style={{ fontSize:11, letterSpacing:3, color:"#eeeae0", fontFamily:"monospace", textTransform:"uppercase", fontWeight:700 }}>Latest Disclosures</div>
+                    <div style={{ flex:1, height:1, background:"#1c2330" }} />
+                    <button onClick={() => { setView("feed"); setFilters(f => ({...f, sortBy:"Latest"})); window.history.pushState({},"","/records"); }}
+                      style={{ fontSize:9, color:"#b02020", fontFamily:"monospace", background:"none", border:"none", cursor:"pointer", letterSpacing:.5 }}>View All →</button>
+                  </div>
+                  <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                    {stories.slice(-5).reverse().map(s => {
+                      const t = getType(s.type);
+                      return (
+                        <div key={s.id} onClick={() => { setOpenStory(s); setView("feed"); window.history.pushState({},"","/records/"+toSlug(s.title)); }}
+                          style={{ display:"flex", gap:12, padding:"14px 16px", background:"#0b0d14", border:"1px solid #1a2030", borderRadius:3, cursor:"pointer", transition:"border-color .15s", alignItems:"flex-start" }}
+                          onMouseEnter={e => e.currentTarget.style.borderColor="#2a3a5a"}
+                          onMouseLeave={e => e.currentTarget.style.borderColor="#1a2030"}>
+                          <div style={{ background:"#b02020", color:"#fff", fontSize:7, padding:"2px 7px", fontFamily:"monospace", letterSpacing:1, flexShrink:0, marginTop:3 }}>NEW</div>
+                          <div style={{ flex:1, minWidth:0 }}>
+                            <div style={{ display:"flex", gap:6, marginBottom:5, flexWrap:"wrap" }}>
+                              <span style={{ background:t.bg, color:t.text, padding:"1px 5px", fontSize:7, fontFamily:"monospace" }}>{t.label}</span>
+                              <span style={{ fontSize:8, color:"#3a5a7a", fontFamily:"monospace" }}>{s.topic}</span>
+                              <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace", marginLeft:"auto" }}>{s.region}</span>
+                            </div>
+                            <div style={{ fontSize:14, color:"#d0ccc4", lineHeight:1.35, fontWeight:500, marginBottom:4 }}>{s.title.slice(0,100)}{s.title.length>100?"...":""}</div>
+                            <div style={{ fontSize:10, color:"#3a4a5a", fontFamily:"monospace" }}>{s.source}</div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-                <a href="https://buymeacoffee.com/thenexus" target="_blank" rel="noopener noreferrer"
-                  style={{ display:"inline-flex", alignItems:"center", gap:8, background:"#FFDD00", color:"#000", padding:"10px 20px", fontFamily:"monospace", fontSize:11, fontWeight:700, textDecoration:"none", borderRadius:4, letterSpacing:.5, whiteSpace:"nowrap", flexShrink:0 }}>
-                  ☕ Buy Me a Coffee
-                </a>
+
+                {/* RIGHT SIDEBAR */}
+                <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+
+                  {/* Support Box */}
+                  <div style={{ background:"linear-gradient(160deg,#110e08,#1a1410)", border:"1px solid #4a3a1a", borderRadius:6, padding:"20px 18px", textAlign:"center" }}>
+                    <div style={{ fontSize:20, marginBottom:8 }}>☕</div>
+                    <div style={{ fontSize:13, color:"#c0a060", fontWeight:700, marginBottom:6, letterSpacing:.5 }}>Support The Nexus</div>
+                    <div style={{ fontSize:11, color:"#6a5a3a", lineHeight:1.7, marginBottom:14 }}>Free forever. No ads. No paywall. If it's been useful, a coffee helps keep it running.</div>
+                    <a href="https://buymeacoffee.com/thenexus" target="_blank" rel="noopener noreferrer"
+                      style={{ display:"block", background:"#FFDD00", color:"#000", padding:"10px 0", fontFamily:"monospace", fontSize:11, fontWeight:700, textDecoration:"none", borderRadius:4, letterSpacing:1 }}>
+                      BUY ME A COFFEE →
+                    </a>
+                  </div>
+
+                  {/* Stats Box */}
+                  <div style={{ background:"#0b0d14", border:"1px solid #1c2330", borderRadius:6, padding:"16px 18px" }}>
+                    <div style={{ fontSize:9, color:"#3a4a5a", letterSpacing:2, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>Archive Stats</div>
+                    {[
+                      { label:"Records", value:stories.length },
+                      { label:"Topics", value:TOPICS.length-1 },
+                      { label:"Sources", value:SOURCES.reduce((a,g)=>a+g.items.length,0) },
+                      { label:"Researchers", value:"25" },
+                    ].map(stat => (
+                      <div key={stat.label} style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"7px 0", borderBottom:"1px solid #0e1018" }}>
+                        <span style={{ fontSize:10, color:"#4a5a6a", fontFamily:"monospace" }}>{stat.label}</span>
+                        <span style={{ fontSize:16, color:"#eeeae0", fontFamily:"monospace", fontWeight:700 }}>{stat.value}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Quick Topics */}
+                  <div style={{ background:"#0b0d14", border:"1px solid #1c2330", borderRadius:6, padding:"16px 18px" }}>
+                    <div style={{ fontSize:9, color:"#3a4a5a", letterSpacing:2, textTransform:"uppercase", fontFamily:"monospace", marginBottom:12 }}>Hot Topics</div>
+                    <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                      {["UAP & Anomalous","Aliens & Extraterrestrial","Government & Intelligence","Ancient Civilizations","Surveillance","Finance & Power"].map(t => {
+                        const count = stories.filter(s => s.topic === t).length;
+                        return (
+                          <button key={t} onClick={() => { setFilters(f => ({...f, topic:t})); setView("feed"); }}
+                            style={{ display:"flex", justifyContent:"space-between", alignItems:"center", background:"transparent", border:"none", color:"#6a7a8a", padding:"6px 0", fontFamily:"monospace", fontSize:10, cursor:"pointer", borderBottom:"1px solid #0e1018", textAlign:"left", transition:"color .12s" }}
+                            onMouseEnter={e => e.currentTarget.style.color="#b02020"}
+                            onMouseLeave={e => e.currentTarget.style.color="#6a7a8a"}>
+                            <span>{t}</span>
+                            <span style={{ fontSize:9, color:"#2a3a4a" }}>{count} →</span>
+                          </button>
+                        );
+                      })}
+                      <button onClick={() => setView("feed")} style={{ fontSize:9, color:"#b02020", fontFamily:"monospace", background:"none", border:"none", cursor:"pointer", textAlign:"left", paddingTop:8, letterSpacing:.5 }}>
+                        All {TOPICS.length-1} topics →
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
-              {/* Browse by Topic */}
+              {/* ── BROWSE ALL TOPICS ── */}
               <div style={{ marginBottom:32 }}>
-                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
-                  <div style={{ fontSize:10, letterSpacing:3, color:"#3a4a5a", fontFamily:"monospace", textTransform:"uppercase" }}>Browse by Topic</div>
+                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:16 }}>
+                  <div style={{ width:3, height:18, background:"#3a4a5a" }} />
+                  <div style={{ fontSize:11, letterSpacing:3, color:"#eeeae0", fontFamily:"monospace", textTransform:"uppercase", fontWeight:700 }}>All Topics</div>
                   <div style={{ flex:1, height:1, background:"#1c2330" }} />
                 </div>
-                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))", gap:6 }}>
+                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))", gap:6 }}>
                   {TOPICS.filter(t => t !== "All Topics").map(t => {
                     const count = stories.filter(s => s.topic === t).length;
                     if (!count) return null;
                     return (
                       <button key={t} onClick={() => { setFilters(f => ({...f, topic:t})); setView("feed"); window.history.pushState({},"","/records/topic/"+t.toLowerCase().replace(/[^a-z0-9]+/g,"-")); }}
-                        style={{ background:"#0b0d14", border:"1px solid #1a2030", color:"#7a8a9a", padding:"12px 14px", fontFamily:"monospace", fontSize:10, cursor:"pointer", textAlign:"left", transition:"all .15s", borderRadius:3 }}
-                        onMouseEnter={e => { e.currentTarget.style.borderColor="#2a4a6a"; e.currentTarget.style.color="#ccc8be"; }}
+                        style={{ display:"flex", justifyContent:"space-between", alignItems:"center", background:"#0b0d14", border:"1px solid #1a2030", color:"#7a8a9a", padding:"11px 14px", fontFamily:"monospace", fontSize:10, cursor:"pointer", textAlign:"left", transition:"all .15s", borderRadius:3 }}
+                        onMouseEnter={e => { e.currentTarget.style.borderColor="#b02020"; e.currentTarget.style.color="#eeeae0"; }}
                         onMouseLeave={e => { e.currentTarget.style.borderColor="#1a2030"; e.currentTarget.style.color="#7a8a9a"; }}>
-                        <div style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace", marginBottom:3 }}>{count} records</div>
-                        {t}
+                        <span>{t}</span>
+                        <span style={{ fontSize:9, color:"#2a3a4a", background:"#0f1018", padding:"1px 7px", borderRadius:10 }}>{count}</span>
                       </button>
                     );
                   })}
@@ -1417,23 +1490,31 @@ function App() {
             </div>
           )}
 
-        </div>{/* ── end nexus-shell ── */}
-
         {/* ── FOOTER ── */}
         <div style={{ borderTop:"1px solid #1c2330", marginTop:32, padding:"12px 20px", background:"#07080c" }}>
-          <div style={{ maxWidth:1280, margin:"0 auto", display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:6, alignItems:"center" }}>
-            <div style={{ display:"flex", gap:12, alignItems:"center", flexWrap:"wrap" }}>
-              <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>© 2025 The Nexus · thenexusapp.com</span>
-              <span style={{ color:"#1c2330", fontSize:8 }}>·</span>
-              <button onClick={() => setShowPrivacy(true)} style={{ background:"none", border:"none", color:"#3a4a5a", fontFamily:"monospace", fontSize:8, cursor:"pointer", textDecoration:"underline", padding:0 }}>Privacy Policy</button>
-              <span style={{ color:"#1c2330", fontSize:8 }}>·</span>
-              <span style={{ fontSize:8, color:"#1c2a38", fontFamily:"monospace" }}>For independent research only · Adults 18+</span>
-              <span style={{ color:"#1c2330", fontSize:8 }}>·</span>
+          <div style={{ maxWidth:1280, margin:"0 auto" }}>
+            <div style={{ display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:12, alignItems:"center", marginBottom:12 }}>
+              <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
+                {["Records","Sources","Researchers","Library","Community"].map(nav => (
+                  <button key={nav} onClick={() => { setView(nav.toLowerCase()); window.history.pushState({},"","/"+nav.toLowerCase()); }}
+                    style={{ background:"none", border:"none", color:"#5a6a7a", fontFamily:"monospace", fontSize:10, cursor:"pointer", padding:"2px 8px" }}
+                    onMouseEnter={e => e.currentTarget.style.color="#b02020"}
+                    onMouseLeave={e => e.currentTarget.style.color="#5a6a7a"}>
+                    {nav}
+                  </button>
+                ))}
+              </div>
               <a href="https://buymeacoffee.com/thenexus" target="_blank" rel="noopener noreferrer"
-                style={{ display:"inline-flex", alignItems:"center", gap:5, background:"#FFDD00", color:"#000", padding:"4px 10px", fontFamily:"monospace", fontSize:8, fontWeight:700, textDecoration:"none", borderRadius:3, letterSpacing:.5 }}>
-                ☕ Support The Nexus
+                style={{ display:"inline-flex", alignItems:"center", gap:6, background:"#FFDD00", color:"#000", padding:"7px 16px", fontFamily:"monospace", fontSize:10, fontWeight:700, textDecoration:"none", borderRadius:3, letterSpacing:.5 }}>
+                ☕ Buy Me a Coffee
               </a>
             </div>
+            <div style={{ borderTop:"1px solid #1c2330", paddingTop:12, display:"flex", gap:16, flexWrap:"wrap", alignItems:"center" }}>
+              <span style={{ fontSize:10, color:"#4a5a6a", fontFamily:"monospace" }}>© 2025 The Nexus · nexusverse.app</span>
+              <button onClick={() => setShowPrivacy(true)} style={{ background:"none", border:"none", color:"#4a5a6a", fontFamily:"monospace", fontSize:10, cursor:"pointer", textDecoration:"underline", padding:0 }}>Privacy Policy</button>
+              <span style={{ fontSize:10, color:"#3a4a5a", fontFamily:"monospace" }}>Independent research only · Adults 18+</span>
+            </div>
+          </div>
             <div style={{ display:"flex", gap:10, alignItems:"center" }}>
               {/* Hidden admin — double-click the dot */}
               <span
@@ -1457,6 +1538,13 @@ function App() {
         {/* Modals */}
         {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
         <Analytics />
+        {/* Floating Support Button */}
+        <a href="https://buymeacoffee.com/thenexus" target="_blank" rel="noopener noreferrer"
+          style={{ position:"fixed", bottom:20, right:20, display:"inline-flex", alignItems:"center", gap:6, background:"#FFDD00", color:"#000", padding:"10px 16px", fontFamily:"monospace", fontSize:11, fontWeight:700, textDecoration:"none", borderRadius:30, boxShadow:"0 4px 20px rgba(0,0,0,.6)", zIndex:999, letterSpacing:.5, transition:"transform .15s" }}
+          onMouseEnter={e => e.currentTarget.style.transform="scale(1.05)"}
+          onMouseLeave={e => e.currentTarget.style.transform="scale(1)"}>
+          ☕ Support
+        </a>
       </div>
     </>
   );
