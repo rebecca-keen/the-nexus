@@ -441,8 +441,8 @@ function App() {
 
                       {/* Actions */}
                       <div style={{ display:"flex", gap:7, flexWrap:"wrap", marginBottom:16 }}>
-                        {openStory.sourceUrl && <a href={openStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ background:"#b02020", color:"#fff", padding:"7px 16px", fontFamily:"monospace", fontSize:9, letterSpacing:.5 }}>Read Source ↗</a>}
-                        <button onClick={() => { setSaved(p => ({ ...p, [openStory.id]:!p[openStory.id] })); toast2(saved[openStory.id] ? "Removed" : "Saved"); }} style={{ background:"transparent", border:"1px solid #1c2330", color:saved[openStory.id]?"#c08030":"#3a4a5a", padding:"7px 12px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>{saved[openStory.id] ? "* Saved" : "Save"}</button>
+                        {openStory.sourceUrl && <a href={openStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ background:"#b02020", color:"#fff", padding:"10px 18px", fontFamily:"monospace", fontSize:10, letterSpacing:.5, borderRadius:3 }}>Read Source ↗</a>}
+                        <button onClick={() => { setSaved(p => ({ ...p, [openStory.id]:!p[openStory.id] })); toast2(saved[openStory.id] ? "Removed" : "Saved"); }} style={{ background:"transparent", border:"1px solid #1c2330", color:saved[openStory.id]?"#c08030":"#3a4a5a", padding:"10px 14px", fontFamily:"monospace", fontSize:10, cursor:"pointer", borderRadius:3 }}>{saved[openStory.id] ? "* Saved" : "Save"}</button>
                         <button onClick={() => { setLibTopic(openStory.topic); setView("library"); }} style={{ background:"transparent", border:"1px solid #2a3a1a", color:"#4a7a4a", padding:"7px 12px", fontFamily:"monospace", fontSize:9, cursor:"pointer" }}>Related Reading</button>
                       </div>
 
@@ -717,9 +717,9 @@ function App() {
                   <div style={{ width:3, height:60, background:"linear-gradient(180deg,#b02020,transparent)", flexShrink:0, marginTop:4 }} />
                   <div>
                     <div style={{ fontSize:10, color:"#b02020", letterSpacing:3, fontFamily:"monospace", textTransform:"uppercase", marginBottom:10 }}>— Independent Research Platform</div>
-                    <div className="bb" style={{ fontSize:"clamp(28px,5vw,52px)", color:"#eeeae0", lineHeight:1.1, marginBottom:4 }}>SOME QUESTIONS</div>
-                    <div className="bb" style={{ fontSize:"clamp(28px,5vw,52px)", color:"#b02020", lineHeight:1.1, marginBottom:20 }}>NEVER GET ANSWERED.</div>
-                    <div style={{ fontSize:15, color:"#5a6a7a", lineHeight:1.8, maxWidth:580, fontFamily:"Georgia,serif", fontStyle:"italic", marginBottom:28 }}>
+                    <div className="bb hero-title" style={{ color:"#eeeae0", lineHeight:1.1, marginBottom:4 }}>SOME QUESTIONS</div>
+                    <div className="bb hero-sub" style={{ color:"#b02020", lineHeight:1.1, marginBottom:20 }}>NEVER GET ANSWERED.</div>
+                    <div className="hero-desc" style={{ color:"#5a6a7a", lineHeight:1.8, maxWidth:580, fontFamily:"Georgia,serif", fontStyle:"italic", marginBottom:28 }}>
                       The Nexus aggregates investigative journalism, declassified records, whistleblower testimony, and disputed history — for adults who ask questions the mainstream stopped asking.
                     </div>
                     <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
@@ -734,7 +734,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginTop:8, paddingLeft:19 }}>
+                <div className="hero-stats" style={{ marginTop:8, paddingLeft:19 }}>
                   {[
                     { n:String(stories.length)+"+", l:"Records" },
                     { n:String(TOPICS.length-1),    l:"Topics" },
@@ -742,7 +742,7 @@ function App() {
                     { n:"25",                         l:"Researchers" },
                   ].map(s => (
                     <div key={s.l} style={{ textAlign:"center" }}>
-                      <div className="bb" style={{ fontSize:26, color:"#eeeae0" }}>{s.n}</div>
+                      <div className="bb" style={{ fontSize:28, color:"#eeeae0" }}>{s.n}</div>
                       <div style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", letterSpacing:1 }}>{s.l}</div>
                     </div>
                   ))}
@@ -750,7 +750,7 @@ function App() {
               </div>
 
               {/* ── QUICK NAV STRIP ── */}
-              <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:32, padding:"16px 0", borderBottom:"1px solid #1c2330" }}>
+              <div style={{ display:"flex", gap:8, overflowX:"auto", marginBottom:32, padding:"16px 0 14px", borderBottom:"1px solid #1c2330", WebkitOverflowScrolling:"touch", scrollbarWidth:"none" }}>
                 {[
                   { label:"Open Records", icon:"▦", view:"feed", color:"#b02020" },
                   { label:"Researchers", icon:"◈", view:"researchers", color:"#4a7aaa" },
@@ -796,7 +796,7 @@ function App() {
                               <span style={{ fontSize:8, color:"#3a5a7a", fontFamily:"monospace" }}>{s.topic}</span>
                               <span style={{ fontSize:8, color:"#2a3a4a", fontFamily:"monospace", marginLeft:"auto" }}>{s.region}</span>
                             </div>
-                            <div style={{ fontSize:14, color:"#d0ccc4", lineHeight:1.35, fontWeight:500, marginBottom:4 }}>{s.title.slice(0,100)}{s.title.length>100?"...":""}</div>
+                            <div style={{ fontSize:14, color:"#d0ccc4", lineHeight:1.35, fontWeight:500, marginBottom:4 }}>{s.title.slice(0,120)}{s.title.length>120?"...":""}</div>
                             <div style={{ fontSize:10, color:"#3a4a5a", fontFamily:"monospace" }}>{s.source}</div>
                           </div>
                         </div>
@@ -873,7 +873,7 @@ function App() {
                     if (!count) return null;
                     return (
                       <button key={t} onClick={() => { setFilters(f => ({...f, topic:t})); setView("feed"); window.history.pushState({},"","/records/topic/"+t.toLowerCase().replace(/[^a-z0-9]+/g,"-")); }}
-                        style={{ display:"flex", justifyContent:"space-between", alignItems:"center", background:"#0b0d14", border:"1px solid #1a2030", color:"#7a8a9a", padding:"11px 14px", fontFamily:"monospace", fontSize:10, cursor:"pointer", textAlign:"left", transition:"all .15s", borderRadius:3 }}
+                        style={{ display:"flex", justifyContent:"space-between", alignItems:"center", background:"#0b0d14", border:"1px solid #1a2030", color:"#7a8a9a", padding:"13px 14px", fontFamily:"monospace", fontSize:10, cursor:"pointer", textAlign:"left", transition:"all .15s", borderRadius:3, minHeight:48 }}
                         onMouseEnter={e => { e.currentTarget.style.borderColor="#b02020"; e.currentTarget.style.color="#eeeae0"; }}
                         onMouseLeave={e => { e.currentTarget.style.borderColor="#1a2030"; e.currentTarget.style.color="#7a8a9a"; }}>
                         <span>{t}</span>
@@ -1529,7 +1529,7 @@ function App() {
           )}
 
         {/* ── FOOTER ── */}
-        <div style={{ borderTop:"1px solid #1c2330", marginTop:32, padding:"12px 20px", background:"#07080c" }}>
+        <div style={{ borderTop:"1px solid #1c2330", marginTop:32, padding:"16px 20px 24px", background:"#07080c" }}>
           <div style={{ maxWidth:1280, margin:"0 auto" }}>
             <div style={{ display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:12, alignItems:"center", marginBottom:12 }}>
               <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
@@ -1578,7 +1578,7 @@ function App() {
         <Analytics />
         {/* Floating Support Button */}
         <a href="https://buymeacoffee.com/thenexus" target="_blank" rel="noopener noreferrer"
-          style={{ position:"fixed", bottom:20, right:20, display:"inline-flex", alignItems:"center", gap:6, background:"#FFDD00", color:"#000", padding:"10px 16px", fontFamily:"monospace", fontSize:11, fontWeight:700, textDecoration:"none", borderRadius:30, boxShadow:"0 4px 20px rgba(0,0,0,.6)", zIndex:999, letterSpacing:.5, transition:"transform .15s" }}
+          className="float-coffee" style={{ position:"fixed", bottom:20, right:20, display:"inline-flex", alignItems:"center", gap:6, background:"#FFDD00", color:"#000", padding:"10px 16px", fontFamily:"monospace", fontSize:11, fontWeight:700, textDecoration:"none", borderRadius:30, boxShadow:"0 4px 20px rgba(0,0,0,.6)", zIndex:999, letterSpacing:.5, transition:"transform .15s" }}
           onMouseEnter={e => e.currentTarget.style.transform="scale(1.05)"}
           onMouseLeave={e => e.currentTarget.style.transform="scale(1)"}>
           ☕ Support

@@ -122,28 +122,79 @@ body { -webkit-font-smoothing: antialiased; }
 .sec-sub  { font-size: 9px; color: #1c2a38; font-family: monospace; }
 
 /* ── MOBILE ──────────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  .nexus-sidebar { display: none; }
-  .home-grid { grid-template-columns: 1fr !important; }
-  .feed-main { padding: 14px 0 32px 0; }
-  .feed-main-full { padding: 14px 0 32px 0; }
-  .rec-title { font-size: 13px; }
-  .rec-detail { padding: 16px; }
-  .rec-detail-title { font-size: 19px; }
-  .rec-detail-summary { font-size: 14px; line-height: 1.75; }
-  .rec-source { max-width: 120px; }
-  .rec-votes { width: 38px; }
-  .rec-vote-btn { width: 24px; height: 20px; }
-  .desktop-nav { display: none !important; }
-  .mobile-hamburger { display: flex !important; }
-  .back-bar { gap: 6px; }
-  .back-btn { padding: 6px 10px; font-size: 10px; }
-  .nexus-shell { padding: 0 10px; }
-  .cred-btn { font-size: 10px; padding: 8px; }
+/* ── TABLET (768px) ── */
+@media (max-width: 1024px) {
+  .home-grid { grid-template-columns: 1fr 280px !important; }
 }
+
+/* ── MOBILE (768px and below) ── */
+@media (max-width: 768px) {
+  /* Layout */
+  .nexus-shell      { padding: 0 14px; }
+  .nexus-sidebar    { display: none; }
+  .feed-main        { padding: 12px 0 40px 0; }
+  .feed-main-full   { padding: 12px 0 40px 0; }
+  .feed-wrap        { gap: 0; }
+
+  /* Home page */
+  .home-grid        { grid-template-columns: 1fr !important; }
+
+  /* Record cards */
+  .rec-card         { margin-bottom: 8px; }
+  .rec-body         { padding: 10px 12px; }
+  .rec-title        { font-size: 14px; line-height: 1.35; }
+  .rec-summary      { font-size: 11px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .rec-source       { max-width: 160px; font-size: 9px; }
+  .rec-date         { font-size: 8px; }
+  .rec-meta         { gap: 5px; }
+
+  /* Record detail */
+  .rec-detail       { padding: 16px 14px; border-radius: 0; border-left: none; border-right: none; }
+  .rec-detail-title { font-size: 20px; line-height: 1.25; }
+  .rec-detail-summary { font-size: 15px; line-height: 1.8; }
+
+  /* Navigation */
+  .desktop-nav      { display: none !important; }
+  .mobile-hamburger { display: flex !important; }
+
+  /* Back bar */
+  .back-bar         { gap: 6px; padding: 8px 0; }
+  .back-btn         { padding: 7px 10px; font-size: 10px; }
+
+  /* Section headers */
+  .sec-head         { font-size: 16px; letter-spacing: 2px; }
+
+  /* Credibility */
+  .cred-panel       { padding: 12px; }
+  .cred-btn         { font-size: 10px; padding: 8px 6px; }
+
+  /* Floating coffee button — move up so it clears mobile browser chrome */
+  .float-coffee     { bottom: 72px !important; right: 14px !important; padding: 9px 14px !important; font-size: 10px !important; }
+}
+
+/* ── SMALL PHONES (480px) ── */
+@media (max-width: 480px) {
+  .nexus-shell      { padding: 0 10px; }
+  .rec-detail-title { font-size: 17px; }
+  .rec-detail-summary { font-size: 14px; }
+  .back-btn         { padding: 6px 8px; font-size: 9px; }
+  .rec-body         { padding: 10px; }
+  .hero-title       { font-size: 32px !important; }
+  .hero-sub         { font-size: 32px !important; }
+  .hero-desc        { font-size: 13px !important; }
+  .hero-stats       { gap: 16px !important; }
+}
+
+/* ── HERO ── */
+.hero-title { font-size: clamp(28px, 6vw, 52px); }
+.hero-sub   { font-size: clamp(28px, 6vw, 52px); }
+.hero-desc  { font-size: 15px; }
+.hero-stats { display: flex; gap: 24px; flex-wrap: wrap; }
+.hero-stat-n { font-size: 26px; }
+
+/* ── DESKTOP only ── */
 @media (min-width: 769px) {
   .mobile-hamburger { display: none !important; }
-  .mobile-show-sidebar .nexus-sidebar { display: block; }
 }
 `;
 
