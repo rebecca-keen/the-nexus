@@ -711,6 +711,44 @@ function App() {
           {view === "home" && (
             <div>
 
+              {/* ── HERO ── */}
+              <div style={{ padding:"52px 0 44px", borderBottom:"1px solid #1c2330", marginBottom:32 }}>
+                <div style={{ display:"flex", alignItems:"flex-start", gap:16, marginBottom:18 }}>
+                  <div style={{ width:3, height:60, background:"linear-gradient(180deg,#b02020,transparent)", flexShrink:0, marginTop:4 }} />
+                  <div>
+                    <div style={{ fontSize:10, color:"#b02020", letterSpacing:3, fontFamily:"monospace", textTransform:"uppercase", marginBottom:10 }}>— Independent Research Platform</div>
+                    <div className="bb" style={{ fontSize:"clamp(28px,5vw,52px)", color:"#eeeae0", lineHeight:1.1, marginBottom:4 }}>SOME QUESTIONS</div>
+                    <div className="bb" style={{ fontSize:"clamp(28px,5vw,52px)", color:"#b02020", lineHeight:1.1, marginBottom:20 }}>NEVER GET ANSWERED.</div>
+                    <div style={{ fontSize:15, color:"#5a6a7a", lineHeight:1.8, maxWidth:580, fontFamily:"Georgia,serif", fontStyle:"italic", marginBottom:28 }}>
+                      The Nexus aggregates investigative journalism, declassified records, whistleblower testimony, and disputed history — for adults who ask questions the mainstream stopped asking.
+                    </div>
+                    <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
+                      <button onClick={() => { setView("feed"); window.history.pushState({},"","/records"); }}
+                        style={{ background:"#b02020", color:"#fff", padding:"12px 28px", fontFamily:"monospace", fontSize:10, letterSpacing:2, border:"none", cursor:"pointer", fontWeight:700 }}>
+                        ENTER THE ARCHIVE →
+                      </button>
+                      <button onClick={() => { setView("sources"); window.history.pushState({},"","/sources"); }}
+                        style={{ background:"transparent", border:"1px solid #2a3a4a", color:"#5a6a7a", padding:"12px 20px", fontFamily:"monospace", fontSize:10, letterSpacing:1, cursor:"pointer" }}>
+                        Browse Sources
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginTop:8, paddingLeft:19 }}>
+                  {[
+                    { n:String(stories.length)+"+", l:"Records" },
+                    { n:String(TOPICS.length-1),    l:"Topics" },
+                    { n:String(SOURCES.reduce((a,g)=>a+g.items.length,0))+"+" , l:"Sources" },
+                    { n:"25",                         l:"Researchers" },
+                  ].map(s => (
+                    <div key={s.l} style={{ textAlign:"center" }}>
+                      <div className="bb" style={{ fontSize:26, color:"#eeeae0" }}>{s.n}</div>
+                      <div style={{ fontSize:9, color:"#3a4a5a", fontFamily:"monospace", letterSpacing:1 }}>{s.l}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* ── QUICK NAV STRIP ── */}
               <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:32, padding:"16px 0", borderBottom:"1px solid #1c2330" }}>
                 {[
