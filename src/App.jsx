@@ -344,7 +344,7 @@ function App() {
     setPosts(p => [post, ...p]);
     setNp({ title:"", body:"", topic:TOPICS[1], region:"🌍 Global", contentType:"research", confidence:"unverified", tags:"" });
     setRefs([{ label:"", url:"" }]);
-    setUploads([]); setShowForm(false); setDisc(false);
+    setUploads([]); setDisc(false);
     toast2("✓ Record submitted to community");
   };
 
@@ -832,7 +832,6 @@ function App() {
                   </div>
                   <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap" }}>
                     {["Hot","New","Top"].map(s => (<button key={s} onClick={() => setCSort(s)} style={{ background:cSort===s?"#1c2330":"transparent", border:`1px solid ${cSort===s?"#3a4a5a":"#1c2330"}`, color:cSort===s?"#ccc8be":"#2a3a4a", padding:"4px 10px", fontFamily:"monospace", fontSize:8, cursor:"pointer", textTransform:"uppercase" }}>{s}</button>))}
-                    <button onClick={() => setShowForm(p => !p)} style={{ background:"#b02020", border:"none", color:"#fff", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Record</button>
                     <button onClick={() => setShowSrc(p => !p)} style={{ background:"#1a2a3a", border:"1px solid #5a9ac8", color:"#5a9ac8", padding:"6px 14px", fontFamily:"monospace", fontSize:8, letterSpacing:1, cursor:"pointer", textTransform:"uppercase" }}>+ Submit Source</button>
                   </div>
                 </div>
