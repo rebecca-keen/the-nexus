@@ -2,1165 +2,1183 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nexusverse.app/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nexusverse.app/records</loc>
-    <lastmod>2026-05-30</lastmod>
+    <loc>https://nexusverse.app/records.html</loc>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://nexusverse.app/about.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nexusverse.app/contact.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nexusverse.app/privacy-policy.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://nexusverse.app/sources</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/community</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/library</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/reddit</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/operation-northwoods-joint-chiefs-proposed-staging-domestic-attacks-to-justify-w</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/book-of-enoch-the-watchers-who-took-human-wives-and-produced-the-nephilim-comple</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/19th-century-newspaper-reports-of-giant-skeletal-remains-across-north-america-ca</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/dolphin-communication-evidence-of-names-syntax-and-cultural-transmission-across-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/mk-ultra-cia-mind-control-experiments-on-unwitting-citizens-confirmed-by-senate-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/nsa-metadata-collection-exceeded-legal-mandate-internal-analysts-raised-concerns</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-bilderberg-group-70-years-of-private-summits-between-heads-of-state-and-cent</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/gobekli-tepe-12-000-year-old-megalithic-temple-complex-rewrites-accepted-timelin</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/genesis-6-and-the-nephilim-cross-cultural-evidence-of-giant-beings-in-over-200-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/suppressed-gospels-and-texts-excluded-at-the-council-of-nicaea-in-325-ad-vatican</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/orca-and-dolphin-long-term-memory-evidence-of-multigenerational-cultural-knowled</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cia-vault-7-umbrage-malware-library-designed-to-frame-other-nations-for-cyberatt</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/jeffrey-epstein-no-verified-income-source-private-islands-access-to-world-leader</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/fbi-director-lab-leak-is-most-credible-covid-19-origin-declassified-intelligence</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/university-of-alaska-fairbanks-wtc-7-collapse-could-not-have-been-caused-by-fire</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/operation-paperclip-1-600-nazi-scientists-secretly-transferred-to-the-u-s-after-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/twitter-files-fbi-communication-channels-resulted-in-suppression-of-accurate-rep</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-federal-reserve-a-private-banking-cartel-that-has-never-been-independently-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ohio-mound-builders-giant-skeletons-7-9-feet-tall-documented-by-archaeologists-i</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/numbers-13-33-the-israelite-spies-report-giants-in-canaan-we-were-like-grasshopp</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-smithsonian-giant-cover-up-hundreds-of-19th-century-reports-and-where-the-re</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/u-s-navy-dolphin-research-program-decades-of-classified-intelligence-on-dolphin-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/bottlenose-dolphins-using-marine-sponges-as-tools-cultural-transmission-confirme</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-great-pyramid-s-internal-temperature-remains-a-constant-68-degreesf-regardle</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/precision-stonework-at-the-valley-temple-of-khafre-cuts-and-tolerances-that-matc</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-council-on-foreign-relations-100-years-of-shaping-u-s-foreign-policy-from-ou</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/seymour-hersh-investigation-u-s-navy-divers-planted-explosives-on-nord-stream-pi</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/chuck-missler-the-integrity-of-the-genetic-bloodline-why-genesis-6-giants-were-t</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/peruvian-elongated-skulls-dna-testing-shows-non-human-mitochondrial-dna-in-parac</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cointelpro-the-fbi-s-documented-campaign-to-destroy-civil-rights-leaders-anti-wa</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/myth-of-adapa-the-first-man-given-wisdom-but-denied-immortality-sumerian-primary</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/anki-enlil-the-anunnaki-council-the-original-divine-hierarchy-preserved-in-sumer</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-anunnaki-sumerian-gods-genetic-engineers-or-extraterrestrial-visitors-all-th</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/vatican-chronovisor-father-ernetti-s-time-viewing-device-built-with-enrico-fermi</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/sedona-vortex-sites-electrical-engineer-measures-magnetic-anomalies-eeg-and-magn</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/george-church-harvard-first-book-encoded-in-dna-70-billion-copies-crispr-synthet</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/bruce-lipton-epigenetics-your-beliefs-change-gene-expression-dna-is-not-your-des</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/vatican-archives-85-kilometers-of-shelving-hidden-gospels-galileo-s-trial-nazi-c</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/gregg-braden-the-god-code-ancient-name-encoded-in-every-human-dna-base-pair-sequ</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/dolores-cannon-qhht-subjects-under-deep-hypnosis-independently-describe-identica</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/billy-carson-the-emerald-tablets-of-thoth-15-tablets-written-by-an-atlantean-pri</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-gospel-of-mary-magdalene-suppressed-first-century-text-shows-her-as-jesus-s-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/heartmath-institute-the-heart-s-electromagnetic-field-is-100x-stronger-than-the-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/bitten-congress-ordered-investigation-into-whether-dod-weaponized-ticks-plum-isl</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/vaers-database-over-2-million-adverse-event-reports-filed-since-1990-what-the-da</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/lab-grown-meat-uses-immortalized-cells-mit-cancer-biologist-they-are-unmistakabl</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/beyond-impossible-the-truth-behind-the-fake-meat-industry-wef-harvard-and-the-pu</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/puma-punku-100-ton-stone-blocks-cut-with-cnc-level-precision-no-metal-tools-avai</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/baalbek-the-1-200-ton-stone-of-the-pregnant-woman-no-modern-crane-can-lift-it</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-younger-dryas-impact-a-comet-strike-12-800-years-ago-destroyed-an-advanced-g</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-osireion-at-abydos-built-before-the-pyramids-massive-granite-structure-defie</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/sacred-geometry-in-ancient-architecture-the-same-mathematical-constants-encoded-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-sumerian-king-list-rulers-who-reigned-for-thousands-of-years-before-the-floo</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ancient-beings-as-engineers-the-gobekli-tepe-builders-knew-astronomy-geometry-an</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/zecharia-sitchin-the-anunnaki-genetically-engineered-homo-sapiens-250-000-years-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-aryan-mystery-secret-societies-blood-types-and-the-hidden-history-of-humanit</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/us-navy-marine-mammal-program-classified-1967-1992-what-the-black-budget-dolphin</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-5-operational-dolphin-teams-mine-detection-swimmer-killing-devices-harbor-pa</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cia-sent-scientist-james-fitzgerald-to-key-west-1964-classified-dolphin-lab-and-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/dr-john-c-lilly-cia-funded-nasa-contracted-lsd-injecting-dolphin-researcher-who-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/vietnam-war-1965-1975-persian-gulf-1986-1988-iraq-war-2003-the-combat-deployment</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/soviet-and-russian-military-dolphins-sevastopol-iran-sale-arctic-bases-and-two-p</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/marine-mammal-protection-act-why-it-is-illegal-to-touch-feed-chase-or-attempt-to</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/global-dolphin-personhood-india-2013-malibu-2014-pacific-islands-2025-government</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/what-we-actually-know-about-dolphin-intelligence-cambridge-declaration-mirror-te</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/what-global-governments-may-be-hiding-about-dolphins-classified-programs-suppres</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/missing-411-david-paulides-documents-9-000-hours-of-research-into-unexplained-na</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-missing-411-profile-points-30-consistent-patterns-across-hundreds-of-disappe</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/missing-411-the-hunted-experienced-hunters-with-military-training-vanish-in-the-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/project-stargate-the-cia-s-20-million-25-year-psychic-espionage-program-now-full</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ingo-swann-the-psychic-who-remote-viewed-jupiter-before-pioneer-10-got-there-and</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-remote-viewers-who-described-soviet-nuclear-submarines-hidden-weapons-and-a-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cia-gateway-process-declassified-1983-army-report-concludes-human-consciousness-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/soviet-psychotronics-the-ussr-spent-60-million-rubles-annually-on-psychic-warfar</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ancient-stargates-sumerian-gate-of-anu-egyptian-osiris-portal-tiahuanaco-gateway</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-montauk-project-classified-time-travel-mind-control-and-interdimensional-por</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cern-large-hadron-collider-scientists-searching-for-extra-dimensions-and-dark-ma</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/skinwalker-ranch-instrumented-scientific-research-confirms-anomalous-portal-like</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-iraqi-stargate-why-the-us-established-military-zones-around-ancient-sumerian</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/global-portal-sites-mount-shasta-sedona-stonehenge-machu-picchu-easter-island-wh</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/geometric-unity-eric-weinstein-s-suppressed-unified-field-theory-harvard-mathema</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-2013-oxford-lecture-eric-weinstein-s-geometric-unity-presented-to-the-academ</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/eric-weinstein-scientific-gatekeeping-institutional-corruption-and-why-the-physi</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/eric-weinstein-government-secretly-recruited-him-to-help-mediate-uap-disclosure-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/geometric-unity-working-draft-the-self-published-paper-and-the-theory-that-chall</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/maj-gen-neil-mccasland-disappears-feb-27-2026-air-force-research-lab-commander-w</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-bermuda-triangle-what-noaa-actually-says-magnetic-anomalies-methane-hydrates</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/atlantis-plato-s-original-account-sonar-anomalies-near-the-azores-and-the-richat</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/95-of-earth-s-oceans-remain-unexplored-what-has-been-found-in-the-deep-includes-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-hutchison-effect-tesla-s-earthquake-machine-and-evidence-that-directed-energ</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/david-grusch-under-oath-us-government-has-retrieved-non-human-craft-and-biologic</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ny-times-breaks-aatip-pentagon-ran-secret-22-million-ufo-program-for-years-the-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cia-declassified-700-ufo-documents-released-flying-saucers-robertson-panel-and-w</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/pentagon-aaro-report-2024-21-true-anomalies-identified-objects-demonstrating-phy</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/trump-releases-second-tranche-of-uap-files-may-2026-dozens-of-military-videos-of</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/nasa-s-official-uap-study-2023-data-collection-is-insufficient-but-the-phenomena</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/project-blue-book-declassified-130-000-pages-12-618-ufo-cases-including-701-that</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/bob-lazar-1989-i-worked-reverse-engineering-alien-craft-at-s-4-near-area-51-his-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-tic-tac-incident-2004-navy-pilots-encountered-a-40-foot-white-object-with-no</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-uap-disclosure-act-congress-mandates-declassification-of-all-uap-records-wha</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/harvard-galileo-project-first-systematic-scientific-search-for-alien-technology-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-disclosure-project-2001-500-military-government-and-intelligence-witnesses-t</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/foreign-governments-are-ahead-of-the-us-on-uap-disclosure-chile-france-uk-have-r</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/congressional-uap-hearings-from-ridiculed-to-required-reporting-the-legislative-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/to-the-stars-academy-how-blink-182-s-tom-delonge-united-rock-music-and-the-penta</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-alien-body-claims-grusch-testified-non-human-biologics-were-found-ryan-grave</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/150-000-civilian-uap-reports-filed-patterns-across-decades-show-consistent-chara</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/skinwalker-ranch-the-dod-funded-investigation-into-a-property-where-physics-brea</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/are-we-alone-seti-the-drake-equation-and-why-scientists-who-spent-careers-search</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/fbi-vault-ufo-files-crashed-disc-reports-roswell-documents-and-the-hottel-memo-t</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-case-for-alien-life-fermi-paradox-drake-equation-and-why-scientists-now-beli</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/exoplanet-revolution-nasa-has-confirmed-5-500-planets-dozens-in-habitable-zones-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/jacques-vallee-ufos-are-not-extraterrestrial-spacecraft-they-are-interdimensiona</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/roswell-1947-the-incident-that-started-everything-declassified-army-fbi-and-cia-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/oumuamua-harvard-astronomer-avi-loeb-says-first-interstellar-object-was-likely-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-1952-washington-dc-ufo-flap-objects-flew-over-the-white-house-and-capitol-tr</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/international-governments-confirm-ufo-programs-brazil-chile-france-uk-peru-what-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-condon-report-1969-the-study-commissioned-to-close-ufo-investigation-but-30-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nexusverse.app/records/nick-pope-i-was-the-uk-government-s-ufo-investigator-for-3-years-here-is-what-i-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <loc>https://nexusverse.app/records/nick-pope-i-was-the-uk-government-s-ufo-investigator-3-years-here-is-what-i-</loc>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/communion-1987-whitley-strieber-s-account-of-repeated-alien-contact-became-a-bes</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/travis-walton-1975-abducted-for-5-days-in-apache-sitgreaves-national-forest-six-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-wow-signal-1977-the-best-candidate-for-alien-radio-contact-in-history-never-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ancient-astronaut-theory-sumerian-texts-describe-the-anunnaki-as-alien-beings-wh</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/september-2025-congressional-hearing-military-veterans-testify-about-non-human-i</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/prism-xkeyscore-muscular-the-full-scope-of-nsa-mass-surveillance-revealed-by-sno</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/stingray-devices-police-are-secretly-using-imsi-catchers-to-track-every-phone-in</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/trump-administration-building-centralized-ai-searchable-database-of-every-us-res</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/church-committee-1975-the-senate-investigation-that-exposed-cointelpro-cia-assas</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/facial-recognition-china-has-700-million-cameras-the-us-is-not-far-behind-how-ma</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/your-smartphone-is-a-surveillance-device-apps-sell-location-data-to-government-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-jekyll-island-meeting-1910-how-seven-men-secretly-wrote-the-federal-reserve-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-missing-21-trillion-pentagon-and-hud-cannot-account-for-funds-official-inspe</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/goldman-sachs-the-great-vampire-squid-how-one-bank-has-positioned-itself-at-the-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-great-reset-world-economic-forum-s-plan-to-use-covid-19-crisis-to-transform-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-panama-papers-11-5-million-documents-expose-how-world-leaders-billionaires-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/money-creation-from-nothing-how-commercial-banks-create-97-of-all-money-as-debt-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/skull-and-bones-antony-sutton-s-research-reveals-how-yale-s-secret-society-has-p</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/carroll-quigley-s-tragedy-and-hope-the-georgetown-historian-who-documented-the-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/bohemian-grove-confirmed-the-annual-gathering-of-us-presidents-ceos-and-power-br</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/freemasonry-the-world-s-largest-secret-society-has-6-million-members-its-symboli</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-bilderberg-group-annual-secret-meeting-of-130-global-power-brokers-no-media-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-illuminati-from-weishaupt-s-1776-bavarian-secret-society-to-modern-conspirac</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-deep-state-how-a-shadow-government-of-intelligence-officials-contractors-and</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/anatomy-of-the-deep-state-28-year-congressional-staffer-mike-lofgren-explains-ho</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/operation-mockingbird-and-its-legacy-how-the-cia-infiltrated-american-media-and-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/pnac-and-the-wolfowitz-doctrine-the-neoconservative-blueprint-written-in-1992-th</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/confessions-of-an-economic-hit-man-how-the-us-engineered-third-world-debt-slaver</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/nord-stream-sabotage-2022-seymour-hersh-reports-us-navy-divers-planted-the-explo</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-cia-as-organized-crime-former-cia-officers-describe-how-the-agency-operates-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/manufacturing-consent-chomsky-and-herman-s-propaganda-model-explains-why-corpora</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/media-consolidation-six-companies-control-90-of-all-us-media-how-the-consolidati</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/operation-mockingbird-exposed-400-journalists-working-for-the-cia-the-full-churc</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-twitter-files-2022-internal-documents-show-fbi-dhs-and-intelligence-agencies</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cnn-s-documented-history-of-fabricated-stories-retracted-reporting-and-coordinat</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/edward-bernays-the-nephew-of-freud-who-invented-public-relations-and-taught-corp</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/sharyl-attkisson-five-time-emmy-award-winner-documents-how-government-and-corpor</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-great-sphinx-was-built-before-the-pharaohs-geologist-robert-schoch-s-water-e</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/forbidden-archaeology-hundreds-of-documented-cases-of-human-remains-and-artifact</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-smithsonian-institution-s-documented-history-of-suppressing-giant-skeleton-d</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/fingerprints-of-the-gods-graham-hancock-s-evidence-for-a-technologically-advance</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-younger-dryas-impact-hypothesis-scientific-evidence-that-a-comet-strike-12-8</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/bitten-science-writer-documents-how-willy-burgdorfer-admitted-plum-island-tick-r</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-replication-crisis-50-70-of-scientific-studies-cannot-be-reproduced-and-the-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/fda-wanted-75-years-to-release-pfizer-covid-vaccine-data-federal-judge-ordered-f</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/tesla-s-suppressed-inventions-free-energy-death-ray-and-the-fbi-files-seized-imm</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-giza-power-plant-engineer-christopher-dunn-s-analysis-shows-the-great-pyrami</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/viktor-schauberger-s-implosion-technology-the-austrian-forester-who-developed-na</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-hutchison-effect-canadian-researcher-documents-levitation-metal-fusion-and-a</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-dead-sea-scrolls-900-manuscripts-hidden-for-2-000-years-reveal-pre-biblical-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-sumerian-king-list-ancient-clay-tablets-record-kings-who-ruled-for-thousands</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-nag-hammadi-library-52-gnostic-texts-hidden-in-350-ce-reveal-alternative-chr</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-stanford-remote-viewing-experiments-1972-1995-physicists-russell-targ-and-ha</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-global-consciousness-project-random-number-generators-show-statistically-sig</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ingo-swann-remotely-viewed-jupiter-s-rings-in-1973-voyager-1-confirmed-them-in-1</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/elongated-skulls-of-paracas-peru-dna-testing-shows-they-are-not-fully-human-the-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-true-legends-of-giants-oral-traditions-of-indigenous-peoples-on-every-contin</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/cern-s-large-hadron-collider-scientists-are-attempting-to-open-microscopic-porta</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/portals-to-the-stars-documented-locations-where-the-laws-of-physics-break-down-s</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/missing-411-2025-update-1-600-documented-cases-of-unexplained-disappearances-in-</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-bermuda-triangle-s-actual-record-1-000-ships-and-75-aircraft-lost-what-insur</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/operation-ajax-1953-the-cia-and-mi6-overthrew-iran-s-democratically-elected-lead</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/mk-ultra-chief-sidney-gottlieb-s-secret-testimony-released-2025-cia-chemist-admi</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/gary-webb-s-dark-alliance-the-cia-contra-crack-cocaine-connection-that-mainstrea</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-pentagon-papers-1971-the-7-000-page-secret-history-of-the-vietnam-war-that-s</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-baltic-sea-anomaly-a-60-meter-object-on-the-ocean-floor-that-sonar-shows-has</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-younger-dryas-catastrophe-geological-evidence-of-a-global-flood-12-800-years</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/the-deep-sea-contains-creatures-and-structures-that-defy-classification-95-of-ea</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nexusverse.app/records/ancient-ocean-floor-maps-show-continents-were-connected-differently-12-000-years</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
