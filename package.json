@@ -2,19 +2,70 @@
   "name": "the-nexus",
   "version": "1.0.0",
   "private": true,
-  "description": "The Nexus \u2014 Independent investigative research platform",
+  "dependencies": {
+    "@vercel/analytics": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "react-snap": "^1.23.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "react-router-dom": "^6.22.0",
-    "@vercel/analytics": "1.1.3"
+  "reactSnap": {
+    "source": "build",
+    "destination": "build",
+    "fallback": "index.html",
+    "crawl": false,
+    "include": [
+      "/",
+      "/records",
+      "/sources",
+      "/community",
+      "/library",
+      "/reddit",
+      "/about.html",
+      "/contact.html",
+      "/privacy-policy.html",
+      "/records/operation-northwoods-joint-chiefs-proposed-staging-domestic-attacks-to-justify-w",
+      "/records/mk-ultra-cia-mind-control-experiments-on-unwitting-citizens-confirmed-by-senate-",
+      "/records/operation-paperclip-1-600-nazi-scientists-secretly-transferred-to-the-u-s-after-",
+      "/records/cointelpro-the-fbi-s-documented-campaign-to-destroy-civil-rights-leaders-anti-wa",
+      "/records/project-stargate-the-cia-s-20-million-25-year-psychic-espionage-program-now-full",
+      "/records/missing-411-david-paulides-documents-9-000-hours-of-research-into-unexplained-na",
+      "/records/david-grusch-under-oath-us-government-has-retrieved-non-human-craft-and-biologic",
+      "/records/ny-times-breaks-aatip-pentagon-ran-secret-22-million-ufo-program-for-years-the-a",
+      "/records/the-tic-tac-incident-2004-navy-pilots-encountered-a-40-foot-white-object-with-no",
+      "/records/maj-gen-neil-mccasland-disappears-feb-27-2026-air-force-research-lab-commander-w",
+      "/records/gobekli-tepe-12-000-year-old-megalithic-temple-complex-rewrites-accepted-timelin",
+      "/records/book-of-enoch-the-watchers-who-took-human-wives-and-produced-the-nephilim-comple",
+      "/records/jeffrey-epstein-no-verified-income-source-private-islands-access-to-world-leader",
+      "/records/cia-gateway-process-declassified-1983-army-report-concludes-human-consciousness-",
+      "/records/the-bilderberg-group-70-years-of-private-summits-between-heads-of-state-and-cent",
+      "/records/the-federal-reserve-a-private-banking-cartel-that-has-never-been-independently-a",
+      "/records/prism-xkeyscore-muscular-the-full-scope-of-nsa-mass-surveillance-revealed-by-sno",
+      "/records/the-panama-papers-11-5-million-documents-expose-how-world-leaders-billionaires-a",
+      "/records/roswell-1947-the-incident-that-started-everything-declassified-army-fbi-and-cia-",
+      "/records/the-wow-signal-1977-the-best-candidate-for-alien-radio-contact-in-history-never-"
+    ],
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "skipThirdPartyRequests": true,
+    "headless": true,
+    "timeout": 60000
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
