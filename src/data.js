@@ -1,3 +1,4 @@
+import { STORY_BODIES } from './data.body.js';
 // --- ADMIN -------------------------------------------------------------------
 
 export const ADMIN_USER = "nexusadmin";
@@ -106,7 +107,9 @@ export const REDDIT_SUBS = [
 
 
 // --- SEED STORIES -------------------------------------------------------------
-export const SEED_STORIES = [
+_SEED_STORIES.map(s =>
+  STORY_BODIES[s.id] ? { ...s, body: STORY_BODIES[s.id] } : s
+);
   { id:"s1",  type:"archive",  source:"National Security Archive", sourceUrl:"https://nsarchive.gwu.edu",         time:"1h ago",  topic:"Government & Intelligence",    region:"USA",title:"Operation Northwoods: Joint Chiefs Proposed Staging Domestic Attacks to Justify War",                     summary:"The 1962 document proposed faking attacks on American soil to justify invading Cuba. JFK rejected it. Declassified in 1997  -  a primary example of documented false-flag planning within the U.S. military establishment.",                                     upvotes:4100, comments:529,  credible:94, debunked:6,  tags:["Declassified","False Flag","Military"],           premium:false },
   { id:"s2",  type:"archive",  source:"Dead Sea Scrolls Archive",  sourceUrl:"https://www.deadseascrolls.org.il", time:"2h ago",  topic:"Biblical & Religious Records",  region:"Middle East",title:"Book of Enoch: The Watchers Who Took Human Wives and Produced the Nephilim  -  Complete Pre-Biblical Account", summary:"The Book of Enoch, found among the Dead Sea Scrolls, describes the Watchers  -  fallen angels  -  who descended to earth, took human wives, and produced the Nephilim giants. The text directly influenced Genesis 6 and was excluded from the Biblical canon at the Council of Nicaea.", upvotes:6821, comments:1102, credible:78, debunked:22, tags:["Enoch","Watchers","Nephilim","Giants"],          premium:false },
   { id:"s3",  type:"research", source:"Smithsonian Archives Review",sourceUrl:"https://www.si.edu",               time:"3h ago",  topic:"Giants & Nephilim",            region:"USA",title:"19th Century Newspaper Reports of Giant Skeletal Remains Across North America  -  Catalogued",               summary:"Over 400 newspaper articles from 1848-1912 report giant humanoid skeletons  -  some 7 to 12 feet tall  -  across the American Midwest. Researchers allege the Smithsonian systematically collected and suppressed these remains following its founding mandate.",      upvotes:9100, comments:1841, credible:65, debunked:35, tags:["Giants","Nephilim","Smithsonian","Cover-up"],    premium:false },
