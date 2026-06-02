@@ -4,9 +4,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CSS, VBadge, Sidebar, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
   ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, VERDICTS, MEDIA_LIBRARY,
-  SEED_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES, RESEARCHERS,
+  SEED_STORIES as _RAW_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES, RESEARCHERS,
   autoVerdict, getType, fmtNum, OPENROUTER_KEY, AI_MODEL,
 } from './data.js';
+import { STORY_BODIES } from './data.body.js';
+
+// Merge article body content into stories for AdSense content depth requirements
+const SEED_STORIES = _RAW_STORIES.map(s =>
+  STORY_BODIES[s.id] ? { ...s, body: STORY_BODIES[s.id] } : s
+);
 
 const callAI = async (system, userMsg, history = [], maxTokens = 900) => {
   const messages = [
