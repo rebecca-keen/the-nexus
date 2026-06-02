@@ -188,7 +188,6 @@ function App() {
   const [sub,    setSub]        = useState(REDDIT_SUBS[0]);
   const [rSort,  setRSort]      = useState("hot");
 
-  const [showForm, setShowForm] = useState(false);
   const [showSrc, setShowSrc]   = useState(false);
   const [np, setNp]             = useState({ title:"", body:"", topic:TOPICS[1], region:"🌍 Global", contentType:"research", confidence:"unverified", tags:"" });
   const [refs, setRefs]         = useState([{ label:"", url:"" }]);
