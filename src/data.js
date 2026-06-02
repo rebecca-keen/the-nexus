@@ -3134,7 +3134,7 @@ export const RESEARCHERS = [
 
 
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
-thenexusapp.com | Effective: \${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
+thenexusapp.com | Effective: June 2026
 
 ==================================
 1. WHO WE ARE
