@@ -1,9 +1,9 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CSS, VBadge, Sidebar, PrivacyModal, SubmitSourceForm } from './components.jsx';
 import {
-  ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, VERDICTS, MEDIA_LIBRARY,
+  ADMIN_USER, ADMIN_PASS, TOPICS, REGIONS, MEDIA_LIBRARY,
   SEED_STORIES as _RAW_STORIES, SEED_POSTS, REDDIT_SUBS, SOURCES, RESEARCHERS,
   autoVerdict, getType, fmtNum, OPENROUTER_KEY, AI_MODEL,
 } from './data.js';
@@ -37,14 +37,16 @@ const callAI = async (system, userMsg, history = [], maxTokens = 900) => {
   const data = await res.json();
   return data.choices?.[0]?.message?.content || "";
 };
-let _session = null;
-const saveSession = u => { _session = u; };
-const clearSession = () => { _session = null; };
+const saveSession = u => { window.__nexusSession = u; };
 
+// eslint-disable-next-line
 const TYPE_ICON = { book:"📖", documentary:"🎬", film:"🎥", article:"📰" };
 const TYPE_CLR  = { book:"#5a9ac8", documentary:"#a060d0", film:"#4a9a5a", article:"#c0a020" };
+// eslint-disable-next-line
 const CONF_LABELS = { confirmed:"✓ Confirmed", likely:"↑ Likely", contested:"⚖ Disputed", unverified:"? Unverified" };
+// eslint-disable-next-line
 const CONF_COLORS = { confirmed:{bg:"#0d2010",c:"#40c070",b:"#1a4a1a"}, likely:{bg:"#0d1a10",c:"#60c080",b:"#1a3a1a"}, contested:{bg:"#1e1808",c:"#c0a020",b:"#3a3010"}, unverified:{bg:"#1a1008",c:"#c07020",b:"#3a2010"} };
+// eslint-disable-next-line
 const CT_LABELS = { research:"🔬 Research", document:"📄 Document", sighting:"👁 Sighting", tip:"💡 Tip", rebuttal:"⚖ Counter", media:"📷 Media" };
 
 const toSlug = str => (str || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
@@ -167,14 +169,13 @@ function ArticleBody({ story, verdicts }) {
 function App() {
   const [user, setUser]         = useState({ plan:"free", isAdmin:false });
   const isAdmin = user.isAdmin;
-  const isPaid  = true;
 
   const [view, setView]         = useState("home");
   const [openStory, setOpenStory] = useState(null);
 
   const [stories, setStories]   = useState(SEED_STORIES);
   const [posts,   setPosts]     = useState(SEED_POSTS);
-  const [verdicts, setVerdicts] = useState({});
+  const [verdicts] = useState({});
   const [saved,   setSaved]     = useState({});
 
   const [filters, setFilters]   = useState({ topic:"All Topics", region:"All Regions", srcType:"All Sources", sortBy:"Latest", search:"", verdict:"All" });
@@ -192,7 +193,6 @@ function App() {
   const [np, setNp]             = useState({ title:"", body:"", topic:TOPICS[1], region:"🌍 Global", contentType:"research", confidence:"unverified", tags:"" });
   const [refs, setRefs]         = useState([{ label:"", url:"" }]);
   const [uploads, setUploads]   = useState([]);
-  const [drag, setDrag]         = useState(false);
   const [disc, setDisc]         = useState(false);
   const [cSort, setCSort]       = useState("Hot");
 
@@ -201,8 +201,7 @@ function App() {
   const [activeResearcher, setActiveResearcher] = useState(null);
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const imgRef = useRef(null);
-  const docRef = useRef(null);
+  // refs removed - not used in this build
 
   const [toast, setToast] = useState(null);
   const toast2 = msg => { setToast(msg); setTimeout(() => setToast(null), 2200); };
@@ -317,6 +316,7 @@ function App() {
     finally { setRLoad(false); }
   }, [sub, rSort]);
 
+  // eslint-disable-next-line
   const handleFiles = files => Array.from(files).forEach(f => {
     const r = new FileReader();
     r.onload = ev => {
@@ -326,6 +326,7 @@ function App() {
     r.readAsDataURL(f);
   });
 
+  // eslint-disable-next-line
   const submitPost = () => {
     if (!np.title.trim()) { toast2("Title required"); return; }
     if (!np.body.trim())  { toast2("Description required"); return; }
