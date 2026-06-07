@@ -9,6 +9,8 @@ export const ADMIN_PASS = "N3xus@2025";
 export const OPENROUTER_KEY = "PASTE_YOUR_OPENROUTER_KEY_HERE";
 export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model  -  no billing required
 
+
+
 // --- TOPICS ------------------------------------------------------------------
 export const TOPICS = [
   "All Topics",
@@ -316,7 +318,7 @@ export const SEED_STORIES = [
   {id:"s123",type:"research", source:"Ancient Astronaut Theory / Zecharia Sitchin", sourceUrl:"https://sitchin.com/",                                                                 time:"33h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Ancient Astronaut Theory: Sumerian Texts Describe the Anunnaki as Alien Beings Who Created Humans - What the Clay Tablets Actually Say", summary:"Zecharia Sitchin spent decades translating Sumerian cuneiform clay tablets and concluded they describe beings called the Anunnaki who came from the planet Nibiru and genetically engineered Homo sapiens as a slave species. The Epic of Gilgamesh pre-dates Genesis by at least 1000 years and contains parallel flood narrative. The Sumerian King List describes rulers who reigned for thousands of years before the flood. Academic Sumerologists dispute Sitchin's translations but the ancient astronaut hypothesis has been adopted by researchers including Erich von Daniken whose Chariots of the Gods became an international bestseller. The History Channel Ancient Aliens series has brought the theory to mass audiences.", upvotes:21500, comments:3101, credible:48, debunked:52, tags:["Anunnaki","Sitchin","Sumerian","Ancient Astronaut","Nibiru","Enki"], premium:false},
 
   {id:"s124",type:"news",     source:"Congress / NewsNation / The Debrief",   sourceUrl:"https://oversight.house.gov/",                                                                  time:"34h ago", topic:"Aliens & Extraterrestrial", region:"USA",    title:"September 2025 Congressional Hearing: Military Veterans Testify About Non-Human Intelligence and Craft Retrieval Programs", summary:"The September 2025 House Oversight Committee hearing titled Restoring Public Trust brought additional military veterans to testify under oath about UAP crash retrieval programs and non-human intelligence. Witnesses included individuals with direct firsthand knowledge of crash retrieval operations rather than secondhand reports. The hearing followed David Grusch's July 2023 testimony and was notable for the increased specificity of accounts given under oath. Multiple witnesses described seeing non-human materials and in some cases non-human biological entities. Congressional pressure for full declassification intensified following the hearing.", upvotes:29100, comments:4201, credible:74, debunked:26, tags:["Congress","2025","Military","Veterans","Crash Retrieval","Non-Human","Testimony"], premium:false},
-
+,
 // ── SURVEILLANCE (need 6 more) ────────────────────────────────────────────
   {id:"s125",type:"archive",  source:"NSA / Edward Snowden / The Guardian",  sourceUrl:"https://theintercept.com/snowden-sidtoday/",                                                     time:"1h ago",  topic:"Surveillance",             region:"USA",    title:"PRISM, XKeyscore, MUSCULAR: The Full Scope of NSA Mass Surveillance Revealed by Snowden - Every American Was Being Watched", summary:"Edward Snowden's 2013 leaks to Glenn Greenwald and Laura Poitras revealed that the NSA had built the most comprehensive mass surveillance apparatus in human history. PRISM collected data directly from Apple, Google, Facebook, Microsoft, Yahoo, AOL, Skype, YouTube and PalTalk. XKeyscore could search the full content of emails, browser history, and social media activity of virtually any internet user on Earth. MUSCULAR tapped the fiber optic cables connecting Google and Yahoo data centers abroad, outside any legal oversight. UPSTREAM collected data directly from internet backbone infrastructure. The NSA was not targeting terrorists - it was collecting everything from everyone.", upvotes:31200, comments:4801, credible:96, debunked:4, tags:["NSA","PRISM","XKeyscore","Snowden","Mass Surveillance","Internet"], premium:false},
 
@@ -455,12 +457,12 @@ export const SEED_STORIES = [
   {id:"s185",type:"research", source:"NOAA / Woods Hole Oceanographic",        sourceUrl:"https://oceanexplorer.noaa.gov",                                                                  time:"61h ago", topic:"Ocean & Earth",           region:"Global", title:"The Baltic Sea Anomaly: A 60-Meter Object on the Ocean Floor That Sonar Shows Has No Natural Explanation - Geologists and Military Remain Silent", summary:"In June 2011 Swedish deep-sea explorers Ocean X Team discovered a 60-meter circular object on the floor of the Baltic Sea at 87 meters depth while searching for a shipwreck. The object has a flat bottom, a distinct circular shape, and a 300-meter runway-like track behind it. Electrical equipment malfunctions when divers get within 200 meters of it. Samples retrieved from the object were analyzed and found to contain metal alloys including titanium that do not occur naturally in this formation. The Swedish military has not commented. Mainstream geologists have proposed it is a glacially deposited disc of glaciofluvial sediment but have not explained the electrical interference or the unusual metal composition. The anomaly remains unidentified.", upvotes:18900, comments:2801, credible:55, debunked:45, tags:["Baltic Sea Anomaly","Sonar","Ocean","UFO","Electrical Interference","Sweden","Titanium"], premium:false},
 
   {id:"s186",type:"research", source:"Randall Carlson / Robert Schoch",        sourceUrl:"https://www.randallcarlson.com",                                                                  time:"62h ago", topic:"Ocean & Earth",           region:"Global", title:"The Younger Dryas Catastrophe: Geological Evidence of a Global Flood 12,800 Years Ago That Reshaped Continents and Killed 75% of Large Mammals", summary:"Approximately 12,800 years ago Earth experienced a sudden and catastrophic warming event that ended the last Ice Age. Evidence documented by geologists including Randall Carlson and J. Harlen Bretz shows that enormous ice dam failures released water volumes creating the Channeled Scablands of Washington State, the Missoula floods visible from space, and a rapid global sea level rise of 400 feet. These floods would have destroyed any coastal civilizations. Simultaneously 75% of large mammals in North America went extinct within a geologically instantaneous period. The Younger Dryas Impact Hypothesis - supported by evidence of nano-diamonds and platinum in a global black mat layer - proposes that a comet strike triggered these catastrophes. This is the geological context for flood myths found in virtually every ancient culture.", upvotes:21700, comments:3101, credible:78, debunked:22, tags:["Younger Dryas","Flood","Carlson","Bretz","Scablands","Comet","Civilization"], premium:false},
-
+,
 // ── OCEAN & EARTH (2 more to reach 8) ──────────────────────────────────────
   {id:"s187",type:"research", source:"NOAA / MBARI / Monterey Bay Aquarium",  sourceUrl:"https://oceanexplorer.noaa.gov",                                                                  time:"63h ago", topic:"Ocean & Earth",           region:"Global", title:"The Deep Sea Contains Creatures and Structures That Defy Classification - 95% of Earth's Oceans Have Never Been Seen by Human Eyes", summary:"NOAA estimates that 95% of Earth's oceans remain unexplored and unmapped. The Challenger Deep in the Mariana Trench reaches 36,000 feet - deep enough to submerge Mount Everest. In explored regions scientists have found hydrothermal vent ecosystems that survive without sunlight, chemosynthetic life forms that completely rewrite the rules of biology, and structures that have never been classified. The MBARI institute has documented creatures including the Humboldt squid with complex communication systems, comb jellies with completely separate nervous system evolution, and deep-sea fish with bioluminescent lures more complex than any engineered system. The bloop, the julia, the train, and the upsweep sounds remain officially unexplained after 30 years.", upvotes:16800, comments:2401, credible:88, debunked:12, tags:["Deep Sea","NOAA","Unexplored","Bioluminescence","Bloop","Mariana Trench"], premium:false},
 
   {id:"s188",type:"research", source:"Comet Research Group / Science Advances", sourceUrl:"https://www.sciencealert.com",                                                                   time:"64h ago", topic:"Ocean & Earth",           region:"Global", title:"Ancient Ocean Floor Maps Show Continents Were Connected Differently 12,000 Years Ago - Coastal Civilizations Would Have Been Destroyed", summary:"At the peak of the last Ice Age approximately 20,000 years ago sea levels were 400 feet lower than today. This means that vast areas of continental shelves now underwater were dry land - including a land bridge connecting Britain to Europe, a massive coastal plain around Southeast Asia called Sundaland, and extensive coastal territories in the Americas and Australia. The rising seas that followed the Younger Dryas warming between 15,000 and 7,000 years ago would have systematically inundated any coastal civilizations. Graham Hancock argues this explains why flood myths are universal - every coastal culture on Earth would have experienced catastrophic inundation. Sonar mapping of submerged areas including the North Sea Doggerland reveals archaeological traces of human habitation.", upvotes:19400, comments:2801, credible:76, debunked:24, tags:["Sea Level","Ice Age","Doggerland","Sundaland","Coastal","Civilization","Flood"], premium:false},
-
+,
 // ── VACCINES & BIG PHARMA ─────────────────────────────────────────────────
   {id:"s189",type:"research",source:"JAMA / Lancet / BMJ",                   sourceUrl:"https://www.bmj.com",                                                                            time:"1h ago",  topic:"Vaccines & Big Pharma",    region:"USA",    title:"Pfizer and Moderna's Own Trial Data Shows mRNA Vaccines Were Never Tested for Preventing Transmission - Only Symptom Reduction", summary:"A re-analysis of Pfizer and Moderna's Phase 3 trial data published in the British Medical Journal confirmed that the COVID-19 mRNA vaccines were never tested for their ability to prevent transmission of the virus. The trials only measured whether vaccinated individuals developed symptoms - not whether they could still spread the virus to others. This distinction was central to the public health justification for vaccine mandates. Former Pfizer board member Dr. Scott Gottlieb acknowledged in 2021 that the trials were not powered to detect a reduction in transmission. The CDC's own MMWR data subsequently showed vaccinated individuals could carry and transmit identical viral loads.", upvotes:28600, comments:4201, credible:74, debunked:26, tags:["Pfizer","mRNA","Transmission","Trial","BMJ","Mandate"], premium:false},
 
@@ -557,6 +559,150 @@ export const SEED_STORIES = [
   {id:"s231",type:"research",source:"Ancient Gods & Beings",                   sourceUrl:"https://www.ancient-origins.net/myths-legends",                                                time:"43h ago", topic:"Ancient Gods & Beings",     region:"Global", title:"The Anunnaki in Sumerian Texts: Beings Who Came From the Sky, Created Humanity to Mine Gold, and Were Worshipped as Gods Across the Ancient World", summary:"The Anunnaki appear throughout Sumerian cuneiform texts as divine beings who descended from the heavens and played a central role in human civilization. The Sumerian texts predate Genesis by at least 1,000 years and describe parallel accounts of creation, the flood, and the formation of humanity. Zecharia Sitchin interpreted the Anunnaki as extraterrestrial beings from the planet Nibiru who genetically engineered Homo sapiens. Academic Sumerologists translate Anunnaki as those of royal blood or those who came from heaven to earth and dispute Sitchin's interpretations. The texts describe the Anunnaki gods as having human form, human emotions, human relationships, and human conflicts - making them either allegorical or literal beings indistinguishable from advanced humans.", upvotes:23400, comments:3401, credible:55, debunked:45, tags:["Anunnaki","Sumerian","Sitchin","Creation","Nibiru","Gods","Ancient Aliens"], premium:false},
 
   {id:"s232",type:"research",source:"Credo Mutwa / Zulu Legends / Michael Tellinger",sourceUrl:"https://www.michaeltellinger.com",                                                  time:"44h ago", topic:"Ancient Gods & Beings",     region:"Global", title:"Credo Mutwa: South Africa's Most Senior Shaman Describes the Chitauri - Reptilian Beings Who Controlled Ancient Africa - In Extraordinary Detail", summary:"Vusamazulu Credo Mutwa was South Africa's most senior traditional healer and keeper of Zulu oral history until his death in 2020. In extensive interviews recorded by David Icke and Michael Tellinger he described the Chitauri - beings that appear in Zulu tradition as reptilian entities who arrived from the sky in ancient times, intermarried with human royalty, and have continued to influence human affairs. Mutwa described these beings in extraordinary physical and behavioral detail including their feeding habits, their hybrid offspring, and their claimed control of weather and political events. Researcher Michael Tellinger has documented similar beings in the oral traditions of other African cultures and proposed that the massive ancient stone circle complex in Mpumalanga was built by the Anunnaki.", upvotes:18700, comments:2701, credible:45, debunked:55, tags:["Credo Mutwa","Chitauri","Zulu","Reptilian","South Africa","Oral History","Tellinger"], premium:false},
+,
+// ── UAP & ALIENS — 2025-2026 BREAKING ────────────────────────────────────
+  {id:"s233",type:"news",    source:"Washington Times / Grusch / UAP Disclosure Act",
+   sourceUrl:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/",
+   time:"1h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"Grusch Returns to Congress June 2026: UAP Disclosure Act Would Force Every Federal Agency to Publish Non-Human Intelligence Records Online",
+   summary:"David Grusch returned to Capitol Hill in June 2026 to testify alongside military witnesses including Air Force veteran Jeffrey Nuccetelli and Navy Senior Chief Petty Officer Alexandro Wiggins. The UAP Disclosure Act under discussion would require the president to direct each federal agency to declassify all UAP records and publish them on public agency websites. Representative Burlison stated that Trump is the first president to take concrete steps toward UAP transparency. Grusch was expected to elaborate on non-human intelligence evidence he encountered in classified channels during his time at the National Geospatial-Intelligence Agency and the National Reconnaissance Office.",
+   upvotes:28400, comments:4201, credible:84, debunked:16, tags:["Grusch","Congress","UAP Disclosure Act","June 2026","Non-Human","NGA","Federal Agencies"], premium:false},
+
+  {id:"s234",type:"news",    source:"DefenseScoop / Christopher Mellon",
+   sourceUrl:"https://defensescoop.com/2026/02/20/trump-uap-government-files-disclosure/",
+   time:"2h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"Trump Vows to Release Government UFO Files February 2026 — Whistleblowers and Former Defense Officials React With Cautious Hope",
+   summary:"President Donald Trump announced in February 2026 his intention to direct the release of government files about UFOs and extraterrestrials, sparking a new wave of anticipation. Christopher Mellon, former Deputy Assistant Secretary of Defense for Intelligence, told DefenseScoop the impact will depend entirely on follow-through. The House Oversight Task Force held a UAP transparency hearing in September 2025 and in April 2026 said it was continuing its investigation and requesting UAP-related videos from the Department of Defense. The 2024 NDAA required the National Archives to establish a formal UAP Records Collection — moving the issue from rumor culture into a formal federal records process.",
+   upvotes:31200, comments:4601, credible:82, debunked:18, tags:["Trump","UFO Files","Mellon","Disclosure","2026","NDAA","National Archives"], premium:false},
+
+  {id:"s235",type:"archive", source:"Fox News / House Oversight / Military Witnesses",
+   sourceUrl:"https://www-ak-ms.foxnews.com/politics/reporters-notebook-military-whistleblowers-testify-congress-about-unexplained-ufo-encounters.print",
+   time:"3h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"Military Whistleblowers Testify to Congress September 2025: Air Force and Navy Witnesses Describe Unexplained UAP Encounters Under Oath",
+   summary:"US Air Force veteran Jeffrey Nuccetelli, Navy Senior Chief Petty Officer Alexandro Wiggins, Air Force veteran Dylan Borland, and investigative journalist George Knapp testified under oath before the House Oversight Committee in September 2025. The witnesses described UAP encounters involving craft that performed maneuvers beyond known physics and that military pilots were discouraged from reporting. The hearing focused on UAP transparency and whistleblower protection — establishing legal protections for military personnel who come forward with UAP information. The committee signaled it does not believe the current transparency process is complete.",
+   upvotes:24800, comments:3601, credible:85, debunked:15, tags:["Whistleblowers","Congress","Air Force","Navy","Nuccetelli","Wiggins","2025 Hearing"], premium:false},
+
+  {id:"s236",type:"research", source:"Paraghosts / National Archives / NARA",
+   sourceUrl:"https://www.paraghosts.com/aliens-and-ufos-in-2026-us-government-disclosure-guide/",
+   time:"4h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"2026 UAP Disclosure Guide: National Archives Now Has a Formal UAP Records Collection — Every Agency Required to Identify and Transmit UAP Files",
+   summary:"The 2024 National Defense Authorization Act formally required the National Archives and Records Administration to establish a UAP Records Collection — the first time in history UAP evidence has been placed in a formal federal records process equivalent to the JFK assassination records. All federal agencies were required to identify, organize, and transmit UAP records to NARA. The House Oversight Task Force in April 2026 was still requesting additional video files from the Department of Defense, signaling Congress itself does not believe full transparency has been achieved. The phrase 'what is still hidden' has renewed force in 2026 because the government's own oversight mechanisms are publicly signaling incompleteness.",
+   upvotes:22600, comments:3301, credible:88, debunked:12, tags:["NARA","National Archives","UAP Records","2024 NDAA","Disclosure","2026","House Oversight"], premium:false},
+
+  {id:"s237",type:"research", source:"AARO / Pentagon / NewsNation",
+   sourceUrl:"https://www.aaro.mil",
+   time:"5h ago", topic:"Aliens & Extraterrestrial", region:"USA",
+   title:"AARO — The All-domain Anomaly Resolution Office: The Pentagon's Official UAP Investigation Body Maintains a Database of 800+ Unresolved Cases",
+   summary:"The All-domain Anomaly Resolution Office was established by Congress in 2022 as the official Pentagon body for receiving, analyzing, and resolving UAP reports from military and intelligence sources. AARO maintains a classified database of over 800 UAP cases, many of which remain unresolved after investigation. AARO's historical record review examined whether US government programs related to UAP involved non-human intelligence or technology — findings were published in a public report in 2024 that critics including David Grusch said was incomplete. Ross Coulthart has reported that multiple sources inside AARO believe the office is being managed to limit disclosure rather than facilitate it.",
+   upvotes:19800, comments:2901, credible:79, debunked:21, tags:["AARO","Pentagon","800 Cases","UAP Database","Grusch","Coulthart","2024 Report"], premium:false},
+
+  {id:"s238",type:"research", source:"The Debrief / Leslie Kean / Ross Coulthart",
+   sourceUrl:"https://thedebrief.org",
+   time:"6h ago", topic:"Aliens & Extraterrestrial", region:"USA",
+   title:"Non-Human Biologics: What Grusch and Other Witnesses Actually Claimed Under Oath — The Specific Testimony That Has Never Been Refuted",
+   summary:"In sworn Congressional testimony in July 2023, David Grusch stated that the United States has for decades been secretly retrieving and reverse-engineering spacecraft of non-human origin. He testified that non-human biologics — physical remains — were recovered alongside some retrieved craft. Other witnesses including former Pentagon official Lue Elizondo and Navy pilot Ryan Graves corroborated aspects of the broader UAP anomaly pattern. No government official or agency has produced evidence directly refuting Grusch's specific claims. The Congressional investigators have been unable to access the classified programs Grusch referenced, which itself has become a significant focus of the investigation.",
+   upvotes:34600, comments:4901, credible:80, debunked:20, tags:["Non-Human Biologics","Grusch","Elizondo","Graves","Congress","Sworn Testimony","Reverse Engineering"], premium:false},
+
+  // ── BIGFOOT / SASQUATCH ───────────────────────────────────────────────────
+  {id:"s239",type:"research", source:"BFRO / Bigfoot Field Researchers Organization",
+   sourceUrl:"https://www.bfro.net/",
+   time:"7h ago", topic:"Unresolved Events", region:"USA",
+   title:"BFRO Database: Over 5,000 Documented Bigfoot Sightings Filed With the Only Scientific Research Organization Dedicated to the Sasquatch Mystery",
+   summary:"The Bigfoot Field Researchers Organization — founded in 1995 — maintains the most comprehensive database of credible Sasquatch sightings in North America. Over 5,000 reports have been filed from every US state except Hawaii. The database includes eyewitness accounts from law enforcement, military personnel, park rangers, and professional hunters — categories of witness with the least incentive to fabricate encounters. Pacific Northwest states Washington, Oregon, and Northern California account for the highest concentration of reports, as does the Great Lakes region. BFRO investigators follow up on reports in person and classify them by credibility level A through C. Class A reports involve clear sightings in good conditions by credible witnesses.",
+   upvotes:18400, comments:2701, credible:62, debunked:38, tags:["BFRO","Sasquatch","5000 Reports","Database","Class A","Pacific Northwest","Witnesses"], premium:false},
+
+  {id:"s240",type:"research", source:"Dr. Melba Ketchum / Sasquatch Genome Project",
+   sourceUrl:"https://squatchable.com/article.asp?id=20334",
+   time:"8h ago", topic:"Unresolved Events", region:"USA",
+   title:"The Sasquatch Genome Project: Peer-Reviewed DNA Study Found Unknown Primate Nuclear DNA — Then Was Systematically Suppressed by Scientific Establishment",
+   summary:"Dr. Melba Ketchum spent five years conducting DNA analysis on samples claimed to be from Sasquatch, working with multiple independent laboratory teams under non-disclosure agreements. The study — submitted to multiple journals before finding a publisher — found that mitochondrial DNA from samples was consistent with modern human female lineage while nuclear DNA sequences were unlike any known primate in GenBank. Critics immediately questioned the methodology and the self-published journal. Ketchum claimed the scientific community was unwilling to engage objectively with the findings because the implications were too disruptive to evolutionary theory. The raw data has never been independently verified and Ketchum has never been given access to the major institutional resources needed to perform definitive analysis.",
+   upvotes:16800, comments:2401, credible:45, debunked:55, tags:["Ketchum","DNA","Sasquatch Genome","Nuclear DNA","Suppressed","GenBank","Hybrid"], premium:false},
+
+  {id:"s241",type:"research", source:"Oxford University / Bryan Sykes / Nature",
+   sourceUrl:"https://www.science.org/content/article/bigfoot-samples-analyzed-lab",
+   time:"9h ago", topic:"Unresolved Events", region:"Global",
+   title:"Oxford-Lausanne Study Analyzed 57 Bigfoot and Yeti Hair Samples — Most Were Bears, But Two Himalayan Samples Matched an Unknown Ancient Bear Lineage",
+   summary:"Bryan Sykes at Oxford University and Michel Sartori at the Lausanne Museum of Zoology conducted the first peer-reviewed genetic survey of physical samples claimed to come from Bigfoot, Yeti, and similar cryptids worldwide. Of 57 samples submitted by enthusiasts and museums from the US, Russia, India, and other countries, most were identified as belonging to known species — bears, horses, deer, coyotes. However two samples from the Himalayan region matched an ancient polar bear lineage that diverged from brown bears over 40,000 years ago, suggesting an unknown bear species or hybrid may be responsible for some Yeti sightings in the Himalayas. This partial positive result was the first peer-reviewed finding to suggest a biological basis for some cryptid reports.",
+   upvotes:21300, comments:3101, credible:78, debunked:22, tags:["Oxford","Sykes","DNA","Yeti","Bear Hybrid","Himalayan","Peer Reviewed"], premium:false},
+
+  {id:"s242",type:"research", source:"Wes Germer / Sasquatch Chronicles / Eyewitness Accounts",
+   sourceUrl:"https://sasquatchchronicles.com",
+   time:"10h ago", topic:"Unresolved Events", region:"USA",
+   title:"Sasquatch Chronicles: Military, Law Enforcement, and Professional Hunters Describe Encounters They Cannot Explain — What the Most Credible Witnesses Report",
+   summary:"Sasquatch Chronicles hosted by Wes Germer has compiled over 700 episodes featuring firsthand accounts from witnesses including US military veterans, police officers, park rangers, professional guides, and hunters. The most compelling accounts share consistent elements: the creature is bipedal at 7-10 feet tall, covered in dark hair, with a distinct odor described as sulfurous or musky. Multiple military witnesses describe something that did not behave like any known animal and that made them genuinely afraid. Several witnesses report infrasound effects — a low-frequency vibration they felt in the chest before any visual contact. The consistency of specific details across thousands of unrelated witnesses across decades and geography is the strongest argument that something real is being encountered.",
+   upvotes:17600, comments:2601, credible:58, debunked:42, tags:["Sasquatch Chronicles","Military","Police","Infrasound","7-10 Feet","Eyewitness","700 Episodes"], premium:false},
+
+  {id:"s243",type:"archive", source:"Patterson-Gimlin / FBI Analysis",
+   sourceUrl:"https://www.bfro.net/MULTIMEDIA/Movies/patty.asp",
+   time:"11h ago", topic:"Unresolved Events", region:"USA",
+   title:"The Patterson-Gimlin Film 1967: 55 Years of Analysis Cannot Confirm It Is a Hoax — Biomechanics Experts Say the Gait Is Impossible to Fake in a Suit",
+   summary:"The Patterson-Gimlin film was shot on October 20 1967 at Bluff Creek California by Roger Patterson and Bob Gimlin. The 59.5 seconds of 16mm footage shows a large bipedal creature walking through a forest clearing. Over 55 years of analysis by biomechanics experts, Hollywood costume designers, primatologists, and forensic analysts has produced no consensus. Biomechanics researcher Jeff Glickman found muscle mass movements in the creature's thigh and calf that would be impossible to replicate in a costume worn by a human. Costume designer Bill Munns spent years attempting to determine if a man in a suit could replicate the walk and concluded the answer was no given 1967 technology. The FBI examined hair samples submitted by Roger Patterson in 1976 and identified them as from a member of the deer family — not a primate.",
+   upvotes:23400, comments:3401, credible:65, debunked:35, tags:["Patterson-Gimlin","1967","Bluff Creek","Biomechanics","Film","FBI","Glickman"], premium:false},
+
+  // ── STARS, ASTRONOMY & ANCIENT CONNECTIONS ────────────────────────────────
+  {id:"s244",type:"research", source:"SciTech Daily / Astronomy Journal",
+   sourceUrl:"https://scitechdaily.com",
+   time:"12h ago", topic:"Forbidden Science", region:"Global",
+   title:"Pleiades Discovery November 2025: Astronomers Found the Seven Sisters Are Only a Small Part of a Vastly Larger Hidden Stellar Family Stretching Across the Sky",
+   summary:"In November 2025 astronomers announced that the Pleiades — the star cluster visible to the naked eye and revered by virtually every ancient culture on Earth — is only a small visible portion of a much larger stellar family extending far across the sky. The full stellar association spans hundreds of light years and contains thousands of stars gravitationally related to the Seven Sisters. This discovery, made possible by data from the Gaia space telescope's precise stellar motion measurements, raises the question of why ancient cultures worldwide fixated specifically on the Pleiades' seven visible stars in remarkably consistent ways. Indigenous astronomical traditions from Aboriginal Australia, the Māori of New Zealand, the Lakota, the Greeks, the Egyptians, and the Pleiadian tradition in India all share the myth of seven sisters — a convergence that archaeoastronomers say predates any known cultural contact.",
+   upvotes:19800, comments:2901, credible:89, debunked:11, tags:["Pleiades","Seven Sisters","Gaia Telescope","Hidden Structure","2025","Ancient Cultures","Archaeoastronomy"], premium:false},
+
+  {id:"s245",type:"research", source:"Archaeoastronomy / Science Survey / Ancient Sites",
+   sourceUrl:"https://thesciencesurvey.com/spotlight/2025/05/11/archaeoastronomy-how-ancient-civilizations-aligned-their-lives-with-the-cosmos/",
+   time:"13h ago", topic:"Ancient Civilizations", region:"Global",
+   title:"Archaeoastronomy 2025: Satellite Imaging and AI Are Revealing Previously Unknown Stellar Alignments in Ancient Sites Worldwide",
+   summary:"A surge in archaeoastronomy research in 2024-2025 driven by satellite imaging, drone surveys, and AI-powered computational modeling is revealing previously unnoticed stellar alignments in ancient structures worldwide. The Great Pyramids of Giza contain shafts aligned with Orion's Belt and the star Sirius — which rose heliacally to signal the annual flooding of the Nile. The Sun Dagger at Chaco Canyon precisely marks solstices and equinoxes through rock slab shafts. Stonehenge aligns with the midsummer sunrise and midwinter sunset. Angkor Wat aligns to the spring equinox sunrise. What makes these discoveries striking is that the precision of alignment — often to fractions of a degree — would have required systematic astronomical observation over generations combined with an architectural precision that mainstream archaeology struggles to explain given the tools attributed to these cultures.",
+   upvotes:22400, comments:3201, credible:86, debunked:14, tags:["Archaeoastronomy","Giza","Stonehenge","Orion","Sirius","Angkor","AI","2025"], premium:false},
+
+  {id:"s246",type:"research", source:"Sirius / Ancient Egypt / Robert Temple",
+   sourceUrl:"https://www.crystalinks.com/pleiades.html",
+   time:"14h ago", topic:"Ancient Civilizations", region:"Egypt",
+   title:"The Sirius Mystery: Why Did Ancient Egypt Build Its Entire Calendar and Religion Around a Star 8.6 Light Years Away — And How Did the Dogon Know Sirius Was a Binary?",
+   summary:"The star Sirius — called Sopdet by the Egyptians — was the most important celestial body in ancient Egyptian religion. Its heliacal rising (first appearance above the horizon before sunrise) predicted the annual Nile flood that made Egyptian civilization possible. The Great Pyramid's southern shaft from the Queen's Chamber points directly at Sirius. Robert Temple's controversial 1976 book The Sirius Mystery documented that the Dogon people of Mali possessed detailed knowledge of Sirius B — the white dwarf companion invisible to the naked eye — including its 50-year orbital period and extreme density, which Western astronomers did not confirm until 1970. Temple argued this knowledge could only have come from an advanced source that observed the binary system telescopically. Critics argue the Dogon acquired this knowledge through contact with Western astronomers in the 1930s.",
+   upvotes:24600, comments:3601, credible:66, debunked:34, tags:["Sirius","Dogon","Sirius B","Binary Star","Robert Temple","Egypt","Ancient Knowledge"], premium:false},
+
+  {id:"s247",type:"research", source:"Ancient Astronaut Theory / Zecharia Sitchin / Giorgio Tsoukalos",
+   sourceUrl:"https://www.ancient-origins.net/myths-legends",
+   time:"15h ago", topic:"Aliens & Extraterrestrial", region:"Global",
+   title:"The Pleiadian Connection: Indigenous Traditions on Six Continents Describe Beings From the Seven Sisters — The Most Globally Consistent Extraterrestrial Origin Myth",
+   summary:"The tradition of beings from the Pleiades visiting Earth and seeding human civilization appears independently in Australian Aboriginal Dreamtime, Māori oral history, Hopi and Cherokee traditions, ancient Greek mythology, Egyptian texts, Vedic Sanskrit literature, and Mayan cosmology — cultures separated by oceans and millennia with no documented contact. Hopi tradition describes the Pleiadians as the Chuhukon who seeded their people. The Cherokee call them the Anisga'ya Tsunsdi. The ancient Japanese Ko-jiki describes the Pleiades. Māori navigators used the Pleiades as their most important navigational star cluster and called its heliacal rising Matariki — the start of the new year. The consistency of detail across completely isolated traditions is the core evidence for either shared ancient contact or a common extraterrestrial origin myth embedded in human consciousness.",
+   upvotes:21800, comments:3201, credible:55, debunked:45, tags:["Pleiades","Pleiadian","Indigenous","Aboriginal","Hopi","Cherokee","Extraterrestrial","Origin Myth"], premium:false},
+
+  // ── SECRET INTELLIGENCE — 2025-2026 ──────────────────────────────────────
+  {id:"s248",type:"archive", source:"DNI Tulsi Gabbard / ODNI Press Release",
+   sourceUrl:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2025/4098-pr-22-25",
+   time:"16h ago", topic:"Government & Intelligence", region:"USA",
+   title:"Gabbard Declassifies Top Secret Email Proving DNI Clapper Suppressed NSA Director's Objections to Politicized 2017 Russia Intelligence Assessment",
+   summary:"Director of National Intelligence Tulsi Gabbard declassified a Top Secret email in August 2025 from former DNI James Clapper showing that NSA Director Mike Rogers had raised serious concerns about the January 2017 Intelligence Community Assessment on Russian election interference. Rogers wrote to Clapper, FBI Director Comey, and CIA Director Brennan that NSA personnel were not comfortable with the assessment and needed more time. Clapper responded that 'we may have to compromise on our normal modalities' and that 'more time is not negotiable.' The declassification confirmed what critics had long alleged: the intelligence community's unanimous assessment of Russian interference with high confidence was manufactured under political pressure from the Obama administration.",
+   upvotes:38400, comments:5601, credible:91, debunked:9, tags:["Gabbard","Clapper","NSA","ICA","2017","Declassified","Rogers","Politicized Intelligence"], premium:false},
+
+  {id:"s249",type:"archive", source:"National Security Archive / JFK Records",
+   sourceUrl:"https://nsarchive.gwu.edu/briefing-book/2025-03-19/cia-covert-ops-kennedy-assassination-records-lift-veil-secrecy",
+   time:"17h ago", topic:"Government & Intelligence", region:"USA",
+   title:"JFK Assassination Records Released March 2025: CIA Vatican Operations, Latin America Covert Programs, and 47% of Embassy Officers Were Undercover Agents in 1961",
+   summary:"The National Security Archive analyzed the JFK assassination records released by Trump's executive order in March 2025. The documents revealed that on the day of Kennedy's inauguration in January 1961, 47 percent of political officers serving in US embassies worldwide were CIA intelligence agents working under diplomatic cover. Previously unknown details of CIA political action programs including financial support operations in multiple countries and a Vatican station operation were confirmed. The National Security Archive stated the documents showed CIA covert ops from the Vatican to Latin America. CIA Director Brennan's own station had been monitoring Lee Harvey Oswald's movements in Mexico City weeks before the assassination.",
+   upvotes:29400, comments:4301, credible:92, debunked:8, tags:["JFK","CIA","Vatican","1961","Diplomatic Cover","2025 Release","Oswald","Covert Ops"], premium:false},
+
+  {id:"s250",type:"news",    source:"ODNI / Intelligence Community Transparency Report 2026",
+   sourceUrl:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4150-pr-05-26",
+   time:"18h ago", topic:"Surveillance", region:"USA",
+   title:"ODNI 2026 Transparency Report: NSA, CIA, and FBI Increased FISA Section 702 Surveillance Targets — US Person Queries Up Again Despite Privacy Promises",
+   summary:"The ODNI's 13th Annual Intelligence Community Transparency Report released in April 2026 revealed that the number of FISA Section 702 targets increased during the reporting period — consistent with increases seen in previous annual reports. Section 702 allows warrantless surveillance of foreign targets while incidentally collecting communications of US persons. The report confirmed the Foreign Intelligence Surveillance Court issued three Section 702 orders including renewal certifications and a new counternarcotics certification. Critics including the ACLU and Electronic Frontier Foundation note that Section 702 has been used to query US persons' communications millions of times annually despite Congress being told it would only target foreigners.",
+   upvotes:18600, comments:2701, credible:88, debunked:12, tags:["FISA 702","NSA","Surveillance","ODNI","2026","Warrantless","US Persons","Intelligence"], premium:false},
+
+  {id:"s251",type:"archive", source:"CIA / National Security Archive October 2025",
+   sourceUrl:"https://www.cia.gov/stories/story/cia-latest-declassified-documents/",
+   time:"19h ago", topic:"Government & Intelligence", region:"USA",
+   title:"CIA October 2025 Declassification: Latest Release of Covert Operation Files Includes Cold War Programs, Foreign Government Manipulation, and Assassination Planning Documents",
+   summary:"The CIA released its latest batch of declassified documents in October 2025, covering Cold War covert operations including foreign government manipulation programs, propaganda operations, and planning documents related to the assassination of foreign leaders. The National Security Archive — which obtained thousands of documents through FOIA — described the releases as significant but noted that hundreds of thousands of documents relating to CIA domestic operations, mind control programs, and foreign assassination plots remain classified decades after the Church Committee called for their release. The NSA's own declassification website continues to add historical signals intelligence records but excludes anything related to domestic surveillance programs that the Church Committee documented in 1975.",
+   upvotes:16800, comments:2401, credible:87, debunked:13, tags:["CIA","Declassified","2025","Covert Ops","Cold War","Assassination","Church Committee","FOIA"], premium:false},
+
+  {id:"s252",type:"research", source:"University at Buffalo / JFK Records / Trump EO",
+   sourceUrl:"https://research.lib.buffalo.edu/fedgov/declassified",
+   time:"20h ago", topic:"Government & Intelligence", region:"USA",
+   title:"Trump Executive Order January 2025: All JFK, RFK, and MLK Assassination Records to Be Declassified — What the First Releases Revealed and What Remains Hidden",
+   summary:"President Trump signed Executive Order 14176 on January 23 2025 directing the declassification of all previously withheld records in the JFK Assassination Records Collection, and for the first time also covering records related to the assassinations of Senator Robert F. Kennedy and Reverend Dr. Martin Luther King Jr. The National Archives released thousands of previously classified documents in early 2025. Among the revelations: CIA surveillance of Oswald predated the assassination, multiple CIA officers had been aware of his Soviet defection and return. The MLK files remain the least fully processed. Critics note that the CIA still maintains thousands of redacted pages citing ongoing sources and methods concerns — 60 years after the assassination.",
+   upvotes:27600, comments:4001, credible:90, debunked:10, tags:["Trump","JFK","RFK","MLK","EO 14176","NARA","2025","Declassified","Oswald","CIA"], premium:false},
 ];
 
 // --- SEED COMMUNITY POSTS -----------------------------------------------------
@@ -3124,12 +3270,70 @@ export const RESEARCHERS = [
     topics:["Remote Viewing & PSI","Consciousness & Mind","Forbidden Science"],
     tags:["Dean Radin","IONS","PSI","Consciousness","Precognition","Quantum"],
     books:[], podcasts:["Into the Impossible - Brian Keating","Theories of Everything - Curt Jaimungal"],
+  },,
+// ── UAP & ALIEN — LIVE 2025-2026 NEWS SOURCES ───────────────────────────
+  {
+    label:"UAP Disclosure — Live 2025-2026 News & Official Sources",
+    type:"news",
+    items:[
+      {n:"NARA — National Archives UAP Records Collection (official federal UAP archive)", u:"https://www.archives.gov/research/uap"},
+      {n:"House Oversight UAP Task Force — Congressional investigation 2025-2026", u:"https://oversight.house.gov/uap"},
+      {n:"DefenseScoop — Trump UAP Files Disclosure February 2026 (article)", u:"https://defensescoop.com/2026/02/20/trump-uap-government-files-disclosure/"},
+      {n:"Washington Times — Grusch Returns to Congress June 2026 (article)", u:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/"},
+      {n:"DNI ODNI — Intelligence Transparency Reports (official)", u:"https://www.dni.gov/index.php/newsroom/press-releases"},
+    ],
+  },
+
+  // ── BIGFOOT & SASQUATCH RESEARCH SOURCES ─────────────────────────────────
+  {
+    label:"Bigfoot & Sasquatch — Research Organizations and Evidence Archives",
+    type:"research",
+    items:[
+      {n:"BFRO Geographical Database — Browse sightings by state & region", u:"https://www.bfro.net/gdb/"},
+      {n:"Sasquatch Chronicles — Wes Germer (700+ eyewitness interviews)", u:"https://sasquatchchronicles.com"},
+      {n:"Squatchable — Sasquatch research aggregator & DNA study archive", u:"https://squatchable.com"},
+      {n:"Oxford Sasquatch Study — Science AAAS peer-reviewed 57-sample analysis", u:"https://www.science.org/content/article/bigfoot-samples-analyzed-lab"},
+      {n:"Patterson-Gimlin Film — BFRO complete analysis archive", u:"https://www.bfro.net/MULTIMEDIA/Movies/patty.asp"},
+      {n:"Bigfoot 2026 Evidence Guide — Outdoor Tech Lab research roundup", u:"https://www.outdoortechlab.com/bigfoot-evidence-2025/"},
+      {n:"Wes Germer — Sasquatch Chronicles Apple Podcasts", u:"https://podcasts.apple.com/us/podcast/sasquatch-chronicles/id930930690"},
+    ],
+  },
+
+  // ── STARS, ANCIENT ASTRONOMY & COSMIC CONNECTIONS ─────────────────────────
+  {
+    label:"Archaeoastronomy — Stars, Ancient Sites and Cosmic Connections",
+    type:"research",
+    items:[
+      {n:"Crystalinks — Pleiades: Ancient cultures and extraterrestrial connection research", u:"https://www.crystalinks.com/pleiades.html"},
+      {n:"SciTech Daily — Pleiades Hidden Structure Discovery November 2025", u:"https://scitechdaily.com/astronomers-uncover-massive-hidden-structure-around-pleiades/"},
+      {n:"Science Survey — Archaeoastronomy 2025: AI Reveals New Ancient Alignments", u:"https://thesciencesurvey.com/spotlight/2025/05/11/archaeoastronomy-how-ancient-civilizations-aligned-their-lives-with-the-cosmos/"},
+      {n:"Gaia Space Telescope — ESA star mapping database (used for Pleiades discovery)", u:"https://www.esa.int/Science_Exploration/Space_Science/Gaia"},
+      {n:"Star Register — Importance of Stars in Ancient Cultures (reference)", u:"https://starregister.org/the-importance-of-stars-in-ancient-cultures.php"},
+      {n:"NASA Night Sky Network — Archaeoastronomy resources and research", u:"https://nightsky.jpl.nasa.gov"},
+      {n:"Mirage News — Astronomy in Ancient Cultures: Early Star Interpretations", u:"https://www.miragenews.com/astronomy-in-ancient-cultures-early-star-1031456/"},
+      {n:"Ancient Origins — Stars, Star Beings and Extraterrestrial Myths (archive)", u:"https://www.ancient-origins.net/myths-legends"},
+    ],
+  },
+
+  // ── SECRET INTELLIGENCE — DECLASSIFIED 2025-2026 ─────────────────────────
+  {
+    label:"Declassified Intelligence — JFK, NSA, CIA 2025-2026 Releases",
+    type:"archive",
+    items:[
+      {n:"ODNI — Gabbard Declassification: Clapper suppression of NSA objections (Aug 2025)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2025/4098-pr-22-25"},
+      {n:"National Security Archive — JFK CIA Covert Ops full analysis March 2025", u:"https://nsarchive.gwu.edu/briefing-book/2025-03-19/cia-covert-ops-kennedy-assassination-records-lift-veil-secrecy"},
+      {n:"National Security Archive — 40 years FOIA: Heroic Excavators of Government Secrets", u:"https://nsarchive.gwu.edu/special-exhibit/2025-12-10/heroic-excavators-government-secrets"},
+      {n:"CIA — Latest Declassified Documents October 2025 (official release)", u:"https://www.cia.gov/stories/story/cia-latest-declassified-documents/"},
+      {n:"NSA Declassification — FOIA documents & Special Topical Reviews", u:"https://www.nsa.gov/Signals-Intelligence/Declassification/"},
+      {n:"ODNI — 13th Annual IC Transparency Report 2026 (FISA 702 data)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4150-pr-05-26"},
+      {n:"University at Buffalo — Federal Declassified Documents Research Guide", u:"https://research.lib.buffalo.edu/fedgov/declassified"},
+    ],
   },
 ];
 
 
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
-thenexusapp.com | Effective: June 2026
+thenexusapp.com | Effective: \${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
 
 ==================================
 1. WHO WE ARE
