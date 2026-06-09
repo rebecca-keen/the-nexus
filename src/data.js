@@ -9,8 +9,6 @@ export const ADMIN_PASS = "N3xus@2025";
 export const OPENROUTER_KEY = "PASTE_YOUR_OPENROUTER_KEY_HERE";
 export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model  -  no billing required
 
-
-
 // --- TOPICS ------------------------------------------------------------------
 export const TOPICS = [
   "All Topics",
@@ -101,9 +99,6 @@ export const REDDIT_SUBS = [
   {name:"r/ForbiddenKnowledge",   url:"https://www.reddit.com/r/ForbiddenKnowledge",   color:"#802040", desc:"Suppressed knowledge"},
   {name:"r/SkinWalkerRanch",      url:"https://www.reddit.com/r/SkinWalkerRanch",      color:"#20c880", desc:"Paranormal ranch research"},
 ];
-
-
-
 
 // --- SEED STORIES -------------------------------------------------------------
 export const SEED_STORIES = [
@@ -288,13 +283,11 @@ export const SEED_STORIES = [
 
   {id:"s110",type:"archive",  source:"FBI Vault / NSA FOIA",                sourceUrl:"https://vault.fbi.gov/UFO",                                                                     time:"20h ago", topic:"UAP & Anomalous",  region:"USA",    title:"FBI Vault UFO Files: Crashed Disc Reports, Roswell Documents, and the Hottel Memo That Described Three Recovered Saucers", summary:"The FBI Vault has released thousands of pages of UFO-related files. Among the most discussed: the 1950 Guy Hottel memo describing an FBI informant reporting that three flying saucers and three bodies of human shape but only 3 feet tall were recovered in New Mexico. The FBI states the memo was unverified. Roswell-era documents are also available. The Vault includes correspondence between J. Edgar Hoover and the Army Air Force about UFO secrecy. The NSA has separately released its UFO files including signals intelligence analyses.", upvotes:20400, comments:2901, credible:70, debunked:30, tags:["FBI","Vault","Hottel","Roswell","Bodies","NSA","Declassified"], premium:false},
 
-
   {id:"s111",type:"research", source:"Britannica / History.com",            sourceUrl:"https://www.britannica.com/topic/UFO",                                                           time:"21h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"The Case for Alien Life: Fermi Paradox, Drake Equation, and Why Scientists Now Believe Extraterrestrial Intelligence Almost Certainly Exists", summary:"The Drake Equation estimates between 1,000 and millions of communicating civilizations should exist in the Milky Way alone. The Fermi Paradox asks why we have not detected them. Modern answers include: civilizations destroy themselves, they communicate in ways we cannot detect, or they are already here and interacting with us. With 300 billion stars in our galaxy and confirmed exoplanets in habitable zones, the mathematical probability of Earth being the only intelligent life is effectively zero. The question has shifted from whether to how.", upvotes:18900, comments:2801, credible:88, debunked:12, tags:["Fermi Paradox","Drake Equation","Extraterrestrial","Life","Galaxy","Math"], premium:false},
 
   {id:"s112",type:"research", source:"SETI Institute / NASA Exoplanets",   sourceUrl:"https://www.seti.org",                                                                           time:"22h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Exoplanet Revolution: NASA Has Confirmed 5,500+ Planets - Dozens in Habitable Zones With Conditions for Life as We Know It", summary:"NASA's Kepler and TESS missions have confirmed over 5,500 exoplanets with thousands more candidates. Scientists have identified dozens of planets in habitable zones with liquid water potential. The James Webb Space Telescope has detected chemical signatures in exoplanet atmospheres consistent with biological processes. The 2024 discovery of K2-18b atmospheric data showed possible signatures of dimethyl sulfide - a chemical produced only by living organisms on Earth. The search for technosignatures has expanded to include radio signals, laser pulses, and megastructure detection.", upvotes:16400, comments:2301, credible:92, debunked:8, tags:["Exoplanets","NASA","JWST","Habitable","Life","SETI","Biosignatures"], premium:false},
 
   {id:"s113",type:"research", source:"Dr. Jacques Vallee / Jacques Vallee", sourceUrl:"https://www.jacquesvallee.net",                                                                  time:"23h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Jacques Vallee: UFOs Are Not Extraterrestrial Spacecraft - They Are Interdimensional Control Systems That Have Been Here for Centuries", summary:"Computer scientist and astronomer Dr. Jacques Vallee - who inspired the character Lacombe in Close Encounters of the Third Kind and was the first researcher to computerize the US Defense Department's ARPA network - argues the extraterrestrial hypothesis is wrong. His interdimensional hypothesis posits UAP are a control system that has interacted with human consciousness for thousands of years, manifesting in ways that match the beliefs of each era. The same phenomenon appeared as angels and demons before spacecraft. Vallee's research has influenced both the scientific establishment and classified government programs.", upvotes:14700, comments:2101, credible:72, debunked:28, tags:["Vallee","Interdimensional","Control System","Consciousness","ETH","Close Encounters"], premium:false},
-
 
 // ALIENS & EXTRATERRESTRIAL - EXPANDED RECORDS
   {id:"s114",type:"archive",  source:"CIA / NSA / FBI FOIA",                sourceUrl:"https://www.cia.gov/readingroom/collection/ufos-fact-or-fiction",                               time:"24h ago", topic:"Aliens & Extraterrestrial", region:"USA",    title:"Roswell 1947: The Incident That Started Everything - Declassified Army, FBI and CIA Files on the Crashed Disc Recovery", summary:"On July 8 1947 the Roswell Army Air Field public information officer issued a press release stating the Army had recovered a flying disc. Within hours the story was retracted and changed to a weather balloon. Declassified documents show FBI Director J. Edgar Hoover was furious about being cut out of the recovery. The FBI Vault contains memos referencing recovered disc and bodies. In 1994 the Air Force admitted it was not a weather balloon but Project Mogul. Witnesses including Major Jesse Marcel maintained until death that the material was not of terrestrial origin.", upvotes:31200, comments:4801, credible:72, debunked:28, tags:["Roswell","1947","Army","FBI","Crash","Recovery"], premium:false},
@@ -318,7 +311,6 @@ export const SEED_STORIES = [
   {id:"s123",type:"research", source:"Ancient Astronaut Theory / Zecharia Sitchin", sourceUrl:"https://sitchin.com/",                                                                 time:"33h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Ancient Astronaut Theory: Sumerian Texts Describe the Anunnaki as Alien Beings Who Created Humans - What the Clay Tablets Actually Say", summary:"Zecharia Sitchin spent decades translating Sumerian cuneiform clay tablets and concluded they describe beings called the Anunnaki who came from the planet Nibiru and genetically engineered Homo sapiens as a slave species. The Epic of Gilgamesh pre-dates Genesis by at least 1000 years and contains parallel flood narrative. The Sumerian King List describes rulers who reigned for thousands of years before the flood. Academic Sumerologists dispute Sitchin's translations but the ancient astronaut hypothesis has been adopted by researchers including Erich von Daniken whose Chariots of the Gods became an international bestseller. The History Channel Ancient Aliens series has brought the theory to mass audiences.", upvotes:21500, comments:3101, credible:48, debunked:52, tags:["Anunnaki","Sitchin","Sumerian","Ancient Astronaut","Nibiru","Enki"], premium:false},
 
   {id:"s124",type:"news",     source:"Congress / NewsNation / The Debrief",   sourceUrl:"https://oversight.house.gov/",                                                                  time:"34h ago", topic:"Aliens & Extraterrestrial", region:"USA",    title:"September 2025 Congressional Hearing: Military Veterans Testify About Non-Human Intelligence and Craft Retrieval Programs", summary:"The September 2025 House Oversight Committee hearing titled Restoring Public Trust brought additional military veterans to testify under oath about UAP crash retrieval programs and non-human intelligence. Witnesses included individuals with direct firsthand knowledge of crash retrieval operations rather than secondhand reports. The hearing followed David Grusch's July 2023 testimony and was notable for the increased specificity of accounts given under oath. Multiple witnesses described seeing non-human materials and in some cases non-human biological entities. Congressional pressure for full declassification intensified following the hearing.", upvotes:29100, comments:4201, credible:74, debunked:26, tags:["Congress","2025","Military","Veterans","Crash Retrieval","Non-Human","Testimony"], premium:false},
-,
 // ── SURVEILLANCE (need 6 more) ────────────────────────────────────────────
   {id:"s125",type:"archive",  source:"NSA / Edward Snowden / The Guardian",  sourceUrl:"https://theintercept.com/snowden-sidtoday/",                                                     time:"1h ago",  topic:"Surveillance",             region:"USA",    title:"PRISM, XKeyscore, MUSCULAR: The Full Scope of NSA Mass Surveillance Revealed by Snowden - Every American Was Being Watched", summary:"Edward Snowden's 2013 leaks to Glenn Greenwald and Laura Poitras revealed that the NSA had built the most comprehensive mass surveillance apparatus in human history. PRISM collected data directly from Apple, Google, Facebook, Microsoft, Yahoo, AOL, Skype, YouTube and PalTalk. XKeyscore could search the full content of emails, browser history, and social media activity of virtually any internet user on Earth. MUSCULAR tapped the fiber optic cables connecting Google and Yahoo data centers abroad, outside any legal oversight. UPSTREAM collected data directly from internet backbone infrastructure. The NSA was not targeting terrorists - it was collecting everything from everyone.", upvotes:31200, comments:4801, credible:96, debunked:4, tags:["NSA","PRISM","XKeyscore","Snowden","Mass Surveillance","Internet"], premium:false},
 
@@ -457,12 +449,10 @@ export const SEED_STORIES = [
   {id:"s185",type:"research", source:"NOAA / Woods Hole Oceanographic",        sourceUrl:"https://oceanexplorer.noaa.gov",                                                                  time:"61h ago", topic:"Ocean & Earth",           region:"Global", title:"The Baltic Sea Anomaly: A 60-Meter Object on the Ocean Floor That Sonar Shows Has No Natural Explanation - Geologists and Military Remain Silent", summary:"In June 2011 Swedish deep-sea explorers Ocean X Team discovered a 60-meter circular object on the floor of the Baltic Sea at 87 meters depth while searching for a shipwreck. The object has a flat bottom, a distinct circular shape, and a 300-meter runway-like track behind it. Electrical equipment malfunctions when divers get within 200 meters of it. Samples retrieved from the object were analyzed and found to contain metal alloys including titanium that do not occur naturally in this formation. The Swedish military has not commented. Mainstream geologists have proposed it is a glacially deposited disc of glaciofluvial sediment but have not explained the electrical interference or the unusual metal composition. The anomaly remains unidentified.", upvotes:18900, comments:2801, credible:55, debunked:45, tags:["Baltic Sea Anomaly","Sonar","Ocean","UFO","Electrical Interference","Sweden","Titanium"], premium:false},
 
   {id:"s186",type:"research", source:"Randall Carlson / Robert Schoch",        sourceUrl:"https://www.randallcarlson.com",                                                                  time:"62h ago", topic:"Ocean & Earth",           region:"Global", title:"The Younger Dryas Catastrophe: Geological Evidence of a Global Flood 12,800 Years Ago That Reshaped Continents and Killed 75% of Large Mammals", summary:"Approximately 12,800 years ago Earth experienced a sudden and catastrophic warming event that ended the last Ice Age. Evidence documented by geologists including Randall Carlson and J. Harlen Bretz shows that enormous ice dam failures released water volumes creating the Channeled Scablands of Washington State, the Missoula floods visible from space, and a rapid global sea level rise of 400 feet. These floods would have destroyed any coastal civilizations. Simultaneously 75% of large mammals in North America went extinct within a geologically instantaneous period. The Younger Dryas Impact Hypothesis - supported by evidence of nano-diamonds and platinum in a global black mat layer - proposes that a comet strike triggered these catastrophes. This is the geological context for flood myths found in virtually every ancient culture.", upvotes:21700, comments:3101, credible:78, debunked:22, tags:["Younger Dryas","Flood","Carlson","Bretz","Scablands","Comet","Civilization"], premium:false},
-,
 // ── OCEAN & EARTH (2 more to reach 8) ──────────────────────────────────────
   {id:"s187",type:"research", source:"NOAA / MBARI / Monterey Bay Aquarium",  sourceUrl:"https://oceanexplorer.noaa.gov",                                                                  time:"63h ago", topic:"Ocean & Earth",           region:"Global", title:"The Deep Sea Contains Creatures and Structures That Defy Classification - 95% of Earth's Oceans Have Never Been Seen by Human Eyes", summary:"NOAA estimates that 95% of Earth's oceans remain unexplored and unmapped. The Challenger Deep in the Mariana Trench reaches 36,000 feet - deep enough to submerge Mount Everest. In explored regions scientists have found hydrothermal vent ecosystems that survive without sunlight, chemosynthetic life forms that completely rewrite the rules of biology, and structures that have never been classified. The MBARI institute has documented creatures including the Humboldt squid with complex communication systems, comb jellies with completely separate nervous system evolution, and deep-sea fish with bioluminescent lures more complex than any engineered system. The bloop, the julia, the train, and the upsweep sounds remain officially unexplained after 30 years.", upvotes:16800, comments:2401, credible:88, debunked:12, tags:["Deep Sea","NOAA","Unexplored","Bioluminescence","Bloop","Mariana Trench"], premium:false},
 
   {id:"s188",type:"research", source:"Comet Research Group / Science Advances", sourceUrl:"https://www.sciencealert.com",                                                                   time:"64h ago", topic:"Ocean & Earth",           region:"Global", title:"Ancient Ocean Floor Maps Show Continents Were Connected Differently 12,000 Years Ago - Coastal Civilizations Would Have Been Destroyed", summary:"At the peak of the last Ice Age approximately 20,000 years ago sea levels were 400 feet lower than today. This means that vast areas of continental shelves now underwater were dry land - including a land bridge connecting Britain to Europe, a massive coastal plain around Southeast Asia called Sundaland, and extensive coastal territories in the Americas and Australia. The rising seas that followed the Younger Dryas warming between 15,000 and 7,000 years ago would have systematically inundated any coastal civilizations. Graham Hancock argues this explains why flood myths are universal - every coastal culture on Earth would have experienced catastrophic inundation. Sonar mapping of submerged areas including the North Sea Doggerland reveals archaeological traces of human habitation.", upvotes:19400, comments:2801, credible:76, debunked:24, tags:["Sea Level","Ice Age","Doggerland","Sundaland","Coastal","Civilization","Flood"], premium:false},
-,
 // ── VACCINES & BIG PHARMA ─────────────────────────────────────────────────
   {id:"s189",type:"research",source:"JAMA / Lancet / BMJ",                   sourceUrl:"https://www.bmj.com",                                                                            time:"1h ago",  topic:"Vaccines & Big Pharma",    region:"USA",    title:"Pfizer and Moderna's Own Trial Data Shows mRNA Vaccines Were Never Tested for Preventing Transmission - Only Symptom Reduction", summary:"A re-analysis of Pfizer and Moderna's Phase 3 trial data published in the British Medical Journal confirmed that the COVID-19 mRNA vaccines were never tested for their ability to prevent transmission of the virus. The trials only measured whether vaccinated individuals developed symptoms - not whether they could still spread the virus to others. This distinction was central to the public health justification for vaccine mandates. Former Pfizer board member Dr. Scott Gottlieb acknowledged in 2021 that the trials were not powered to detect a reduction in transmission. The CDC's own MMWR data subsequently showed vaccinated individuals could carry and transmit identical viral loads.", upvotes:28600, comments:4201, credible:74, debunked:26, tags:["Pfizer","mRNA","Transmission","Trial","BMJ","Mandate"], premium:false},
 
@@ -559,7 +549,6 @@ export const SEED_STORIES = [
   {id:"s231",type:"research",source:"Ancient Gods & Beings",                   sourceUrl:"https://www.ancient-origins.net/myths-legends",                                                time:"43h ago", topic:"Ancient Gods & Beings",     region:"Global", title:"The Anunnaki in Sumerian Texts: Beings Who Came From the Sky, Created Humanity to Mine Gold, and Were Worshipped as Gods Across the Ancient World", summary:"The Anunnaki appear throughout Sumerian cuneiform texts as divine beings who descended from the heavens and played a central role in human civilization. The Sumerian texts predate Genesis by at least 1,000 years and describe parallel accounts of creation, the flood, and the formation of humanity. Zecharia Sitchin interpreted the Anunnaki as extraterrestrial beings from the planet Nibiru who genetically engineered Homo sapiens. Academic Sumerologists translate Anunnaki as those of royal blood or those who came from heaven to earth and dispute Sitchin's interpretations. The texts describe the Anunnaki gods as having human form, human emotions, human relationships, and human conflicts - making them either allegorical or literal beings indistinguishable from advanced humans.", upvotes:23400, comments:3401, credible:55, debunked:45, tags:["Anunnaki","Sumerian","Sitchin","Creation","Nibiru","Gods","Ancient Aliens"], premium:false},
 
   {id:"s232",type:"research",source:"Credo Mutwa / Zulu Legends / Michael Tellinger",sourceUrl:"https://www.michaeltellinger.com",                                                  time:"44h ago", topic:"Ancient Gods & Beings",     region:"Global", title:"Credo Mutwa: South Africa's Most Senior Shaman Describes the Chitauri - Reptilian Beings Who Controlled Ancient Africa - In Extraordinary Detail", summary:"Vusamazulu Credo Mutwa was South Africa's most senior traditional healer and keeper of Zulu oral history until his death in 2020. In extensive interviews recorded by David Icke and Michael Tellinger he described the Chitauri - beings that appear in Zulu tradition as reptilian entities who arrived from the sky in ancient times, intermarried with human royalty, and have continued to influence human affairs. Mutwa described these beings in extraordinary physical and behavioral detail including their feeding habits, their hybrid offspring, and their claimed control of weather and political events. Researcher Michael Tellinger has documented similar beings in the oral traditions of other African cultures and proposed that the massive ancient stone circle complex in Mpumalanga was built by the Anunnaki.", upvotes:18700, comments:2701, credible:45, debunked:55, tags:["Credo Mutwa","Chitauri","Zulu","Reptilian","South Africa","Oral History","Tellinger"], premium:false},
-,
 // ── UAP & ALIENS — 2025-2026 BREAKING ────────────────────────────────────
   {id:"s233",type:"news",    source:"Washington Times / Grusch / UAP Disclosure Act",
    sourceUrl:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/",
@@ -814,7 +803,6 @@ export const MEDIA_LIBRARY = [
   {id:"a11", type:"article", title:"Unlimited Hangout - Whitney Webb Archive","author":"Whitney Webb",            year:2019, topic:"Government & Intelligence",    tags:["Intelligence","Epstein","Control"],   desc:"Whitney Webb's complete investigative archive at unlimitedhangout.com covering intelligence networks, Epstein, and hidden power structures.",                                                                              url:"https://unlimitedhangout.com",                                                                       rating:4.9},
   {id:"a12", type:"article", title:"Naked Bible Blog - Dr. Michael Heiser",   author:"Dr. Michael Heiser",        year:2010, topic:"Biblical & Religious Records",  tags:["Nephilim","Bible","Theology"],        desc:"Dr. Heiser's peer-reviewed biblical scholarship blog covering divine council theology, the Nephilim, and what the original Hebrew texts actually say.",                                                                    url:"https://www.nakedbiblepodcast.com",                                                                  rating:4.7},
 ];
-
 
 export const SOURCES = [
 
@@ -1525,7 +1513,6 @@ export const SOURCES = [
     ],
   },
 
-
   // REDDIT  -  UFO, UAP & DISCLOSURE
   {
     label:"Reddit  -  UFO, UAP, Aliens & Disclosure",
@@ -2017,7 +2004,8 @@ export const SOURCES = [
       {n:"Gaia - consciousness & ancient civilizations",              u:"https://www.youtube.com/@GaiaVideo"},
       {n:"Jimmy - conspiracy documentaries",                          u:"https://www.youtube.com/@JimmyFlatbush"},
     ],
-  },,
+  },
+
 // STATE PARKS, NATIONAL PARKS & MISSING PERSONS
   {
     label:"State Parks, National Parks & Missing Persons Research",
@@ -2082,7 +2070,8 @@ export const SOURCES = [
       {n:"Historic Mysteries - Missing 411 Pattern Evidence",                  u:"https://www.historicmysteries.com/missing-411/"},
       {n:"Mysterious Universe - Portals and Missing People (article archive)", u:"https://mysteriousuniverse.org/?s=portal+missing"},
     ],
-  },,
+  },
+
 // CIA DECLASSIFIED FILES - BY TOPIC (OFFICIAL FOIA READING ROOM)
   {
     label:"CIA Declassified Files - MK-Ultra, Mind Control & Human Experiments",
@@ -2196,7 +2185,8 @@ export const SOURCES = [
       {n:"Jeremy Scahill - Dirty Wars (CIA drone kill list reporting)",    u:"https://theintercept.com/staff/jeremyscahill/"},
       {n:"Nick Davies - Hack Attack (phone hacking & intelligence)",       u:"https://www.theguardian.com/profile/nickdavies"},
     ],
-  },,
+  },
+
 // UFO / UAP / ALIENS - OFFICIAL GOVERNMENT DISCLOSURE (2024-2026)
   {
     label:"UFO / UAP - Official Government Disclosure & Documents",
@@ -2330,7 +2320,8 @@ export const SOURCES = [
     type:"user",
     items:[
     ],
-  },,
+  },
+
 // PORTALS & STARGATES - GREENLAND & ARCTIC ANOMALIES
   {
     label:"Portals & Stargates - Greenland, Camp Century & Arctic Anomalies",
@@ -2478,7 +2469,8 @@ export const SOURCES = [
       {n:"YouTube - Terrain Theory vs Germ Theory Documentary",                  u:"https://www.youtube.com/results?search_query=terrain+theory+germ+theory+documentary"},
       {n:"YouTube - Big Pharma Exposed Documentary Playlist",                    u:"https://www.youtube.com/results?search_query=big+pharma+exposed+documentary"},
     ],
-  },,
+  },
+
 // ALIENS & EXTRATERRESTRIAL - KEY RESEARCHERS & AUTHORS
   {
     label:"Aliens & Extraterrestrial - Key Researchers, Authors & Investigators",
@@ -2667,7 +2659,8 @@ export const SOURCES = [
       {n:"Empire Files - Abby Martin investigative journalism",               u:"https://www.youtube.com/@EmpireFiles"},
       {n:"The Duran - Alexander Mercouris geopolitical analysis",             u:"https://www.youtube.com/@TheDuran"},
     ],
-  },,
+  },
+
 // PODCASTS - UAP / ALIEN / PARANORMAL (APPLE PODCASTS - VERIFIED)
   {
     label:"Podcasts - UAP, Alien & Paranormal (Apple Podcasts - Verified)",
@@ -2798,7 +2791,8 @@ export const SOURCES = [
       {n:"Washington Post - PRISM program (Snowden disclosures 2013)",          u:"https://www.washingtonpost.com/investigations/us-intelligence-mining-data-from-nine-us-internet-companies-in-broad-secret-program/2013/06/06/3a0c0da8-cebf-11e2-8845-d970ccb04497_story.html"},
       {n:"New Yorker - Seymour Hersh on Abu Ghraib (May 2004)",                u:"https://www.newyorker.com/magazine/2004/05/10/torture-at-abu-ghraib"},
     ],
-  },,
+  },
+
 // PODCASTS - UFO/UAP TOP RANKED (APPLE + SPOTIFY VERIFIED LINKS)
   {
     label:"Podcasts - UFO & UAP Top Ranked (Apple & Spotify Verified)",
@@ -2916,7 +2910,8 @@ export const SOURCES = [
       {n:"As You Wish Talk Radio - ECETI Ranch (Apple)",                               u:"https://podcasts.apple.com/us/podcast/as-you-wish-talk-radio/id1451534773"},
       {n:"Curious Minds - science & unexplained phenomena (Apple)",                    u:"https://podcasts.apple.com/us/podcast/curious-minds-a-science-podcast/id988560546"},
     ],
-  },,
+  },
+
 
   // WHITE HOUSE & OFFICIAL GOVERNMENT TRACKERS
   {
@@ -2927,7 +2922,8 @@ export const SOURCES = [
       {n:"White House - Official News & Executive Orders",                   u:"https://www.whitehouse.gov/news/"},
       {n:"White House - Presidential Actions Archive",                       u:"https://www.whitehouse.gov/presidential-actions/"},
     ],
-  },,
+  },
+
 // FATHER STEPHEN DE YOUNG - ORTHODOX THEOLOGY & BIBLICAL RESEARCH
   {
     label:"Fr. Stephen De Young - Orthodox Theology, Nephilim & Biblical Cosmology",
@@ -2946,7 +2942,8 @@ export const SOURCES = [
       {n:"Tucker Carlson Show - Apple Podcasts (search Fr. Stephen De Young episodes)",   u:"https://podcasts.apple.com/us/podcast/the-tucker-carlson-show/id1752867424"},
       {n:"Tucker Carlson Show - tuckercarlson.com (official site)",                       u:"https://tuckercarlson.com"},
     ],
-  },,
+  },
+
 // NEWS HUBS - UAP/UFO LATEST ARTICLES (2025-2026)
   {
     label:"News Hubs - UAP & UFO Latest Articles (2025-2026)",
@@ -3066,6 +3063,65 @@ export const SOURCES = [
       {n:"Glenn Greenwald - System Update Newsletter",                       u:"https://greenwald.substack.com"},
       {n:"UFO Disclosure Yearbook - Justin Snead Substack",                  u:"https://justinsnead.substack.com"},
       {n:"Ross Coulthart - Need to Know Newsletter",                         u:"https://rosscoulthart.substack.com"},
+    ],
+  },
+
+  // ── UAP & ALIEN — LIVE 2025-2026 NEWS SOURCES ───────────────────────────
+  {
+    label:"UAP Disclosure — Live 2025-2026 News & Official Sources",
+    type:"news",
+    items:[
+      {n:"NARA — National Archives UAP Records Collection (official federal UAP archive)", u:"https://www.archives.gov/research/uap"},
+      {n:"House Oversight UAP Task Force — Congressional investigation 2025-2026", u:"https://oversight.house.gov/uap"},
+      {n:"DefenseScoop — Trump UAP Files Disclosure February 2026 (article)", u:"https://defensescoop.com/2026/02/20/trump-uap-government-files-disclosure/"},
+      {n:"Washington Times — Grusch Returns to Congress June 2026 (article)", u:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/"},
+      {n:"DNI ODNI — Intelligence Transparency Reports (official)", u:"https://www.dni.gov/index.php/newsroom/press-releases"},
+    ],
+  },
+
+  // ── BIGFOOT & SASQUATCH RESEARCH SOURCES ─────────────────────────────────
+  {
+    label:"Bigfoot & Sasquatch — Research Organizations and Evidence Archives",
+    type:"research",
+    items:[
+      {n:"BFRO Geographical Database — Browse sightings by state & region", u:"https://www.bfro.net/gdb/"},
+      {n:"Sasquatch Chronicles — Wes Germer (700+ eyewitness interviews)", u:"https://sasquatchchronicles.com"},
+      {n:"Squatchable — Sasquatch research aggregator & DNA study archive", u:"https://squatchable.com"},
+      {n:"Oxford Sasquatch Study — Science AAAS peer-reviewed 57-sample analysis", u:"https://www.science.org/content/article/bigfoot-samples-analyzed-lab"},
+      {n:"Patterson-Gimlin Film — BFRO complete analysis archive", u:"https://www.bfro.net/MULTIMEDIA/Movies/patty.asp"},
+      {n:"Bigfoot 2026 Evidence Guide — Outdoor Tech Lab research roundup", u:"https://www.outdoortechlab.com/bigfoot-evidence-2025/"},
+      {n:"Wes Germer — Sasquatch Chronicles Apple Podcasts", u:"https://podcasts.apple.com/us/podcast/sasquatch-chronicles/id930930690"},
+    ],
+  },
+
+  // ── STARS, ANCIENT ASTRONOMY & COSMIC CONNECTIONS ─────────────────────────
+  {
+    label:"Archaeoastronomy — Stars, Ancient Sites and Cosmic Connections",
+    type:"research",
+    items:[
+      {n:"Crystalinks — Pleiades: Ancient cultures and extraterrestrial connection research", u:"https://www.crystalinks.com/pleiades.html"},
+      {n:"SciTech Daily — Pleiades Hidden Structure Discovery November 2025", u:"https://scitechdaily.com/astronomers-uncover-massive-hidden-structure-around-pleiades/"},
+      {n:"Science Survey — Archaeoastronomy 2025: AI Reveals New Ancient Alignments", u:"https://thesciencesurvey.com/spotlight/2025/05/11/archaeoastronomy-how-ancient-civilizations-aligned-their-lives-with-the-cosmos/"},
+      {n:"Gaia Space Telescope — ESA star mapping database (used for Pleiades discovery)", u:"https://www.esa.int/Science_Exploration/Space_Science/Gaia"},
+      {n:"Star Register — Importance of Stars in Ancient Cultures (reference)", u:"https://starregister.org/the-importance-of-stars-in-ancient-cultures.php"},
+      {n:"NASA Night Sky Network — Archaeoastronomy resources and research", u:"https://nightsky.jpl.nasa.gov"},
+      {n:"Mirage News — Astronomy in Ancient Cultures: Early Star Interpretations", u:"https://www.miragenews.com/astronomy-in-ancient-cultures-early-star-1031456/"},
+      {n:"Ancient Origins — Stars, Star Beings and Extraterrestrial Myths (archive)", u:"https://www.ancient-origins.net/myths-legends"},
+    ],
+  },
+
+  // ── SECRET INTELLIGENCE — DECLASSIFIED 2025-2026 ─────────────────────────
+  {
+    label:"Declassified Intelligence — JFK, NSA, CIA 2025-2026 Releases",
+    type:"archive",
+    items:[
+      {n:"ODNI — Gabbard Declassification: Clapper suppression of NSA objections (Aug 2025)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2025/4098-pr-22-25"},
+      {n:"National Security Archive — JFK CIA Covert Ops full analysis March 2025", u:"https://nsarchive.gwu.edu/briefing-book/2025-03-19/cia-covert-ops-kennedy-assassination-records-lift-veil-secrecy"},
+      {n:"National Security Archive — 40 years FOIA: Heroic Excavators of Government Secrets", u:"https://nsarchive.gwu.edu/special-exhibit/2025-12-10/heroic-excavators-government-secrets"},
+      {n:"CIA — Latest Declassified Documents October 2025 (official release)", u:"https://www.cia.gov/stories/story/cia-latest-declassified-documents/"},
+      {n:"NSA Declassification — FOIA documents & Special Topical Reviews", u:"https://www.nsa.gov/Signals-Intelligence/Declassification/"},
+      {n:"ODNI — 13th Annual IC Transparency Report 2026 (FISA 702 data)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4150-pr-05-26"},
+      {n:"University at Buffalo — Federal Declassified Documents Research Guide", u:"https://research.lib.buffalo.edu/fedgov/declassified"},
     ],
   },
 ];
@@ -3208,7 +3264,7 @@ export const RESEARCHERS = [
     books:[], podcasts:["The Corbett Report Podcast"],
   },
   {
-    id:"r18", name:"Dr. Robert Schoch", role:"Physicist / Remote Viewing", country:"USA",
+    id:"r18", name:"Russell Targ", role:"Physicist / Remote Viewing", country:"USA",
     bio:"Physicist who co-founded the Stanford Research Institute remote viewing program with Hal Puthoff in 1972, funded by the CIA. His experiments with Ingo Swann showed statistically significant evidence of remote perception. Author of The Reality of ESP.",
     url:"https://www.espresearch.com",
     topics:["Remote Viewing & PSI","Forbidden Science"],
@@ -3270,70 +3326,11 @@ export const RESEARCHERS = [
     topics:["Remote Viewing & PSI","Consciousness & Mind","Forbidden Science"],
     tags:["Dean Radin","IONS","PSI","Consciousness","Precognition","Quantum"],
     books:[], podcasts:["Into the Impossible - Brian Keating","Theories of Everything - Curt Jaimungal"],
-  },,
-// ── UAP & ALIEN — LIVE 2025-2026 NEWS SOURCES ───────────────────────────
-  {
-    label:"UAP Disclosure — Live 2025-2026 News & Official Sources",
-    type:"news",
-    items:[
-      {n:"NARA — National Archives UAP Records Collection (official federal UAP archive)", u:"https://www.archives.gov/research/uap"},
-      {n:"House Oversight UAP Task Force — Congressional investigation 2025-2026", u:"https://oversight.house.gov/uap"},
-      {n:"DefenseScoop — Trump UAP Files Disclosure February 2026 (article)", u:"https://defensescoop.com/2026/02/20/trump-uap-government-files-disclosure/"},
-      {n:"Washington Times — Grusch Returns to Congress June 2026 (article)", u:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/"},
-      {n:"DNI ODNI — Intelligence Transparency Reports (official)", u:"https://www.dni.gov/index.php/newsroom/press-releases"},
-    ],
-  },
-
-  // ── BIGFOOT & SASQUATCH RESEARCH SOURCES ─────────────────────────────────
-  {
-    label:"Bigfoot & Sasquatch — Research Organizations and Evidence Archives",
-    type:"research",
-    items:[
-      {n:"BFRO Geographical Database — Browse sightings by state & region", u:"https://www.bfro.net/gdb/"},
-      {n:"Sasquatch Chronicles — Wes Germer (700+ eyewitness interviews)", u:"https://sasquatchchronicles.com"},
-      {n:"Squatchable — Sasquatch research aggregator & DNA study archive", u:"https://squatchable.com"},
-      {n:"Oxford Sasquatch Study — Science AAAS peer-reviewed 57-sample analysis", u:"https://www.science.org/content/article/bigfoot-samples-analyzed-lab"},
-      {n:"Patterson-Gimlin Film — BFRO complete analysis archive", u:"https://www.bfro.net/MULTIMEDIA/Movies/patty.asp"},
-      {n:"Bigfoot 2026 Evidence Guide — Outdoor Tech Lab research roundup", u:"https://www.outdoortechlab.com/bigfoot-evidence-2025/"},
-      {n:"Wes Germer — Sasquatch Chronicles Apple Podcasts", u:"https://podcasts.apple.com/us/podcast/sasquatch-chronicles/id930930690"},
-    ],
-  },
-
-  // ── STARS, ANCIENT ASTRONOMY & COSMIC CONNECTIONS ─────────────────────────
-  {
-    label:"Archaeoastronomy — Stars, Ancient Sites and Cosmic Connections",
-    type:"research",
-    items:[
-      {n:"Crystalinks — Pleiades: Ancient cultures and extraterrestrial connection research", u:"https://www.crystalinks.com/pleiades.html"},
-      {n:"SciTech Daily — Pleiades Hidden Structure Discovery November 2025", u:"https://scitechdaily.com/astronomers-uncover-massive-hidden-structure-around-pleiades/"},
-      {n:"Science Survey — Archaeoastronomy 2025: AI Reveals New Ancient Alignments", u:"https://thesciencesurvey.com/spotlight/2025/05/11/archaeoastronomy-how-ancient-civilizations-aligned-their-lives-with-the-cosmos/"},
-      {n:"Gaia Space Telescope — ESA star mapping database (used for Pleiades discovery)", u:"https://www.esa.int/Science_Exploration/Space_Science/Gaia"},
-      {n:"Star Register — Importance of Stars in Ancient Cultures (reference)", u:"https://starregister.org/the-importance-of-stars-in-ancient-cultures.php"},
-      {n:"NASA Night Sky Network — Archaeoastronomy resources and research", u:"https://nightsky.jpl.nasa.gov"},
-      {n:"Mirage News — Astronomy in Ancient Cultures: Early Star Interpretations", u:"https://www.miragenews.com/astronomy-in-ancient-cultures-early-star-1031456/"},
-      {n:"Ancient Origins — Stars, Star Beings and Extraterrestrial Myths (archive)", u:"https://www.ancient-origins.net/myths-legends"},
-    ],
-  },
-
-  // ── SECRET INTELLIGENCE — DECLASSIFIED 2025-2026 ─────────────────────────
-  {
-    label:"Declassified Intelligence — JFK, NSA, CIA 2025-2026 Releases",
-    type:"archive",
-    items:[
-      {n:"ODNI — Gabbard Declassification: Clapper suppression of NSA objections (Aug 2025)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2025/4098-pr-22-25"},
-      {n:"National Security Archive — JFK CIA Covert Ops full analysis March 2025", u:"https://nsarchive.gwu.edu/briefing-book/2025-03-19/cia-covert-ops-kennedy-assassination-records-lift-veil-secrecy"},
-      {n:"National Security Archive — 40 years FOIA: Heroic Excavators of Government Secrets", u:"https://nsarchive.gwu.edu/special-exhibit/2025-12-10/heroic-excavators-government-secrets"},
-      {n:"CIA — Latest Declassified Documents October 2025 (official release)", u:"https://www.cia.gov/stories/story/cia-latest-declassified-documents/"},
-      {n:"NSA Declassification — FOIA documents & Special Topical Reviews", u:"https://www.nsa.gov/Signals-Intelligence/Declassification/"},
-      {n:"ODNI — 13th Annual IC Transparency Report 2026 (FISA 702 data)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4150-pr-05-26"},
-      {n:"University at Buffalo — Federal Declassified Documents Research Guide", u:"https://research.lib.buffalo.edu/fedgov/declassified"},
-    ],
-  },
+  }
 ];
 
-
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
-thenexusapp.com | Effective: \${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
+thenexusapp.com | Effective: ${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
 
 ==================================
 1. WHO WE ARE
