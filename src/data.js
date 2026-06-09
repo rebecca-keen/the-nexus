@@ -9,6 +9,8 @@ export const ADMIN_PASS = "N3xus@2025";
 export const OPENROUTER_KEY = "PASTE_YOUR_OPENROUTER_KEY_HERE";
 export const AI_MODEL = "google/gemma-3-27b-it:free"; // Free model  -  no billing required
 
+
+
 // --- TOPICS ------------------------------------------------------------------
 export const TOPICS = [
   "All Topics",
@@ -99,6 +101,9 @@ export const REDDIT_SUBS = [
   {name:"r/ForbiddenKnowledge",   url:"https://www.reddit.com/r/ForbiddenKnowledge",   color:"#802040", desc:"Suppressed knowledge"},
   {name:"r/SkinWalkerRanch",      url:"https://www.reddit.com/r/SkinWalkerRanch",      color:"#20c880", desc:"Paranormal ranch research"},
 ];
+
+
+
 
 // --- SEED STORIES -------------------------------------------------------------
 export const SEED_STORIES = [
@@ -283,11 +288,13 @@ export const SEED_STORIES = [
 
   {id:"s110",type:"archive",  source:"FBI Vault / NSA FOIA",                sourceUrl:"https://vault.fbi.gov/UFO",                                                                     time:"20h ago", topic:"UAP & Anomalous",  region:"USA",    title:"FBI Vault UFO Files: Crashed Disc Reports, Roswell Documents, and the Hottel Memo That Described Three Recovered Saucers", summary:"The FBI Vault has released thousands of pages of UFO-related files. Among the most discussed: the 1950 Guy Hottel memo describing an FBI informant reporting that three flying saucers and three bodies of human shape but only 3 feet tall were recovered in New Mexico. The FBI states the memo was unverified. Roswell-era documents are also available. The Vault includes correspondence between J. Edgar Hoover and the Army Air Force about UFO secrecy. The NSA has separately released its UFO files including signals intelligence analyses.", upvotes:20400, comments:2901, credible:70, debunked:30, tags:["FBI","Vault","Hottel","Roswell","Bodies","NSA","Declassified"], premium:false},
 
+
   {id:"s111",type:"research", source:"Britannica / History.com",            sourceUrl:"https://www.britannica.com/topic/UFO",                                                           time:"21h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"The Case for Alien Life: Fermi Paradox, Drake Equation, and Why Scientists Now Believe Extraterrestrial Intelligence Almost Certainly Exists", summary:"The Drake Equation estimates between 1,000 and millions of communicating civilizations should exist in the Milky Way alone. The Fermi Paradox asks why we have not detected them. Modern answers include: civilizations destroy themselves, they communicate in ways we cannot detect, or they are already here and interacting with us. With 300 billion stars in our galaxy and confirmed exoplanets in habitable zones, the mathematical probability of Earth being the only intelligent life is effectively zero. The question has shifted from whether to how.", upvotes:18900, comments:2801, credible:88, debunked:12, tags:["Fermi Paradox","Drake Equation","Extraterrestrial","Life","Galaxy","Math"], premium:false},
 
   {id:"s112",type:"research", source:"SETI Institute / NASA Exoplanets",   sourceUrl:"https://www.seti.org",                                                                           time:"22h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Exoplanet Revolution: NASA Has Confirmed 5,500+ Planets - Dozens in Habitable Zones With Conditions for Life as We Know It", summary:"NASA's Kepler and TESS missions have confirmed over 5,500 exoplanets with thousands more candidates. Scientists have identified dozens of planets in habitable zones with liquid water potential. The James Webb Space Telescope has detected chemical signatures in exoplanet atmospheres consistent with biological processes. The 2024 discovery of K2-18b atmospheric data showed possible signatures of dimethyl sulfide - a chemical produced only by living organisms on Earth. The search for technosignatures has expanded to include radio signals, laser pulses, and megastructure detection.", upvotes:16400, comments:2301, credible:92, debunked:8, tags:["Exoplanets","NASA","JWST","Habitable","Life","SETI","Biosignatures"], premium:false},
 
   {id:"s113",type:"research", source:"Dr. Jacques Vallee / Jacques Vallee", sourceUrl:"https://www.jacquesvallee.net",                                                                  time:"23h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Jacques Vallee: UFOs Are Not Extraterrestrial Spacecraft - They Are Interdimensional Control Systems That Have Been Here for Centuries", summary:"Computer scientist and astronomer Dr. Jacques Vallee - who inspired the character Lacombe in Close Encounters of the Third Kind and was the first researcher to computerize the US Defense Department's ARPA network - argues the extraterrestrial hypothesis is wrong. His interdimensional hypothesis posits UAP are a control system that has interacted with human consciousness for thousands of years, manifesting in ways that match the beliefs of each era. The same phenomenon appeared as angels and demons before spacecraft. Vallee's research has influenced both the scientific establishment and classified government programs.", upvotes:14700, comments:2101, credible:72, debunked:28, tags:["Vallee","Interdimensional","Control System","Consciousness","ETH","Close Encounters"], premium:false},
+
 
 // ALIENS & EXTRATERRESTRIAL - EXPANDED RECORDS
   {id:"s114",type:"archive",  source:"CIA / NSA / FBI FOIA",                sourceUrl:"https://www.cia.gov/readingroom/collection/ufos-fact-or-fiction",                               time:"24h ago", topic:"Aliens & Extraterrestrial", region:"USA",    title:"Roswell 1947: The Incident That Started Everything - Declassified Army, FBI and CIA Files on the Crashed Disc Recovery", summary:"On July 8 1947 the Roswell Army Air Field public information officer issued a press release stating the Army had recovered a flying disc. Within hours the story was retracted and changed to a weather balloon. Declassified documents show FBI Director J. Edgar Hoover was furious about being cut out of the recovery. The FBI Vault contains memos referencing recovered disc and bodies. In 1994 the Air Force admitted it was not a weather balloon but Project Mogul. Witnesses including Major Jesse Marcel maintained until death that the material was not of terrestrial origin.", upvotes:31200, comments:4801, credible:72, debunked:28, tags:["Roswell","1947","Army","FBI","Crash","Recovery"], premium:false},
@@ -311,6 +318,7 @@ export const SEED_STORIES = [
   {id:"s123",type:"research", source:"Ancient Astronaut Theory / Zecharia Sitchin", sourceUrl:"https://sitchin.com/",                                                                 time:"33h ago", topic:"Aliens & Extraterrestrial", region:"Global", title:"Ancient Astronaut Theory: Sumerian Texts Describe the Anunnaki as Alien Beings Who Created Humans - What the Clay Tablets Actually Say", summary:"Zecharia Sitchin spent decades translating Sumerian cuneiform clay tablets and concluded they describe beings called the Anunnaki who came from the planet Nibiru and genetically engineered Homo sapiens as a slave species. The Epic of Gilgamesh pre-dates Genesis by at least 1000 years and contains parallel flood narrative. The Sumerian King List describes rulers who reigned for thousands of years before the flood. Academic Sumerologists dispute Sitchin's translations but the ancient astronaut hypothesis has been adopted by researchers including Erich von Daniken whose Chariots of the Gods became an international bestseller. The History Channel Ancient Aliens series has brought the theory to mass audiences.", upvotes:21500, comments:3101, credible:48, debunked:52, tags:["Anunnaki","Sitchin","Sumerian","Ancient Astronaut","Nibiru","Enki"], premium:false},
 
   {id:"s124",type:"news",     source:"Congress / NewsNation / The Debrief",   sourceUrl:"https://oversight.house.gov/",                                                                  time:"34h ago", topic:"Aliens & Extraterrestrial", region:"USA",    title:"September 2025 Congressional Hearing: Military Veterans Testify About Non-Human Intelligence and Craft Retrieval Programs", summary:"The September 2025 House Oversight Committee hearing titled Restoring Public Trust brought additional military veterans to testify under oath about UAP crash retrieval programs and non-human intelligence. Witnesses included individuals with direct firsthand knowledge of crash retrieval operations rather than secondhand reports. The hearing followed David Grusch's July 2023 testimony and was notable for the increased specificity of accounts given under oath. Multiple witnesses described seeing non-human materials and in some cases non-human biological entities. Congressional pressure for full declassification intensified following the hearing.", upvotes:29100, comments:4201, credible:74, debunked:26, tags:["Congress","2025","Military","Veterans","Crash Retrieval","Non-Human","Testimony"], premium:false},
+,
 // ── SURVEILLANCE (need 6 more) ────────────────────────────────────────────
   {id:"s125",type:"archive",  source:"NSA / Edward Snowden / The Guardian",  sourceUrl:"https://theintercept.com/snowden-sidtoday/",                                                     time:"1h ago",  topic:"Surveillance",             region:"USA",    title:"PRISM, XKeyscore, MUSCULAR: The Full Scope of NSA Mass Surveillance Revealed by Snowden - Every American Was Being Watched", summary:"Edward Snowden's 2013 leaks to Glenn Greenwald and Laura Poitras revealed that the NSA had built the most comprehensive mass surveillance apparatus in human history. PRISM collected data directly from Apple, Google, Facebook, Microsoft, Yahoo, AOL, Skype, YouTube and PalTalk. XKeyscore could search the full content of emails, browser history, and social media activity of virtually any internet user on Earth. MUSCULAR tapped the fiber optic cables connecting Google and Yahoo data centers abroad, outside any legal oversight. UPSTREAM collected data directly from internet backbone infrastructure. The NSA was not targeting terrorists - it was collecting everything from everyone.", upvotes:31200, comments:4801, credible:96, debunked:4, tags:["NSA","PRISM","XKeyscore","Snowden","Mass Surveillance","Internet"], premium:false},
 
@@ -449,10 +457,12 @@ export const SEED_STORIES = [
   {id:"s185",type:"research", source:"NOAA / Woods Hole Oceanographic",        sourceUrl:"https://oceanexplorer.noaa.gov",                                                                  time:"61h ago", topic:"Ocean & Earth",           region:"Global", title:"The Baltic Sea Anomaly: A 60-Meter Object on the Ocean Floor That Sonar Shows Has No Natural Explanation - Geologists and Military Remain Silent", summary:"In June 2011 Swedish deep-sea explorers Ocean X Team discovered a 60-meter circular object on the floor of the Baltic Sea at 87 meters depth while searching for a shipwreck. The object has a flat bottom, a distinct circular shape, and a 300-meter runway-like track behind it. Electrical equipment malfunctions when divers get within 200 meters of it. Samples retrieved from the object were analyzed and found to contain metal alloys including titanium that do not occur naturally in this formation. The Swedish military has not commented. Mainstream geologists have proposed it is a glacially deposited disc of glaciofluvial sediment but have not explained the electrical interference or the unusual metal composition. The anomaly remains unidentified.", upvotes:18900, comments:2801, credible:55, debunked:45, tags:["Baltic Sea Anomaly","Sonar","Ocean","UFO","Electrical Interference","Sweden","Titanium"], premium:false},
 
   {id:"s186",type:"research", source:"Randall Carlson / Robert Schoch",        sourceUrl:"https://www.randallcarlson.com",                                                                  time:"62h ago", topic:"Ocean & Earth",           region:"Global", title:"The Younger Dryas Catastrophe: Geological Evidence of a Global Flood 12,800 Years Ago That Reshaped Continents and Killed 75% of Large Mammals", summary:"Approximately 12,800 years ago Earth experienced a sudden and catastrophic warming event that ended the last Ice Age. Evidence documented by geologists including Randall Carlson and J. Harlen Bretz shows that enormous ice dam failures released water volumes creating the Channeled Scablands of Washington State, the Missoula floods visible from space, and a rapid global sea level rise of 400 feet. These floods would have destroyed any coastal civilizations. Simultaneously 75% of large mammals in North America went extinct within a geologically instantaneous period. The Younger Dryas Impact Hypothesis - supported by evidence of nano-diamonds and platinum in a global black mat layer - proposes that a comet strike triggered these catastrophes. This is the geological context for flood myths found in virtually every ancient culture.", upvotes:21700, comments:3101, credible:78, debunked:22, tags:["Younger Dryas","Flood","Carlson","Bretz","Scablands","Comet","Civilization"], premium:false},
+,
 // ── OCEAN & EARTH (2 more to reach 8) ──────────────────────────────────────
   {id:"s187",type:"research", source:"NOAA / MBARI / Monterey Bay Aquarium",  sourceUrl:"https://oceanexplorer.noaa.gov",                                                                  time:"63h ago", topic:"Ocean & Earth",           region:"Global", title:"The Deep Sea Contains Creatures and Structures That Defy Classification - 95% of Earth's Oceans Have Never Been Seen by Human Eyes", summary:"NOAA estimates that 95% of Earth's oceans remain unexplored and unmapped. The Challenger Deep in the Mariana Trench reaches 36,000 feet - deep enough to submerge Mount Everest. In explored regions scientists have found hydrothermal vent ecosystems that survive without sunlight, chemosynthetic life forms that completely rewrite the rules of biology, and structures that have never been classified. The MBARI institute has documented creatures including the Humboldt squid with complex communication systems, comb jellies with completely separate nervous system evolution, and deep-sea fish with bioluminescent lures more complex than any engineered system. The bloop, the julia, the train, and the upsweep sounds remain officially unexplained after 30 years.", upvotes:16800, comments:2401, credible:88, debunked:12, tags:["Deep Sea","NOAA","Unexplored","Bioluminescence","Bloop","Mariana Trench"], premium:false},
 
   {id:"s188",type:"research", source:"Comet Research Group / Science Advances", sourceUrl:"https://www.sciencealert.com",                                                                   time:"64h ago", topic:"Ocean & Earth",           region:"Global", title:"Ancient Ocean Floor Maps Show Continents Were Connected Differently 12,000 Years Ago - Coastal Civilizations Would Have Been Destroyed", summary:"At the peak of the last Ice Age approximately 20,000 years ago sea levels were 400 feet lower than today. This means that vast areas of continental shelves now underwater were dry land - including a land bridge connecting Britain to Europe, a massive coastal plain around Southeast Asia called Sundaland, and extensive coastal territories in the Americas and Australia. The rising seas that followed the Younger Dryas warming between 15,000 and 7,000 years ago would have systematically inundated any coastal civilizations. Graham Hancock argues this explains why flood myths are universal - every coastal culture on Earth would have experienced catastrophic inundation. Sonar mapping of submerged areas including the North Sea Doggerland reveals archaeological traces of human habitation.", upvotes:19400, comments:2801, credible:76, debunked:24, tags:["Sea Level","Ice Age","Doggerland","Sundaland","Coastal","Civilization","Flood"], premium:false},
+,
 // ── VACCINES & BIG PHARMA ─────────────────────────────────────────────────
   {id:"s189",type:"research",source:"JAMA / Lancet / BMJ",                   sourceUrl:"https://www.bmj.com",                                                                            time:"1h ago",  topic:"Vaccines & Big Pharma",    region:"USA",    title:"Pfizer and Moderna's Own Trial Data Shows mRNA Vaccines Were Never Tested for Preventing Transmission - Only Symptom Reduction", summary:"A re-analysis of Pfizer and Moderna's Phase 3 trial data published in the British Medical Journal confirmed that the COVID-19 mRNA vaccines were never tested for their ability to prevent transmission of the virus. The trials only measured whether vaccinated individuals developed symptoms - not whether they could still spread the virus to others. This distinction was central to the public health justification for vaccine mandates. Former Pfizer board member Dr. Scott Gottlieb acknowledged in 2021 that the trials were not powered to detect a reduction in transmission. The CDC's own MMWR data subsequently showed vaccinated individuals could carry and transmit identical viral loads.", upvotes:28600, comments:4201, credible:74, debunked:26, tags:["Pfizer","mRNA","Transmission","Trial","BMJ","Mandate"], premium:false},
 
@@ -549,6 +559,7 @@ export const SEED_STORIES = [
   {id:"s231",type:"research",source:"Ancient Gods & Beings",                   sourceUrl:"https://www.ancient-origins.net/myths-legends",                                                time:"43h ago", topic:"Ancient Gods & Beings",     region:"Global", title:"The Anunnaki in Sumerian Texts: Beings Who Came From the Sky, Created Humanity to Mine Gold, and Were Worshipped as Gods Across the Ancient World", summary:"The Anunnaki appear throughout Sumerian cuneiform texts as divine beings who descended from the heavens and played a central role in human civilization. The Sumerian texts predate Genesis by at least 1,000 years and describe parallel accounts of creation, the flood, and the formation of humanity. Zecharia Sitchin interpreted the Anunnaki as extraterrestrial beings from the planet Nibiru who genetically engineered Homo sapiens. Academic Sumerologists translate Anunnaki as those of royal blood or those who came from heaven to earth and dispute Sitchin's interpretations. The texts describe the Anunnaki gods as having human form, human emotions, human relationships, and human conflicts - making them either allegorical or literal beings indistinguishable from advanced humans.", upvotes:23400, comments:3401, credible:55, debunked:45, tags:["Anunnaki","Sumerian","Sitchin","Creation","Nibiru","Gods","Ancient Aliens"], premium:false},
 
   {id:"s232",type:"research",source:"Credo Mutwa / Zulu Legends / Michael Tellinger",sourceUrl:"https://www.michaeltellinger.com",                                                  time:"44h ago", topic:"Ancient Gods & Beings",     region:"Global", title:"Credo Mutwa: South Africa's Most Senior Shaman Describes the Chitauri - Reptilian Beings Who Controlled Ancient Africa - In Extraordinary Detail", summary:"Vusamazulu Credo Mutwa was South Africa's most senior traditional healer and keeper of Zulu oral history until his death in 2020. In extensive interviews recorded by David Icke and Michael Tellinger he described the Chitauri - beings that appear in Zulu tradition as reptilian entities who arrived from the sky in ancient times, intermarried with human royalty, and have continued to influence human affairs. Mutwa described these beings in extraordinary physical and behavioral detail including their feeding habits, their hybrid offspring, and their claimed control of weather and political events. Researcher Michael Tellinger has documented similar beings in the oral traditions of other African cultures and proposed that the massive ancient stone circle complex in Mpumalanga was built by the Anunnaki.", upvotes:18700, comments:2701, credible:45, debunked:55, tags:["Credo Mutwa","Chitauri","Zulu","Reptilian","South Africa","Oral History","Tellinger"], premium:false},
+,
 // ── UAP & ALIENS — 2025-2026 BREAKING ────────────────────────────────────
   {id:"s233",type:"news",    source:"Washington Times / Grusch / UAP Disclosure Act",
    sourceUrl:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/",
@@ -692,6 +703,176 @@ export const SEED_STORIES = [
    title:"Trump Executive Order January 2025: All JFK, RFK, and MLK Assassination Records to Be Declassified — What the First Releases Revealed and What Remains Hidden",
    summary:"President Trump signed Executive Order 14176 on January 23 2025 directing the declassification of all previously withheld records in the JFK Assassination Records Collection, and for the first time also covering records related to the assassinations of Senator Robert F. Kennedy and Reverend Dr. Martin Luther King Jr. The National Archives released thousands of previously classified documents in early 2025. Among the revelations: CIA surveillance of Oswald predated the assassination, multiple CIA officers had been aware of his Soviet defection and return. The MLK files remain the least fully processed. Critics note that the CIA still maintains thousands of redacted pages citing ongoing sources and methods concerns — 60 years after the assassination.",
    upvotes:27600, comments:4001, credible:90, debunked:10, tags:["Trump","JFK","RFK","MLK","EO 14176","NARA","2025","Declassified","Oswald","CIA"], premium:false},
+,
+// ── NASA ARTEMIS — BREAKING 2026 ─────────────────────────────────────────
+  {id:"s253",type:"news", source:"NASA Official / AP / Reuters",
+   sourceUrl:"https://www.nasa.gov/artemis-ii-news-and-updates/",
+   time:"1h ago", topic:"Forbidden Science", region:"USA",
+   title:"Artemis II Launched April 1 2026: First Humans Around the Moon in 54 Years — Orion Capsule Splashes Down After 10-Day Mission",
+   summary:"On April 1 2026, NASA launched Artemis II from Kennedy Space Center — the first crewed lunar flyby since Apollo 17 in 1972. Astronauts Reid Wiseman, Victor Glover, Christina Koch, and Canadian Jeremy Hansen flew around the Moon in the Orion spacecraft named 'Integrity' on a 10-day mission before splashing down in the Pacific Ocean on April 10. The mission set a new distance record, surpassing Apollo 13. Artemis II marks the first time humans have traveled beyond low Earth orbit in over half a century. NASA now targets early 2028 for the first actual lunar landing on Artemis 4 — a date unchanged since mid-2025 despite mission restructuring in February 2026 that removed the original female-first-landing goal.",
+   upvotes:44800, comments:6201, credible:99, debunked:1,
+   tags:["Artemis II","Orion","Moon","2026","Wiseman","Koch","Glover","Hansen"], premium:false},
+
+  {id:"s254",type:"news", source:"Washington Times / AP — Breaking June 9 2026",
+   sourceUrl:"https://www.washingtontimes.com/news/2026/jun/9/nasa-reveals-artemis-iii-astronauts-test-technology-future-moon/",
+   time:"2h ago", topic:"Forbidden Science", region:"USA",
+   title:"BREAKING June 9 2026: NASA Announces Artemis III Crew — Bresnik, Rubio, Douglas and Parmitano to Practice Lunar Lander Docking in Earth Orbit",
+   summary:"NASA announced the Artemis III crew on June 9 2026 — Randy Bresnik, Frank Rubio, and Andre Douglas of NASA, and ESA's Luca Parmitano. Unlike Artemis II which flew around the Moon, the Artemis III mission will orbit Earth while the crew practices docking their Orion capsule with two commercial lunar landers — SpaceX Starship and Blue Origin's Blue Moon — in preparation for the actual lunar landing planned for Artemis 4. The announcement came just two months after Artemis II's record-breaking flight. A further Artemis 5 mission will build the first lunar base. NASA expects to launch lunar missions annually after Artemis 5.",
+   upvotes:28600, comments:3901, credible:99, debunked:1,
+   tags:["Artemis III","Bresnik","Rubio","Douglas","Parmitano","Orion","SpaceX","Blue Origin"], premium:false},
+
+  {id:"s255",type:"research", source:"NASA / ESA / SLS",
+   sourceUrl:"https://www.nasa.gov/humans-in-space/artemis/",
+   time:"3h ago", topic:"Forbidden Science", region:"USA",
+   title:"Orion Spacecraft: The Capsule Built by Lockheed Martin to Carry Humans to the Moon Costs $93 Billion and Has Already Flown Farther Than Any Crewed Spacecraft in History",
+   summary:"NASA's Orion Multi-Purpose Crew Vehicle is the deep space capsule built by Lockheed Martin under contract. The United States is estimated to have spent approximately $93 billion on the Artemis program through 2025. The Space Launch System rocket that carries Orion is described as powerful and over-budget. Artemis I flew unmanned in 2022 on a 25-day voyage around the Moon. Artemis II in April 2026 carried four astronauts on a 10-day mission around the Moon, setting a new crewed spaceflight distance record. The first Moon landing — Artemis 4 — targets early 2028 with astronauts transferring from Orion to a SpaceX Starship lunar lander in lunar orbit. The Lunar Gateway space station, being built around the Moon, was described as being 'sized' in a March 2026 update whose full details were not publicly disclosed.",
+   upvotes:22400, comments:3201, credible:97, debunked:3,
+   tags:["Orion","SLS","Lockheed Martin","$93 Billion","SpaceX Starship","Lunar Gateway","2028 Landing"], premium:false},
+
+  // ── PENTAGON UFO FILES — MAY 2026 BREAKING ────────────────────────────────
+  {id:"s256",type:"news", source:"Pentagon / NBC Washington / AP — May 8 2026",
+   sourceUrl:"https://www.nbcwashington.com/news/national-international/pentagon-releasing-new-files-ufos/4101937/",
+   time:"4h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"Pentagon Releases First UFO Files May 8 2026: Flying Saucer Specimens, 1948 Reports Saying Craft Not From Any Known Culture, Buzz Aldrin Seeing Bright Light on Apollo 11",
+   summary:"The Pentagon began releasing its first batch of UAP files on May 8 2026. The initial release included hundreds of pages of sightings dating back to the 1940s. A 1948 report from US airmen in the Netherlands documented recurring flying saucer sightings — Swedish counterparts agreed and stated the craft did not come from 'any presently known culture on earth.' Photos of alleged flying saucer specimens were released. Apollo 11 astronaut Buzz Aldrin's account of observing a 'fairly bright light source' during the mission was included. A 2023 Aegean Sea military report described a UAP flying just above the ocean surface making multiple 90-degree turns. A Kazakhstan incident described a blazingly bright object doing corkscrew twists. Trump stated he directed the release for 'Complete and Maximum Transparency.' The new Pentagon UAP website received over one billion views worldwide in its first weeks.",
+   upvotes:68200, comments:9401, credible:88, debunked:12,
+   tags:["Pentagon UFO Files","May 2026","Flying Saucer","1948","Buzz Aldrin","Apollo 11","Kazakhstan","90 Degree Turns"], premium:false},
+
+  {id:"s257",type:"news", source:"ABC News / HuffPost / Pentagon — May 22 2026",
+   sourceUrl:"https://abcnews.com/US/pentagon-releases-declassified-ufo-files-including-intelligence-officers/story?id=133209645",
+   time:"5h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"Second Pentagon UFO Batch May 22 2026: Intelligence Officer Left 'Virtually Speechless' — Orbs Swarming a US Base, F-16 Shoots Down UAP Over Lake Huron, 13 Fighter Jets Chase Object",
+   summary:"The Pentagon's second tranche of UAP files released May 22 2026 contained some of the most dramatic accounts ever officially published. A senior US intelligence officer described being left 'virtually speechless' after witnessing from a helicopter multiple glowing orange orbs — oval-shaped with bright centers — flying near the rotor disk at a US military installation. Fighter jets scrambled to identify the objects but couldn't. The same orbs then appeared to chase the jets, matching their speed. A report described 'countless orbs swarming in all directions' forming distinct triangle formations before vanishing. Separate footage shows an F-16 shooting down a UAP over Lake Huron. 13 fighter jets were documented chasing a single object. A June 2024 encounter shows a spherical UAP pulsing over water. Multiple orbs were observed around a US submarine, executing rapid direction changes inconsistent with balloon behavior.",
+   upvotes:74600, comments:10801, credible:87, debunked:13,
+   tags:["Pentagon UFO Files","May 22 2026","Orbs","Speechless","F-16","Lake Huron","13 Jets","Submarine","Virtually Speechless"], premium:false},
+
+  {id:"s258",type:"archive", source:"Pentagon Official UAP Website / DOD",
+   sourceUrl:"https://www.defense.gov/UAP",
+   time:"6h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"Pentagon UAP Official Website: 1 Billion Views in First Weeks — All Released Files Including Videos, Photos, and Reports Now Publicly Available",
+   summary:"The Department of Defense launched an official UAP transparency website after President Trump directed the release of government UFO files in 2026 for 'Complete and Maximum Transparency regarding our government's understanding of Unidentified Anomalous Phenomena.' The website received over one billion views worldwide within its first weeks of operation — an extraordinary level of public interest. Additional files are being released on a rolling basis. The releases include videos, imagery, testimony, reports, and previously classified cables from US embassies worldwide. The DOD stated the releases are 'in an effort to bring unprecedented transparency regarding our government's understanding of UAP.' Critics including former AARO director Sean Kirkpatrick warned that releasing raw files without analysis will 'only serve to fuel more speculation, conspiracy and arm-chair pseudoscience.'",
+   upvotes:51400, comments:7201, credible:92, debunked:8,
+   tags:["Pentagon UAP Website","1 Billion Views","DOD Transparency","Rolling Release","2026","Official"], premium:false},
+
+  {id:"s259",type:"news", source:"NewsNation / NUFORC",
+   sourceUrl:"https://www.newsnationnow.com/space/ufo/over-2000-ufo-sightings-first-half-2025/",
+   time:"7h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"2,174 UFO Sightings in First Half of 2025 — Up From 1,492 in Same Period 2024, And Researchers Estimate Only 5% of Actual Sightings Get Reported",
+   summary:"The National UFO Reporting Center documented 2,174 UAP sightings in the first half of 2025 — a significant increase from 1,492 in the same period of 2024. NUFORC collected over 3,000 total reports in that period but many were delayed reports of past incidents. Chief Technology Officer Christian Stepien estimates only approximately 5 percent of actual sightings are ever reported, suggesting real sighting rates are tens of thousands per year. Reports included green orbs zigzagging, helicopters chasing bright white saucers, silent triangles, fast-moving disks, and shape-shifting lights. New York state alone had 66 reports in the first half of 2025. The Wall Street Journal reported separately that AARO itself may be behind some rumors of alien technology as part of cover stories for classified Earth-based programs.",
+   upvotes:29800, comments:4301, credible:82, debunked:18,
+   tags:["NUFORC","2174 Sightings","2025","5 Percent","Unreported","New York","Wall Street Journal"], premium:false},
+
+  {id:"s260",type:"archive", source:"NBC / AP / Pentagon Archives",
+   sourceUrl:"https://www.nbcwashington.com/news/national-international/pentagon-releasing-new-files-ufos/4101937/",
+   time:"8h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"1948 Flying Saucer Reports: US Airmen in Netherlands and Swedish Military Both Concluded the Craft Came From No Known Culture on Earth",
+   summary:"Among the most historically significant documents in the Pentagon's May 2026 UAP release are 1948 military reports documenting recurring flying saucer sightings over the Netherlands by US airmen. Swedish military counterparts who witnessed the same phenomena independently concluded that the craft 'did not come from any presently known culture on earth.' These 1948 assessments predated Project Blue Book and represent the earliest official military conclusions that some observed aerial phenomena are not attributable to any known nation. The documents indicate that from the very beginning of the modern UFO era, frontline military observers were concluding extraterrestrial origin — conclusions that were subsequently suppressed for nearly 80 years before appearing in the 2026 release.",
+   upvotes:38400, comments:5601, credible:91, debunked:9,
+   tags:["1948","Flying Saucer","Netherlands","Sweden","Unknown Culture","Pentagon Files","Historical","80 Years Suppressed"], premium:false},
+
+  {id:"s261",type:"news", source:"Nebraska Public Media / University of Nebraska Archives",
+   sourceUrl:"https://nebraskapublicmedia.org/en/news/news-articles/flying-saucers-over-the-sandhills-ufo-investigations-now-public-in-university-of-nebraska-archives/",
+   time:"9h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"University of Nebraska Opens UFO Investigation Archives May 2026: Schoolteacher's 50-Year Investigation of Flying Saucer Sightings Now Public",
+   summary:"The University of Nebraska-Lincoln opened the archives of E.A. 'Earl' Kral in May 2026 — a schoolteacher who spent decades systematically investigating UFO sightings and paranormal reports across Nebraska. The Kral files document dozens of purported flying saucer sightings including a photograph of a purported UFO over the Nebraska Sandhills dating to the 1970s. The archive's release coincided with the surge of official government interest in UAP. The University described releasing the files amid heightened public interest after even Barack Obama publicly discussed the possibility that some UAP cannot be explained. The Kral files join a growing body of citizen-documented UFO evidence now held in academic archives — representing an alternative record of UAP history outside government control.",
+   upvotes:14800, comments:2101, credible:72, debunked:28,
+   tags:["Nebraska","UFO Archives","Kral","University","Citizen Investigation","Flying Saucer","1970s"], premium:false},
+
+  {id:"s262",type:"news", source:"Hollywood Reporter / HuffPost / Pentagon — Second Batch",
+   sourceUrl:"https://www.hollywoodreporter.com/news/general-news/pentagon-ufo-files-2-1236604232/",
+   time:"10h ago", topic:"Aliens & Extraterrestrial", region:"USA",
+   title:"Second Pentagon UAP Release: F-16 Shoots Down UFO Over Lake Huron, Orbs Chase Military Aircraft, Human-Shaped Object Intrigues Chinese Scientists",
+   summary:"The second batch of Pentagon UAP files released May 22 2026 included footage of an F-16 fighter jet shooting down an unidentified object over Lake Huron. A separate report showed a group of orbs observed around a US submarine moving in multiple directions simultaneously — behavior the Pentagon noted is inconsistent with balloons. An intelligence officer's report described countless oval-shaped orbs swarming in all directions near a military installation and forming a distinct triangle formation. Chinese scientists who reviewed the same files were particularly intrigued by footage appearing to show a human-shaped object in one of the videos. BBC reported on multiple sightings with the description 'orbs swarming in all directions' and separately reported additional footage released May 22. The DOD promised further rolling releases.",
+   upvotes:56800, comments:7901, credible:86, debunked:14,
+   tags:["F-16","Lake Huron","Orbs Swarming","Submarine","Human Shaped","Chinese Scientists","Triangle Formation","BBC"], premium:false},
+,
+// ── BREAKING JUNE 9 2026 — UAP WHISTLEBLOWER IMMUNITY ───────────────────
+  {id:"s263",type:"news", source:"NewsNation / The Hill / Washington Times — June 9 2026",
+   sourceUrl:"https://www.newsnationnow.com/space/ufo/lawmakers-ufo-whistleblowers-immunity/",
+   time:"1h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"BREAKING June 9 2026: Grusch Says Government Aware of 'Several' Kinds of Extraterrestrial Life — Bipartisan Lawmakers Demand Trump Grant UAP Whistleblowers Full Immunity",
+   summary:"In a major Capitol Hill event on June 9 2026, David Grusch testified that the US government is aware of several kinds of extraterrestrial life ranging in complexity. A bipartisan group of lawmakers simultaneously called on President Trump to waive all non-disclosure agreements for UAP whistleblowers and grant them permanent immunity. Rep. Anna Paulina Luna demanded the White House grant immunity to whistleblowers who know the locations of UFOs and advanced technology. Rep. Jared Moskowitz declared 'Disclosure today, disclosure tomorrow — the American people deserve to know.' Rep. Tim Burchett said if lawmakers toured Area 51 they would only get a T-shirt because the government would move everything else. Grusch stated the topics discussed 'go beyond life in the universe' and cited national security concerns. The group called for release of the 1996 Varginha Brazil incident files, where witnesses reported contact with nonhuman beings transported to the US.",
+   upvotes:82400, comments:11801, credible:86, debunked:14,
+   tags:["Grusch","Several Aliens","Immunity","June 2026","Luna","Moskowitz","Burchett","NDAs","Varginha","Whistleblower"], premium:false},
+
+  {id:"s264",type:"archive", source:"Congress.gov — H.R. 5060 119th Congress",
+   sourceUrl:"https://www.congress.gov/bill/119th-congress/house-bill/5060/text",
+   time:"2h ago", topic:"Government & Intelligence", region:"USA",
+   title:"UAP Whistleblower Protection Act H.R. 5060: Federal Law That Would Shield Anyone Who Discloses Government UAP Research From Prosecution or Retaliation",
+   summary:"The UAP Whistleblower Protection Act introduced in the 119th Congress (H.R. 5060) would amend federal civil service law to codify specific protections for any federal employee or contractor who discloses information about the use of US government taxpayer funds to evaluate or research unidentified anomalous phenomenon material. The bill covers matter associated with objects observed in air, space, or sea domains that cannot be immediately explained. Rep. Anna Paulina Luna stated that whistleblowers who provide details on UAP spending, classification, and declassification should be able to do so without retribution. DefenseScoop reported that the Pentagon itself has welcomed the Trump administration's UAP transparency push. The bill represents the most specific whistleblower protection legislation ever written for the UAP domain.",
+   upvotes:34600, comments:4801, credible:92, debunked:8,
+   tags:["UAP Whistleblower Protection Act","H.R. 5060","Congress","Luna","Federal Law","Immunity","Retribution","119th Congress"], premium:false},
+
+  {id:"s265",type:"news", source:"NewsNation / Washington Times — Varginha 1996",
+   sourceUrl:"https://www.washingtontimes.com/news/2026/jun/9/lawmakers-whistleblower-demand-full-disclosure-governments/",
+   time:"3h ago", topic:"Aliens & Extraterrestrial", region:"Global",
+   title:"Varginha 1996 Brazil Incident: Lawmakers Formally Demand Files — Witnesses Reported Contact With Nonhuman Sentient Beings Who Were Allegedly Transported to the United States",
+   summary:"At the June 9 2026 Capitol Hill UAP event, lawmakers specifically called for declassification of files related to the 1996 Varginha incident in Brazil. In January 1996 in Varginha, Minas Gerais state, multiple witnesses including civilians and military personnel reported encountering short, dark-skinned beings with large heads, red eyes, and an oily skin described as similar to catfish. Brazilian military units reportedly captured one or two living beings and one dead being. Local hospital staff and military witnesses claimed the beings were transported to facilities in Brazil and subsequently to the United States — potentially to Wright-Patterson Air Force Base. The incident is Brazil's most significant documented UAP encounter and has been investigated for 30 years without official explanation. Lawmakers' decision to name Varginha specifically signals they have intelligence suggesting US government involvement.",
+   upvotes:48200, comments:6801, credible:71, debunked:29,
+   tags:["Varginha","1996","Brazil","Nonhuman Beings","Military","Wright-Patterson","Transport","June 2026 Demand"], premium:false},
+
+  // ── NASA CURIOSITY — MARS LIFE DISCOVERY APRIL 2026 ──────────────────────
+  {id:"s266",type:"research", source:"NASA JPL / Nature Communications — April 2026",
+   sourceUrl:"https://www.jpl.nasa.gov/news/nasas-curiosity-finds-organic-molecules-never-seen-before-on-mars/",
+   time:"4h ago", topic:"Forbidden Science", region:"Global",
+   title:"NASA Curiosity Finds 21 Organic Molecules on Mars Including DNA Precursor — 'Most Diverse Collection Ever Found on the Red Planet' Published Nature Communications April 2026",
+   summary:"NASA's Curiosity rover published findings in Nature Communications in April 2026 revealing the most diverse collection of organic molecules ever found on Mars. Of 21 carbon-containing molecules identified in the Mary Anning 3 rock sample taken in 2020, seven had never been detected on Mars before. The standout discovery is a nitrogen heterocycle — a ring-shaped molecule containing both carbon and nitrogen — described by lead author Dr. Amy Williams of the University of Florida as a chemical precursor to RNA and DNA. The sample came from clay-rich ancient lakebed rocks in Gale Crater that were covered by water billions of years ago. NASA stated the discovery confirms ancient Mars had the right chemistry to support life, though the molecules could be biologic or geologic in origin. The data took years of laboratory analysis to decode before publication.",
+   upvotes:62400, comments:8801, credible:97, debunked:3,
+   tags:["Mars","Organic Molecules","DNA Precursor","Curiosity","Mary Anning","Nature Communications","2026","Life Chemistry"], premium:false},
+
+  // ── SETI PROTOCOL UPDATE — JUNE 8 2026 ────────────────────────────────────
+  {id:"s267",type:"news", source:"BBC Sky at Night / Universe Today — June 8 2026",
+   sourceUrl:"https://www.skyatnightmagazine.com/news/scientists-update-rules-announce-extraterrestrial-intelligence-to-the-world",
+   time:"5h ago", topic:"Aliens & Extraterrestrial", region:"Global",
+   title:"SETI Scientists Update Official Protocols for Announcing Extraterrestrial Intelligence to the World — June 8 2026, Days Before Spielberg's Disclosure Day Film Release",
+   summary:"The International Academy of Astronautics SETI Committee published updated protocols on June 8 2026 for how scientists should evaluate and announce the detection of extraterrestrial intelligence. The revisions to the decades-old Declaration of Principles establish new rules for verification, inter-agency consultation, and public communication in the event of confirmed contact. Universe Today reported the update came just days before the theatrical release of Steven Spielberg's Disclosure Day on June 12 2026. BBC Sky at Night noted the protocols consider the transformative effect such a statement would have on humanity and seek to prevent premature or irresponsible announcements. The timing of the update — coinciding with the most active period of US government UAP disclosure in history — has not been explained by the committee.",
+   upvotes:29400, comments:4101, credible:88, debunked:12,
+   tags:["SETI","IAA","Protocol Update","June 2026","Extraterrestrial Intelligence","Announcement Rules","Disclosure Day","Spielberg"], premium:false},
+
+  // ── JAMES WEBB — STRONGEST SIGN OF ALIEN LIFE April 2025 ──────────────────
+  {id:"s268",type:"research", source:"University of Cambridge / Nature / BBC — April 2025",
+   sourceUrl:"https://www.euronews.com/tag/james-webb-space-telescope",
+   time:"6h ago", topic:"Aliens & Extraterrestrial", region:"Global",
+   title:"James Webb Space Telescope Detects 'Strongest Sign Yet' of Life on Exoplanet K2-18b — Compounds Found That on Earth Are Only Produced by Living Organisms",
+   summary:"Scientists at the University of Cambridge using the James Webb Space Telescope detected what they described as the strongest sign yet of possible life on another planet in April 2025. The exoplanet K2-18b, located 124 light years from Earth in the habitable zone of its star, showed atmospheric compounds that on Earth are produced exclusively by living organisms — specifically dimethyl sulfide (DMS) and dimethyl disulfide (DMDS). On Earth these gases are only produced by microbial life, primarily marine phytoplankton. The detection does not confirm life but represents the most compelling atmospheric biosignature yet observed on any world outside our solar system. A major SETI radio search of K2-18b conducted in 2026 found no artificial narrowband radio signal, but researchers say this does not rule out life and only sharpens future search parameters.",
+   upvotes:54800, comments:7801, credible:86, debunked:14,
+   tags:["K2-18b","James Webb","Biosignature","Dimethyl Sulfide","Cambridge","Strongest Sign","2025","Habitable Zone"], premium:false},
+
+  // ── ROMAN SPACE TELESCOPE — JUNE 1 2026 ────────────────────────────────────
+  {id:"s269",type:"news", source:"ScienceDaily / NASA — June 1 2026",
+   sourceUrl:"https://www.sciencedaily.com/news/space_time/space_exploration/",
+   time:"7h ago", topic:"Forbidden Science", region:"Global",
+   title:"NASA's Roman Space Telescope Could Discover 100,000 Exoplanets — More Than All Previous Missions Combined — Revolutionizing Search for Alien Worlds",
+   summary:"NASA announced on June 1 2026 that the Nancy Grace Roman Space Telescope could revolutionize the search for alien worlds by discovering approximately 100,000 exoplanets — far more than all previous missions combined. The telescope uses gravitational microlensing to detect planets that are otherwise invisible to direct observation, including Earth-sized worlds and rogue planets not orbiting any star. This capability would increase the known exoplanet catalog by an order of magnitude. Combined with the James Webb Space Telescope's ability to analyze exoplanet atmospheres for biosignatures, the Roman telescope's discoveries would create an enormous target list for follow-up life detection studies. The number and diversity of potentially habitable worlds being identified in 2025-2026 has fundamentally changed the scientific consensus that life beyond Earth might be rare.",
+   upvotes:36800, comments:5201, credible:96, debunked:4,
+   tags:["Roman Space Telescope","100000 Exoplanets","NASA","Gravitational Microlensing","Alien Worlds","June 2026","Life Search"], premium:false},
+
+  // ── ROGUE PLANETS — MAY 2026 ────────────────────────────────────────────────
+  {id:"s270",type:"research", source:"ScienceDaily — May 29 2026",
+   sourceUrl:"https://www.sciencedaily.com/news/space_time/",
+   time:"8h ago", topic:"Forbidden Science", region:"Global",
+   title:"Rogue Planet Moons Could Harbor Alien Life for Billions of Years Without a Star — Tidal Heating and Hydrogen Atmospheres Create Hidden Habitable Zones",
+   summary:"Scientists published findings in May 2026 showing that moons orbiting rogue planets — planets wandering through the galaxy untethered to any star — could remain warm enough to sustain liquid water and potentially life for billions of years. The warming mechanism is tidal heating from the planet's gravity combined with hydrogen-rich atmospheres that trap heat. These starless worlds were previously considered inhospitable, but the new research suggests they represent a vastly larger category of potentially life-bearing environments than star-orbiting planets alone. Given that rogue planets may outnumber star-orbiting planets in the galaxy, the total number of potential life-bearing worlds in the Milky Way could be orders of magnitude larger than current estimates. The finding suggests life in the universe could be far more common and more widely distributed than previously imagined.",
+   upvotes:28600, comments:4001, credible:88, debunked:12,
+   tags:["Rogue Planets","Moons","Tidal Heating","Alien Life","Habitable","Starless","Hydrogen Atmosphere","May 2026"], premium:false},
+
+  // ── JAMES WEBB ICE CLOUDS ALIEN PLANET — APRIL 2026 ──────────────────────
+  {id:"s271",type:"research", source:"ScienceDaily / James Webb — April 22 2026",
+   sourceUrl:"https://www.sciencedaily.com/releases/2026/04/260422120000.htm",
+   time:"9h ago", topic:"Forbidden Science", region:"Global",
+   title:"James Webb Finds Unexpected Water-Ice Clouds on Giant Alien Planet — Discovery Challenges All Current Atmospheric Models for Gas Giants",
+   summary:"Scientists using the James Webb Space Telescope announced on April 22 2026 the discovery of unexpected water-ice clouds on a distant Jupiter-like exoplanet by directly imaging Epsilon Indi Ab. The ice clouds were not predicted by any current atmospheric model and challenge fundamental assumptions about how giant planet atmospheres behave at these temperatures. Direct imaging of exoplanet atmospheres — as opposed to transit observations — represents a new frontier in characterizing alien worlds. The discovery was described as stunning because the planet's temperature range was not expected to support water-ice cloud formation based on existing models. Scientists said the finding means existing atmospheric models are significantly incomplete and that many assumed-uninhabitable worlds may need to be reassessed. James Webb's capability to directly image and spectrally analyze exoplanet atmospheres is rewriting planetary science in real time.",
+   upvotes:32400, comments:4601, credible:94, debunked:6,
+   tags:["James Webb","Ice Clouds","Epsilon Indi Ab","Gas Giant","Atmospheric Models","Direct Imaging","April 2026"], premium:false},
+
+  // ── WASHINGTON ARCHBISHOP REMOVES PRIEST — UAP COMMENTS ──────────────────
+  {id:"s272",type:"news", source:"The Hill / NewsNation — June 2026",
+   sourceUrl:"https://thehill.com/homenews/administration/5916231-government-aware-of-several-kinds-of-aliens-ufo-whistleblower/",
+   time:"10h ago", topic:"Biblical & Religious Records", region:"USA",
+   title:"Washington DC Archbishop Removes Catholic Priest From Ministry After He Made Public Comments About UFOs — Church Discipline Enters the UAP Disclosure Conversation",
+   summary:"A Washington DC Catholic archbishop removed a priest from active ministry after the priest made public comments about UFOs and unidentified aerial phenomena, according to reports surfacing during the June 2026 Capitol Hill UAP disclosure events. The incident represents a remarkable intersection of institutional religious authority and the growing mainstream UAP disclosure movement. The Catholic Church's action stands in contrast to Vatican astronomers who have publicly stated that belief in extraterrestrial life is not incompatible with Catholic doctrine. The incident raises questions about which institutions are attempting to manage or suppress public discourse on the UAP subject as government disclosures accelerate. The priest's specific statements have not been fully reported but the archbishop's response was immediate and formal.",
+   upvotes:24800, comments:3601, credible:74, debunked:26,
+   tags:["Archbishop","Catholic","Priest","UFO Comments","Washington DC","Removed","Church","June 2026","Suppression"], premium:false},
 ];
 
 // --- SEED COMMUNITY POSTS -----------------------------------------------------
@@ -803,6 +984,7 @@ export const MEDIA_LIBRARY = [
   {id:"a11", type:"article", title:"Unlimited Hangout - Whitney Webb Archive","author":"Whitney Webb",            year:2019, topic:"Government & Intelligence",    tags:["Intelligence","Epstein","Control"],   desc:"Whitney Webb's complete investigative archive at unlimitedhangout.com covering intelligence networks, Epstein, and hidden power structures.",                                                                              url:"https://unlimitedhangout.com",                                                                       rating:4.9},
   {id:"a12", type:"article", title:"Naked Bible Blog - Dr. Michael Heiser",   author:"Dr. Michael Heiser",        year:2010, topic:"Biblical & Religious Records",  tags:["Nephilim","Bible","Theology"],        desc:"Dr. Heiser's peer-reviewed biblical scholarship blog covering divine council theology, the Nephilim, and what the original Hebrew texts actually say.",                                                                    url:"https://www.nakedbiblepodcast.com",                                                                  rating:4.7},
 ];
+
 
 export const SOURCES = [
 
@@ -1513,6 +1695,7 @@ export const SOURCES = [
     ],
   },
 
+
   // REDDIT  -  UFO, UAP & DISCLOSURE
   {
     label:"Reddit  -  UFO, UAP, Aliens & Disclosure",
@@ -2004,8 +2187,7 @@ export const SOURCES = [
       {n:"Gaia - consciousness & ancient civilizations",              u:"https://www.youtube.com/@GaiaVideo"},
       {n:"Jimmy - conspiracy documentaries",                          u:"https://www.youtube.com/@JimmyFlatbush"},
     ],
-  },
-
+  },,
 // STATE PARKS, NATIONAL PARKS & MISSING PERSONS
   {
     label:"State Parks, National Parks & Missing Persons Research",
@@ -2070,8 +2252,7 @@ export const SOURCES = [
       {n:"Historic Mysteries - Missing 411 Pattern Evidence",                  u:"https://www.historicmysteries.com/missing-411/"},
       {n:"Mysterious Universe - Portals and Missing People (article archive)", u:"https://mysteriousuniverse.org/?s=portal+missing"},
     ],
-  },
-
+  },,
 // CIA DECLASSIFIED FILES - BY TOPIC (OFFICIAL FOIA READING ROOM)
   {
     label:"CIA Declassified Files - MK-Ultra, Mind Control & Human Experiments",
@@ -2185,8 +2366,7 @@ export const SOURCES = [
       {n:"Jeremy Scahill - Dirty Wars (CIA drone kill list reporting)",    u:"https://theintercept.com/staff/jeremyscahill/"},
       {n:"Nick Davies - Hack Attack (phone hacking & intelligence)",       u:"https://www.theguardian.com/profile/nickdavies"},
     ],
-  },
-
+  },,
 // UFO / UAP / ALIENS - OFFICIAL GOVERNMENT DISCLOSURE (2024-2026)
   {
     label:"UFO / UAP - Official Government Disclosure & Documents",
@@ -2320,8 +2500,7 @@ export const SOURCES = [
     type:"user",
     items:[
     ],
-  },
-
+  },,
 // PORTALS & STARGATES - GREENLAND & ARCTIC ANOMALIES
   {
     label:"Portals & Stargates - Greenland, Camp Century & Arctic Anomalies",
@@ -2469,8 +2648,7 @@ export const SOURCES = [
       {n:"YouTube - Terrain Theory vs Germ Theory Documentary",                  u:"https://www.youtube.com/results?search_query=terrain+theory+germ+theory+documentary"},
       {n:"YouTube - Big Pharma Exposed Documentary Playlist",                    u:"https://www.youtube.com/results?search_query=big+pharma+exposed+documentary"},
     ],
-  },
-
+  },,
 // ALIENS & EXTRATERRESTRIAL - KEY RESEARCHERS & AUTHORS
   {
     label:"Aliens & Extraterrestrial - Key Researchers, Authors & Investigators",
@@ -2659,8 +2837,7 @@ export const SOURCES = [
       {n:"Empire Files - Abby Martin investigative journalism",               u:"https://www.youtube.com/@EmpireFiles"},
       {n:"The Duran - Alexander Mercouris geopolitical analysis",             u:"https://www.youtube.com/@TheDuran"},
     ],
-  },
-
+  },,
 // PODCASTS - UAP / ALIEN / PARANORMAL (APPLE PODCASTS - VERIFIED)
   {
     label:"Podcasts - UAP, Alien & Paranormal (Apple Podcasts - Verified)",
@@ -2791,8 +2968,7 @@ export const SOURCES = [
       {n:"Washington Post - PRISM program (Snowden disclosures 2013)",          u:"https://www.washingtonpost.com/investigations/us-intelligence-mining-data-from-nine-us-internet-companies-in-broad-secret-program/2013/06/06/3a0c0da8-cebf-11e2-8845-d970ccb04497_story.html"},
       {n:"New Yorker - Seymour Hersh on Abu Ghraib (May 2004)",                u:"https://www.newyorker.com/magazine/2004/05/10/torture-at-abu-ghraib"},
     ],
-  },
-
+  },,
 // PODCASTS - UFO/UAP TOP RANKED (APPLE + SPOTIFY VERIFIED LINKS)
   {
     label:"Podcasts - UFO & UAP Top Ranked (Apple & Spotify Verified)",
@@ -2910,8 +3086,7 @@ export const SOURCES = [
       {n:"As You Wish Talk Radio - ECETI Ranch (Apple)",                               u:"https://podcasts.apple.com/us/podcast/as-you-wish-talk-radio/id1451534773"},
       {n:"Curious Minds - science & unexplained phenomena (Apple)",                    u:"https://podcasts.apple.com/us/podcast/curious-minds-a-science-podcast/id988560546"},
     ],
-  },
-
+  },,
 
   // WHITE HOUSE & OFFICIAL GOVERNMENT TRACKERS
   {
@@ -2922,8 +3097,7 @@ export const SOURCES = [
       {n:"White House - Official News & Executive Orders",                   u:"https://www.whitehouse.gov/news/"},
       {n:"White House - Presidential Actions Archive",                       u:"https://www.whitehouse.gov/presidential-actions/"},
     ],
-  },
-
+  },,
 // FATHER STEPHEN DE YOUNG - ORTHODOX THEOLOGY & BIBLICAL RESEARCH
   {
     label:"Fr. Stephen De Young - Orthodox Theology, Nephilim & Biblical Cosmology",
@@ -2942,8 +3116,7 @@ export const SOURCES = [
       {n:"Tucker Carlson Show - Apple Podcasts (search Fr. Stephen De Young episodes)",   u:"https://podcasts.apple.com/us/podcast/the-tucker-carlson-show/id1752867424"},
       {n:"Tucker Carlson Show - tuckercarlson.com (official site)",                       u:"https://tuckercarlson.com"},
     ],
-  },
-
+  },,
 // NEWS HUBS - UAP/UFO LATEST ARTICLES (2025-2026)
   {
     label:"News Hubs - UAP & UFO Latest Articles (2025-2026)",
@@ -3063,65 +3236,6 @@ export const SOURCES = [
       {n:"Glenn Greenwald - System Update Newsletter",                       u:"https://greenwald.substack.com"},
       {n:"UFO Disclosure Yearbook - Justin Snead Substack",                  u:"https://justinsnead.substack.com"},
       {n:"Ross Coulthart - Need to Know Newsletter",                         u:"https://rosscoulthart.substack.com"},
-    ],
-  },
-
-  // ── UAP & ALIEN — LIVE 2025-2026 NEWS SOURCES ───────────────────────────
-  {
-    label:"UAP Disclosure — Live 2025-2026 News & Official Sources",
-    type:"news",
-    items:[
-      {n:"NARA — National Archives UAP Records Collection (official federal UAP archive)", u:"https://www.archives.gov/research/uap"},
-      {n:"House Oversight UAP Task Force — Congressional investigation 2025-2026", u:"https://oversight.house.gov/uap"},
-      {n:"DefenseScoop — Trump UAP Files Disclosure February 2026 (article)", u:"https://defensescoop.com/2026/02/20/trump-uap-government-files-disclosure/"},
-      {n:"Washington Times — Grusch Returns to Congress June 2026 (article)", u:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/"},
-      {n:"DNI ODNI — Intelligence Transparency Reports (official)", u:"https://www.dni.gov/index.php/newsroom/press-releases"},
-    ],
-  },
-
-  // ── BIGFOOT & SASQUATCH RESEARCH SOURCES ─────────────────────────────────
-  {
-    label:"Bigfoot & Sasquatch — Research Organizations and Evidence Archives",
-    type:"research",
-    items:[
-      {n:"BFRO Geographical Database — Browse sightings by state & region", u:"https://www.bfro.net/gdb/"},
-      {n:"Sasquatch Chronicles — Wes Germer (700+ eyewitness interviews)", u:"https://sasquatchchronicles.com"},
-      {n:"Squatchable — Sasquatch research aggregator & DNA study archive", u:"https://squatchable.com"},
-      {n:"Oxford Sasquatch Study — Science AAAS peer-reviewed 57-sample analysis", u:"https://www.science.org/content/article/bigfoot-samples-analyzed-lab"},
-      {n:"Patterson-Gimlin Film — BFRO complete analysis archive", u:"https://www.bfro.net/MULTIMEDIA/Movies/patty.asp"},
-      {n:"Bigfoot 2026 Evidence Guide — Outdoor Tech Lab research roundup", u:"https://www.outdoortechlab.com/bigfoot-evidence-2025/"},
-      {n:"Wes Germer — Sasquatch Chronicles Apple Podcasts", u:"https://podcasts.apple.com/us/podcast/sasquatch-chronicles/id930930690"},
-    ],
-  },
-
-  // ── STARS, ANCIENT ASTRONOMY & COSMIC CONNECTIONS ─────────────────────────
-  {
-    label:"Archaeoastronomy — Stars, Ancient Sites and Cosmic Connections",
-    type:"research",
-    items:[
-      {n:"Crystalinks — Pleiades: Ancient cultures and extraterrestrial connection research", u:"https://www.crystalinks.com/pleiades.html"},
-      {n:"SciTech Daily — Pleiades Hidden Structure Discovery November 2025", u:"https://scitechdaily.com/astronomers-uncover-massive-hidden-structure-around-pleiades/"},
-      {n:"Science Survey — Archaeoastronomy 2025: AI Reveals New Ancient Alignments", u:"https://thesciencesurvey.com/spotlight/2025/05/11/archaeoastronomy-how-ancient-civilizations-aligned-their-lives-with-the-cosmos/"},
-      {n:"Gaia Space Telescope — ESA star mapping database (used for Pleiades discovery)", u:"https://www.esa.int/Science_Exploration/Space_Science/Gaia"},
-      {n:"Star Register — Importance of Stars in Ancient Cultures (reference)", u:"https://starregister.org/the-importance-of-stars-in-ancient-cultures.php"},
-      {n:"NASA Night Sky Network — Archaeoastronomy resources and research", u:"https://nightsky.jpl.nasa.gov"},
-      {n:"Mirage News — Astronomy in Ancient Cultures: Early Star Interpretations", u:"https://www.miragenews.com/astronomy-in-ancient-cultures-early-star-1031456/"},
-      {n:"Ancient Origins — Stars, Star Beings and Extraterrestrial Myths (archive)", u:"https://www.ancient-origins.net/myths-legends"},
-    ],
-  },
-
-  // ── SECRET INTELLIGENCE — DECLASSIFIED 2025-2026 ─────────────────────────
-  {
-    label:"Declassified Intelligence — JFK, NSA, CIA 2025-2026 Releases",
-    type:"archive",
-    items:[
-      {n:"ODNI — Gabbard Declassification: Clapper suppression of NSA objections (Aug 2025)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2025/4098-pr-22-25"},
-      {n:"National Security Archive — JFK CIA Covert Ops full analysis March 2025", u:"https://nsarchive.gwu.edu/briefing-book/2025-03-19/cia-covert-ops-kennedy-assassination-records-lift-veil-secrecy"},
-      {n:"National Security Archive — 40 years FOIA: Heroic Excavators of Government Secrets", u:"https://nsarchive.gwu.edu/special-exhibit/2025-12-10/heroic-excavators-government-secrets"},
-      {n:"CIA — Latest Declassified Documents October 2025 (official release)", u:"https://www.cia.gov/stories/story/cia-latest-declassified-documents/"},
-      {n:"NSA Declassification — FOIA documents & Special Topical Reviews", u:"https://www.nsa.gov/Signals-Intelligence/Declassification/"},
-      {n:"ODNI — 13th Annual IC Transparency Report 2026 (FISA 702 data)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4150-pr-05-26"},
-      {n:"University at Buffalo — Federal Declassified Documents Research Guide", u:"https://research.lib.buffalo.edu/fedgov/declassified"},
     ],
   },
 ];
@@ -3264,7 +3378,7 @@ export const RESEARCHERS = [
     books:[], podcasts:["The Corbett Report Podcast"],
   },
   {
-    id:"r18", name:"Russell Targ", role:"Physicist / Remote Viewing", country:"USA",
+    id:"r18", name:"Dr. Robert Schoch", role:"Physicist / Remote Viewing", country:"USA",
     bio:"Physicist who co-founded the Stanford Research Institute remote viewing program with Hal Puthoff in 1972, funded by the CIA. His experiments with Ingo Swann showed statistically significant evidence of remote perception. Author of The Reality of ESP.",
     url:"https://www.espresearch.com",
     topics:["Remote Viewing & PSI","Forbidden Science"],
@@ -3326,11 +3440,251 @@ export const RESEARCHERS = [
     topics:["Remote Viewing & PSI","Consciousness & Mind","Forbidden Science"],
     tags:["Dean Radin","IONS","PSI","Consciousness","Precognition","Quantum"],
     books:[], podcasts:["Into the Impossible - Brian Keating","Theories of Everything - Curt Jaimungal"],
-  }
+  },,
+// ── UAP & ALIEN — LIVE 2025-2026 NEWS SOURCES ───────────────────────────
+  {
+    label:"UAP Disclosure — Live 2025-2026 News & Official Sources",
+    type:"news",
+    items:[
+      {n:"NARA — National Archives UAP Records Collection (official federal UAP archive)", u:"https://www.archives.gov/research/uap"},
+      {n:"House Oversight UAP Task Force — Congressional investigation 2025-2026", u:"https://oversight.house.gov/uap"},
+      {n:"DefenseScoop — Trump UAP Files Disclosure February 2026 (article)", u:"https://defensescoop.com/2026/02/20/trump-uap-government-files-disclosure/"},
+      {n:"Washington Times — Grusch Returns to Congress June 2026 (article)", u:"https://www.washingtontimes.com/news/2026/may/29/lawmakers-host-whistleblowers-ufo-investigators-press-feds-come-clean/"},
+      {n:"DNI ODNI — Intelligence Transparency Reports (official)", u:"https://www.dni.gov/index.php/newsroom/press-releases"},
+    ],
+  },
+
+  // ── BIGFOOT & SASQUATCH RESEARCH SOURCES ─────────────────────────────────
+  {
+    label:"Bigfoot & Sasquatch — Research Organizations and Evidence Archives",
+    type:"research",
+    items:[
+      {n:"BFRO Geographical Database — Browse sightings by state & region", u:"https://www.bfro.net/gdb/"},
+      {n:"Sasquatch Chronicles — Wes Germer (700+ eyewitness interviews)", u:"https://sasquatchchronicles.com"},
+      {n:"Squatchable — Sasquatch research aggregator & DNA study archive", u:"https://squatchable.com"},
+      {n:"Oxford Sasquatch Study — Science AAAS peer-reviewed 57-sample analysis", u:"https://www.science.org/content/article/bigfoot-samples-analyzed-lab"},
+      {n:"Patterson-Gimlin Film — BFRO complete analysis archive", u:"https://www.bfro.net/MULTIMEDIA/Movies/patty.asp"},
+      {n:"Bigfoot 2026 Evidence Guide — Outdoor Tech Lab research roundup", u:"https://www.outdoortechlab.com/bigfoot-evidence-2025/"},
+      {n:"Wes Germer — Sasquatch Chronicles Apple Podcasts", u:"https://podcasts.apple.com/us/podcast/sasquatch-chronicles/id930930690"},
+    ],
+  },
+
+  // ── STARS, ANCIENT ASTRONOMY & COSMIC CONNECTIONS ─────────────────────────
+  {
+    label:"Archaeoastronomy — Stars, Ancient Sites and Cosmic Connections",
+    type:"research",
+    items:[
+      {n:"Crystalinks — Pleiades: Ancient cultures and extraterrestrial connection research", u:"https://www.crystalinks.com/pleiades.html"},
+      {n:"SciTech Daily — Pleiades Hidden Structure Discovery November 2025", u:"https://scitechdaily.com/astronomers-uncover-massive-hidden-structure-around-pleiades/"},
+      {n:"Science Survey — Archaeoastronomy 2025: AI Reveals New Ancient Alignments", u:"https://thesciencesurvey.com/spotlight/2025/05/11/archaeoastronomy-how-ancient-civilizations-aligned-their-lives-with-the-cosmos/"},
+      {n:"Gaia Space Telescope — ESA star mapping database (used for Pleiades discovery)", u:"https://www.esa.int/Science_Exploration/Space_Science/Gaia"},
+      {n:"Star Register — Importance of Stars in Ancient Cultures (reference)", u:"https://starregister.org/the-importance-of-stars-in-ancient-cultures.php"},
+      {n:"NASA Night Sky Network — Archaeoastronomy resources and research", u:"https://nightsky.jpl.nasa.gov"},
+      {n:"Mirage News — Astronomy in Ancient Cultures: Early Star Interpretations", u:"https://www.miragenews.com/astronomy-in-ancient-cultures-early-star-1031456/"},
+      {n:"Ancient Origins — Stars, Star Beings and Extraterrestrial Myths (archive)", u:"https://www.ancient-origins.net/myths-legends"},
+    ],
+  },
+
+  // ── SECRET INTELLIGENCE — DECLASSIFIED 2025-2026 ─────────────────────────
+  {
+    label:"Declassified Intelligence — JFK, NSA, CIA 2025-2026 Releases",
+    type:"archive",
+    items:[
+      {n:"ODNI — Gabbard Declassification: Clapper suppression of NSA objections (Aug 2025)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2025/4098-pr-22-25"},
+      {n:"National Security Archive — JFK CIA Covert Ops full analysis March 2025", u:"https://nsarchive.gwu.edu/briefing-book/2025-03-19/cia-covert-ops-kennedy-assassination-records-lift-veil-secrecy"},
+      {n:"National Security Archive — 40 years FOIA: Heroic Excavators of Government Secrets", u:"https://nsarchive.gwu.edu/special-exhibit/2025-12-10/heroic-excavators-government-secrets"},
+      {n:"CIA — Latest Declassified Documents October 2025 (official release)", u:"https://www.cia.gov/stories/story/cia-latest-declassified-documents/"},
+      {n:"NSA Declassification — FOIA documents & Special Topical Reviews", u:"https://www.nsa.gov/Signals-Intelligence/Declassification/"},
+      {n:"ODNI — 13th Annual IC Transparency Report 2026 (FISA 702 data)", u:"https://www.dni.gov/index.php/newsroom/press-releases/press-releases-2026/4150-pr-05-26"},
+      {n:"University at Buffalo — Federal Declassified Documents Research Guide", u:"https://research.lib.buffalo.edu/fedgov/declassified"},
+    ],
+  },,
+// ── ANIMAL INTELLIGENCE — NEW SOURCES 2025-2026 ──────────────────────────
+  {
+    label:"Animal Intelligence — Live Research News 2025-2026",
+    type:"news",
+    items:[
+      {n:"ScienceDaily — Animal Learning & Intelligence live news feed", u:"https://www.sciencedaily.com/news/plants_animals/animal_learning_and_intelligence/"},
+      {n:"The Conversation — Animal Intelligence research and analysis 2025-2026", u:"https://theconversation.com/topics/animal-intelligence-7837"},
+      {n:"Orca Tool Use June 2025 — First documented seaweed tool use (The Conversation)", u:"https://theconversation.com/for-the-first-time-orcas-have-been-seen-making-and-using-tools-230264"},
+      {n:"Bee Mathematics Jan 2026 — Bees and humans share mathematical ability (The Conversation)", u:"https://theconversation.com/humans-and-bees-can-both-work-with-mathematics-could-aliens-do-the-same-244891"},
+      {n:"Capuchin Monkey Abduction Study May 2025 — Never-seen primate behavior (ScienceDaily)", u:"https://www.sciencedaily.com/releases/2025/05/250519140000.htm"},
+      {n:"Animal Consciousness — New Thinking Allowed (Jeffrey Mishlove PhD interviews)", u:"https://podcasts.apple.com/us/podcast/new-thinking-allowed-audio/id1435178031"},
+      {n:"Consciousness Evolved in Stages Dec 2025 — ScienceDaily research", u:"https://www.sciencedaily.com/releases/2025/12/251215120000.htm"},
+    ],
+  },
+
+  // ── HIDDEN HISTORY & FORBIDDEN ARCHAEOLOGY — NEW SOURCES ─────────────────
+  {
+    label:"Hidden History & Forbidden Archaeology — Podcasts and Research 2025-2026",
+    type:"podcast",
+    items:[
+      {n:"Forbidden Archaeology Podcast — Apple Podcasts (disputed excavations & OOPArts)", u:"https://podcasts.apple.com/us/podcast/forbidden-archaeology/id1820661946"},
+      {n:"The Forbidden Knowledge Network — Patreon full episodes archive", u:"https://www.patreon.com/theforbiddenknowledgenetwork"},
+      {n:"Beyond the Map Podcast — Former detective explores ancient secrets & UAPs", u:"https://podcasts.apple.com/us/podcast/beyond-the-map/id1590671064"},
+      {n:"Forgotten Civilizations Podcast — Vanished empires and hidden temples (Apple)", u:"https://podcasts.apple.com/us/podcast/forgotten-civilizations/id1679234151"},
+      {n:"Digging Up Ancient Aliens Podcast — Archaeologist critiques ancient alien theory (Apple)", u:"https://podcasts.apple.com/us/podcast/digging-up-ancient-aliens/id1574851828"},
+      {n:"Bible Mysteries Podcast — Hidden scriptural codes and ancient secrets (Apple)", u:"https://podcasts.apple.com/us/podcast/bible-mysteries/id1547297090"},
+      {n:"Anunnaki Ancient Mystery Podcast — Ancient texts and hidden origins (Apple)", u:"https://podcasts.apple.com/us/podcast/anunnaki-ancient-mystery/id1720641955"},
+      {n:"HistoryExtra Podcast — BBC leading historical experts (Apple Podcasts)", u:"https://podcasts.apple.com/us/podcast/historyextra-podcast/id486454828"},
+    ],
+  },
+
+  // ── REMOTE VIEWING & PSI — NEW SOURCES ───────────────────────────────────
+  {
+    label:"Remote Viewing & PSI — Top Podcasts and Research Organizations 2025-2026",
+    type:"podcast",
+    items:[
+      {n:"Remote Viewing Podcast (Daz Smith) — Best RV podcast: McMoneagle, Dale Graff, Edwin May", u:"https://podcasts.apple.com/us/podcast/remote-viewing-podcast/id1436399706"},
+      {n:"PSIPHR The Remote Viewing Podcast — Trained viewers applying RV to ancient mysteries", u:"https://podcasts.apple.com/us/podcast/psiphr-the-remote-viewing-podcast/id1498701565"},
+      {n:"Third Eye Drops Podcast — Consciousness UFOs Remote Viewing & esoteric (Apple)", u:"https://podcasts.apple.com/us/podcast/third-eye-drops/id1091861630"},
+      {n:"Paul H. Smith — Remote Viewing Instructional Services (STAR GATE veteran)", u:"https://rviewer.com"},
+      {n:"Social RV — New AI-powered remote viewing sessions platform (IRVA 2025)", u:"https://socialrv.com"},
+      {n:"Bigelow Institute for Consciousness Studies — Postmortem survival research", u:"https://www.bigelowinstitute.org"},
+    ],
+  },
+
+  // ── ANCIENT CIVILIZATIONS — NEW SOURCES ──────────────────────────────────
+  {
+    label:"Ancient Civilizations — New Podcasts and Research 2025-2026",
+    type:"podcast",
+    items:[
+      {n:"Ancient Conspiracies Podcast — Lost civilizations forbidden archaeology (Apple)", u:"https://podcasts.apple.com/us/podcast/ancient-conspiracies/id1648906282"},
+      {n:"Machu Picchu Discovery Podcast — Hiram Bingham & great archaeological finds (Apple)", u:"https://podcasts.apple.com/us/podcast/history-unplugged-podcast/id982801977"},
+      {n:"Universe of Memory Podcast — Myths hidden in history and history hidden in myths", u:"https://podcasts.apple.com/us/podcast/universe-of-memory/id1556832437"},
+      {n:"Ancient Mysteries Feedspot Top 70 Podcasts 2026 — Discovery guide", u:"https://podcast.feedspot.com/ancient_civilization_podcasts/"},
+      {n:"Java Man Returned to Indonesia Sept 2025 — Colonial fossil repatriation (BBC)", u:"https://www.bbc.com/news/articles/c5ydrwgl02xo"},
+      {n:"Masripithecus Fossil Discovery Egypt March 2026 — Rewrites human origins (ScienceDaily)", u:"https://www.sciencedaily.com/releases/2026/03/260327140000.htm"},
+    ],
+  },
+
+  // ── CONSCIOUSNESS & MIND — NEW SOURCES ───────────────────────────────────
+  {
+    label:"Consciousness & Mind — Research Hubs and Podcasts 2025-2026",
+    type:"research",
+    items:[
+      {n:"California Institute for Human Sciences — PSI & parapsychology accredited program", u:"https://cihs.edu"},
+      {n:"Galileo Commission — Scientists challenging consciousness-as-brain-product consensus", u:"https://galileocommission.org"},
+      {n:"Essentia Foundation — Consciousness as fundamental (Bernardo Kastrup)", u:"https://www.essentiafoundation.org"},
+      {n:"Sam Parnia — AWARE Study consciousness during cardiac arrest (NYU Langone)", u:"https://nyulangone.org/doctors/1316996958/sam-parnia"},
+    ],
+  },
+
+  // ── HEALTH & SCIENCE — NEW SOURCES ───────────────────────────────────────
+  {
+    label:"Health & Science — Independent Research and Watchdogs 2025-2026",
+    type:"news",
+    items:[
+      {n:"CHD.TV — Children's Health Defense streaming channel (RFK Jr. media network)", u:"https://live.childrenshealthdefense.org"},
+      {n:"Science Based Medicine — Critical analysis of medical claims and studies", u:"https://sciencebasedmedicine.org"},
+      {n:"The BMJ — British Medical Journal investigative health journalism", u:"https://www.bmj.com"},
+      {n:"PubPeer — Peer post-publication scientific paper criticism", u:"https://pubpeer.com"},
+    ],
+  },
+
+  // ── FINANCE & POWER — NEW SOURCES ────────────────────────────────────────
+  {
+    label:"Finance & Power — Independent Analysis 2025-2026",
+    type:"news",
+    items:[
+      {n:"Financial Times — Global finance investigation and analysis (paywall)", u:"https://www.ft.com"},
+      {n:"ICIJ — Panama Papers & Pandora Papers ongoing investigation database", u:"https://offshoreleaks.icij.org"},
+      {n:"David Rogers Webb — The Great Taking (securities law collateral research)", u:"https://thegreattaking.com"},
+      {n:"E. Michael Jones — The Debt as Control (cultural economics analysis)", u:"https://www.culturewars.com"},
+      {n:"Patrick Bet-David — Valuetainment (finance power & geopolitics on YouTube)", u:"https://www.youtube.com/@valuetainment"},
+    ],
+  },
+
+  // ── GEOPOLITICS & DEEP STATE — NEW SOURCES ────────────────────────────────
+  {
+    label:"Geopolitics & Deep State — Independent Journalism 2025-2026",
+    type:"news",
+    items:[
+      {n:"Simplicius The Thinker Substack — Deep geopolitical analysis Ukraine Russia 2026", u:"https://simplicius76.substack.com"},
+      {n:"Big Serge Thought Substack — Military history and geopolitical strategy", u:"https://bigserge.substack.com"},
+      {n:"Larry Johnson Substack — Former CIA officer intel analysis", u:"https://sonar21.com"},
+      {n:"Patrick Lawrence Substack — Independent foreign policy journalism", u:"https://thefloutist.substack.com"},
+      {n:"Antiwar.com — Independent anti-intervention news and analysis (since 1995)", u:"https://www.antiwar.com"},
+      {n:"The Saker Archive — Geopolitics Russia and multipolar world analysis", u:"https://thesaker.is"},
+    ],
+  },
+
+  // ── SECRET SOCIETIES — NEW SOURCES ───────────────────────────────────────
+  {
+    label:"Secret Societies — Research Archives and Documentary Sources",
+    type:"research",
+    items:[
+      {n:"Masonic Lodge Ritual Archive — Historical ritual texts (Archive.org)", u:"https://archive.org/search?query=freemasonry+ritual"},
+      {n:"Bohemian Club — Official site (minimal, confirms existence)", u:"https://www.bohemianclub.com"},
+      {n:"Skull and Bones — Yale senior society documented membership history (NYT)", u:"https://www.nytimes.com/topic/organization/skull-and-bones"},
+      {n:"Illuminati Rex — Historical research on Weishaupt and Bavarian Illuminati", u:"https://illuminatirex.com"},
+      {n:"High Strangeness Podcast — Secret societies mysticism UAPs paranormal (Apple)", u:"https://podcasts.apple.com/us/podcast/high-strangeness/id1494381787"},
+    ],
+  },
+
+  // ── SURVEILLANCE — NEW SOURCES 2025-2026 ──────────────────────────────────
+  {
+    label:"Surveillance & Privacy — Watchdogs and Tools 2025-2026",
+    type:"research",
+    items:[
+      {n:"EFF Surveillance Self-Defense — Electronic Frontier Foundation (practical guide)", u:"https://ssd.eff.org"},
+      {n:"ACLU — Know Your Rights surveillance and privacy (legal resource)", u:"https://www.aclu.org/issues/privacy-technology"},
+      {n:"Restore The Fourth — Anti-NSA surveillance grassroots advocacy", u:"https://restorethefourth.net"},
+      {n:"Just Security — National security law and policy watchdog", u:"https://www.justsecurity.org"},
+      {n:"The Markup — Technology accountability journalism (surveillance tracking)", u:"https://themarkup.org"},
+      {n:"Surveillance Report — Monthly privacy and surveillance news (YouTube/Podcast)", u:"https://www.youtube.com/@surveillancereport"},
+    ],
+  },
+
+  // ── MEDIA & DISCLOSURE — NEW SOURCES ─────────────────────────────────────
+  {
+    label:"Media & Disclosure — Press Freedom and Journalism Watchdogs",
+    type:"research",
+    items:[
+      {n:"Reporters Without Borders — Annual Press Freedom Index (global rankings)", u:"https://rsf.org/en/index"},
+      {n:"Media Manipulation Casebook — Harvard Kennedy School (documented examples)", u:"https://mediamanipulation.org"},
+      {n:"NewsGuard — Media credibility ratings and misinformation tracker", u:"https://www.newsguardtech.com"},
+      {n:"AllSides — Media bias ratings across political spectrum", u:"https://www.allsides.com/media-bias/ratings"},
+      {n:"Ad Fontes Media Bias Chart — Visual media reliability chart", u:"https://adfontesmedia.com/interactive-media-bias-chart/"},
+    ],
+  },
+,
+// ── NASA ARTEMIS & ORION — OFFICIAL SOURCES ──────────────────────────────
+  {
+    label:"NASA Artemis & Orion — Official Mission Sources 2026",
+    type:"archive",
+    items:[
+      {n:"NASA Artemis Official — Moon to Mars mission hub", u:"https://www.nasa.gov/humans-in-space/artemis/"},
+      {n:"NASA Artemis II News & Updates — Official mission journal", u:"https://www.nasa.gov/artemis-ii-news-and-updates/"},
+      {n:"NASA Artemis II Science — Research findings post-mission", u:"https://science.nasa.gov/missions/artemis/artemis-2/nasas-artemis-ii-moon-mission-research-continues-on-earth/"},
+      {n:"Royal Museums Greenwich — Artemis Programme complete timeline", u:"https://www.rmg.co.uk/stories/space-astronomy/nasa-moon-mission-artemis-program-launch-date"},
+      {n:"SpaceX Starship — Lunar lander for Artemis 4 Moon landing", u:"https://www.spacex.com/vehicles/starship/"},
+      {n:"Blue Origin Blue Moon — Second commercial lunar lander contractor", u:"https://www.blueorigin.com/blue-moon"},
+      {n:"Lockheed Martin Orion — Spacecraft builder official site", u:"https://www.lockheedmartin.com/en-us/products/orion-spacecraft.html"},
+    ],
+  },
+
+  // ── PENTAGON UFO FILES 2026 — OFFICIAL & REPORTING ───────────────────────
+  {
+    label:"Pentagon UFO Files May 2026 — Official Releases & Coverage",
+    type:"archive",
+    items:[
+      {n:"Pentagon UAP Official Site — All released files (May 2026 ongoing)", u:"https://www.defense.gov/UAP"},
+      {n:"NBC Washington — First Batch May 8 2026: Flying saucer, 1948 reports", u:"https://www.nbcwashington.com/news/national-international/pentagon-releasing-new-files-ufos/4101937/"},
+      {n:"ABC News — Second Batch May 22 2026: Orbs, intelligence officer 'speechless'", u:"https://abcnews.com/US/pentagon-releases-declassified-ufo-files-including-intelligence-officers/story?id=133209645"},
+      {n:"HuffPost — Best Videos Second Pentagon UAP Drop: F-16 shoots down UFO", u:"https://www.huffpost.com/entry/more-pentagon-ufo-files-released_n_6a0d8a3ee4b0d1a142e228f5"},
+      {n:"Hollywood Reporter — F-16, orbs, submarine UAPs: Second Pentagon UAP batch", u:"https://www.hollywoodreporter.com/news/general-news/pentagon-ufo-files-2-1236604232/"},
+      {n:"BBC — UFO sighting reports: Orbs swarming in all directions (May 21 2026)", u:"https://www.bbc.com/news/articles/ufo-sighting-reports-2026"},
+      {n:"Daily Sabah — Pentagon UFO files: full AP report May 8 2026", u:"https://www.dailysabah.com/life/whats-in-the-sky-new-pentagon-ufo-files-rekindle-old-mystery/news"},
+      {n:"WSLS — Pentagon UFO files analysis: fighter jets star-shaped craft", u:"https://www.wsls.com/news/politics/2026/05/08/pentagon-begins-releasing-new-files-on-ufos/"},
+    ],
+  },
+
 ];
 
+
 export const PRIVACY_POLICY = `PRIVACY POLICY & TERMS OF USE  -  THE NEXUS
-thenexusapp.com | Effective: ${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
+thenexusapp.com | Effective: \${new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})}
 
 ==================================
 1. WHO WE ARE
