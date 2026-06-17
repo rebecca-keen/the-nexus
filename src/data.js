@@ -873,6 +873,77 @@ export const SEED_STORIES = [
    summary:"A Washington DC Catholic archbishop removed a priest from active ministry after the priest made public comments about UFOs and unidentified aerial phenomena, according to reports surfacing during the June 2026 Capitol Hill UAP disclosure events. The incident represents a remarkable intersection of institutional religious authority and the growing mainstream UAP disclosure movement. The Catholic Church's action stands in contrast to Vatican astronomers who have publicly stated that belief in extraterrestrial life is not incompatible with Catholic doctrine. The incident raises questions about which institutions are attempting to manage or suppress public discourse on the UAP subject as government disclosures accelerate. The priest's specific statements have not been fully reported but the archbishop's response was immediate and formal.",
    upvotes:24800, comments:3601, credible:74, debunked:26,
    tags:["Archbishop","Catholic","Priest","UFO Comments","Washington DC","Removed","Church","June 2026","Suppression"], premium:false},
+,
+// ── PENTAGON PURSUE — THIRD UAP RELEASE JUNE 12 2026 ────────────────────
+  {id:"s273",type:"news", source:"CBS News / EarthSky / LiveNOW FOX — June 12 2026",
+   sourceUrl:"https://www.cbsnews.com/news/ufo-files-pentagon-3rd-release-documents-videos/",
+   time:"1h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"THIRD Pentagon UAP Release June 12 2026: 'Mother' Orb Launches Baby Red Orbs, 1947 Roswell Report, Zimbabwe Disc With Beams Sent to White House — WAR.GOV/UFO Hits 1.7 Billion Views",
+   summary:"The Pentagon released its third tranche of PURSUE UAP files on June 12 2026, the same day Spielberg's Disclosure Day film opened in theaters. The batch includes 53 documents, 10 images, six videos, and three NASA audio recordings from the CIA, FBI, NASA, and Department of Defense. The most significant document: a June 5 2026 AARO report signed by Pentagon AARO director Dr. Jon Kosloski confirming an October 2023 incident where law enforcement witnessed an orange 'mother' orb that launched smaller red orbs. Kosloski confirmed 40% of reported phenomena lack a plausible explanation after first-stage analysis and remain unresolved. A 253-page 1947 Air Force report covering Roswell contains witness accounts specifically excluding weather balloon and optical illusion explanations. A 2008 CIA cable from Harare Zimbabwe describes a disc-shaped object with rotating lights and 'beams' transmitted to the White House Situation Room. A 2022 Colorado Springs report describes a translucent opalescent potato-shaped object. Department of War spokesman Sean Parnell confirmed WAR.GOV/UFO has received over 1.7 billion hits worldwide.",
+   upvotes:94200, comments:13801, credible:90, debunked:10,
+   tags:["PURSUE","Third Release","June 12 2026","Mother Orb","Kosloski","40 Percent","Roswell 1947","Zimbabwe","1.7 Billion","WAR.GOV"], premium:false},
+
+  {id:"s274",type:"archive", source:"The Debrief / Avi Loeb / Dick Russell — June 13 2026",
+   sourceUrl:"https://thedebrief.org/the-pentagon-just-released-its-third-batch-of-uap-files-what-have-we-learned-from-the-pursue-releases-so-far/",
+   time:"2h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"PURSUE Analysis: UAP Objects Fly Between 10,000-30,000 Feet at Up to Mach 2, No Thermal Exhaust, Unknown Propulsion — AARO's Own Technical Data",
+   summary:"The Debrief's analysis of the three PURSUE UAP releases reveals AARO's internal technical characterization of genuinely anomalous UAP. According to AARO data, the objects perform at altitudes between 10,000 and 30,000 feet and velocities ranging from stationary hovering to Mach 2 (1,534 mph). Critically: no thermal exhaust associated with any known propulsion system has been detected. Radar signatures include intermittent X-Band (8-12 GHz) and radio frequency emissions in the 1-3 GHz and 8-12 GHz ranges. Infrared thermal signatures are intermittently detectable. Dick Russell's Substack analysis of the third release called the 253-page 1947 Air Force Roswell report 'the most significant material in this tranche' — noting it directly refutes weather balloon explanations because witnesses described objects traveling against prevailing wind and making turns impossible for any known aircraft. Harvard physicist Avi Loeb stated on Fox & Friends that if a non-human technological origin is confirmed 'that would constitute the biggest scientific discovery ever made by humanity.'",
+   upvotes:46800, comments:6601, credible:91, debunked:9,
+   tags:["Mach 2","AARO Technical","No Thermal Exhaust","Roswell 1947","Avi Loeb","The Debrief","X-Band Radar","Unknown Propulsion"], premium:false},
+
+  // ── NSA TOP SECRET UMBRA UAP FILES — MAY 18 2026 ─────────────────────────
+  {id:"s275",type:"archive", source:"Disclosure Foundation FOIA / NSA — May 18 2026",
+   sourceUrl:"https://disclosure.org/news/nsa-top-secret-umbra-uap-foia-release",
+   time:"3h ago", topic:"Government & Intelligence", region:"USA",
+   title:"NSA Releases 300+ Pages of TOP SECRET UMBRA UAP Records May 18 2026 — Highest Signals Intelligence Classification Level — Almost No Mainstream Coverage",
+   summary:"On May 18 2026 — between the first and second Pentagon PURSUE releases — the National Security Agency was compelled to release over 300 pages of UAP-related records previously classified at the TOP SECRET UMBRA level: one of the most sensitive compartments in the entire US signals intelligence system. UMBRA covers the most sensitive signals intelligence sources and methods. The release was forced by a Freedom of Information Act appeal by the Disclosure Foundation that dated back to a request filed in 1980 — 46 years earlier. The records demonstrate that the NSA tracked, classified, and actively protected information about UAP phenomena for decades as serious intelligence matters. The Disclosure Foundation confirmed it will challenge remaining redactions and has filed Mandatory Declassification Review requests for classified Congressional UAP briefings. Almost no major mainstream outlet covered the UMBRA release — which occurred the same week Pentagon releases dominated headlines.",
+   upvotes:52400, comments:7401, credible:93, debunked:7,
+   tags:["NSA","TOP SECRET UMBRA","FOIA","Disclosure Foundation","300 Pages","May 2026","Signals Intelligence","Ignored"], premium:false},
+
+  // ── PURSUE PROGRAM — FULL CONTEXT ────────────────────────────────────────
+  {id:"s276",type:"archive", source:"Department of War / WAR.GOV/UFO",
+   sourceUrl:"https://todaywhy.com/pentagon-ufo-files-released-uap-disclosure/",
+   time:"4h ago", topic:"UAP & Anomalous", region:"USA",
+   title:"PURSUE — Presidential Unsealing and Reporting System for UAP Encounters: The Complete Record of All Three 2026 Releases From WAR.GOV/UFO",
+   summary:"PURSUE (Presidential Unsealing and Reporting System for UAP Encounters) is the Trump administration's official UAP declassification program housed at WAR.GOV/UFO. Tranche 1 (May 8 2026): 162 files covering 400+ UAP incidents from 1944-2026 including 1948 flying saucer reports from the Netherlands, Buzz Aldrin Apollo 11 testimony, and multiple 90-degree turn incidents. Tranche 2 (May 22 2026): 64 files primarily video — four-UAP formation over Iran, Syrian UAP with instant acceleration, F-16 shootdown over Lake Huron, intelligence officer 'virtually speechless' orb account, NASA mission audio recordings. Tranche 3 (June 12 2026): 53 documents, 10 images, 6 videos, 3 NASA audio files — mother orb launching red orbs, Kosloski 40% unresolved confirmation, 253-page 1947 Roswell Air Force report, Zimbabwe CIA White House cable. NSA TOP SECRET UMBRA release (May 18 2026): 300+ pages of FOIA-compelled signals intelligence UAP records. Total worldwide views of WAR.GOV/UFO: 1.7 billion. Additional tranches expected on rolling basis.",
+   upvotes:48600, comments:6801, credible:92, debunked:8,
+   tags:["PURSUE","WAR.GOV","All Tranches","Complete Record","1.7 Billion","Three Releases","Rolling Basis","2026"], premium:false},
+
+  // ── GRUSCH — POLITICAL APPOINTEES NOT COMPLYING ───────────────────────────
+  {id:"s277",type:"news", source:"NewsNation / The Hill — June 9-13 2026",
+   sourceUrl:"https://www.newsnationnow.com/space/ufo/ufo-whistleblower-david-grusch-declassified-uap-files/",
+   time:"5h ago", topic:"Government & Intelligence", region:"USA",
+   title:"Grusch June 2026: 'Political Appointees Have Not Complied With the Disclosure Law' — Accuses Government of Gatekeeping As Ross Coulthart Examines Full UAP Timeline June 13",
+   summary:"At the June 9 2026 Capitol Hill UAP event, David Grusch made a pointed accusation beyond his previous testimony: 'Political appointees have not complied with the disclosure law.' This statement — that appointed officials are actively violating the UAP disclosure laws passed by Congress — represents an escalation from his previous position that programs exist to one that officials are breaking the law to hide them. Grusch also accused unspecified government actors of 'gatekeeping information around UFOs.' Ross Coulthart, the Australian investigative journalist who broke Grusch's story, hosted a NewsNation special on June 13 2026 examining the full path to disclosure from ancient sightings to Hollywood fascination. Supporters of disclosure argue that even after three PURSUE releases, Congress and the public still do not have access to all government UAP records and that key information remains classified despite years of hearings.",
+   upvotes:41800, comments:5901, credible:86, debunked:14,
+   tags:["Grusch","Political Appointees","Non-Compliance","Disclosure Law","Gatekeeping","Coulthart","June 13","NewsNation Special"], premium:false},
+
+  // ── FOUR ALIEN SPECIES — FOX NEWS CLAIM ──────────────────────────────────
+  {id:"s278",type:"news", source:"Fox News — June 2026",
+   sourceUrl:"https://www.foxnews.com/politics/nasa-chief-pulls-back-curtain-trump-ufo-files-after-bizarre-finds-surface-buried-fed-records",
+   time:"6h ago", topic:"Aliens & Extraterrestrial", region:"USA",
+   title:"UFO Insider Claims US Government Holds Bodies of 4 Different Alien Species From Downed Spacecraft in Custody — Fox News Report June 2026",
+   summary:"A Fox News report during the June 2026 PURSUE releases cited an unidentified UFO insider claiming the US government holds bodies of four different alien species recovered from downed spacecraft in government custody. The claim — unverified and sourced anonymously — appeared alongside NASA chief commentary on the PURSUE releases and statements from space entrepreneur Jared Isaacman, who said: 'Government agencies really didn't take this quite as seriously in the past until President Trump put out the tweet, basically giving an order to government agencies — this time you better go through the files, you better start searching your databases and bring things up.' The four-species claim has not been corroborated by any named whistleblower or documented source but reflects the escalating nature of claims being made publicly as the disclosure environment intensifies. David Grusch's previous testimony mentioned non-human biologics without specifying number of species.",
+   upvotes:68400, comments:9601, credible:52, debunked:48,
+   tags:["4 Alien Species","Bodies","Fox News","Government Custody","Spacecraft","Grusch","Non-Human Biologics","June 2026"], premium:false},
+
+  // ── KONA BLUE — CONFIRMED NEVER APPROVED ─────────────────────────────────
+  {id:"s279",type:"archive", source:"AARO / Pentagon — June 2026",
+   sourceUrl:"https://omniflights.com/articles/pentagon-uap-disclosure-new-files-released-amid-criticism",
+   time:"7h ago", topic:"Government & Intelligence", region:"USA",
+   title:"AARO Confirms Kona Blue Was Never a Formally Approved UAP Program — Whistleblowers Who Claimed It Existed Were Describing an Unapproved Proposal",
+   summary:"Embedded in the third PURSUE release, AARO officially confirmed that the alleged secret UAP reverse-engineering program known as Kona Blue was never formally approved as a government program. Previous whistleblower and researcher claims had described Kona Blue as a classified Department of Homeland Security initiative to study retrieved UAP craft. AARO's confirmation means either that Kona Blue never existed as described, or that it operated as an unauthorized unacknowledged special access program outside normal approval channels — which would itself be a significant legal violation. The disclosure fueled ongoing debate: critics of AARO argued the office has a structural interest in denying the existence of such programs. Defenders argued the denial is credible given AARO's access to classified program records. The Kona Blue clarification is the first time a specific named UAP program has been officially addressed in the PURSUE releases.",
+   upvotes:29800, comments:4201, credible:78, debunked:22,
+   tags:["Kona Blue","AARO","Never Approved","DHS","Reverse Engineering","Unauthorized","USAP","Whistleblowers"], premium:false},
+
+  // ── ROSS COULTHART — JUNE 13 2026 SPECIAL ────────────────────────────────
+  {id:"s280",type:"news", source:"NewsNation — Ross Coulthart June 13 2026",
+   sourceUrl:"https://www.newsnationnow.com/author/ross-coulthart/",
+   time:"8h ago", topic:"Media & Disclosure", region:"Global",
+   title:"Ross Coulthart June 13 2026: NewsNation Special Examines Full UAP Path From Ancient Sightings to Hollywood Disclosure Day — The Most Active Week in UAP History",
+   summary:"On June 13 2026 Ross Coulthart hosted a NewsNation special examining the complete arc of UAP disclosure: from ancient sightings through Project Blue Book, the 1947-1960s cover-up confirmed in the third PURSUE release's CIA U-2 admission, through to the June 2026 moment. The CIA's own internal history — revealed in the third PURSUE batch — admits that secret U-2 and OXCART spy-plane flights caused more than half of all UFO reports in the late 1950s and 1960s, and that Project Blue Book gave the public false explanations to protect the program. Coulthart framed this as confirmation that systematic deception of the public about aerial phenomena has been documented government policy. The week of June 9-15 2026 saw: the Grusch Capitol Hill immunity push, the third PURSUE release, and 1.7 billion WAR.GOV/UFO views — making it the most active single week in UAP disclosure history.",
+   upvotes:38200, comments:5401, credible:88, debunked:12,
+   tags:["Coulthart","NewsNation","June 13","CIA U-2 Admission","Blue Book False","Deception","Most Active Week","UAP History"], premium:false},
 ];
 
 // --- SEED COMMUNITY POSTS -----------------------------------------------------
@@ -3677,6 +3748,36 @@ export const RESEARCHERS = [
       {n:"BBC — UFO sighting reports: Orbs swarming in all directions (May 21 2026)", u:"https://www.bbc.com/news/articles/ufo-sighting-reports-2026"},
       {n:"Daily Sabah — Pentagon UFO files: full AP report May 8 2026", u:"https://www.dailysabah.com/life/whats-in-the-sky-new-pentagon-ufo-files-rekindle-old-mystery/news"},
       {n:"WSLS — Pentagon UFO files analysis: fighter jets star-shaped craft", u:"https://www.wsls.com/news/politics/2026/05/08/pentagon-begins-releasing-new-files-on-ufos/"},
+    ],
+  },
+,
+// ── PURSUE & JUNE 2026 UAP RELEASES — LIVE SOURCES ──────────────────────
+  {
+    label:"PURSUE — Pentagon UAP Files Official & Analysis Sources June 2026",
+    type:"archive",
+    items:[
+      {n:"CBS News — Third PURSUE release June 12 2026: Mother orb, Roswell, Zimbabwe", u:"https://www.cbsnews.com/news/ufo-files-pentagon-3rd-release-documents-videos/"},
+      {n:"EarthSky — Full analysis of all three Pentagon UAP batches (ongoing)", u:"https://earthsky.org/human-world/pentagon-uap-files-ufos-pursue/"},
+      {n:"LiveNOW FOX — Third Pentagon UAP release videos and documents", u:"https://www.livenowfox.com/news/third-batch-ufo-files-released-pentagon"},
+      {n:"The Debrief — Technical AARO analysis: Mach 2, no thermal exhaust, X-band radar", u:"https://thedebrief.org/the-pentagon-just-released-its-third-batch-of-uap-files-what-have-we-learned-from-the-pursue-releases-so-far/"},
+      {n:"Avi Loeb Medium — UAP Disclosure #3 Most Intriguing Release (June 13 2026)", u:"https://avi-loeb.medium.com/uap-disclosure-3-is-most-intriguing-release-thus-far-e4643013245b"},
+      {n:"Avi Loeb Medium — UAP Science Advisory Council: Keeping Eyes on the Orbs", u:"https://avi-loeb.medium.com/a-uap-science-advisory-council-to-the-u-s-f7262e57b0df"},
+      {n:"Dick Russell Substack — Revelations in the Third UAP Release (Roswell analysis)", u:"https://dickrussell.substack.com/p/revelations-in-the-third-uap-release"},
+      {n:"TodayWhy — Complete PURSUE guide: All tranches + NSA UMBRA (full record)", u:"https://todaywhy.com/pentagon-ufo-files-released-uap-disclosure/"},
+      {n:"Wikipedia — United States UFO Files (PURSUE complete reference)", u:"https://en.wikipedia.org/wiki/United_States_UFO_files"},
+    ],
+  },
+
+  // ── NSA TOP SECRET UMBRA & DISCLOSURE FOUNDATION ─────────────────────────
+  {
+    label:"NSA Top Secret UMBRA UAP Records & Disclosure Foundation FOIA 2026",
+    type:"archive",
+    items:[
+      {n:"Disclosure Foundation — NSA TOP SECRET UMBRA UAP FOIA release (official)", u:"https://disclosure.org/news/nsa-top-secret-umbra-uap-foia-release"},
+      {n:"Infinity Explorers — NSA UMBRA analysis: What the 300 pages reveal", u:"https://www.infinityexplorers.com/nsa-top-secret-umbra-uap-foia-disclosure-foundation-may-2026/"},
+      {n:"TodayWhy — NSA Top Secret Umbra UAP Records: Full 2026 FOIA analysis", u:"https://todaywhy.com/nsa-top-secret-umbra-uap-records-foia-2026/"},
+      {n:"Lifeboat Foundation — NSA UMBRA UAP records FOIA release (May 2026)", u:"https://lifeboat.com/blog/2026/05/nsa-releases-hundreds-of-pages-of-formerly-top-secret-umbra-uap-records-after-disclosure-foundation-foia-appeal"},
+      {n:"Disclosure Foundation — Official UAP transparency nonprofit (all FOIA filings)", u:"https://disclosure.org"},
     ],
   },
 
